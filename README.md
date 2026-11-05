@@ -6611,9 +6611,12 @@ GitFlow adaptada para entregas incrementales y trabajo colaborativo iterativo.
 
 - Repositorios del Proyecto 
 
-  - Terratech-report: Repositorio de documentación oficial del proyecto en Markdown.   
-  - Terratech-mobile: Repositorio del código fuente de la aplicación nativa en Android/Kotlin.   
-  - Terratech-backend: Repositorio del servicio Web API REST desarrollado en .NET / C#.
+- **Repositorios del proyecto**
+
+    - [terratech-project-report](https://github.com/AppMovil-Dato/terratech-project-report): documentación oficial del proyecto en Markdown.
+    - [App-Android-Terratech](https://github.com/AppMovil-Dato/App-Android-Terratech): código fuente de la aplicación nativa Android.
+    - [BackEnd-TerraTech](https://github.com/AppMovil-Dato/BackEnd-TerraTech): código fuente del backend REST desarrollado en C# y ASP.NET Core.
+    - [LandingPage-TerraTech](https://github.com/AppMovil-Dato/LandingPage-TerraTech): código fuente de la Landing Page.
 
 - **GitFlow WorkFlow**
 
