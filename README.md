@@ -7000,7 +7000,7 @@ Las siguientes capturas se tomaron el 4 de octubre de 2026 del [sitio publicado 
 | --- | --- |
 | <img src="assets/images/cap4/sprint1/landing-desktop.png" alt="Landing Page publicada de TerraTech en viewport de escritorio" width="220"> | <img src="assets/images/cap4/sprint1/landing-mobile.png" alt="Landing Page publicada de TerraTech en viewport móvil con el menú hamburguesa abierto" width="220"> |
 
-**Video de navegación:** existe una grabación local `artifacts/TerraTech-TB1-emulator.mp4` en el proyecto Android, excluida de Git. Falta publicar el video narrado del equipo en OneDrive/YouTube y colocar el enlace accesible; no se sustituye por una URL ficticia. Se requieren también capturas de registro/confirmación y del recorrido actual en teléfono; ver [detalle de evidencia pendiente](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md).
+**Video de navegación:** se registra una grabación local en `artifacts/TerraTech-TB1-emulator.mp4`, dentro del proyecto Android. Queda pendiente incorporar el enlace accesible al video narrado del equipo, junto con las capturas de registro y confirmación y la evidencia del recorrido en teléfono. El detalle se conserva en el [checklist de cierre del Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md).
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
