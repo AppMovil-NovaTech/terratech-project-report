@@ -7215,6 +7215,28 @@ Para cada funcionalidad se documentan el dispositivo o emulador utilizado, la ve
 
 El video debe explicar las funcionalidades incorporadas respecto de TB1 y mostrar su comportamiento durante la navegación. Cuando se utilicen datos simulados, su origen se identifica en la demostración.
 
+##### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+La documentación de servicios describe los endpoints utilizados por las funcionalidades del Sprint 2. Se mantiene mediante OpenAPI y debe corresponder a la versión del backend publicada para AV2.
+
+Para cada operación se identifican su método HTTP, ruta, parámetros, cuerpo de solicitud, respuestas y requisitos de autenticación. Los ejemplos y capturas deben mostrar la interacción con el servicio sin exponer credenciales ni tokens.
+
+| Historia | Método y ruta | Parámetros / cuerpo | Respuestas | Documentación pública | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+**URL de OpenAPI de la versión evaluada:** POR COMPLETAR.
+
+**Repositorio y commits relacionados con la documentación:** POR COMPLETAR.
+
+La evaluación del cumplimiento funcional del backend se registra mediante la siguiente matriz:
+
+| Requisito / criterio del backend | Endpoint o servicio | Implementación | Prueba | Despliegue | Resultado |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+La matriz permite identificar los requisitos implementados, comprobados y disponibles en el entorno público. La cobertura de código y el porcentaje de tráfico de una revisión se registran como indicadores independientes del cumplimiento funcional.
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
