@@ -6892,12 +6892,10 @@ La matriz LACX relaciona la responsabilidad registrada en el informe con los asp
 | Delgado Perez, James Caleb | JAmsy06 | — | — | — | — | L | — | — |
 | Barba Estrada, Bryan Eduardo | bry4nbe | — | — | — | — | — | L | L |
 
-La matriz de implementación de la Landing Page distingue el código del diseño:
-La tecnología efectiva es **C#, ASP.NET Core .NET 10, Entity Framework Core y MySQL** para backend; **Kotlin, Compose, MVVM/StateFlow, Hilt, Retrofit, Room y DataStore** para Android; **HTML5, CSS3 y JavaScript sin dependencias de frontend**, con diccionarios JSON para el bilingüismo ES/EN, para la Landing Page. Las menciones anteriores a Spring Security, JPA/Hibernate, Spring Data y PostgreSQL no describían esta implementación y se corrigen en este Sprint.
-
+La tecnología documentada para el incremento es **C#, ASP.NET Core .NET 10, Entity Framework Core y MySQL** en backend; **Kotlin, Jetpack Compose, MVVM/StateFlow, Hilt, Retrofit, Room y DataStore** en Android; y **HTML5, CSS3 y JavaScript** en la Landing Page, con diccionarios JSON para el contenido ES/EN.
 #### 4.2.1.3. Sprint Backlog 1
 
-El backlog descompone el recorrido en tareas comprobables. La captura y URL pública del tablero quedan pendientes: no se creó una imagen de tablero ni se dedujeron horas a partir de commits. **NR** indica estimación en horas no registrada. **Done** identifica la tarea técnica comprobada; **To-Review** reserva aceptación del equipo o evidencia de entrega; **To-do** identifica trabajo que no se presenta como realizado. Responsable **RF**: Rúbens Fitzgerald Bendezú Navarro (`Lucemz`).
+El Sprint Backlog descompone el recorrido de TB1 en tareas comprobables y conserva los estados registrados para ese incremento. **NR** indica que la estimación en horas no fue registrada; **Done**, una tarea técnica comprobada; **To-Review**, una tarea pendiente de revisión; y **To-do**, una tarea pendiente de ejecución. La actualización del tablero realizada posteriormente se documentará como parte del levantamiento de observaciones en AV2. La sigla **RF** identifica a Rúbens Fitzgerald Bendezú Navarro (`Lucemz`).
 
 | User Story Id | Title | Task Id | Title / Description | Estimation (Hours) | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- |
