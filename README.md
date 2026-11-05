@@ -6380,22 +6380,22 @@ El mock-up final presenta el formulario de solicitud de demostración utilizando
 
 ### 3.1.4. Mobile Applications UX/UI Design
 
-El diseño de experiencia de usuario (UX) e interfaz de usuario (UI) para la aplicación móvil de **TerraTech** se encuentra estrictamente delimitado para resolver las necesidades prioritarias del agricultor dentro del alcance de la entrega (TB1 / Sprint 2). La solución tecnológica móvil se enfoca en dos pilares fundamentales: la **gestión de identidad, predios y dispositivos IoT**, y el **monitoreo agronómico en tiempo real con capacidad de consulta resiliente sin conexión**.
+El diseño UX/UI de TerraTech presentado en TB1 corresponde al Sprint 1 y prioriza el recorrido del agricultor: acceso a su cuenta, gestión de perfil y parcelas, asociación de sensores y consulta de indicadores e históricos. La información descargada se conserva para su consulta sin conexión, con fecha y aviso de antigüedad.
 
-El diseño responde a tres principios esenciales:
-1. **Resiliencia operativa en campo rural (Offline-First):** Soporte de almacenamiento local en el dispositivo (SQLite / Room) para garantizar la consulta ininterrumpida de parcelas, sensores y mediciones descargadas previamente, indicando de forma visible la antigüedad de los datos en zonas sin cobertura de red.
-2. **Ergonomía táctil y diseño inclusivo:** Componentes con áreas de contacto mínimas de 48 × 48 dp, contrastes cromáticos adecuados para lectura bajo luz solar directa en campo y flujos optimizados para usuarios con diversos niveles de alfabetización digital.
-3. **Claridad informativa y veracidad de telemetría:** Jerarquía visual enfocada en indicadores agronómicos críticos (humedad %, temperatura del suelo °C y nutrientes N-P-K en ppm), señalando con precisión la fecha y hora de la última sincronización y emitiendo alertas visuales preventivas ante falta de recepción de datos por más de 30 minutos.
+El diseño utiliza tres criterios: navegación comprensible para los usuarios objetivo, controles táctiles accesibles y presentación clara del origen y la actualización de los datos. Las mediciones de demostración identificadas como SIMULATED se distinguen de las mediciones procedentes de hardware.
 
-Las interfaces y flujos implementados cubren de manera exhaustiva las 8 Historias de Usuario priorizadas para el producto móvil:
-- **US06 — Registro:** Creación de cuenta de usuario con validación de nombre, correo electrónico y contraseña confirmada.
-- **US07 — Inicio de sesión:** Autenticación segura mediante tokens JWT, control de credenciales incorrectas, verificación de correo y restricción de acceso a recursos propios.
-- **US09 — Perfil:** Visualización y edición de datos del agricultor y de la parcela (número de teléfono, ubicación y tamaño de terreno).
-- **US17 — Registro de sensor:** Asociación de dispositivos físicos válidos (`TT-XXXXXX`) a una parcela específica con rechazo de códigos inválidos o duplicados.
-- **US11 — Selección de parcela/sensor:** Navegación y filtrado entre parcelas y sus respectivos sensores asociados.
-- **US10 — Indicadores:** Visualización en tiempo real de humedad, temperatura y nutrientes (N, P, K) con timestamp y alerta de datos desactualizados.
-- **US12 — Histórico:** Monitoreo gráfico de humedad a 7 días (por defecto con umbral mínimo de referencia), selector rápido a 30 días y detalle táctil de cada punto.
-- **Nueva HU — Consulta sin conexión:** Acceso a la información previamente almacenada en caché local y banner informativo con la antigüedad de la sincronización.
+El recorrido móvil de referencia comprende:
+
+- **US06 — Registro:** Creación de cuenta y validación de los campos del formulario.
+- **US07 — Inicio de sesión:** Autenticación y mensajes ante credenciales incorrectas.
+- **US09 — Perfil:** Consulta y edición de los datos del agricultor y su terreno.
+- **US17 — Registro de sensor:** Asociación de un dispositivo disponible a una parcela propia y mensajes ante códigos inválidos o ya utilizados.
+- **US11 — Selección de parcela/sensor:** Selección de la parcela y consulta de sus dispositivos.
+- **US10 — Indicadores:** Consulta de humedad, temperatura y nutrientes, con unidades y fecha de la muestra.
+- **US12 — Histórico:** Consulta de humedad de 7 y 30 días y acceso al detalle de una lectura.
+- **HU-OFF01 — Consulta sin conexión:** Acceso a los datos previamente descargados y visualización de su antigüedad.
+
+La evidencia de implementación de TB1 se presenta en 4.2.1. La verificación de correo y la recuperación de contraseña no se acreditan como implementadas en ese incremento. Sus incorporaciones posteriores deben documentarse en el sprint correspondiente. Las actualizaciones de diseño para AV2 se relacionarán con las historias y evidencias del Sprint 2.
 
 #### 3.1.4.1. Mobile Applications Wireframes
 
