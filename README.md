@@ -6925,7 +6925,7 @@ El backend heredado se amplió para el recorrido móvil: identidad JWT estándar
 
 Android se organiza bajo `iam`, `profile`, `monitoring` y `core`, con capas `domain`, `application`, `infrastructure` y `presentation` en los contextos de negocio. ViewModels exponen StateFlow; los casos de uso aplican reglas de dominio; Retrofit, DTOs, entidades/DAOs Room y repositorios concretos permanecen en infraestructura. Hilt resuelve dependencias. Room almacena consultas y DataStore preferencias/selección y material de sesión protegido; no se persisten contraseñas.
 
-**Repositorios:** [backend](https://github.com/AppMovil-Dato/BackEnd-TerraTech), [Android](https://github.com/AppMovil-Dato/App-Android-Terratech), [Landing Page](https://github.com/AppMovil-Dato/LandingPage-TerraTech) e [informe](https://github.com/AppMovil-Dato/terratech-project-report). Los commits siguientes se inspeccionaron en los repositorios; cuando no existe cuerpo de mensaje se indica «Sin cuerpo» en lugar de inventarlo.
+**Repositorios:** [backend](https://github.com/AppMovil-Dato/BackEnd-TerraTech), [Android](https://github.com/AppMovil-Dato/App-Android-Terratech), [Landing Page](https://github.com/AppMovil-Dato/LandingPage-TerraTech) e [informe](https://github.com/AppMovil-Dato/terratech-project-report). La siguiente tabla relaciona los commits del incremento con su repositorio, rama, mensaje y fecha. «Sin cuerpo» indica que el commit no contiene un mensaje adicional.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date, Lima) |
 | --- | --- | --- | --- | --- | --- |
