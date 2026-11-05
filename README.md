@@ -7152,6 +7152,23 @@ Los estados utilizados son **To-do**, **In-Process**, **To-Review** y **Done**. 
 
 El registro debe diferenciar las capacidades heredadas del Sprint 1, las ampliaciones implementadas durante el Sprint 2 y las correcciones derivadas de la revisión de TB1. Las historias trasladadas desde otra iteración deben actualizarse también en el Product Backlog.
 
+##### 4.2.2.4. Development Evidence for Sprint Review
+
+La evidencia de desarrollo relaciona los cambios del Sprint 2 con las historias y productos afectados. Se conserva la arquitectura del proyecto reutilizado y se documentan las ampliaciones realizadas en la aplicación móvil y el backend.
+
+Entre los avances registrados durante la continuidad del proyecto se encuentran el trabajo sobre el mapa de fertilidad, la configuración de umbrales y la integración de funcionalidades de monitoreo. La consolidación del incremento debe identificar qué capacidades están integradas y cuáles continúan en desarrollo o revisión.
+
+En el backend se documentan los cambios en entidades, reglas de dominio, servicios de aplicación, repositorios, recursos REST y persistencia que correspondan a cada historia. En Android se identifican los cambios en navegación, pantallas, estado, consumo de servicios y almacenamiento local.
+
+La siguiente tabla debe incorporar los commits del incremento, diferenciando implementación, correcciones e integración.
+
+| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| AppMovil-Dato/App-Android-Terratech | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| AppMovil-Dato/BackEnd-TerraTech | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+Los cambios de la Landing Page se incorporarán a esta tabla cuando formen parte del incremento. La documentación del informe se registra en las evidencias de colaboración correspondientes.
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
