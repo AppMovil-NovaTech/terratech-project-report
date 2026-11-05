@@ -5463,10 +5463,8 @@ solución:
         *MVVM + Clean Architecture*, StateFlow para reactividad, inyección
         de dependencias con Hilt/Koin y cliente Retrofit para comunicación
         HTTPS con el backend.
-    2. **Local SQLite / Room Database:** Base de datos embebida en el dispositivo móvil Android.
-        Almacena localmente información previamente obtenida y los datos que requieran sincronización 
-        posterior, permitiendo consultar información disponible cuando no exista conexión y
-        actualizarla cuando se recupere la conectividad.
+    2.  **Local SQLite / Room Database:** Base de datos embebida en el dispositivo Android. 
+        Conserva información previamente descargada para consultar parcelas, sensores y mediciones cuando no existe conexión, mostrando su fecha y antigüedad. La implementación documentada en TB1 permite consultas offline; la sincronización de escrituras requiere una implementación y validación independientes.
     3.  **Web Landing Page (HTML5 / CSS3 / JavaScript):** Sitio web
         institucional responsivo, sin dependencias de frontend ni paso de
         compilación. Presenta el producto, el alcance funcional, los planes
