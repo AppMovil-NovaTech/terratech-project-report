@@ -247,6 +247,16 @@ Para el desarrollo de la TB1, el equipo NovaTech continuó trabajando mediante G
             - [4.2.1.7. Services Documentation Evidence for Sprint Review](#4217-services-documentation-evidence-for-sprint-review)
             - [4.2.1.8. Software Deployment Evidence for Sprint Review](#4218-software-deployment-evidence-for-sprint-review)
             - [4.2.1.9. Team Collaboration Insights during Sprint](#4219-team-collaboration-insights-during-sprint)
+        - [4.2.2. Sprint 2](#422-sprint-2)
+            - [4.2.2.1. Sprint Planning 2](#4221-sprint-planning-2)
+            - [4.2.2.2. Aspect Leaders and Collaborators](#4222-aspect-leaders-and-collaborators)
+            - [4.2.2.3. Sprint Backlog 2](#4223-sprint-backlog-2)
+            - [4.2.2.4. Development Evidence for Sprint Review](#4224-development-evidence-for-sprint-review)
+            - [4.2.2.5. Testing Suite Evidence for Sprint Review](#4225-testing-suite-evidence-for-sprint-review)
+            - [4.2.2.6. Execution Evidence for Sprint Review](#4226-execution-evidence-for-sprint-review)
+            - [4.2.2.7. Services Documentation Evidence for Sprint Review](#4227-services-documentation-evidence-for-sprint-review)
+            - [4.2.2.8. Software Deployment Evidence for Sprint Review](#4228-software-deployment-evidence-for-sprint-review)
+            - [4.2.2.9. Team Collaboration Insights during Sprint](#4229-team-collaboration-insights-during-sprint)
     - [4.3. Validation Interviews](#43-validation-interviews)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
@@ -339,8 +349,8 @@ relevantes y estar delimitados por un plazo.
 | Objetivo profesional | Introducirme en el mercado, dentro de una empresa de tecnologia y teniendo un puesto como desarrollador junior. | Poner en marcha mis proyectos propios. |
 | Específico | Conseguir un puesto de trabajo como Desarrollador Junior (Frontend, Backend o Fullstack) en una empresa del sector tecnológico o consultoría TI, aplicando metodologías ágiles y arquitecturas limpias. | Lanzar una versión funcional (MVP - Minimum Viable Product) de una aplicación o plataforma propia, desplegada en producción y accesible para los primeros usuarios de prueba. |
 | Medible | Postular a un mínimo de 10 ofertas semanales, realizar al menos 5 entrevistas técnicas o de selección y obtener al menos 1 oferta laboral formal. | Completar el 100% de las funcionalidades clave definidas en el backlog del MVP y alcanzar un primer grupo de al menos 20 usuarios activos que prueben la solución. |
-| Alcanzable | Completar el 100% de las funcionalidades clave definidas en el backlog del MVP y alcanzar un primer grupo de al menos 20 usuarios activos que prueben la solución. | Utilizar arquitecturas conocidas, herramientas de código abierto o infraestructura en la nube con capas gratuitas (e.g., Firebase, Vercel, AWS Free Tier) para reducir costos iniciales y avanzar de forma incremental. |
-| Relevante | Utilizar arquitecturas conocidas, herramientas de código abierto o infraestructura en la nube con capas gratuitas (e.g., Firebase, Vercel, AWS Free Tier) para reducir costos iniciales y avanzar de forma incremental. | Permitirá validar una idea de negocio propia en el mercado, poner en práctica habilidades de liderazgo, producto y desarrollo integral, y diversificar las fuentes de ingresos/portafolio. |
+| Alcanzable | Preparar y mantener un portafolio con los proyectos desarrollados durante la carrera, reforzar las tecnologías requeridas para puestos junior y organizar las postulaciones y la preparación de entrevistas dentro del plazo establecido. | Utilizar arquitecturas conocidas, herramientas de código abierto o infraestructura en la nube con capas gratuitas (e.g., Firebase, Vercel, AWS Free Tier) para reducir costos iniciales y avanzar de forma incremental. |
+| Relevante | Me permitirá iniciar mi experiencia profesional en desarrollo de software, aplicar los conocimientos adquiridos durante la carrera y fortalecer mis competencias técnicas y de trabajo en equipo. | Permitirá validar una idea de negocio propia en el mercado, poner en práctica habilidades de liderazgo, producto y desarrollo integral, y diversificar las fuentes de ingresos/portafolio. |
 | Plazo | En un plazo máximo de 3 a 6 meses posteriores a la finalización de los estudios académicos. | En un plazo máximo de 6 a 9 meses, dedicando horas semanales constantes fuera del horario académico. |
 
 <div class="page"></div>
@@ -1999,8 +2009,9 @@ funcionalidades.
        <b>Then</b> se presenta la misión y visión de TerraTech junto con el nombre de la startup NovaTech<br>
        <br>
        <b>Scenario 2: Información del equipo</b><br>
-       <b>Given</b> el visitante consulta la sección del equipo<br>
-       <b>Then</b> se muestran las fotografías, nombres completos, roles y especialidad de los integrantes del equipo de desarrollo
+       <b>Given</b> el visitante se encuentra en la Landing Page<br>
+       <b>When</b> accede a la sección del equipo<br>
+       <b>Then</b> se muestran las fotografías, nombres completos, roles y especialidad de los integrantes del equipo de desarrollo 
      </td>
    </tr>
   </tbody>
@@ -3992,7 +4003,8 @@ funcionalidades.
        <b>And</b> las reseñas se ordenan de la más reciente a la más antigua<br>
         <br>
         <b>Scenario 2: Resumen de calificaciones</b><br>
-        <b>Given</b> el cliente consulta las reseñas de un producto<br>
+        <b>Given</b> el cliente accede al detalle de un producto con reseñas registradas<br>
+        <b>When</b> consulta el resumen de calificaciones<br>
         <b>Then</b> el sistema presenta la calificación promedio, el número total de reseñas y la distribución de estrellas<br>
         <br>
         <b>Scenario 3: Filtro por calificación</b><br>
@@ -4376,11 +4388,12 @@ funcionalidades.
 <tr>
      <td colspan="4">
        <b>Scenario 1: Ramas del flujo de trabajo</b><br>
-       <b>Given</b> se consultan las ramas de un repositorio del proyecto<br>
+       <b>Given</b> el repositorio del proyecto está disponible en GitHub<br>
+       <b>When</b> un integrante consulta las ramas y las reglas de integración del repositorio<br>
        <b>Then</b> existen las ramas permanentes main y develop<br>
-        <b>And</b> las funcionalidades se desarrollan en ramas feature<br>
-        <b>And</b> la rama main solo recibe cambios mediante pull request con al menos una aprobación<br>
-        <br>
+       <b>And</b> las funcionalidades se desarrollan en ramas feature<br>
+       <b>And</b> la rama main solo recibe cambios mediante pull request con al menos una aprobación<br>
+       <br>
         <b>Scenario 2: Mensajes de commit</b><br>
         <b>Given</b> se revisa el historial de commits de un repositorio<br>
         <b>When</b> se analizan los últimos mensajes registrados<br>
@@ -4494,7 +4507,7 @@ funcionalidades.
    <tr>
      <td colspan="4">
        <b>Como</b> developer,<br>
-       <b>deseo</b> contar con una base de datos PostgreSQL en la nube para persistir la información de usuarios, parcelas, dispositivos y recomendaciones.
+       <b>deseo</b> contar con una base de datos MySQL en la nube para persistir la información de usuarios, parcelas, dispositivos y recomendaciones.
      </td>
    </tr>
 
@@ -5229,9 +5242,7 @@ El Product Backlog consolida y prioriza las 54 historias del proyecto (53 estima
 
 Los porcentajes de la tabla representan esfuerzo estimado sobre 202 SP, no avance funcional, cobertura ni velocidad medida del equipo. HU-OFF01 requiere estimación del equipo.
 
-La captura del tablero y el enlace público del Product Backlog se
-incorporarán cuando el equipo cree el tablero en la herramienta de
-gestión seleccionada.
+El equipo actualizó el tablero de Trello para atender las observaciones recibidas en TB1. La evidencia correspondiente a AV2 debe incorporar el enlace de consulta y una captura de la versión actualizada, manteniendo la relación entre las historias, las tareas, los responsables y sus estados.
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
@@ -5452,10 +5463,8 @@ solución:
         *MVVM + Clean Architecture*, StateFlow para reactividad, inyección
         de dependencias con Hilt/Koin y cliente Retrofit para comunicación
         HTTPS con el backend.
-    2. **Local SQLite / Room Database:** Base de datos embebida en el dispositivo móvil Android.
-        Almacena localmente información previamente obtenida y los datos que requieran sincronización 
-        posterior, permitiendo consultar información disponible cuando no exista conexión y
-        actualizarla cuando se recupere la conectividad.
+    2.  **Local SQLite / Room Database:** Base de datos embebida en el dispositivo Android. 
+        Conserva información previamente descargada para consultar parcelas, sensores y mediciones cuando no existe conexión, mostrando su fecha y antigüedad. La implementación documentada en TB1 permite consultas offline; la sincronización de escrituras requiere una implementación y validación independientes.
     3.  **Web Landing Page (HTML5 / CSS3 / JavaScript):** Sitio web
         institucional responsivo, sin dependencias de frontend ni paso de
         compilación. Presenta el producto, el alcance funcional, los planes
@@ -5465,10 +5474,7 @@ solución:
          Application, Interface e Infrastructure. Expone endpoints REST consumidos por la aplicación móvil
          y utiliza mecanismos de autenticación y autorización basados en JWT.
          La persistencia del backend se gestiona mediante Entity Framework Core.
-    5.  **Relational Database:** Base de datos relacional centralizada utilizada por el backend de TerraTech
-        para persistir la información estructurada de los diferentes Bounded Contexts.
-        El motor de base de datos debe corresponder con el proveedor configurado 
-        en la implementación reutilizada del backend.
+    5.  **Relational Database (MySQL):** Base de datos centralizada utilizada por el backend para persistir la información de los Bounded Contexts. El despliegue documentado en TB1 utiliza MySQL administrado en Aiven y acceso mediante Entity Framework Core.
 
 #### 2.5.3.3. Software Architecture Deployment Diagram
 
@@ -5479,12 +5485,11 @@ protocolos de red y seguridad:
 ![Strategic Context Map](assets/images/strategic-ddd/c4-deployment.svg)
 
 - **Nodos de Infraestructura y Despliegue:**
-    - **Nodo Cliente - Smartphone Android:** Dispositivo móvil que ejecuta la aplicación TerraTech. La aplicación utiliza almacenamiento local mediante Room para conservar información disponible sin conexión y sincronizarla posteriormente cuando exista conectividad.
+    - **Nodo Cliente - Smartphone Android:** Dispositivo que ejecuta la aplicación TerraTech. Utiliza Room para conservar y consultar información previamente descargada cuando no existe conexión. La sincronización de escrituras no forma parte del comportamiento acreditado en el Sprint 1.
 
     - **Nodo Cloud - Infraestructura de despliegue:**
         - **Backend REST API:** Servicio que ejecuta la API ASP.NET Core reutilizada por TerraTech y expone sus endpoints mediante HTTPS.
-        - **Base de datos relacional:** Servicio encargado de persistir la información centralizada utilizada por el backend. El motor y el proveedor de despliegue deberán coincidir con la configuración real del proyecto.
-
+        - **Base de datos relacional:** Servicio MySQL administrado en Aiven que conserva la información centralizada del backend. La conexión y las migraciones se gestionan mediante la configuración del entorno y Entity Framework Core.
     - **Nodo SaaS Externo:** Servicios externos utilizados por TerraTech, como el proveedor de información climática y el servicio seleccionado para el envío de notificaciones push.
 
 ## 2.6. Tactical-Level Domain-Driven Design
@@ -5857,7 +5862,7 @@ la mantenibilidad del sistema.
   <img src="assets/images/cap5/Notification-Db.png" alt="Notification Database Design Diagram" width="650">
 </p>
 
-### 2.6.6. Bounded Context: Shared Bounded
+### 2.6.6. Shared: componentes transversales
 
 #### 2.6.6.1. Domain Layer
 
@@ -6234,7 +6239,7 @@ La Landing Page no pretende simular que todas sus secciones dependen del backend
 - **US11 — Selección de parcela/sensor:** selección de una parcela y consulta de sus dispositivos.
 - **US10 — Indicadores:** consulta de humedad, temperatura y nutrientes con fecha de actualización y aviso de datos desactualizados.
 - **US12 — Histórico:** consulta de humedad de los últimos 7 días, cambio a 30 días y visualización del detalle de una lectura.
-- **Nueva HU — Consulta sin conexión:** consulta de parcelas, sensores y mediciones previamente descargadas, indicando la antigüedad de la información.
+- **HU-OFF01 — Consulta sin conexión:** consulta de parcelas, sensores y mediciones previamente descargadas, indicando la antigüedad de la información.
 
 Se consideran versiones **Desktop Web Browser** y **Mobile Web Browser**, manteniendo el mismo contenido pero modificando la distribución de los componentes según el espacio disponible.
 
@@ -6375,22 +6380,22 @@ El mock-up final presenta el formulario de solicitud de demostración utilizando
 
 ### 3.1.4. Mobile Applications UX/UI Design
 
-El diseño de experiencia de usuario (UX) e interfaz de usuario (UI) para la aplicación móvil de **TerraTech** se encuentra estrictamente delimitado para resolver las necesidades prioritarias del agricultor dentro del alcance de la entrega (TB1 / Sprint 2). La solución tecnológica móvil se enfoca en dos pilares fundamentales: la **gestión de identidad, predios y dispositivos IoT**, y el **monitoreo agronómico en tiempo real con capacidad de consulta resiliente sin conexión**.
+El diseño UX/UI de TerraTech presentado en TB1 corresponde al Sprint 1 y prioriza el recorrido del agricultor: acceso a su cuenta, gestión de perfil y parcelas, asociación de sensores y consulta de indicadores e históricos. La información descargada se conserva para su consulta sin conexión, con fecha y aviso de antigüedad.
 
-El diseño responde a tres principios esenciales:
-1. **Resiliencia operativa en campo rural (Offline-First):** Soporte de almacenamiento local en el dispositivo (SQLite / Room) para garantizar la consulta ininterrumpida de parcelas, sensores y mediciones descargadas previamente, indicando de forma visible la antigüedad de los datos en zonas sin cobertura de red.
-2. **Ergonomía táctil y diseño inclusivo:** Componentes con áreas de contacto mínimas de 48 × 48 dp, contrastes cromáticos adecuados para lectura bajo luz solar directa en campo y flujos optimizados para usuarios con diversos niveles de alfabetización digital.
-3. **Claridad informativa y veracidad de telemetría:** Jerarquía visual enfocada en indicadores agronómicos críticos (humedad %, temperatura del suelo °C y nutrientes N-P-K en ppm), señalando con precisión la fecha y hora de la última sincronización y emitiendo alertas visuales preventivas ante falta de recepción de datos por más de 30 minutos.
+El diseño utiliza tres criterios: navegación comprensible para los usuarios objetivo, controles táctiles accesibles y presentación clara del origen y la actualización de los datos. Las mediciones de demostración identificadas como SIMULATED se distinguen de las mediciones procedentes de hardware.
 
-Las interfaces y flujos implementados cubren de manera exhaustiva las 8 Historias de Usuario priorizadas para el producto móvil:
-- **US06 — Registro:** Creación de cuenta de usuario con validación de nombre, correo electrónico y contraseña confirmada.
-- **US07 — Inicio de sesión:** Autenticación segura mediante tokens JWT, control de credenciales incorrectas, verificación de correo y restricción de acceso a recursos propios.
-- **US09 — Perfil:** Visualización y edición de datos del agricultor y de la parcela (número de teléfono, ubicación y tamaño de terreno).
-- **US17 — Registro de sensor:** Asociación de dispositivos físicos válidos (`TT-XXXXXX`) a una parcela específica con rechazo de códigos inválidos o duplicados.
-- **US11 — Selección de parcela/sensor:** Navegación y filtrado entre parcelas y sus respectivos sensores asociados.
-- **US10 — Indicadores:** Visualización en tiempo real de humedad, temperatura y nutrientes (N, P, K) con timestamp y alerta de datos desactualizados.
-- **US12 — Histórico:** Monitoreo gráfico de humedad a 7 días (por defecto con umbral mínimo de referencia), selector rápido a 30 días y detalle táctil de cada punto.
-- **Nueva HU — Consulta sin conexión:** Acceso a la información previamente almacenada en caché local y banner informativo con la antigüedad de la sincronización.
+El recorrido móvil de referencia comprende:
+
+- **US06 — Registro:** Creación de cuenta y validación de los campos del formulario.
+- **US07 — Inicio de sesión:** Autenticación y mensajes ante credenciales incorrectas.
+- **US09 — Perfil:** Consulta y edición de los datos del agricultor y su terreno.
+- **US17 — Registro de sensor:** Asociación de un dispositivo disponible a una parcela propia y mensajes ante códigos inválidos o ya utilizados.
+- **US11 — Selección de parcela/sensor:** Selección de la parcela y consulta de sus dispositivos.
+- **US10 — Indicadores:** Consulta de humedad, temperatura y nutrientes, con unidades y fecha de la muestra.
+- **US12 — Histórico:** Consulta de humedad de 7 y 30 días y acceso al detalle de una lectura.
+- **HU-OFF01 — Consulta sin conexión:** Acceso a los datos previamente descargados y visualización de su antigüedad.
+
+La evidencia de implementación de TB1 se presenta en 4.2.1. La verificación de correo y la recuperación de contraseña no se acreditan como implementadas en ese incremento. Sus incorporaciones posteriores deben documentarse en el sprint correspondiente. Las actualizaciones de diseño para AV2 se relacionarán con las historias y evidencias del Sprint 2.
 
 #### 3.1.4.1. Mobile Applications Wireframes
 
@@ -6536,9 +6541,9 @@ El diseño de experiencia de usuario contempla formalmente los escenarios de exc
 <p align="center"><em>Figura 3.18. Diagrama de Rutas de Excepción y Contingencia (Unhappy Paths).</em></p>
 
 - **UP1 — Fallos en Registro o Inicio de Sesión (US06 / US07):**
-  - *Caso 1.1 (Registro con correo ya registrado):* Si el agricultor intenta registrarse con un correo ya existente en la base de datos, el formulario bloquea la creación, muestra el mensaje de error *"El correo electrónico ya se encuentra registrado"* y provee un enlace directo para recuperar la contraseña o iniciar sesión.
+  - *Caso 1.1 (Registro con correo ya registrado):* Si el agricultor intenta registrarse con un correo existente, el sistema rechaza la creación de la cuenta y muestra el mensaje correspondiente. La recuperación de contraseña se documentará en el incremento en el que se implemente.
   - *Caso 1.2 (Contraseñas no coincidentes o con longitud menor a 6 caracteres):* La interfaz valida en tiempo real los campos; si las contraseñas difieren o no alcanzan la longitud mínima requerida, se desactivan los controles de envío y se despliegan mensajes de advertencia en color rojo debajo de los campos afectados.
-  - *Caso 1.3 (Credenciales incorrectas o correo no verificado):* Si las credenciales no coinciden, se emite el mensaje *"Correo o contraseña incorrectos"* sin exponer información sensible. Si el usuario no ha verificado su cuenta por correo, se presenta una notificación con la opción de reenviar el enlace de activación.
+  - *Caso 1.3 (Credenciales incorrectas):* Si las credenciales no coinciden, el sistema informa que el correo o la contraseña son incorrectos y no permite iniciar sesión. La verificación de correo y el reenvío de enlaces de activación no se presentan como funcionalidades implementadas en TB1.
 
 - **UP2 — Registro de Sensor con Código Inválido o Duplicado (US17):**
   - *Caso 2.1 (Formato inválido o código inexistente):* Si el código ingresado no cumple con la nomenclatura `TT-XXXXXX` o no figura en el inventario global de hardware de TerraTech, el sistema rechaza la solicitud indicando *"Código de sensor no válido o no reconocido en el sistema"*.
@@ -6606,9 +6611,12 @@ GitFlow adaptada para entregas incrementales y trabajo colaborativo iterativo.
 
 - Repositorios del Proyecto 
 
-  - Terratech-report: Repositorio de documentación oficial del proyecto en Markdown.   
-  - Terratech-mobile: Repositorio del código fuente de la aplicación nativa en Android/Kotlin.   
-  - Terratech-backend: Repositorio del servicio Web API REST desarrollado en .NET / C#.
+- **Repositorios del proyecto**
+
+    - [terratech-project-report](https://github.com/AppMovil-Dato/terratech-project-report): documentación oficial del proyecto en Markdown.
+    - [App-Android-Terratech](https://github.com/AppMovil-Dato/App-Android-Terratech): código fuente de la aplicación nativa Android.
+    - [BackEnd-TerraTech](https://github.com/AppMovil-Dato/BackEnd-TerraTech): código fuente del backend REST desarrollado en C# y ASP.NET Core.
+    - [LandingPage-TerraTech](https://github.com/AppMovil-Dato/LandingPage-TerraTech): código fuente de la Landing Page.
 
 - **GitFlow WorkFlow**
 
@@ -6884,12 +6892,10 @@ La matriz LACX relaciona la responsabilidad registrada en el informe con los asp
 | Delgado Perez, James Caleb | JAmsy06 | — | — | — | — | L | — | — |
 | Barba Estrada, Bryan Eduardo | bry4nbe | — | — | — | — | — | L | L |
 
-La matriz de implementación de la Landing Page distingue el código del diseño:
-La tecnología efectiva es **C#, ASP.NET Core .NET 10, Entity Framework Core y MySQL** para backend; **Kotlin, Compose, MVVM/StateFlow, Hilt, Retrofit, Room y DataStore** para Android; **HTML5, CSS3 y JavaScript sin dependencias de frontend**, con diccionarios JSON para el bilingüismo ES/EN, para la Landing Page. Las menciones anteriores a Spring Security, JPA/Hibernate, Spring Data y PostgreSQL no describían esta implementación y se corrigen en este Sprint.
-
+La tecnología documentada para el incremento es **C#, ASP.NET Core .NET 10, Entity Framework Core y MySQL** en backend; **Kotlin, Jetpack Compose, MVVM/StateFlow, Hilt, Retrofit, Room y DataStore** en Android; y **HTML5, CSS3 y JavaScript** en la Landing Page, con diccionarios JSON para el contenido ES/EN.
 #### 4.2.1.3. Sprint Backlog 1
 
-El backlog descompone el recorrido en tareas comprobables. La captura y URL pública del tablero quedan pendientes: no se creó una imagen de tablero ni se dedujeron horas a partir de commits. **NR** indica estimación en horas no registrada. **Done** identifica la tarea técnica comprobada; **To-Review** reserva aceptación del equipo o evidencia de entrega; **To-do** identifica trabajo que no se presenta como realizado. Responsable **RF**: Rúbens Fitzgerald Bendezú Navarro (`Lucemz`).
+El Sprint Backlog descompone el recorrido de TB1 en tareas comprobables y conserva los estados registrados para ese incremento. **NR** indica que la estimación en horas no fue registrada; **Done**, una tarea técnica comprobada; **To-Review**, una tarea pendiente de revisión; y **To-do**, una tarea pendiente de ejecución. La actualización del tablero realizada posteriormente se documentará como parte del levantamiento de observaciones en AV2. La sigla **RF** identifica a Rúbens Fitzgerald Bendezú Navarro (`Lucemz`).
 
 | User Story Id | Title | Task Id | Title / Description | Estimation (Hours) | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -6919,7 +6925,7 @@ El backend heredado se amplió para el recorrido móvil: identidad JWT estándar
 
 Android se organiza bajo `iam`, `profile`, `monitoring` y `core`, con capas `domain`, `application`, `infrastructure` y `presentation` en los contextos de negocio. ViewModels exponen StateFlow; los casos de uso aplican reglas de dominio; Retrofit, DTOs, entidades/DAOs Room y repositorios concretos permanecen en infraestructura. Hilt resuelve dependencias. Room almacena consultas y DataStore preferencias/selección y material de sesión protegido; no se persisten contraseñas.
 
-**Repositorios:** [backend](https://github.com/AppMovil-Dato/BackEnd-TerraTech), [Android](https://github.com/AppMovil-Dato/App-Android-Terratech), [Landing Page](https://github.com/AppMovil-Dato/LandingPage-TerraTech) e [informe](https://github.com/AppMovil-Dato/terratech-project-report). Los commits siguientes se inspeccionaron en los repositorios; cuando no existe cuerpo de mensaje se indica «Sin cuerpo» en lugar de inventarlo.
+**Repositorios:** [backend](https://github.com/AppMovil-Dato/BackEnd-TerraTech), [Android](https://github.com/AppMovil-Dato/App-Android-Terratech), [Landing Page](https://github.com/AppMovil-Dato/LandingPage-TerraTech) e [informe](https://github.com/AppMovil-Dato/terratech-project-report). La siguiente tabla relaciona los commits del incremento con su repositorio, rama, mensaje y fecha. «Sin cuerpo» indica que el commit no contiene un mensaje adicional.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date, Lima) |
 | --- | --- | --- | --- | --- | --- |
@@ -6994,7 +7000,7 @@ Las siguientes capturas se tomaron el 4 de octubre de 2026 del [sitio publicado 
 | --- | --- |
 | <img src="assets/images/cap4/sprint1/landing-desktop.png" alt="Landing Page publicada de TerraTech en viewport de escritorio" width="220"> | <img src="assets/images/cap4/sprint1/landing-mobile.png" alt="Landing Page publicada de TerraTech en viewport móvil con el menú hamburguesa abierto" width="220"> |
 
-**Video de navegación:** existe una grabación local `artifacts/TerraTech-TB1-emulator.mp4` en el proyecto Android, excluida de Git. Falta publicar el video narrado del equipo en OneDrive/YouTube y colocar el enlace accesible; no se sustituye por una URL ficticia. Se requieren también capturas de registro/confirmación y del recorrido actual en teléfono; ver [detalle de evidencia pendiente](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md).
+**Video de navegación:** se registra una grabación local en `artifacts/TerraTech-TB1-emulator.mp4`, dentro del proyecto Android. Queda pendiente incorporar el enlace accesible al video narrado del equipo, junto con las capturas de registro y confirmación y la evidencia del recorrido en teléfono. El detalle se conserva en el [checklist de cierre del Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md).
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
@@ -7044,7 +7050,7 @@ Las capturas previas en `assets/images/cap4/deployment-evidence-*.png` y `databa
 
 Figura S1-D1. Captura del equipo del 04/10/2026; consola de observabilidad de Cloud Run. Se mantiene la zona horaria visible de la consola, sin confundirla con la hora de reunión del Sprint.
 
-**Evaluación del hito:** backend publicado y pantallas core implementadas. El requisito «70 % del backend desplegado» debe evaluarse con un denominador funcional acordado y la [matriz backend](https://github.com/AppMovil-Dato/BackEnd-TerraTech/blob/ab66a7f/docs/TB1_MATRIX.md), diferenciando el alcance TB1 del backlog completo. No se afirma 70 % por tener 77.21 % de cobertura ni por contar endpoints; faltan evidencia de Landing Page, capturas de despliegue y video/aceptación del equipo para cerrar toda la entrega.
+**Evaluación del hito TB1:** se registra el backend publicado y la implementación de las pantallas core del recorrido agrícola. La implementación de la Landing Page y su URL se documentan en 4.2.1.4 y 4.2.1.9; los pendientes de US02 y US04 se conservan en el Sprint Backlog. Las pruebas y capturas acreditan los entornos y casos descritos. La evaluación del porcentaje funcional requiere relacionar el alcance del backend con sus criterios de aceptación y evidencias, sin utilizar la cobertura de código como sustituto.
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
@@ -7062,7 +7068,206 @@ El incremento reutiliza el backend anterior y los artefactos de dominio y UI del
 
 **Mejoras para el próximo sprint:** registrar reunión/estimaciones antes de implementar; vincular tasks del board con commits y revisiones; completar la matriz LACX con acuerdos del equipo; añadir capturas de Contributors/Network/Pull Requests por cada repositorio; revisar el porcentaje funcional con criterios ponderados; y ejecutar el recorrido en teléfono sobre el servicio publicado. Un número de commits no mide esfuerzo ni acredita por sí solo participación de todos en cada producto.
 
-El detalle de capturas y datos faltantes está en [checklist de cierre Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md). Esta documentación no presenta actas, analíticos, videos ni pruebas físicas inexistentes como evidencia completada.
+El [checklist de cierre del Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md) reúne las evidencias pendientes al corte de TB1. Su resolución posterior se relacionará con las correcciones y evidencias incorporadas en AV2.
+
+
+#### 4.2.2. Sprint 2
+
+El Sprint 2 corresponde al incremento de TerraTech presentado en AV2. Continúa el recorrido agrícola desarrollado durante TB1 e incorpora las ampliaciones seleccionadas por el equipo, su integración con la aplicación móvil y el levantamiento de las observaciones de la entrega anterior.
+
+El trabajo comprende la evolución de las funcionalidades de acceso, monitoreo, mapa de fertilidad, configuración de sensores y servicios relacionados con la información agrícola. La selección definitiva de historias se consolida en el Sprint Backlog y debe mantener correspondencia con el Product Backlog actualizado.
+
+El incremento reutiliza el backend y la Landing Page existentes. Las modificaciones del backend se orientan a completar los servicios requeridos por los recorridos móviles, manteniendo la organización por Bounded Contexts y las capas de Domain, Application, Infrastructure e Interfaces.
+
+La aceptación de AV2 requiere comprobar el backend público y su documentación, demostrar las principales funcionalidades core de la aplicación y presentar las primeras versiones de los videos de validación, producto y equipo. El avance se acredita mediante las evidencias de implementación, pruebas, ejecución y despliegue descritas en los siguientes apartados.
+
+##### 4.2.2.1. Sprint Planning 2
+
+La planificación del Sprint 2 parte de los resultados de TB1 y de las capacidades necesarias para ampliar el recorrido del agricultor. El equipo debe relacionar las historias seleccionadas con las tareas de implementación móvil, backend, pruebas y documentación.
+
+La selección considera las dependencias entre componentes. Una pantalla disponible en la aplicación no determina por sí sola la aceptación de una historia: también deben comprobarse sus operaciones, persistencia, manejo de errores y acceso a los recursos correspondientes al usuario.
+
+| Campo | Registro |
+| --- | --- |
+| Sprint # | Sprint 2 — AV2 |
+| Date | POR COMPLETAR con la fecha de la planificación. |
+| Time | POR COMPLETAR con la hora registrada. |
+| Location | POR COMPLETAR con el lugar o plataforma utilizados. |
+| Prepared By | POR COMPLETAR con el integrante responsable del registro. |
+| Attendees | POR COMPLETAR con los participantes de la planificación. |
+| Sprint 1 Review Summary | En TB1 se documentó el recorrido de registro, inicio de sesión, perfil, parcelas, asociación de sensores, indicadores, histórico y consulta de información descargada sin conexión. Se incorporaron evidencias de ejecución en emulador, pruebas técnicas y publicación del backend. El Sprint 2 continúa sobre esa base y registra por separado las ampliaciones y correcciones posteriores. |
+| Sprint 1 Retrospective Summary | Las observaciones posteriores a TB1 identificaron la necesidad de corregir contenido mal integrado en el informe y mejorar la organización y trazabilidad del tablero. El equipo actualizó Trello; su evidencia debe incorporarse al reporte. También se requiere mantener coherencia entre requisitos, diseño, código y resultados de las pruebas. |
+| Sprint 2 Goal | Propuesta para consolidación del equipo: permitir al agricultor utilizar los recorridos core seleccionados para AV2 sobre sus propios recursos, integrando la aplicación móvil con el backend público y ampliando la consulta e interpretación de la información agrícola. |
+| Métrica de cumplimiento | Criterios de aceptación aprobados respecto del total seleccionado para el sprint, con evidencia de implementación, ejecución y pruebas sobre la versión evaluada. |
+| Historias seleccionadas | POR COMPLETAR con los IDs del Trello y Product Backlog actualizados. |
+| Sprint 2 Velocity | POR COMPLETAR con la capacidad comprometida registrada por el equipo. |
+| Sum of Story Points | POR COMPLETAR con la suma de las historias efectivamente seleccionadas. |
+
+La planificación anterior del informe asignaba TS05, US08, TS08 y SP02 al Sprint 2. La incorporación de capacidades adelantadas desde otras iteraciones debe registrarse como una actualización de la planificación, conservando sus identificadores y estimaciones.
+
+**Criterios de cierre del incremento:**
+
+- Las historias seleccionadas cumplen sus criterios de aceptación.
+- Los cambios están integrados en las ramas correspondientes.
+- La aplicación consume los servicios del entorno evaluado.
+- Las operaciones conservan las reglas de autorización y propiedad de los recursos.
+- Las pruebas y sus resultados identifican la versión del código y el entorno utilizado.
+- La documentación de los servicios corresponde a la implementación publicada.
+- Las evidencias del informe permiten reconstruir los recorridos presentados.
+
+##### 4.2.2.2. Aspect Leaders and Collaborators
+
+La matriz Leadership-and-Collaboration Matrix relaciona los aspectos del Sprint 2 con los integrantes que los lideran y quienes colaboran en su desarrollo. Las asignaciones deben coincidir con las tareas del tablero y los aportes registrados en los repositorios.
+
+**L** identifica al líder de un aspecto y **C** a sus colaboradores. Las responsabilidades del Sprint 1 no se trasladan automáticamente al Sprint 2.
+
+| Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias |
+| --- | --- | --- | --- | --- | --- |
+| Barba Estrada, Bryan Eduardo | bry4nbe | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Delgado Perez, James Caleb | JAmsy06 | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+Cada integrante aporta las evidencias de las tareas realizadas. La consolidación de una sección del informe no sustituye la identificación de los responsables de implementación, pruebas o despliegue.
+
+##### 4.2.2.3. Sprint Backlog 2
+
+El Sprint Backlog organiza las historias seleccionadas en tareas verificables. Incluye su identificador, descripción, estimación, responsable y estado, manteniendo correspondencia con el tablero de Trello actualizado.
+
+Los estados utilizados son **To-do**, **In-Process**, **To-Review** y **Done**. La aceptación de una tarea requiere comprobar su resultado y relacionarlo con la evidencia correspondiente.
+
+**Enlace al tablero del Sprint 2:** POR COMPLETAR.
+
+**Captura del tablero actualizado:** POR COMPLETAR.
+
+| User Story ID | Title | Task ID | Title | Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+El registro debe diferenciar las capacidades heredadas del Sprint 1, las ampliaciones implementadas durante el Sprint 2 y las correcciones derivadas de la revisión de TB1. Las historias trasladadas desde otra iteración deben actualizarse también en el Product Backlog.
+
+##### 4.2.2.4. Development Evidence for Sprint Review
+
+La evidencia de desarrollo relaciona los cambios del Sprint 2 con las historias y productos afectados. Se conserva la arquitectura del proyecto reutilizado y se documentan las ampliaciones realizadas en la aplicación móvil y el backend.
+
+Entre los avances registrados durante la continuidad del proyecto se encuentran el trabajo sobre el mapa de fertilidad, la configuración de umbrales y la integración de funcionalidades de monitoreo. La consolidación del incremento debe identificar qué capacidades están integradas y cuáles continúan en desarrollo o revisión.
+
+En el backend se documentan los cambios en entidades, reglas de dominio, servicios de aplicación, repositorios, recursos REST y persistencia que correspondan a cada historia. En Android se identifican los cambios en navegación, pantallas, estado, consumo de servicios y almacenamiento local.
+
+La siguiente tabla debe incorporar los commits del incremento, diferenciando implementación, correcciones e integración.
+
+| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| AppMovil-Dato/App-Android-Terratech | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| AppMovil-Dato/BackEnd-TerraTech | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+Los cambios de la Landing Page se incorporarán a esta tabla cuando formen parte del incremento. La documentación del informe se registra en las evidencias de colaboración correspondientes.
+
+##### 4.2.2.5. Testing Suite Evidence for Sprint Review
+
+Las pruebas del Sprint 2 comprueban los criterios de las historias seleccionadas y las regresiones sobre las funcionalidades existentes. Cada resultado debe identificar el commit o versión evaluada, el entorno y la fecha de ejecución.
+
+Las comprobaciones previas del proyecto incluyen navegación del mapa de fertilidad y operaciones de guardado y restablecimiento de umbrales. Estos antecedentes orientan las pruebas de regresión, pero sus resultados deben contrastarse con la versión integrada que se presentará en AV2.
+
+La evaluación comprende los siguientes aspectos, según las historias seleccionadas:
+
+- Validaciones de los datos de entrada.
+- Persistencia y recuperación de la información.
+- Autorización y acceso a recursos propios.
+- Respuestas ante datos inexistentes o inválidos.
+- Correspondencia entre las respuestas del backend y el estado mostrado en Android.
+- Conservación del recorrido de consulta offline implementado en el Sprint 1.
+- Manejo de errores de conexión y de respuestas del servicio.
+
+| Historia / criterio | Tipo de prueba | Clase, archivo o caso | Versión y entorno | Resultado | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+Para las pruebas de aceptación bajo enfoque BDD se incorporan los archivos `.feature`, sus Steps y la relación con las historias evaluadas.
+
+| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+Las pruebas técnicas se distinguen de las sesiones de validación con usuarios. Sus resultados se complementan, pero evalúan aspectos diferentes del producto.
+
+##### 4.2.2.6. Execution Evidence for Sprint Review
+
+La evidencia de ejecución presenta los recorridos disponibles en la versión evaluada para AV2. Las capturas deben mostrar la interacción del usuario y el resultado de las operaciones, identificando las historias relacionadas.
+
+El recorrido conserva las funcionalidades de acceso, perfil, parcelas y consulta de información de TB1, e incorpora las ampliaciones aceptadas durante el Sprint 2.
+
+Para cada funcionalidad se documentan el dispositivo o emulador utilizado, la versión de la aplicación, el entorno del backend y el resultado observado.
+
+| Recorrido | Historia relacionada | Dispositivo / versión | Backend utilizado | Resultado | Captura o marca temporal |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+**Video de ejecución del Sprint 2:** POR COMPLETAR.
+
+**Duración:** POR COMPLETAR.
+
+El video debe explicar las funcionalidades incorporadas respecto de TB1 y mostrar su comportamiento durante la navegación. Cuando se utilicen datos simulados, su origen se identifica en la demostración.
+
+##### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+La documentación de servicios describe los endpoints utilizados por las funcionalidades del Sprint 2. Se mantiene mediante OpenAPI y debe corresponder a la versión del backend publicada para AV2.
+
+Para cada operación se identifican su método HTTP, ruta, parámetros, cuerpo de solicitud, respuestas y requisitos de autenticación. Los ejemplos y capturas deben mostrar la interacción con el servicio sin exponer credenciales ni tokens.
+
+| Historia | Método y ruta | Parámetros / cuerpo | Respuestas | Documentación pública | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+**URL de OpenAPI de la versión evaluada:** POR COMPLETAR.
+
+**Repositorio y commits relacionados con la documentación:** POR COMPLETAR.
+
+La evaluación del cumplimiento funcional del backend se registra mediante la siguiente matriz:
+
+| Requisito / criterio del backend | Endpoint o servicio | Implementación | Prueba | Despliegue | Resultado |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+La matriz permite identificar los requisitos implementados, comprobados y disponibles en el entorno público. La cobertura de código y el porcentaje de tráfico de una revisión se registran como indicadores independientes del cumplimiento funcional.
+
+##### 4.2.2.8. Software Deployment Evidence for Sprint Review
+
+El despliegue del Sprint 2 debe vincular las versiones publicadas con las funcionalidades y pruebas presentadas en AV2. La infraestructura documentada en TB1 utiliza GitHub Pages para la Landing Page, Google Cloud Run para el backend y MySQL administrado en Aiven.
+
+La evidencia de AV2 debe comprobar la configuración vigente y la versión efectivamente publicada. Para el backend se identifican el commit o imagen desplegada, la revisión activa, las migraciones aplicadas y el resultado de acceso a los servicios.
+
+La aplicación utilizada en la demostración debe consumir el entorno identificado en el informe. Las pruebas contra un servidor local se registran separadamente de las realizadas contra el servicio público.
+
+| Producto | URL / entorno | Commit o revisión | Fecha de verificación | Resultado | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| Landing Page | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Backend y OpenAPI | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Base de datos y migraciones | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Aplicación evaluada | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+El cierre del despliegue se relaciona con la matriz de requisitos y pruebas del backend, de modo que la publicación del servicio y su cumplimiento funcional queden documentados.
+
+##### 4.2.2.9. Team Collaboration Insights during Sprint
+
+La colaboración del Sprint 2 se documenta mediante las tareas del tablero, los aportes en los repositorios y las revisiones de integración. Se diferencian las responsabilidades de implementación, pruebas, documentación y consolidación de evidencias.
+
+Los integrantes trabajan sobre ramas destinadas a sus aportes y coordinan la integración de cambios que afectan componentes compartidos. Las correcciones del informe mantienen coherencia con los cambios del código y las evidencias del incremento.
+
+Se incorporan capturas de contribuciones, ramas y revisiones de los productos correspondientes al sprint, indicando el período representado.
+
+| Producto | Evidencia de colaboración | Período | Aportes relacionados |
+| --- | --- | --- | --- |
+| Informe | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Aplicación móvil | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Backend | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Landing Page, cuando corresponda | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+La interpretación de los analíticos relaciona las contribuciones con las tareas y resultados del sprint. Las gráficas acumuladas se identifican como tales para distinguirlas de las contribuciones realizadas exclusivamente durante esta iteración.
+
+La retrospectiva final del Sprint 2 registrará los resultados de la integración, las dificultades encontradas y las acciones de mejora acordadas para la siguiente iteración.
+
 
 
 ### 4.3. Validation Interviews
@@ -7251,7 +7456,7 @@ El cierre de la sesión comprende la consulta del histórico de humedad de los �
 
 #### 4.3.3. Evaluaciones según heurísticas
 
-La evaluación de usabilidad de TerraTech se basa en los **10 principios heurísticos de Jakob Nielsen** y sigue los recorridos definidos en el diseño de las entrevistas para TB1. Considera la comprensión de la propuesta de valor, la facilidad para encontrar las funciones y la ejecución de las tareas contempladas en la Landing Page y la aplicación móvil Android..
+La evaluación de la experiencia de usuario de TerraTech toma como referencia los diez principios heurísticos de Jakob Nielsen y el formato del Anexo E del enunciado. Considera usabilidad, diseño inclusivo y arquitectura de información en los recorridos definidos para la Landing Page y la aplicación móvil Android.
 
 Las heurísticas consideradas son las siguientes:
 
@@ -7266,7 +7471,7 @@ Las heurísticas consideradas son las siguientes:
 9. Ayuda para reconocer, diagnosticar y recuperarse de errores.
 10. Ayuda y documentación.
 
-El registro de cada entrevista distingue si las tareas se completan sin ayuda, con ayuda o si no pueden completarse. El análisis contempla las dificultades observadas, los comentarios y las sugerencias de los participantes, relacionando cada hallazgo con el flujo evaluado y la heurística correspondiente. La revisión presta especial atención a los mensajes de registro, inicio de sesión y asociación de sensores, así como a la selección de parcelas, la edición del perfil y la consulta de indicadores e históricos.
+Para cada entrevista se debe registrar si las tareas se completan sin ayuda, con ayuda o si no pueden completarse. Cada hallazgo debe relacionarse con el flujo evaluado, la evidencia de la sesión y la heurística o principio correspondiente. La evaluación debe incluir una tabla de problemas con severidad, descripción, captura y recomendación, siguiendo el formato del Anexo E.
 
 La evaluación también considera si los participantes identifican la fecha de actualización de los datos, comprenden los avisos de información desactualizada y reconocen la antigüedad de las mediciones disponibles sin conexión. Los resultados constituyen la base para priorizar mejoras en la navegación, los mensajes y la presentación de la información dentro del alcance de TB1.
 
@@ -7321,7 +7526,7 @@ La evaluación también considera si los participantes identifican la fecha de a
 
 ### TB1 - Recomendaciones para el roadmap
 
-1. **Cerrar la aceptación del Sprint 1:** completar acta y tablero, ratificar responsables/estimaciones, incorporar evidencia de Landing Page publicada, video y ejecución en teléfono con reapertura offline. Usar la matriz de historias y criterios para evaluar el 70 % funcional del backend exigido por el hito; la cobertura de líneas no lo reemplaza.
+1. **Completar la trazabilidad del cierre del Sprint 1:** incorporar la evidencia del tablero actualizado y relacionar los pendientes históricos con su resolución en AV2. Mantener las referencias a la Landing Page publicada y completar las evidencias de ejecución y revisión que correspondan. El cumplimiento funcional del backend se evaluará mediante requisitos, criterios de aceptación y pruebas; la cobertura de código se reportará como un indicador independiente.
 2. **Medir usabilidad con el protocolo de 4.3:** consolidar tareas completadas sin ayuda/con ayuda/no completadas, tiempos y hallazgos por heurística, dispositivo y entorno. Priorizar mensajes y navegación con esos resultados; distinguir una entrevista de usabilidad de la medición de adopción regular de H-02.
 3. **Validar telemetría antes de atribuir beneficios agronómicos:** incorporar sensores reales y comprobar unidades, fechas, continuidad y calibración. Definir una evaluación de campo con consumo de agua, costos de fertilización y línea base para H-01/H-04; no extrapolar mejoras económicas desde datos simulados.
 4. **Revisar las siguientes iteraciones con evidencia:** priorizar únicamente capacidades acordadas del backlog y métricas medibles; mantener fuera del TB1 IA y recomendaciones, y reevaluar las hipótesis cuyo alcance requiera esas capacidades. La consulta offline de lectura ya implementada se distingue de una futura sincronización de escrituras.
