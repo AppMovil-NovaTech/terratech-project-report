@@ -7068,7 +7068,7 @@ El incremento reutiliza el backend anterior y los artefactos de dominio y UI del
 
 **Mejoras para el próximo sprint:** registrar reunión/estimaciones antes de implementar; vincular tasks del board con commits y revisiones; completar la matriz LACX con acuerdos del equipo; añadir capturas de Contributors/Network/Pull Requests por cada repositorio; revisar el porcentaje funcional con criterios ponderados; y ejecutar el recorrido en teléfono sobre el servicio publicado. Un número de commits no mide esfuerzo ni acredita por sí solo participación de todos en cada producto.
 
-El detalle de capturas y datos faltantes está en [checklist de cierre Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md). Esta documentación no presenta actas, analíticos, videos ni pruebas físicas inexistentes como evidencia completada.
+El [checklist de cierre del Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md) reúne las evidencias pendientes al corte de TB1. Su resolución posterior se relacionará con las correcciones y evidencias incorporadas en AV2.
 
 
 #### 4.2.2. Sprint 2
