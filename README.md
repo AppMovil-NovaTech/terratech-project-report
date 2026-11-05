@@ -7237,6 +7237,23 @@ La evaluación del cumplimiento funcional del backend se registra mediante la si
 
 La matriz permite identificar los requisitos implementados, comprobados y disponibles en el entorno público. La cobertura de código y el porcentaje de tráfico de una revisión se registran como indicadores independientes del cumplimiento funcional.
 
+##### 4.2.2.8. Software Deployment Evidence for Sprint Review
+
+El despliegue del Sprint 2 debe vincular las versiones publicadas con las funcionalidades y pruebas presentadas en AV2. La infraestructura documentada en TB1 utiliza GitHub Pages para la Landing Page, Google Cloud Run para el backend y MySQL administrado en Aiven.
+
+La evidencia de AV2 debe comprobar la configuración vigente y la versión efectivamente publicada. Para el backend se identifican el commit o imagen desplegada, la revisión activa, las migraciones aplicadas y el resultado de acceso a los servicios.
+
+La aplicación utilizada en la demostración debe consumir el entorno identificado en el informe. Las pruebas contra un servidor local se registran separadamente de las realizadas contra el servicio público.
+
+| Producto | URL / entorno | Commit o revisión | Fecha de verificación | Resultado | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| Landing Page | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Backend y OpenAPI | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Base de datos y migraciones | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Aplicación evaluada | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+El cierre del despliegue se relaciona con la matriz de requisitos y pruebas del backend, de modo que la publicación del servicio y su cumplimiento funcional queden documentados.
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
