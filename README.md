@@ -4003,7 +4003,8 @@ funcionalidades.
        <b>And</b> las reseñas se ordenan de la más reciente a la más antigua<br>
         <br>
         <b>Scenario 2: Resumen de calificaciones</b><br>
-        <b>Given</b> el cliente consulta las reseñas de un producto<br>
+        <b>Given</b> el cliente accede al detalle de un producto con reseñas registradas<br>
+        <b>When</b> consulta el resumen de calificaciones<br>
         <b>Then</b> el sistema presenta la calificación promedio, el número total de reseñas y la distribución de estrellas<br>
         <br>
         <b>Scenario 3: Filtro por calificación</b><br>
