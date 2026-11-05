@@ -4507,7 +4507,7 @@ funcionalidades.
    <tr>
      <td colspan="4">
        <b>Como</b> developer,<br>
-       <b>deseo</b> contar con una base de datos PostgreSQL en la nube para persistir la información de usuarios, parcelas, dispositivos y recomendaciones.
+       <b>deseo</b> contar con una base de datos MySQL en la nube para persistir la información de usuarios, parcelas, dispositivos y recomendaciones.
      </td>
    </tr>
 
