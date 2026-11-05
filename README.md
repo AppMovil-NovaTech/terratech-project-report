@@ -7136,6 +7136,22 @@ La matriz Leadership-and-Collaboration Matrix relaciona los aspectos del Sprint 
 
 Cada integrante aporta las evidencias de las tareas realizadas. La consolidación de una sección del informe no sustituye la identificación de los responsables de implementación, pruebas o despliegue.
 
+##### 4.2.2.3. Sprint Backlog 2
+
+El Sprint Backlog organiza las historias seleccionadas en tareas verificables. Incluye su identificador, descripción, estimación, responsable y estado, manteniendo correspondencia con el tablero de Trello actualizado.
+
+Los estados utilizados son **To-do**, **In-Process**, **To-Review** y **Done**. La aceptación de una tarea requiere comprobar su resultado y relacionarlo con la evidencia correspondiente.
+
+**Enlace al tablero del Sprint 2:** POR COMPLETAR.
+
+**Captura del tablero actualizado:** POR COMPLETAR.
+
+| User Story ID | Title | Task ID | Title | Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+El registro debe diferenciar las capacidades heredadas del Sprint 1, las ampliaciones implementadas durante el Sprint 2 y las correcciones derivadas de la revisión de TB1. Las historias trasladadas desde otra iteración deben actualizarse también en el Product Backlog.
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
