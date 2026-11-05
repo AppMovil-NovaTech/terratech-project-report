@@ -7254,6 +7254,27 @@ La aplicación utilizada en la demostración debe consumir el entorno identifica
 
 El cierre del despliegue se relaciona con la matriz de requisitos y pruebas del backend, de modo que la publicación del servicio y su cumplimiento funcional queden documentados.
 
+##### 4.2.2.9. Team Collaboration Insights during Sprint
+
+La colaboración del Sprint 2 se documenta mediante las tareas del tablero, los aportes en los repositorios y las revisiones de integración. Se diferencian las responsabilidades de implementación, pruebas, documentación y consolidación de evidencias.
+
+Los integrantes trabajan sobre ramas destinadas a sus aportes y coordinan la integración de cambios que afectan componentes compartidos. Las correcciones del informe mantienen coherencia con los cambios del código y las evidencias del incremento.
+
+Se incorporan capturas de contribuciones, ramas y revisiones de los productos correspondientes al sprint, indicando el período representado.
+
+| Producto | Evidencia de colaboración | Período | Aportes relacionados |
+| --- | --- | --- | --- |
+| Informe | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Aplicación móvil | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Backend | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Landing Page, cuando corresponda | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+La interpretación de los analíticos relaciona las contribuciones con las tareas y resultados del sprint. Las gráficas acumuladas se identifican como tales para distinguirlas de las contribuciones realizadas exclusivamente durante esta iteración.
+
+La retrospectiva final del Sprint 2 registrará los resultados de la integración, las dificultades encontradas y las acciones de mejora acordadas para la siguiente iteración.
+
+
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
