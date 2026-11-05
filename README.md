@@ -6239,7 +6239,7 @@ La Landing Page no pretende simular que todas sus secciones dependen del backend
 - **US11 — Selección de parcela/sensor:** selección de una parcela y consulta de sus dispositivos.
 - **US10 — Indicadores:** consulta de humedad, temperatura y nutrientes con fecha de actualización y aviso de datos desactualizados.
 - **US12 — Histórico:** consulta de humedad de los últimos 7 días, cambio a 30 días y visualización del detalle de una lectura.
-- **Nueva HU — Consulta sin conexión:** consulta de parcelas, sensores y mediciones previamente descargadas, indicando la antigüedad de la información.
+- **HU-OFF01 — Consulta sin conexión:** consulta de parcelas, sensores y mediciones previamente descargadas, indicando la antigüedad de la información.
 
 Se consideran versiones **Desktop Web Browser** y **Mobile Web Browser**, manteniendo el mismo contenido pero modificando la distribución de los componentes según el espacio disponible.
 
