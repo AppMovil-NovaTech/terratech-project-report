@@ -7050,7 +7050,7 @@ Las capturas previas en `assets/images/cap4/deployment-evidence-*.png` y `databa
 
 Figura S1-D1. Captura del equipo del 04/10/2026; consola de observabilidad de Cloud Run. Se mantiene la zona horaria visible de la consola, sin confundirla con la hora de reunión del Sprint.
 
-**Evaluación del hito:** backend publicado y pantallas core implementadas. El requisito «70 % del backend desplegado» debe evaluarse con un denominador funcional acordado y la [matriz backend](https://github.com/AppMovil-Dato/BackEnd-TerraTech/blob/ab66a7f/docs/TB1_MATRIX.md), diferenciando el alcance TB1 del backlog completo. No se afirma 70 % por tener 77.21 % de cobertura ni por contar endpoints; faltan evidencia de Landing Page, capturas de despliegue y video/aceptación del equipo para cerrar toda la entrega.
+**Evaluación del hito TB1:** se registra el backend publicado y la implementación de las pantallas core del recorrido agrícola. La implementación de la Landing Page y su URL se documentan en 4.2.1.4 y 4.2.1.9; los pendientes de US02 y US04 se conservan en el Sprint Backlog. Las pruebas y capturas acreditan los entornos y casos descritos. La evaluación del porcentaje funcional requiere relacionar el alcance del backend con sus criterios de aceptación y evidencias, sin utilizar la cobertura de código como sustituto.
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
