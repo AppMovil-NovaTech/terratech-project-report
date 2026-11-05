@@ -5862,7 +5862,7 @@ la mantenibilidad del sistema.
   <img src="assets/images/cap5/Notification-Db.png" alt="Notification Database Design Diagram" width="650">
 </p>
 
-### 2.6.6. Bounded Context: Shared Bounded
+### 2.6.6. Shared: componentes transversales
 
 #### 2.6.6.1. Domain Layer
 
