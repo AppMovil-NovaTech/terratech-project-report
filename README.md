@@ -7169,6 +7169,34 @@ La siguiente tabla debe incorporar los commits del incremento, diferenciando imp
 
 Los cambios de la Landing Page se incorporarán a esta tabla cuando formen parte del incremento. La documentación del informe se registra en las evidencias de colaboración correspondientes.
 
+##### 4.2.2.5. Testing Suite Evidence for Sprint Review
+
+Las pruebas del Sprint 2 comprueban los criterios de las historias seleccionadas y las regresiones sobre las funcionalidades existentes. Cada resultado debe identificar el commit o versión evaluada, el entorno y la fecha de ejecución.
+
+Las comprobaciones previas del proyecto incluyen navegación del mapa de fertilidad y operaciones de guardado y restablecimiento de umbrales. Estos antecedentes orientan las pruebas de regresión, pero sus resultados deben contrastarse con la versión integrada que se presentará en AV2.
+
+La evaluación comprende los siguientes aspectos, según las historias seleccionadas:
+
+- Validaciones de los datos de entrada.
+- Persistencia y recuperación de la información.
+- Autorización y acceso a recursos propios.
+- Respuestas ante datos inexistentes o inválidos.
+- Correspondencia entre las respuestas del backend y el estado mostrado en Android.
+- Conservación del recorrido de consulta offline implementado en el Sprint 1.
+- Manejo de errores de conexión y de respuestas del servicio.
+
+| Historia / criterio | Tipo de prueba | Clase, archivo o caso | Versión y entorno | Resultado | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+Para las pruebas de aceptación bajo enfoque BDD se incorporan los archivos `.feature`, sus Steps y la relación con las historias evaluadas.
+
+| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+Las pruebas técnicas se distinguen de las sesiones de validación con usuarios. Sus resultados se complementan, pero evalúan aspectos diferentes del producto.
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
