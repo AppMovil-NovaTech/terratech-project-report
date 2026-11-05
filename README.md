@@ -7456,7 +7456,7 @@ El cierre de la sesión comprende la consulta del histórico de humedad de los �
 
 #### 4.3.3. Evaluaciones según heurísticas
 
-La evaluación de usabilidad de TerraTech se basa en los **10 principios heurísticos de Jakob Nielsen** y sigue los recorridos definidos en el diseño de las entrevistas para TB1. Considera la comprensión de la propuesta de valor, la facilidad para encontrar las funciones y la ejecución de las tareas contempladas en la Landing Page y la aplicación móvil Android..
+La evaluación de la experiencia de usuario de TerraTech toma como referencia los diez principios heurísticos de Jakob Nielsen y el formato del Anexo E del enunciado. Considera usabilidad, diseño inclusivo y arquitectura de información en los recorridos definidos para la Landing Page y la aplicación móvil Android.
 
 Las heurísticas consideradas son las siguientes:
 
