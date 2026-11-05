@@ -7120,6 +7120,22 @@ La planificación anterior del informe asignaba TS05, US08, TS08 y SP02 al Sprin
 - La documentación de los servicios corresponde a la implementación publicada.
 - Las evidencias del informe permiten reconstruir los recorridos presentados.
 
+##### 4.2.2.2. Aspect Leaders and Collaborators
+
+La matriz Leadership-and-Collaboration Matrix relaciona los aspectos del Sprint 2 con los integrantes que los lideran y quienes colaboran en su desarrollo. Las asignaciones deben coincidir con las tareas del tablero y los aportes registrados en los repositorios.
+
+**L** identifica al líder de un aspecto y **C** a sus colaboradores. Las responsabilidades del Sprint 1 no se trasladan automáticamente al Sprint 2.
+
+| Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias |
+| --- | --- | --- | --- | --- | --- |
+| Barba Estrada, Bryan Eduardo | bry4nbe | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Delgado Perez, James Caleb | JAmsy06 | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+Cada integrante aporta las evidencias de las tareas realizadas. La consolidación de una sección del informe no sustituye la identificación de los responsables de implementación, pruebas o despliegue.
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
