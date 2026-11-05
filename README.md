@@ -2009,8 +2009,9 @@ funcionalidades.
        <b>Then</b> se presenta la misión y visión de TerraTech junto con el nombre de la startup NovaTech<br>
        <br>
        <b>Scenario 2: Información del equipo</b><br>
-       <b>Given</b> el visitante consulta la sección del equipo<br>
-       <b>Then</b> se muestran las fotografías, nombres completos, roles y especialidad de los integrantes del equipo de desarrollo
+       <b>Given</b> el visitante se encuentra en la Landing Page<br>
+       <b>When</b> accede a la sección del equipo<br>
+       <b>Then</b> se muestran las fotografías, nombres completos, roles y especialidad de los integrantes del equipo de desarrollo 
      </td>
    </tr>
   </tbody>
