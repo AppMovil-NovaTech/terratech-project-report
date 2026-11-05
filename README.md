@@ -5474,10 +5474,7 @@ solución:
          Application, Interface e Infrastructure. Expone endpoints REST consumidos por la aplicación móvil
          y utiliza mecanismos de autenticación y autorización basados en JWT.
          La persistencia del backend se gestiona mediante Entity Framework Core.
-    5.  **Relational Database:** Base de datos relacional centralizada utilizada por el backend de TerraTech
-        para persistir la información estructurada de los diferentes Bounded Contexts.
-        El motor de base de datos debe corresponder con el proveedor configurado 
-        en la implementación reutilizada del backend.
+    5.  **Relational Database (MySQL):** Base de datos centralizada utilizada por el backend para persistir la información de los Bounded Contexts. El despliegue documentado en TB1 utiliza MySQL administrado en Aiven y acceso mediante Entity Framework Core.
 
 #### 2.5.3.3. Software Architecture Deployment Diagram
 
