@@ -7471,7 +7471,7 @@ Las heurísticas consideradas son las siguientes:
 9. Ayuda para reconocer, diagnosticar y recuperarse de errores.
 10. Ayuda y documentación.
 
-El registro de cada entrevista distingue si las tareas se completan sin ayuda, con ayuda o si no pueden completarse. El análisis contempla las dificultades observadas, los comentarios y las sugerencias de los participantes, relacionando cada hallazgo con el flujo evaluado y la heurística correspondiente. La revisión presta especial atención a los mensajes de registro, inicio de sesión y asociación de sensores, así como a la selección de parcelas, la edición del perfil y la consulta de indicadores e históricos.
+Para cada entrevista se debe registrar si las tareas se completan sin ayuda, con ayuda o si no pueden completarse. Cada hallazgo debe relacionarse con el flujo evaluado, la evidencia de la sesión y la heurística o principio correspondiente. La evaluación debe incluir una tabla de problemas con severidad, descripción, captura y recomendación, siguiendo el formato del Anexo E.
 
 La evaluación también considera si los participantes identifican la fecha de actualización de los datos, comprenden los avisos de información desactualizada y reconocen la antigüedad de las mediciones disponibles sin conexión. Los resultados constituyen la base para priorizar mejoras en la navegación, los mensajes y la presentación de la información dentro del alcance de TB1.
 
