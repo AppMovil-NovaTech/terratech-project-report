@@ -6541,9 +6541,9 @@ El diseño de experiencia de usuario contempla formalmente los escenarios de exc
 <p align="center"><em>Figura 3.18. Diagrama de Rutas de Excepción y Contingencia (Unhappy Paths).</em></p>
 
 - **UP1 — Fallos en Registro o Inicio de Sesión (US06 / US07):**
-  - *Caso 1.1 (Registro con correo ya registrado):* Si el agricultor intenta registrarse con un correo ya existente en la base de datos, el formulario bloquea la creación, muestra el mensaje de error *"El correo electrónico ya se encuentra registrado"* y provee un enlace directo para recuperar la contraseña o iniciar sesión.
+  - *Caso 1.1 (Registro con correo ya registrado):* Si el agricultor intenta registrarse con un correo existente, el sistema rechaza la creación de la cuenta y muestra el mensaje correspondiente. La recuperación de contraseña se documentará en el incremento en el que se implemente.
   - *Caso 1.2 (Contraseñas no coincidentes o con longitud menor a 6 caracteres):* La interfaz valida en tiempo real los campos; si las contraseñas difieren o no alcanzan la longitud mínima requerida, se desactivan los controles de envío y se despliegan mensajes de advertencia en color rojo debajo de los campos afectados.
-  - *Caso 1.3 (Credenciales incorrectas o correo no verificado):* Si las credenciales no coinciden, se emite el mensaje *"Correo o contraseña incorrectos"* sin exponer información sensible. Si el usuario no ha verificado su cuenta por correo, se presenta una notificación con la opción de reenviar el enlace de activación.
+  - *Caso 1.3 (Credenciales incorrectas):* Si las credenciales no coinciden, el sistema informa que el correo o la contraseña son incorrectos y no permite iniciar sesión. La verificación de correo y el reenvío de enlaces de activación no se presentan como funcionalidades implementadas en TB1.
 
 - **UP2 — Registro de Sensor con Código Inválido o Duplicado (US17):**
   - *Caso 2.1 (Formato inválido o código inexistente):* Si el código ingresado no cumple con la nomenclatura `TT-XXXXXX` o no figura en el inventario global de hardware de TerraTech, el sistema rechaza la solicitud indicando *"Código de sensor no válido o no reconocido en el sistema"*.
