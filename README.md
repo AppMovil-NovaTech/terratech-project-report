@@ -7197,6 +7197,24 @@ Para las pruebas de aceptación bajo enfoque BDD se incorporan los archivos `.fe
 
 Las pruebas técnicas se distinguen de las sesiones de validación con usuarios. Sus resultados se complementan, pero evalúan aspectos diferentes del producto.
 
+##### 4.2.2.6. Execution Evidence for Sprint Review
+
+La evidencia de ejecución presenta los recorridos disponibles en la versión evaluada para AV2. Las capturas deben mostrar la interacción del usuario y el resultado de las operaciones, identificando las historias relacionadas.
+
+El recorrido conserva las funcionalidades de acceso, perfil, parcelas y consulta de información de TB1, e incorpora las ampliaciones aceptadas durante el Sprint 2.
+
+Para cada funcionalidad se documentan el dispositivo o emulador utilizado, la versión de la aplicación, el entorno del backend y el resultado observado.
+
+| Recorrido | Historia relacionada | Dispositivo / versión | Backend utilizado | Resultado | Captura o marca temporal |
+| --- | --- | --- | --- | --- | --- |
+| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+
+**Video de ejecución del Sprint 2:** POR COMPLETAR.
+
+**Duración:** POR COMPLETAR.
+
+El video debe explicar las funcionalidades incorporadas respecto de TB1 y mostrar su comportamiento durante la navegación. Cuando se utilicen datos simulados, su origen se identifica en la demostración.
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
