@@ -4388,11 +4388,12 @@ funcionalidades.
 <tr>
      <td colspan="4">
        <b>Scenario 1: Ramas del flujo de trabajo</b><br>
-       <b>Given</b> se consultan las ramas de un repositorio del proyecto<br>
+       <b>Given</b> el repositorio del proyecto está disponible en GitHub<br>
+       <b>When</b> un integrante consulta las ramas y las reglas de integración del repositorio<br>
        <b>Then</b> existen las ramas permanentes main y develop<br>
-        <b>And</b> las funcionalidades se desarrollan en ramas feature<br>
-        <b>And</b> la rama main solo recibe cambios mediante pull request con al menos una aprobación<br>
-        <br>
+       <b>And</b> las funcionalidades se desarrollan en ramas feature<br>
+       <b>And</b> la rama main solo recibe cambios mediante pull request con al menos una aprobación<br>
+       <br>
         <b>Scenario 2: Mensajes de commit</b><br>
         <b>Given</b> se revisa el historial de commits de un repositorio<br>
         <b>When</b> se analizan los últimos mensajes registrados<br>
