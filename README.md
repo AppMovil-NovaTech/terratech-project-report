@@ -7086,6 +7086,40 @@ El incremento reutiliza el backend y la Landing Page existentes. Las modificacio
 
 La aceptación de AV2 requiere comprobar el backend público y su documentación, demostrar las principales funcionalidades core de la aplicación y presentar las primeras versiones de los videos de validación, producto y equipo. El avance se acredita mediante las evidencias de implementación, pruebas, ejecución y despliegue descritas en los siguientes apartados.
 
+##### 4.2.2.1. Sprint Planning 2
+
+La planificación del Sprint 2 parte de los resultados de TB1 y de las capacidades necesarias para ampliar el recorrido del agricultor. El equipo debe relacionar las historias seleccionadas con las tareas de implementación móvil, backend, pruebas y documentación.
+
+La selección considera las dependencias entre componentes. Una pantalla disponible en la aplicación no determina por sí sola la aceptación de una historia: también deben comprobarse sus operaciones, persistencia, manejo de errores y acceso a los recursos correspondientes al usuario.
+
+| Campo | Registro |
+| --- | --- |
+| Sprint # | Sprint 2 — AV2 |
+| Date | POR COMPLETAR con la fecha de la planificación. |
+| Time | POR COMPLETAR con la hora registrada. |
+| Location | POR COMPLETAR con el lugar o plataforma utilizados. |
+| Prepared By | POR COMPLETAR con el integrante responsable del registro. |
+| Attendees | POR COMPLETAR con los participantes de la planificación. |
+| Sprint 1 Review Summary | En TB1 se documentó el recorrido de registro, inicio de sesión, perfil, parcelas, asociación de sensores, indicadores, histórico y consulta de información descargada sin conexión. Se incorporaron evidencias de ejecución en emulador, pruebas técnicas y publicación del backend. El Sprint 2 continúa sobre esa base y registra por separado las ampliaciones y correcciones posteriores. |
+| Sprint 1 Retrospective Summary | Las observaciones posteriores a TB1 identificaron la necesidad de corregir contenido mal integrado en el informe y mejorar la organización y trazabilidad del tablero. El equipo actualizó Trello; su evidencia debe incorporarse al reporte. También se requiere mantener coherencia entre requisitos, diseño, código y resultados de las pruebas. |
+| Sprint 2 Goal | Propuesta para consolidación del equipo: permitir al agricultor utilizar los recorridos core seleccionados para AV2 sobre sus propios recursos, integrando la aplicación móvil con el backend público y ampliando la consulta e interpretación de la información agrícola. |
+| Métrica de cumplimiento | Criterios de aceptación aprobados respecto del total seleccionado para el sprint, con evidencia de implementación, ejecución y pruebas sobre la versión evaluada. |
+| Historias seleccionadas | POR COMPLETAR con los IDs del Trello y Product Backlog actualizados. |
+| Sprint 2 Velocity | POR COMPLETAR con la capacidad comprometida registrada por el equipo. |
+| Sum of Story Points | POR COMPLETAR con la suma de las historias efectivamente seleccionadas. |
+
+La planificación anterior del informe asignaba TS05, US08, TS08 y SP02 al Sprint 2. La incorporación de capacidades adelantadas desde otras iteraciones debe registrarse como una actualización de la planificación, conservando sus identificadores y estimaciones.
+
+**Criterios de cierre del incremento:**
+
+- Las historias seleccionadas cumplen sus criterios de aceptación.
+- Los cambios están integrados en las ramas correspondientes.
+- La aplicación consume los servicios del entorno evaluado.
+- Las operaciones conservan las reglas de autorización y propiedad de los recursos.
+- Las pruebas y sus resultados identifican la versión del código y el entorno utilizado.
+- La documentación de los servicios corresponde a la implementación publicada.
+- Las evidencias del informe permiten reconstruir los recorridos presentados.
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
