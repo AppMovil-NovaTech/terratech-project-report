@@ -5242,9 +5242,7 @@ El Product Backlog consolida y prioriza las 54 historias del proyecto (53 estima
 
 Los porcentajes de la tabla representan esfuerzo estimado sobre 202 SP, no avance funcional, cobertura ni velocidad medida del equipo. HU-OFF01 requiere estimación del equipo.
 
-La captura del tablero y el enlace público del Product Backlog se
-incorporarán cuando el equipo cree el tablero en la herramienta de
-gestión seleccionada.
+El equipo actualizó el tablero de Trello para atender las observaciones recibidas en TB1. La evidencia correspondiente a AV2 debe incorporar el enlace de consulta y una captura de la versión actualizada, manteniendo la relación entre las historias, las tareas, los responsables y sus estados.
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
