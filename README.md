@@ -5485,12 +5485,11 @@ protocolos de red y seguridad:
 ![Strategic Context Map](assets/images/strategic-ddd/c4-deployment.svg)
 
 - **Nodos de Infraestructura y Despliegue:**
-    - **Nodo Cliente - Smartphone Android:** Dispositivo móvil que ejecuta la aplicación TerraTech. La aplicación utiliza almacenamiento local mediante Room para conservar información disponible sin conexión y sincronizarla posteriormente cuando exista conectividad.
+    - **Nodo Cliente - Smartphone Android:** Dispositivo que ejecuta la aplicación TerraTech. Utiliza Room para conservar y consultar información previamente descargada cuando no existe conexión. La sincronización de escrituras no forma parte del comportamiento acreditado en el Sprint 1.
 
     - **Nodo Cloud - Infraestructura de despliegue:**
         - **Backend REST API:** Servicio que ejecuta la API ASP.NET Core reutilizada por TerraTech y expone sus endpoints mediante HTTPS.
-        - **Base de datos relacional:** Servicio encargado de persistir la información centralizada utilizada por el backend. El motor y el proveedor de despliegue deberán coincidir con la configuración real del proyecto.
-
+        - **Base de datos relacional:** Servicio MySQL administrado en Aiven que conserva la información centralizada del backend. La conexión y las migraciones se gestionan mediante la configuración del entorno y Entity Framework Core.
     - **Nodo SaaS Externo:** Servicios externos utilizados por TerraTech, como el proveedor de información climática y el servicio seleccionado para el envío de notificaciones push.
 
 ## 2.6. Tactical-Level Domain-Driven Design
