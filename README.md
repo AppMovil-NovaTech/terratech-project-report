@@ -7076,6 +7076,16 @@ El incremento reutiliza el backend anterior y los artefactos de dominio y UI del
 El detalle de capturas y datos faltantes está en [checklist de cierre Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md). Esta documentación no presenta actas, analíticos, videos ni pruebas físicas inexistentes como evidencia completada.
 
 
+#### 4.2.2. Sprint 2
+
+El Sprint 2 corresponde al incremento de TerraTech presentado en AV2. Continúa el recorrido agrícola desarrollado durante TB1 e incorpora las ampliaciones seleccionadas por el equipo, su integración con la aplicación móvil y el levantamiento de las observaciones de la entrega anterior.
+
+El trabajo comprende la evolución de las funcionalidades de acceso, monitoreo, mapa de fertilidad, configuración de sensores y servicios relacionados con la información agrícola. La selección definitiva de historias se consolida en el Sprint Backlog y debe mantener correspondencia con el Product Backlog actualizado.
+
+El incremento reutiliza el backend y la Landing Page existentes. Las modificaciones del backend se orientan a completar los servicios requeridos por los recorridos móviles, manteniendo la organización por Bounded Contexts y las capas de Domain, Application, Infrastructure e Interfaces.
+
+La aceptación de AV2 requiere comprobar el backend público y su documentación, demostrar las principales funcionalidades core de la aplicación y presentar las primeras versiones de los videos de validación, producto y equipo. El avance se acredita mediante las evidencias de implementación, pruebas, ejecución y despliegue descritas en los siguientes apartados.
+
 ### 4.3. Validation Interviews
 
 #### 4.3.1. Diseño de Entrevistas
