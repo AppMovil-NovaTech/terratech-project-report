@@ -7172,8 +7172,26 @@ La siguiente tabla debe incorporar los commits del incremento, diferenciando imp
 
 | Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
 | --- | --- | --- | --- | --- | --- |
-| AppMovil-Dato/App-Android-Terratech | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| AppMovil-Dato/BackEnd-TerraTech | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [23f6cb1](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/23f6cb1693ddc63ea9efbc4a0b871e4d54b66499) | feat(weather): implement Open-Meteo external client and response models | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [2e662e8](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/2e662e8b64be80c6511cc01d495b5ad213da28fa) | feat(weather): add weather forecast application service with 3-hour cache and combined irrigation recommendation | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [4b58d9a](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/4b58d9a390a11513460146103ab900c549ca05ec) | feat(weather): add FieldWeatherController endpoint and OpenAPI annotations | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [9b517fc](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/9b517fcd3c04ed24d3d102bb097daf734c51de81) | test(weather): add integration tests for weather forecast and external error handling | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [75ee298](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/75ee2983dac879539824d05d612af1f5e1361d05) | docs(weather): update OpenAPI snapshot and API documentation for weather forecast | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | develop | [4fe9c65](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/4fe9c65b955ecd00b34c4f81167c26bb06d4e789) | Merge branch 'feature/weather-forecast' into develop | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [1ce56c2](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/1ce56c259e34f142c3e4e911aac82c0d9ea01790) | feat(satellite): define satellite image aggregate and repository contract | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [7a866a6](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/7a866a6f05b04ed6818ca7227993a934a3f1b727) | feat(satellite): implement satellite image service for latest and historical queries | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [1f790bf](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/1f790bfe9046862b1e4fc391807a1a6a46d669be) | feat(satellite): add SatelliteImagesController with latest and date-filtered endpoints | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [b0cdeac](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/b0cdeac5e110433c5818e8a1544516ede68a8b3e) | test(satellite): add integration tests for latest and historical satellite images | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [8197aa3](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/8197aa3b8df528c3d52fe7c3fa162463a38886db) | docs(satellite): update OpenAPI snapshot with satellite images endpoints | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [fd17293](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/fd17293bfa9feae9d240eaeaa57a4f041cee595c) | style(satellite): remove unused logger parameter from SatelliteImagesController | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | develop | [21ef446](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/21ef44600ac3524dd6328aa7b817fdce4d4ebdda) | Merge branch 'feature/satellite-images' into develop | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | develop | [2cb27a0](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/2cb27a04172b23314b08c5633b5af7c38508f565) | style(satellite): remove unused logger from SatelliteImageService | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [77675b1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/77675b15b040e48f7240814366feb3b9737ca9ee) | feat(monitoring): add weather and satellite remote DTOs and API endpoints | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [ec04013](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/ec040133ba82b63af6caa8ef9703b65fee9087b5) | feat(monitoring): implement weather and satellite local persistence and room v4 migration | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [b41702e](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/b41702ee36736a3d51ca28e1dec593d2e7f543e6) | feat(monitoring): implement domain models, repositories, mappers and contract tests for weather and satellite | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [3c48fcf](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/3c48fcfc05f17a0a4ab89dfd605a6fcdac4fa1d7) | feat(monitoring): implement use cases, viewmodel state and actions for weather and satellite | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [b44e15d](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/b44e15db1e60ad4905fadf64fc9498d1f16ee2f7) | feat(monitoring): implement weather and satellite compose UI components and vegetation comparison screen | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | develop | [56eddd1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/56eddd14f58737a58adfc7fbe2fd52100b4ec498) | Merge pull request #2 from AppMovil-NovaTech/feature/external-services-us22-us23 | Feature/external services us22 us23 | 28/10/2026 |
 
 Los cambios de la Landing Page se incorporarán a esta tabla cuando formen parte del incremento. La documentación del informe se registra en las evidencias de colaboración correspondientes.
 
@@ -7195,13 +7213,23 @@ La evaluación comprende los siguientes aspectos, según las historias seleccion
 
 | Historia / criterio | Tipo de prueba | Clase, archivo o caso | Versión y entorno | Resultado | Evidencia |
 | --- | --- | --- | --- | --- | --- |
-| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| US22: Pronóstico 200 y recomendación combinada de riego | Integración backend (xUnit) | WeatherTests.cs (WeatherForecastReturns200WithCombinedRecommendation) | Backend Debug, MySQL aislado en contenedor | Aprobado (200 OK, temp 22.5 °C, lluvia 85%, suspensión activa y ahorro 500 L) | Incluido en 96 pruebas de sprint2-validation.json |
+| US22: Falla de proveedor externo 502 | Integración backend (xUnit) | WeatherTests.cs (WeatherForecastReturns502WhenProviderFails) | Backend Debug, cliente simulado con fallo | Aprobado (502 Bad Gateway, código WEATHER_SERVICE_UNAVAILABLE) | Incluido en 96 pruebas de sprint2-validation.json |
+| US22: Parcela ajena o inexistente 404 | Integración backend (xUnit) | WeatherTests.cs (WeatherForecastRejectsForeignOrNonexistentFieldWith404) | Backend Debug, aislamiento de cuentas | Aprobado (404 Not Found ante fieldId inexistente) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Imagen reciente con metadatos y límites | Integración backend (xUnit) | SatelliteImageTests.cs (GetLatestSatelliteImageReturns200WithMetadataAndBounds) | Backend Debug, MySQL aislado | Aprobado (200 OK, NDVI en rango [0.1, 1.0], nubes [0.0, 100.0] y bounds válidos) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Búsqueda de imagen por fecha más cercana | Integración backend (xUnit) | SatelliteImageTests.cs (GetSatelliteImageByTargetDateReturnsClosestImage) | Backend Debug, MySQL aislado | Aprobado (200 OK con ?targetDate=...) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Fecha fuera de rango máximo de 60 días | Integración backend (xUnit) | SatelliteImageTests.cs (GetSatelliteImageWhenDateOutOfRangeReturns404) | Backend Debug, MySQL aislado | Aprobado (404 Not Found, código SATELLITE_IMAGE_NOT_FOUND) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Parcela ajena o inexistente 404 | Integración backend (xUnit) | SatelliteImageTests.cs (GetSatelliteImageRejectsForeignOrNonexistentFieldWith404) | Backend Debug, aislamiento de cuentas | Aprobado (404 Not Found) | Incluido en 96 pruebas de sprint2-validation.json |
+| US22 / US23: Contrato HTTP Retrofit y respuestas | Contrato Android (JUnit/MockWebServer) | ExternalServicesContractTest.kt (4 casos: 200 clima, 200 satelital, 502 proveedor y 404 satelital) | Android Debug, MockWebServer local | 4/4 casos aprobados, serialización Gson estricta | Suite ejecutada en emulador/JVM local |
+| US23: Cálculo de delta NDVI y orden cronológico | Unitaria de dominio Android (JUnit) | CompareVegetationPeriodTest.kt (2 casos: cálculo positivo de delta +0.25 / +50% y ordenamiento cronológico -0.20 / -33.33%) | Android JVM local | 2/2 casos aprobados sin dependencias de framework | Suite ejecutada en local |
 
 Para las pruebas de aceptación bajo enfoque BDD se incorporan los archivos `.feature`, sus Steps y la relación con las historias evaluadas.
 
 | Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
 | --- | --- | --- | --- | --- | --- |
-| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| BackEnd-TerraTech | feature/weather-forecast | [9b517fc](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/9b517fcd3c04ed24d3d102bb097daf734c51de81) | test(weather): add integration tests for weather forecast and external error handling | Sin cuerpo | 28/10/2026 |
+| BackEnd-TerraTech | feature/satellite-images | [b0cdeac](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/b0cdeac5e110433c5818e8a1544516ede68a8b3e) | test(satellite): add integration tests for latest and historical satellite images | Sin cuerpo | 28/10/2026 |
+| App-Android-Terratech | feature/external-services-us22-us23 | [b41702e](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/b41702ee36736a3d51ca28e1dec593d2e7f543e6) | feat(monitoring): implement domain models, repositories, mappers and contract tests for weather and satellite | Sin cuerpo | 28/10/2026 |
 
 Las pruebas técnicas se distinguen de las sesiones de validación con usuarios. Sus resultados se complementan, pero evalúan aspectos diferentes del producto.
 
