@@ -84,6 +84,7 @@
 | 0.9.2 | 04/10/2026 | Barba Estrada, Bryan Eduardo | Alineación de la sección 3.1 con la Landing Page implementada: tipografía Inter, paleta, escala de espaciado, breakpoints, estructura de secciones, etiquetas, metadatos, internationalización ES/EN y accesibilidad. Registro de la evidencia de implementación y publicación en GitHub Pages, columna de implementación de la Landing Page en la matriz LACX, corrección de la descripción tecnológica y renumeración de las figuras del capítulo 3. |
 | 0.9.3 | 05/10/2026 | Retuerto Rodriguez, Jorge Manuel | Implementacion de reglas de diseño y herramientas para el correcto desarrollo de la apliaciones                                                                                                                                                                                                                                                                                                                              | 
 | 1.0.0 | 05/10/2026 | Equipo NovaTech | Consolidación final del informe correspondiente a la TB1, integrando Product Design, Mobile UX/UI Design, implementación del Sprint 1, Validation Interviews, Collaboration Insights, Student Outcome, conclusiones y evidencias de la entrega. |
+| 1.1.0 | 28/10/2026 | Barba Estrada, Bryan Eduardo | Documentación de la integración de servicios externos para el Sprint 2 (AV2): planificación, matriz LACX, tareas del Sprint Backlog (S2-01 a S2-14), evidencias de desarrollo y pruebas en backend (xUnit) y Android (MockWebServer, Room v4), contratos OpenAPI, verificación de despliegue en Cloud Run y analíticos de colaboración para US22 y US23. |
 ## Project Report Collaboration Insights
 
 Esta sección presenta la organización y las evidencias del trabajo
@@ -7090,18 +7091,18 @@ La selección considera las dependencias entre componentes. Una pantalla disponi
 | Campo | Registro |
 | --- | --- |
 | Sprint # | Sprint 2 — AV2 |
-| Date | POR COMPLETAR con la fecha de la planificación. |
-| Time | POR COMPLETAR con la hora registrada. |
-| Location | POR COMPLETAR con el lugar o plataforma utilizados. |
-| Prepared By | POR COMPLETAR con el integrante responsable del registro. |
-| Attendees | POR COMPLETAR con los participantes de la planificación. |
+| Date | 28/10/2026 |
+| Time | 10:00 - 11:30 America/Lima |
+| Location | Sesión remota vía Discord / Google Meet |
+| Prepared By | Barba Estrada, Bryan Eduardo y Bendezú Navarro, Rúbens Fitzgerald |
+| Attendees | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
 | Sprint 1 Review Summary | En TB1 se documentó el recorrido de registro, inicio de sesión, perfil, parcelas, asociación de sensores, indicadores, histórico y consulta de información descargada sin conexión. Se incorporaron evidencias de ejecución en emulador, pruebas técnicas y publicación del backend. El Sprint 2 continúa sobre esa base y registra por separado las ampliaciones y correcciones posteriores. |
 | Sprint 1 Retrospective Summary | Las observaciones posteriores a TB1 identificaron la necesidad de corregir contenido mal integrado en el informe y mejorar la organización y trazabilidad del tablero. El equipo actualizó Trello; su evidencia debe incorporarse al reporte. También se requiere mantener coherencia entre requisitos, diseño, código y resultados de las pruebas. |
-| Sprint 2 Goal | Propuesta para consolidación del equipo: permitir al agricultor utilizar los recorridos core seleccionados para AV2 sobre sus propios recursos, integrando la aplicación móvil con el backend público y ampliando la consulta e interpretación de la información agrícola. |
-| Métrica de cumplimiento | Criterios de aceptación aprobados respecto del total seleccionado para el sprint, con evidencia de implementación, ejecución y pruebas sobre la versión evaluada. |
-| Historias seleccionadas | POR COMPLETAR con los IDs del Trello y Product Backlog actualizados. |
-| Sprint 2 Velocity | POR COMPLETAR con la capacidad comprometida registrada por el equipo. |
-| Sum of Story Points | POR COMPLETAR con la suma de las historias efectivamente seleccionadas. |
+| Sprint 2 Goal | Permitir al agricultor optimizar la toma de decisiones agronómicas mediante la consulta integrada del pronóstico del clima con recomendación automática de suspensión de riego (US22) y el análisis visual de teledetección satelital con cálculo de índices de vegetación NDVI y comparación temporal de parcelas (US23), garantizando persistencia local en Room v4 para operación sin conexión y disponibilidad verificada en Cloud Run. |
+| Métrica de cumplimiento | 100 % de los criterios de aceptación técnicos y funcionales de US22 y US23 aprobados, respaldados por 7 pruebas de integración xUnit en backend, 4 pruebas de contrato y 2 pruebas unitarias de dominio en Android, además de migración Room v4 y despliegue público en Google Cloud Run. |
+| Historias seleccionadas | US22 (Consulta del pronóstico del clima - 5 SP) y US23 (Consulta de imágenes satelitales - 8 SP) adelantadas de EPIC08 (Transversal / Shared) para la entrega AV2. Se integran además US08 (Recuperación de contraseña), US13 (Zonas fértiles) y US18 (Umbrales de alerta). |
+| Sprint 2 Velocity | 32 SP comprometidos para el Sprint 2 por el equipo de desarrollo. |
+| Sum of Story Points | 13 SP correspondientes a la integración de servicios externos de Bryan Barba (5 SP de US22 + 8 SP de US23), dentro del compromiso total del incremento. |
 
 La planificación anterior del informe asignaba TS05, US08, TS08 y SP02 al Sprint 2. La incorporación de capacidades adelantadas desde otras iteraciones debe registrarse como una actualización de la planificación, conservando sus identificadores y estimaciones.
 
@@ -7123,7 +7124,7 @@ La matriz Leadership-and-Collaboration Matrix relaciona los aspectos del Sprint 
 
 | Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias |
 | --- | --- | --- | --- | --- | --- |
-| Barba Estrada, Bryan Eduardo | bry4nbe | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Barba Estrada, Bryan Eduardo | bry4nbe | L | L | C | L |
 | Bendezú Navarro, Rúbens Fitzgerald | Lucemz | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
 | Delgado Perez, James Caleb | JAmsy06 | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
 | Pariona Chacca, Angel Jose | Angelitoso-opp | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
@@ -7143,7 +7144,20 @@ Los estados utilizados son **To-do**, **In-Process**, **To-Review** y **Done**. 
 
 | User Story ID | Title | Task ID | Title | Description | Estimation (Hours) | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| US22 | Consulta del pronóstico del clima | S2-01 | Cliente Open-Meteo y modelos de datos | Implementación de OpenMeteoWeatherClient e interfaces de deserialización externa en backend | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-02 | Servicio de clima, caché 3h y regla agronómica | Servicio WeatherForecastService con IMemoryCache y cálculo de suspensión de riego (lluvia >=80% / 10mm y humedad <=35% -> ahorro 500 L) | 8 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-03 | Controlador REST y OpenAPI de clima | Creación de FieldWeatherController (GET /api/v1/fields/{id}/weather), DTOs y manejo de errores 404/502 | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-04 | Persistencia Room v4 y DTOs de clima | Creación de FieldWeatherRow, FieldWeatherDao, DTOs remotos y migración Room 3->4 | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-05 | Caso de uso y repositorio Android de clima | Implementación de GetFieldWeather, FieldWeatherRepositoryImpl con fallback offline y StateFlow en ViewModel | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-06 | Componentes Compose de clima y banner | Diseño e integración de WeatherForecastCard e IrrigationSuspensionBanner en SensorsScreen | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-07 | Agregado y catálogo satelital backend | Definición de SatelliteImageRecord, SatelliteBounds y servicio SatelliteImageService con catálogo multitemporal | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-08 | Controlador REST y OpenAPI satelital | Implementación de SatelliteImagesController con endpoints /latest y ?targetDate=... y validación de ventana de 60 días | 5 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-09 | Persistencia Room v4 y DTOs satelitales | Creación de SatelliteImageRow, SatelliteImageDao, DTOs Retrofit y actualización de TerraDatabase v4 | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-10 | Casos de uso y comparación de vegetación | Implementación de GetSatelliteImage, CompareVegetationPeriod y repositorio SatelliteImageRepositoryImpl | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-11 | UI Compose: Visor satelital y selector | Desarrollo de SatelliteOverlayViewer, diálogo de fecha SatelliteDatePickerDialog y alternancia mapa/satélite | 8 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-12 | Pantalla y navegación de comparación | Creación de VegetationComparisonCard, VegetationComparisonScreen y subgrafo de navegación Compose | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 / US23 | Integración con Servicios Externos | S2-13 | Pruebas de integración xUnit de backend | Suites WeatherTests (3 casos) y SatelliteImageTests (4 casos) con servidor MySQL aislado | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 / US23 | Integración con Servicios Externos | S2-14 | Pruebas de contrato y unitarias Android | Suites ExternalServicesContractTest (4 casos con MockWebServer) y CompareVegetationPeriodTest (2 casos) | 5 | Barba Estrada, Bryan Eduardo | Done |
 
 El registro debe diferenciar las capacidades heredadas del Sprint 1, las ampliaciones implementadas durante el Sprint 2 y las correcciones derivadas de la revisión de TB1. Las historias trasladadas desde otra iteración deben actualizarse también en el Product Backlog.
 
@@ -7159,8 +7173,26 @@ La siguiente tabla debe incorporar los commits del incremento, diferenciando imp
 
 | Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
 | --- | --- | --- | --- | --- | --- |
-| AppMovil-Dato/App-Android-Terratech | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| AppMovil-Dato/BackEnd-TerraTech | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [23f6cb1](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/23f6cb1693ddc63ea9efbc4a0b871e4d54b66499) | feat(weather): implement Open-Meteo external client and response models | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [2e662e8](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/2e662e8b64be80c6511cc01d495b5ad213da28fa) | feat(weather): add weather forecast application service with 3-hour cache and combined irrigation recommendation | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [4b58d9a](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/4b58d9a390a11513460146103ab900c549ca05ec) | feat(weather): add FieldWeatherController endpoint and OpenAPI annotations | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [9b517fc](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/9b517fcd3c04ed24d3d102bb097daf734c51de81) | test(weather): add integration tests for weather forecast and external error handling | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [75ee298](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/75ee2983dac879539824d05d612af1f5e1361d05) | docs(weather): update OpenAPI snapshot and API documentation for weather forecast | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | develop | [4fe9c65](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/4fe9c65b955ecd00b34c4f81167c26bb06d4e789) | Merge branch 'feature/weather-forecast' into develop | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [1ce56c2](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/1ce56c259e34f142c3e4e911aac82c0d9ea01790) | feat(satellite): define satellite image aggregate and repository contract | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [7a866a6](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/7a866a6f05b04ed6818ca7227993a934a3f1b727) | feat(satellite): implement satellite image service for latest and historical queries | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [1f790bf](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/1f790bfe9046862b1e4fc391807a1a6a46d669be) | feat(satellite): add SatelliteImagesController with latest and date-filtered endpoints | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [b0cdeac](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/b0cdeac5e110433c5818e8a1544516ede68a8b3e) | test(satellite): add integration tests for latest and historical satellite images | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [8197aa3](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/8197aa3b8df528c3d52fe7c3fa162463a38886db) | docs(satellite): update OpenAPI snapshot with satellite images endpoints | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [fd17293](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/fd17293bfa9feae9d240eaeaa57a4f041cee595c) | style(satellite): remove unused logger parameter from SatelliteImagesController | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | develop | [21ef446](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/21ef44600ac3524dd6328aa7b817fdce4d4ebdda) | Merge branch 'feature/satellite-images' into develop | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | develop | [2cb27a0](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/2cb27a04172b23314b08c5633b5af7c38508f565) | style(satellite): remove unused logger from SatelliteImageService | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [77675b1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/77675b15b040e48f7240814366feb3b9737ca9ee) | feat(monitoring): add weather and satellite remote DTOs and API endpoints | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [ec04013](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/ec040133ba82b63af6caa8ef9703b65fee9087b5) | feat(monitoring): implement weather and satellite local persistence and room v4 migration | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [b41702e](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/b41702ee36736a3d51ca28e1dec593d2e7f543e6) | feat(monitoring): implement domain models, repositories, mappers and contract tests for weather and satellite | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [3c48fcf](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/3c48fcfc05f17a0a4ab89dfd605a6fcdac4fa1d7) | feat(monitoring): implement use cases, viewmodel state and actions for weather and satellite | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [b44e15d](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/b44e15db1e60ad4905fadf64fc9498d1f16ee2f7) | feat(monitoring): implement weather and satellite compose UI components and vegetation comparison screen | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | develop | [56eddd1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/56eddd14f58737a58adfc7fbe2fd52100b4ec498) | Merge pull request #2 from AppMovil-NovaTech/feature/external-services-us22-us23 | Feature/external services us22 us23 | 28/10/2026 |
 
 Los cambios de la Landing Page se incorporarán a esta tabla cuando formen parte del incremento. La documentación del informe se registra en las evidencias de colaboración correspondientes.
 
@@ -7182,13 +7214,23 @@ La evaluación comprende los siguientes aspectos, según las historias seleccion
 
 | Historia / criterio | Tipo de prueba | Clase, archivo o caso | Versión y entorno | Resultado | Evidencia |
 | --- | --- | --- | --- | --- | --- |
-| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| US22: Pronóstico 200 y recomendación combinada de riego | Integración backend (xUnit) | WeatherTests.cs (WeatherForecastReturns200WithCombinedRecommendation) | Backend Debug, MySQL aislado en contenedor | Aprobado (200 OK, temp 22.5 °C, lluvia 85%, suspensión activa y ahorro 500 L) | Incluido en 96 pruebas de sprint2-validation.json |
+| US22: Falla de proveedor externo 502 | Integración backend (xUnit) | WeatherTests.cs (WeatherForecastReturns502WhenProviderFails) | Backend Debug, cliente simulado con fallo | Aprobado (502 Bad Gateway, código WEATHER_SERVICE_UNAVAILABLE) | Incluido en 96 pruebas de sprint2-validation.json |
+| US22: Parcela ajena o inexistente 404 | Integración backend (xUnit) | WeatherTests.cs (WeatherForecastRejectsForeignOrNonexistentFieldWith404) | Backend Debug, aislamiento de cuentas | Aprobado (404 Not Found ante fieldId inexistente) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Imagen reciente con metadatos y límites | Integración backend (xUnit) | SatelliteImageTests.cs (GetLatestSatelliteImageReturns200WithMetadataAndBounds) | Backend Debug, MySQL aislado | Aprobado (200 OK, NDVI en rango [0.1, 1.0], nubes [0.0, 100.0] y bounds válidos) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Búsqueda de imagen por fecha más cercana | Integración backend (xUnit) | SatelliteImageTests.cs (GetSatelliteImageByTargetDateReturnsClosestImage) | Backend Debug, MySQL aislado | Aprobado (200 OK con ?targetDate=...) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Fecha fuera de rango máximo de 60 días | Integración backend (xUnit) | SatelliteImageTests.cs (GetSatelliteImageWhenDateOutOfRangeReturns404) | Backend Debug, MySQL aislado | Aprobado (404 Not Found, código SATELLITE_IMAGE_NOT_FOUND) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Parcela ajena o inexistente 404 | Integración backend (xUnit) | SatelliteImageTests.cs (GetSatelliteImageRejectsForeignOrNonexistentFieldWith404) | Backend Debug, aislamiento de cuentas | Aprobado (404 Not Found) | Incluido en 96 pruebas de sprint2-validation.json |
+| US22 / US23: Contrato HTTP Retrofit y respuestas | Contrato Android (JUnit/MockWebServer) | ExternalServicesContractTest.kt (4 casos: 200 clima, 200 satelital, 502 proveedor y 404 satelital) | Android Debug, MockWebServer local | 4/4 casos aprobados, serialización Gson estricta | Suite ejecutada en emulador/JVM local |
+| US23: Cálculo de delta NDVI y orden cronológico | Unitaria de dominio Android (JUnit) | CompareVegetationPeriodTest.kt (2 casos: cálculo positivo de delta +0.25 / +50% y ordenamiento cronológico -0.20 / -33.33%) | Android JVM local | 2/2 casos aprobados sin dependencias de framework | Suite ejecutada en local |
 
 Para las pruebas de aceptación bajo enfoque BDD se incorporan los archivos `.feature`, sus Steps y la relación con las historias evaluadas.
 
 | Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
 | --- | --- | --- | --- | --- | --- |
-| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| BackEnd-TerraTech | feature/weather-forecast | [9b517fc](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/9b517fcd3c04ed24d3d102bb097daf734c51de81) | test(weather): add integration tests for weather forecast and external error handling | Sin cuerpo | 28/10/2026 |
+| BackEnd-TerraTech | feature/satellite-images | [b0cdeac](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/b0cdeac5e110433c5818e8a1544516ede68a8b3e) | test(satellite): add integration tests for latest and historical satellite images | Sin cuerpo | 28/10/2026 |
+| App-Android-Terratech | feature/external-services-us22-us23 | [b41702e](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/b41702ee36736a3d51ca28e1dec593d2e7f543e6) | feat(monitoring): implement domain models, repositories, mappers and contract tests for weather and satellite | Sin cuerpo | 28/10/2026 |
 
 Las pruebas técnicas se distinguen de las sesiones de validación con usuarios. Sus resultados se complementan, pero evalúan aspectos diferentes del producto.
 
@@ -7202,7 +7244,10 @@ Para cada funcionalidad se documentan el dispositivo o emulador utilizado, la ve
 
 | Recorrido | Historia relacionada | Dispositivo / versión | Backend utilizado | Resultado | Captura o marca temporal |
 | --- | --- | --- | --- | --- | --- |
-| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Consulta del pronóstico climático y recomendación combinada de suspensión de riego | US22 | Emulador Pixel 7 (API 34), APK Debug | Development / Cloud Run producción | Presentación de WeatherForecastCard con temperatura, humedad, viento y probabilidad de lluvia; despliegue de IrrigationSuspensionBanner con aviso de ahorro de 500 L | `assets/images/cap4/sprint2/weather-forecast.png` |
+| Visualización de capa satelital y alternancia con mapa base | US23 (Escenario 1) | Emulador Pixel 7 (API 34), APK Debug | Development / Cloud Run producción | Carga de SatelliteOverlayViewer con overlay sobre la parcela, indicador de NDVI promedio (0.74), nubosidad (3.2%) y botón de alternancia con mapa vectorial base | `assets/images/cap4/sprint2/satellite-viewer.png` |
+| Consulta de escena satelital histórica por fecha objetivo | US23 (Escenario 2) | Emulador Pixel 7 (API 34), APK Debug | Development / Cloud Run producción | Apertura de SatelliteDatePickerDialog, selección de fecha objetivo, recuperación de imagen más cercana en 60 días y manejo de 404 si no existen datos | `assets/images/cap4/sprint2/satellite-date-picker.png` |
+| Comparación temporal de vegetación entre dos periodos | US23 (Escenario 3) | Emulador Pixel 7 (API 34), APK Debug | Development / Cloud Run producción | Pantalla VegetationComparisonScreen, despliegue de VegetationComparisonCard con dos escenas lado a lado, cálculo de delta de NDVI y porcentaje de cambio | `assets/images/cap4/sprint2/vegetation-comparison.png` |
 
 **Video de ejecución del Sprint 2:** POR COMPLETAR.
 
@@ -7218,17 +7263,25 @@ Para cada operación se identifican su método HTTP, ruta, parámetros, cuerpo d
 
 | Historia | Método y ruta | Parámetros / cuerpo | Respuestas | Documentación pública | Evidencia |
 | --- | --- | --- | --- | --- | --- |
-| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| US22 | GET `/api/v1/fields/{fieldId}/weather` | `fieldId` (int, path); Header `Authorization: Bearer <token>` | 200 OK (`FieldWeatherResource`); 404 (`FIELD_NOT_FOUND`); 502 (`WEATHER_SERVICE_UNAVAILABLE` / `WEATHER_SERVICE_TIMEOUT`) | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US23 | GET `/api/v1/fields/{fieldId}/satellite-images/latest` | `fieldId` (int, path); Header `Authorization: Bearer <token>` | 200 OK (`SatelliteImageResource`: fieldId, capturedAt, imageUrl, ndviAverage, cloudCoveragePercent, bounds); 404 (`SATELLITE_IMAGE_NOT_FOUND`) | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US23 | GET `/api/v1/fields/{fieldId}/satellite-images` | `fieldId` (int, path), `targetDate` (DateTime ISO 8601, query); Header `Authorization: Bearer <token>` | 200 OK (`SatelliteImageResource`); 404 si la fecha dista más de 60 días (`SATELLITE_IMAGE_NOT_FOUND`) | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
 
-**URL de OpenAPI de la versión evaluada:** POR COMPLETAR.
+**URL de OpenAPI de la versión evaluada:** `https://terratech-api.lucemz.com/swagger/v1/swagger.json`
 
-**Repositorio y commits relacionados con la documentación:** POR COMPLETAR.
+**Repositorio y commits relacionados con la documentación:** [75ee298](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/75ee2983dac879539824d05d612af1f5e1361d05) y [8197aa3](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/8197aa3b8df528c3d52fe7c3fa162463a38886db) en `BackEnd-TerraTech`.
 
 La evaluación del cumplimiento funcional del backend se registra mediante la siguiente matriz:
 
 | Requisito / criterio del backend | Endpoint o servicio | Implementación | Prueba | Despliegue | Resultado |
 | --- | --- | --- | --- | --- | --- |
-| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Consulta de pronóstico del clima con 3h de caché | `GET /api/v1/fields/{fieldId}/weather` | `FieldWeatherController`, `WeatherForecastService`, `OpenMeteoWeatherClient` | `WeatherForecastReturns200WithCombinedRecommendation` | Cloud Run `00016-rer` | Cumplido |
+| Falla de proveedor externo 502 Bad Gateway | `GET /api/v1/fields/{fieldId}/weather` | `FieldWeatherController` (catch `HttpRequestException` y `TaskCanceledException`) | `WeatherForecastReturns502WhenProviderFails` | Cloud Run `00016-rer` | Cumplido |
+| Recomendación combinada con ahorro de 500 L | `WeatherForecastService` | Evaluación combinada de lluvia >=80% / 10mm y humedad <=35% | `WeatherForecastReturns200WithCombinedRecommendation` | Cloud Run `00016-rer` | Cumplido |
+| Consulta de última imagen satelital con NDVI y bounds | `GET /api/v1/fields/{fieldId}/satellite-images/latest` | `SatelliteImagesController`, `SatelliteImageService` | `GetLatestSatelliteImageReturns200WithMetadataAndBounds` | Cloud Run `00016-rer` | Cumplido |
+| Búsqueda por fecha objetivo dentro de 60 días | `GET /api/v1/fields/{fieldId}/satellite-images?targetDate=...` | `SatelliteImagesController`, `SatelliteImageService` | `GetSatelliteImageByTargetDateReturnsClosestImage` | Cloud Run `00016-rer` | Cumplido |
+| Rechazo con 404 por fecha fuera de rango | `GET /api/v1/fields/{fieldId}/satellite-images?targetDate=...` | Filtro `Diff <= 60` en `SatelliteImageService` | `GetSatelliteImageWhenDateOutOfRangeReturns404` | Cloud Run `00016-rer` | Cumplido |
+| Aislamiento de recursos ajenos con 404 | Ambos controladores | Validación de propiedad contra identidad JWT | Pruebas de campo inexistente / ajeno en ambas suites | Cloud Run `00016-rer` | Cumplido |
 
 La matriz permite identificar los requisitos implementados, comprobados y disponibles en el entorno público. La cobertura de código y el porcentaje de tráfico de una revisión se registran como indicadores independientes del cumplimiento funcional.
 
@@ -7242,10 +7295,10 @@ La aplicación utilizada en la demostración debe consumir el entorno identifica
 
 | Producto | URL / entorno | Commit o revisión | Fecha de verificación | Resultado | Evidencia |
 | --- | --- | --- | --- | --- | --- |
-| Landing Page | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Backend y OpenAPI | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Base de datos y migraciones | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Aplicación evaluada | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Landing Page | https://appmovil-dato.github.io/LandingPage-TerraTech/ | Rama `main` actualizada con secciones de monitoreo y servicios | 31/10/2026 | Despliegue activo en GitHub Pages | Capturas en `assets/images/cap4/sprint2/landing-page-av2.png` |
+| Backend y OpenAPI | https://terratech-api.lucemz.com/ | Revisión Cloud Run `backend-terratech-git-00016-rer` (imagen basada en commit `38045e5` / `dfc9191`) | 31/10/2026 04:31 UTC | Ready=True, 100% tráfico, probes `/health/live` y `/health/ready` 200 OK | `docs/sprint2-deployment.json` y `docs/sprint2-public-verification.json` |
+| Base de datos y migraciones | MySQL administrado en Aiven (puerto 16600, SslMode=Required) | Migraciones iniciales y de ampliación aplicadas al arrancar | 31/10/2026 | Tablas iniciales verificadas; sin migraciones pendientes | `docs/sprint2-validation.json` |
+| Aplicación evaluada | APK Debug instalable en emulador Pixel 7 (API 34) | Commit [56eddd1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/56eddd14f58737a58adfc7fbe2fd52100b4ec498) en rama `feature/external-services-us22-us23` | 28/10/2026 | Compilación Debug aprobada, Room v4 migrado, consumo de API verificado | `app/schemas/com.novatech.terratech.core.database.TerraDatabase/4.json` |
 
 El cierre del despliegue se relaciona con la matriz de requisitos y pruebas del backend, de modo que la publicación del servicio y su cumplimiento funcional queden documentados.
 
@@ -7259,10 +7312,10 @@ Se incorporan capturas de contribuciones, ramas y revisiones de los productos co
 
 | Producto | Evidencia de colaboración | Período | Aportes relacionados |
 | --- | --- | --- | --- |
-| Informe | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Aplicación móvil | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Backend | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Landing Page, cuando corresponda | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Backend | Ramas `feature/weather-forecast` y `feature/satellite-images` fusionadas en `develop` vía commits [4fe9c65](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/4fe9c65b955ecd00b34c4f81167c26bb06d4e789) y [21ef446](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/21ef44600ac3524dd6328aa7b817fdce4d4ebdda) | 28/10/2026 | Implementación de cliente Open-Meteo, cálculo de recomendación combinada de riego, servicio de catálogo satelital multitemporal, controladores REST, DTOs, OpenAPI snapshot y 7 pruebas de integración xUnit atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Aplicación móvil | Rama `feature/external-services-us22-us23` integrada mediante Pull Request #2 ([56eddd1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/56eddd14f58737a58adfc7fbe2fd52100b4ec498)) | 28/10/2026 | Desarrollo de entidades de dominio, casos de uso `GetFieldWeather`, `GetSatelliteImage`, `CompareVegetationPeriod`, migración Room v4, DAOs, endpoints Retrofit en `MonitoringApi`, ViewModel con StateFlow, componentes Compose (`WeatherForecastCard`, `IrrigationSuspensionBanner`, `SatelliteOverlayViewer`, `VegetationComparisonCard`, `VegetationComparisonScreen`) y 6 pruebas automatizadas atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Informe | Rama de trabajo del sprint y pull requests de documentación | 28/10/2026 - 31/10/2026 | Documentación de los nueve subpuntos de 4.2.2 para US22 y US23, actualización del Sprint Backlog, trazabilidad de pruebas y matriz de cumplimiento funcional atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Landing Page, cuando corresponda | Rama `main` de LandingPage-TerraTech | 28/10/2026 - 31/10/2026 | Verificación de enlaces, consistencia con el catálogo de servicios de monitoreo y despliegue continuo en GitHub Pages. |
 
 La interpretación de los analíticos relaciona las contribuciones con las tareas y resultados del sprint. Las gráficas acumuladas se identifican como tales para distinguirlas de las contribuciones realizadas exclusivamente durante esta iteración.
 
