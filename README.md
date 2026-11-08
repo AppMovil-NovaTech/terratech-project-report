@@ -7090,18 +7090,18 @@ La selección considera las dependencias entre componentes. Una pantalla disponi
 | Campo | Registro |
 | --- | --- |
 | Sprint # | Sprint 2 — AV2 |
-| Date | POR COMPLETAR con la fecha de la planificación. |
-| Time | POR COMPLETAR con la hora registrada. |
-| Location | POR COMPLETAR con el lugar o plataforma utilizados. |
-| Prepared By | POR COMPLETAR con el integrante responsable del registro. |
-| Attendees | POR COMPLETAR con los participantes de la planificación. |
+| Date | 28/10/2026 |
+| Time | 10:00 - 11:30 America/Lima |
+| Location | Sesión remota vía Discord / Google Meet |
+| Prepared By | Barba Estrada, Bryan Eduardo y Bendezú Navarro, Rúbens Fitzgerald |
+| Attendees | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
 | Sprint 1 Review Summary | En TB1 se documentó el recorrido de registro, inicio de sesión, perfil, parcelas, asociación de sensores, indicadores, histórico y consulta de información descargada sin conexión. Se incorporaron evidencias de ejecución en emulador, pruebas técnicas y publicación del backend. El Sprint 2 continúa sobre esa base y registra por separado las ampliaciones y correcciones posteriores. |
 | Sprint 1 Retrospective Summary | Las observaciones posteriores a TB1 identificaron la necesidad de corregir contenido mal integrado en el informe y mejorar la organización y trazabilidad del tablero. El equipo actualizó Trello; su evidencia debe incorporarse al reporte. También se requiere mantener coherencia entre requisitos, diseño, código y resultados de las pruebas. |
-| Sprint 2 Goal | Propuesta para consolidación del equipo: permitir al agricultor utilizar los recorridos core seleccionados para AV2 sobre sus propios recursos, integrando la aplicación móvil con el backend público y ampliando la consulta e interpretación de la información agrícola. |
-| Métrica de cumplimiento | Criterios de aceptación aprobados respecto del total seleccionado para el sprint, con evidencia de implementación, ejecución y pruebas sobre la versión evaluada. |
-| Historias seleccionadas | POR COMPLETAR con los IDs del Trello y Product Backlog actualizados. |
-| Sprint 2 Velocity | POR COMPLETAR con la capacidad comprometida registrada por el equipo. |
-| Sum of Story Points | POR COMPLETAR con la suma de las historias efectivamente seleccionadas. |
+| Sprint 2 Goal | Permitir al agricultor optimizar la toma de decisiones agronómicas mediante la consulta integrada del pronóstico del clima con recomendación automática de suspensión de riego (US22) y el análisis visual de teledetección satelital con cálculo de índices de vegetación NDVI y comparación temporal de parcelas (US23), garantizando persistencia local en Room v4 para operación sin conexión y disponibilidad verificada en Cloud Run. |
+| Métrica de cumplimiento | 100 % de los criterios de aceptación técnicos y funcionales de US22 y US23 aprobados, respaldados por 7 pruebas de integración xUnit en backend, 4 pruebas de contrato y 2 pruebas unitarias de dominio en Android, además de migración Room v4 y despliegue público en Google Cloud Run. |
+| Historias seleccionadas | US22 (Consulta del pronóstico del clima - 5 SP) y US23 (Consulta de imágenes satelitales - 8 SP) adelantadas de EPIC08 (Transversal / Shared) para la entrega AV2. Se integran además US08 (Recuperación de contraseña), US13 (Zonas fértiles) y US18 (Umbrales de alerta). |
+| Sprint 2 Velocity | 32 SP comprometidos para el Sprint 2 por el equipo de desarrollo. |
+| Sum of Story Points | 13 SP correspondientes a la integración de servicios externos de Bryan Barba (5 SP de US22 + 8 SP de US23), dentro del compromiso total del incremento. |
 
 La planificación anterior del informe asignaba TS05, US08, TS08 y SP02 al Sprint 2. La incorporación de capacidades adelantadas desde otras iteraciones debe registrarse como una actualización de la planificación, conservando sus identificadores y estimaciones.
 
@@ -7123,7 +7123,7 @@ La matriz Leadership-and-Collaboration Matrix relaciona los aspectos del Sprint 
 
 | Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias |
 | --- | --- | --- | --- | --- | --- |
-| Barba Estrada, Bryan Eduardo | bry4nbe | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Barba Estrada, Bryan Eduardo | bry4nbe | L | L | C | L |
 | Bendezú Navarro, Rúbens Fitzgerald | Lucemz | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
 | Delgado Perez, James Caleb | JAmsy06 | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
 | Pariona Chacca, Angel Jose | Angelitoso-opp | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
@@ -7143,7 +7143,20 @@ Los estados utilizados son **To-do**, **In-Process**, **To-Review** y **Done**. 
 
 | User Story ID | Title | Task ID | Title | Description | Estimation (Hours) | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| US22 | Consulta del pronóstico del clima | S2-01 | Cliente Open-Meteo y modelos de datos | Implementación de OpenMeteoWeatherClient e interfaces de deserialización externa en backend | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-02 | Servicio de clima, caché 3h y regla agronómica | Servicio WeatherForecastService con IMemoryCache y cálculo de suspensión de riego (lluvia >=80% / 10mm y humedad <=35% -> ahorro 500 L) | 8 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-03 | Controlador REST y OpenAPI de clima | Creación de FieldWeatherController (GET /api/v1/fields/{id}/weather), DTOs y manejo de errores 404/502 | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-04 | Persistencia Room v4 y DTOs de clima | Creación de FieldWeatherRow, FieldWeatherDao, DTOs remotos y migración Room 3->4 | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-05 | Caso de uso y repositorio Android de clima | Implementación de GetFieldWeather, FieldWeatherRepositoryImpl con fallback offline y StateFlow en ViewModel | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | S2-06 | Componentes Compose de clima y banner | Diseño e integración de WeatherForecastCard e IrrigationSuspensionBanner en SensorsScreen | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-07 | Agregado y catálogo satelital backend | Definición de SatelliteImageRecord, SatelliteBounds y servicio SatelliteImageService con catálogo multitemporal | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-08 | Controlador REST y OpenAPI satelital | Implementación de SatelliteImagesController con endpoints /latest y ?targetDate=... y validación de ventana de 60 días | 5 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-09 | Persistencia Room v4 y DTOs satelitales | Creación de SatelliteImageRow, SatelliteImageDao, DTOs Retrofit y actualización de TerraDatabase v4 | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-10 | Casos de uso y comparación de vegetación | Implementación de GetSatelliteImage, CompareVegetationPeriod y repositorio SatelliteImageRepositoryImpl | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-11 | UI Compose: Visor satelital y selector | Desarrollo de SatelliteOverlayViewer, diálogo de fecha SatelliteDatePickerDialog y alternancia mapa/satélite | 8 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | S2-12 | Pantalla y navegación de comparación | Creación de VegetationComparisonCard, VegetationComparisonScreen y subgrafo de navegación Compose | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 / US23 | Integración con Servicios Externos | S2-13 | Pruebas de integración xUnit de backend | Suites WeatherTests (3 casos) y SatelliteImageTests (4 casos) con servidor MySQL aislado | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 / US23 | Integración con Servicios Externos | S2-14 | Pruebas de contrato y unitarias Android | Suites ExternalServicesContractTest (4 casos con MockWebServer) y CompareVegetationPeriodTest (2 casos) | 5 | Barba Estrada, Bryan Eduardo | Done |
 
 El registro debe diferenciar las capacidades heredadas del Sprint 1, las ampliaciones implementadas durante el Sprint 2 y las correcciones derivadas de la revisión de TB1. Las historias trasladadas desde otra iteración deben actualizarse también en el Product Backlog.
 
