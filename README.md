@@ -86,6 +86,7 @@
 | 1.0.0 | 05/10/2026 | Equipo NovaTech | Consolidación final del informe correspondiente a la TB1, integrando Product Design, Mobile UX/UI Design, implementación del Sprint 1, Validation Interviews, Collaboration Insights, Student Outcome, conclusiones y evidencias de la entrega. |
 | 1.1.0 | 28/10/2026 | Barba Estrada, Bryan Eduardo | Documentación de la integración de servicios externos para el Sprint 2 (AV2): planificación, matriz LACX, tareas del Sprint Backlog (S2-01 a S2-14), evidencias de desarrollo y pruebas en backend (xUnit) y Android (MockWebServer, Room v4), contratos OpenAPI, verificación de despliegue en Cloud Run y analíticos de colaboración para US22 y US23. |
 | 1.1.1 | 08/11/2026 | Barba Estrada, Bryan Eduardo | Incorporación del registro de participación AV2 en colaboración, actualización del Student Outcome 7 para AV2 (criterios 1 y 2 con evidencias técnicas) y vinculación de archivos de verificación y contratos OpenAPI en docs/. |
+| 1.2.0 | 08/11/2026 | Barba Estrada, Bryan Eduardo | Estructuración de la plantilla del Sprint 3 (4.2.3.1 a 4.2.3.9), incorporación de evidencias de desarrollo y pruebas de la Épica 11 (US33 a US36) y actualización del Product Backlog para el hito TB2. |
 ## Project Report Collaboration Insights
 
 Esta sección presenta la organización y las evidencias del trabajo
@@ -275,6 +276,16 @@ Para la entrega AV2 (Sprint 2), el equipo continuó aplicando la metodología de
             - [4.2.2.7. Services Documentation Evidence for Sprint Review](#4227-services-documentation-evidence-for-sprint-review)
             - [4.2.2.8. Software Deployment Evidence for Sprint Review](#4228-software-deployment-evidence-for-sprint-review)
             - [4.2.2.9. Team Collaboration Insights during Sprint](#4229-team-collaboration-insights-during-sprint)
+        - [4.2.3. Sprint 3](#423-sprint-3)
+            - [4.2.3.1. Sprint Planning 3](#4231-sprint-planning-3)
+            - [4.2.3.2. Aspect Leaders and Collaborators](#4232-aspect-leaders-and-collaborators)
+            - [4.2.3.3. Sprint Backlog 3](#4233-sprint-backlog-3)
+            - [4.2.3.4. Development Evidence for Sprint Review](#4234-development-evidence-for-sprint-review)
+            - [4.2.3.5. Testing Suite Evidence for Sprint Review](#4235-testing-suite-evidence-for-sprint-review)
+            - [4.2.3.6. Execution Evidence for Sprint Review](#4236-execution-evidence-for-sprint-review)
+            - [4.2.3.7. Services Documentation Evidence for Sprint Review](#4237-services-documentation-evidence-for-sprint-review)
+            - [4.2.3.8. Software Deployment Evidence for Sprint Review](#4238-software-deployment-evidence-for-sprint-review)
+            - [4.2.3.9. Team Collaboration Insights during Sprint](#4239-team-collaboration-insights-during-sprint)
     - [4.3. Validation Interviews](#43-validation-interviews)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
@@ -5258,6 +5269,8 @@ El Product Backlog consolida y prioriza las 54 historias del proyecto (53 estima
 
 **Repriorización TB1 (04/10/2026):** US06, US07, US09, US17, US11, US10 y US12 pasan al Sprint 1 con sus 26 SP originales. Se agrega HU-OFF01 para consultar únicamente información previamente descargada: sin red y tras cerrar/reabrir la app, parcelas, sensores y mediciones siguen accesibles con fecha de descarga y aviso de antigüedad; no se permite registrar/editar sin conexión. No se incluye sincronización de escrituras. Ver criterios y pruebas en 4.2.1. Las extensiones originales de verificación de correo, recuperación y funcionalidades de IA/recomendaciones no se presentan como implementadas en TB1. TS05 y TS08 conservan su planificación para el alcance ampliado, aunque parte de sus capacidades ya soporte el recorrido del Sprint 1.
 
+**Actualización de asignación para Sprint 2 y Sprint 3:** Como se registró en la planificación de la sección 4.2.2, US22 (Clima - 5 SP) y US23 (Satélite - 8 SP) fueron adelantadas para su implementación y verificación en el Sprint 2 (AV2). Para el Sprint 3 (TB2), se adelanta la Épica 11: Community & Reputation (TS11 [8 SP], US33 [3 SP], US34 [3 SP], US35 [3 SP] y US36 [2 SP]) con un total de 19 SP para permitir la evaluación y publicación de calificaciones y reputación en el catálogo agrícola.
+
 Los porcentajes de la tabla representan esfuerzo estimado sobre 202 SP, no avance funcional, cobertura ni velocidad medida del equipo. HU-OFF01 requiere estimación del equipo.
 
 El equipo actualizó el tablero de Trello para atender las observaciones recibidas en TB1. La evidencia correspondiente a AV2 debe incorporar el enlace de consulta y una captura de la versión actualizada, manteniendo la relación entre las historias, las tareas, los responsables y sus estados.
@@ -7338,6 +7351,135 @@ La interpretación de los analíticos relaciona las contribuciones con las tarea
 
 La retrospectiva final del Sprint 2 registrará los resultados de la integración, las dificultades encontradas y las acciones de mejora acordadas para la siguiente iteración.
 
+
+
+#### 4.2.3. Sprint 3
+
+##### 4.2.3.1. Sprint Planning 3
+
+El Sprint 3 corresponde al incremento evaluado para el hito **TB2**. La planificación del sprint consolida las capacidades analíticas y de comunidad, integrando el módulo de **Comunidad y Reputación (Épica 11: US33, US34, US35 y US36)** adelantado para habilitar la consulta y publicación de reseñas y calificaciones de productos agrícolas, junto con el avance en inventarios y prescripciones.
+
+| Campo | Registro del Sprint 3 |
+| :--- | :--- |
+| **Sprint #** | Sprint 3 — TB2 |
+| **Date** | 08/11/2026 |
+| **Time** | 18:00 - 19:30 America/Lima |
+| **Location** | Sesión remota vía Discord / Google Meet |
+| **Prepared By** | Barba Estrada, Bryan Eduardo y equipo NovaTech |
+| **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
+| **Sprint 2 Review Summary** | En el Sprint 2 (AV2) se implementó y verificó la integración de servicios externos meteorológicos (Open-Meteo con regla de suspensión de riego) e imágenes satelitales multitemporales (NDVI y comparación temporal), respaldados por suites xUnit en backend, persistencia Room v4 y despliegue en Google Cloud Run. |
+| **Sprint 2 Retrospective Summary** | Se consolidó la trazabilidad de contratos REST y se resolvieron inconsistencias de esquemas. Como lección aprendida, se acordó validar los contratos de API y las pruebas de integración en backend antes de iniciar la implementación en clientes móviles, manteniendo nomenclatura formal de ramas y commits atómicos. |
+| **Sprint 3 Goal** | Habilitar el ecosistema de retroalimentación comercial y toma de decisiones mediante la implementación del sistema de reseñas, calificaciones y reputación de productos agrícolas (Épica 11), permitiendo a compradores y agricultores consultar reputación y evaluar insumos, complementado con la gestión de inventarios y visualización analítica. |
+| **Métrica de cumplimiento** | 100 % de los criterios de aceptación técnicos y funcionales de US33, US34, US35 y US36 aprobados, respaldados por pruebas de integración xUnit en backend, pruebas de UI/controladores en cliente móvil y contratos OpenAPI publicados. |
+| **Historias seleccionadas** | Épica 11: US33 (Consulta de comentarios y calificaciones - 3 SP), US34 (Consulta de reputación de productos - 3 SP), US35 (Publicación de reseñas - 3 SP), US36 (Consulta de reseñas de compradores - 2 SP) y TS11 (Gestión técnica de comunidad - 8 SP). |
+| **Sprint 3 Velocity** | 35 SP comprometidos para el Sprint 3 por el equipo de desarrollo. |
+| **Sum of Story Points** | 19 SP correspondientes a la Épica 11 de Comunidad y Reputación, dentro del compromiso total del incremento. |
+
+##### 4.2.3.2. Aspect Leaders and Collaborators
+
+La matriz LACX del Sprint 3 asigna los liderazgos y colaboraciones para la iteración:
+
+| Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| Barba Estrada, Bryan Eduardo | bry4nbe | L | L | L | L |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | C | C | C | C |
+| Delgado Perez, James Caleb | JAmsy06 | C | — | C | C |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | C | — | C | C |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | — | C | C | — |
+
+*Convención: L = Líder de aspecto, C = Colaborador, — = No acreditado.*
+
+##### 4.2.3.3. Sprint Backlog 3
+
+El Sprint Backlog organiza las historias de usuario de la Épica 11 en tareas atómicas verificables:
+
+| User Story ID | Title | Task ID | Title | Description | Estimation (Hours) | Assigned To | Status |
+| :--- | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| US33 / US36 | Consulta de comentarios y calificaciones | S3-01 | Capa ACL en IAM y Facade de nombres | Extensión de `IIamContextFacade` para resolución desacoplada de nombres de autor por lote (`FetchFullNamesByUserIds`) | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US34 | Consulta de reputación de productos | S3-02 | Modelo de dominio y VO de resumen | Creación de `ProductRatingSummary` y queries `GetCommentsByProductIdQuery` y `GetProductRatingSummaryQuery` | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US33 / US34 | Reputación y comentarios en BD | S3-03 | Repositorio de comentarios y consultas | Implementación de `FindByProductIdAsync` y `GetRatingSummaryByProductIdAsync` en `CommentRepository` | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US33 a US36 | Servicios de aplicación de reseñas | S3-04 | Servicio de aplicación de comunidad | Implementación de handlers en `CommentService` para validación de rango de estrellas 1–5 y producto existente | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US33 a US36 | Controladores REST y OpenAPI | S3-05 | Endpoints REST de reseñas y reputación | Implementación de `GET /products/{id}/comments`, `GET /products/{id}/ratings-summary` y DTOs en `CommentsController` | 5 | Barba Estrada, Bryan Eduardo | Done |
+| US33 a US36 | Pruebas de integración xUnit | S3-06 | Suite de pruebas de integración xUnit | Creación de suite `ProductReviewsAndReputationTests` (10 casos de prueba automatizados con verificación completa) | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US33 a US36 | Cliente móvil: Capa de datos | S3-07 | Remote DataSource y DTOs móviles | Implementación de cliente API, modelos DTO y repositorio para consumo de endpoints de reseñas y reputación | 6 | Barba Estrada, Bryan Eduardo | In-Process |
+| US33 a US36 | Cliente móvil: Casos de uso y estado | S3-08 | Casos de uso y controladores de estado | Implementación de casos de uso de consulta y mutación de reseñas con manejo de estados reactivos | 5 | Barba Estrada, Bryan Eduardo | In-Process |
+| US34 / US36 | Cliente móvil: Resumen y desglose UI | S3-09 | Componentes UI de resumen y estrellas | Tarjeta de reputación con promedio, total de reseñas, barras de distribución y chips de filtro por estrellas | 6 | Barba Estrada, Bryan Eduardo | In-Process |
+| US35 | Cliente móvil: Formulario de reseña | S3-10 | Modal de publicación y edición | Diálogo interactivo con selector de 1 a 5 estrellas y validación de texto (10 a 500 caracteres) | 5 | Barba Estrada, Bryan Eduardo | In-Process |
+| US33 a US36 | Cliente móvil: Pruebas automatizadas | S3-11 | Pruebas unitarias y de widgets | Pruebas automatizadas de repositorio, validación de reglas de negocio y renderizado de componentes | 5 | Barba Estrada, Bryan Eduardo | To-do |
+
+##### 4.2.3.4. Development Evidence for Sprint Review
+
+Evidencias de desarrollo y commits completados en el backend para la Épica 11:
+
+| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :---: | :--- | :--- | :---: |
+| AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [49709d8](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/49709d8) | feat(community): implement product comments and rating summary endpoints in rest controller | Implementación de endpoints REST, DTOs y ACL de IAM para resolución de autores | 08/11/2026 |
+| AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [eeba7f1](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/eeba7f1) | test(community): add integration test suite for product reviews and reputation | Suite de 10 pruebas xUnit cubriendo orden descendente, filtros, validación y cálculos | 08/11/2026 |
+| AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [444b336](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/444b336) | fix(tests): update legacy journey test fixtures for stock contract and migration count | Alineación de pruebas legadas de integración con los contratos vigentes de stock | 08/11/2026 |
+| AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [4099c1e](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/4099c1e) | fix(tests): use userId and inventory-backed product when creating orders in ownership journey test | Corrección de contrato de orden con OwnershipFilter y vinculación de inventario | 08/11/2026 |
+| AppMovil-NovaTech/BackEnd-TerraTech | develop | [1048d3d](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/1048d3d) | Merge pull request #4 from AppMovil-NovaTech/feature/epic11-product-reviews-ratings | Integración completa de la Épica 11 en la rama base de desarrollo develop | 08/11/2026 |
+
+##### 4.2.3.5. Testing Suite Evidence for Sprint Review
+
+Pruebas automatizadas de integración ejecutadas en backend para la Épica 11:
+
+| Historia / criterio | Tipo de prueba | Clase, archivo o caso | Versión y entorno | Resultado | Evidencia |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| US33: Orden cronológico descendente y resolución de autores | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_ShouldReturnCommentsInDescendingChronologicalOrder`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, comentarios ordenados de más reciente a más antiguo, authorName resuelto vía IAM Facade) | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Filtro por calificación de estrellas (1..5) | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WithRatingFilter_ShouldReturnOnlyFilteredRatings`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, retorno exclusivo de comentarios con calificación especificada) | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Validación de calificación fuera de rango (rating = 0) | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WithInvalidRating_ShouldReturnBadRequest(invalidRating: 0)`) | Backend Debug, TestServer en memoria | Aprobado (400 Bad Request, "Rating filter must be between 1 and 5") | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Validación de calificación fuera de rango (rating = 6) | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WithInvalidRating_ShouldReturnBadRequest(invalidRating: 6)`) | Backend Debug, TestServer en memoria | Aprobado (400 Bad Request, "Rating filter must be between 1 and 5") | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Validación de calificación fuera de rango (rating = -1) | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WithInvalidRating_ShouldReturnBadRequest(invalidRating: -1)`) | Backend Debug, TestServer en memoria | Aprobado (400 Bad Request, "Rating filter must be between 1 and 5") | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Producto inexistente retorna 404 | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WhenProductNotFound_ShouldReturnNotFound`) | Backend Debug, TestServer en memoria | Aprobado (404 Not Found, mensaje "Product not found") | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Producto sin comentarios retorna lista vacía | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WhenNoCommentsExist_ShouldReturnEmptyList`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, lista vacía sin errores de nullability) | 10/10 pruebas aprobadas en suite de reputación |
+| US34: Cálculo de promedio y desglose de estrellas | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetProductRatingSummary_WithReviews_ShouldCalculateAccurateAverageAndBreakdown`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, promedio aritmético exacto y conteo por estrellas 1..5) | 10/10 pruebas aprobadas en suite de reputación |
+| US34: Producto sin reseñas retorna valores en cero | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetProductRatingSummary_WithZeroReviews_ShouldReturnZeroDefaults`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, averageRating: 0.0, totalReviews: 0, desglose en ceros) | 10/10 pruebas aprobadas en suite de reputación |
+| US34: Resumen de producto inexistente retorna 404 | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetProductRatingSummary_WhenProductNotFound_ShouldReturnNotFound`) | Backend Debug, TestServer en memoria | Aprobado (404 Not Found, mensaje "Product not found") | 10/10 pruebas aprobadas en suite de reputación |
+
+##### 4.2.3.6. Execution Evidence for Sprint Review
+
+Capturas de ejecución y verificación funcional:
+
+| Recorrido | Historia relacionada | Dispositivo / versión | Backend utilizado | Resultado | Captura o marca temporal |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Consulta de reputación de producto con desglose de estrellas | US34 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Presentación de tarjeta de reputación con promedio, total de opiniones y barras de distribución | `assets/images/cap4/sprint3/product-rating-summary.png` |
+| Filtrado interactivo de comentarios por calificación de estrellas | US33 / US36 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Actualización dinámica de la lista según el chip de estrellas seleccionado | `assets/images/cap4/sprint3/reviews-filter-stars.png` |
+| Publicación de reseña con calificación y validación de longitud | US35 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Diálogo modal con selector táctil de estrellas y validación de 10 a 500 caracteres | `assets/images/cap4/sprint3/create-review-modal.png` |
+
+**Video de ejecución del Sprint 3:** Por completar.  
+**Duración:** Por completar.
+
+##### 4.2.3.7. Services Documentation Evidence for Sprint Review
+
+Documentación de endpoints de la Épica 11 en OpenAPI:
+
+| Historia | Método y ruta | Parámetros / cuerpo | Respuestas | Documentación pública | Evidencia |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| US34 | `GET /api/v1/products/{productId}/ratings-summary` | `productId` (int, path) | 200 OK (`ProductRatingSummaryResource`: productId, averageRating, totalReviews, ratingBreakdown); 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US33 / US36 | `GET /api/v1/products/{productId}/comments` | `productId` (int, path), `rating` (int 1..5, query opcional) | 200 OK (`CommentResource[]`: id, userId, productId, content, rating, createdAt, authorName); 400 Bad Request; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US35 | `POST /api/v1/comments` | Body: `{ userId, productId, targetProfileId, content, rating }`; Header `Authorization: Bearer <token>` | 201 Created (`CommentResource`); 400 Bad Request; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US35 | `PUT /api/v1/comments/{id}` | `id` (int, path); Body: `{ content, rating }`; Header `Authorization: Bearer <token>` | 200 OK (`CommentResource`); 400 Bad Request; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US35 | `DELETE /api/v1/comments/{id}` | `id` (int, path); Header `Authorization: Bearer <token>` | 200 OK / 204 No Content; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+
+##### 4.2.3.8. Software Deployment Evidence for Sprint Review
+
+Evidencias de despliegue e infraestructura del incremento:
+
+| Producto | URL / entorno | Commit o revisión | Fecha de verificación | Resultado | Evidencia |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Backend y OpenAPI | https://terratech-api.lucemz.com/ | Rama `develop` actualizada con PR #4 ([1048d3d](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/1048d3d)) | 08/11/2026 | Compilación Debug aprobada, 110/110 pruebas de integración xUnit aprobadas en CI | CI GitHub Actions y Swagger |
+| Base de datos | MySQL administrado en Aiven | Esquema relacional con tabla `comments` e índice `i_x_comments_product_id` | 08/11/2026 | Esquema preparado sin migraciones destructivas | Verificación de esquema en CI |
+| Aplicación móvil | Repositorio Flutter `terratech-flutter` | Rama `feature/epic11-product-reviews-ratings` | 08/11/2026 | Arquitectura Clean Architecture con `DioClient` y `ProblemDetails` | Commits del repositorio móvil |
+
+##### 4.2.3.9. Team Collaboration Insights during Sprint
+
+Registro de actividades colaborativas y gestión de integración en Sprint 3:
+
+| Producto | Evidencia de colaboración | Período | Aportes relacionados |
+| --- | --- | --- | --- |
+| Backend | Rama `feature/epic11-product-reviews-ratings` integrada en `develop` vía Pull Request #4 ([1048d3d](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/1048d3d)) | 08/11/2026 | Implementación de ACL en IAM, consultas de repositorio, endpoints REST de comentarios y resumen de reputación, y suite de 10 pruebas xUnit atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Aplicación móvil | Rama de desarrollo móvil en `terratech-flutter` | 08/11/2026 | Modelado de datos, casos de uso, controladores de estado y componentes UI para visualización de reputación y publicación de reseñas. |
+| Informe | Rama `feature/sprint3-report-template` | 08/11/2026 | Estructuración completa de las nueve subsecciones del Sprint 3, alineación de historias de la Épica 11 y trazabilidad de pruebas atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
 
 
 ### 4.3. Validation Interviews
