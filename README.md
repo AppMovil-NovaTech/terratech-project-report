@@ -5219,40 +5219,40 @@ El Product Backlog consolida y prioriza las 54 historias del proyecto (53 estima
 | 15 | US10 | Consulta de indicadores clave | 5 | Sprint 1 |
 | 16 | US11 | Selección de zona o sensor específico | 3 | Sprint 1 |
 | 17 | US12 | Consulta del histórico de datos | 5 | Sprint 1 |
-| 18 | HU-OFF01 | Consulta sin conexión de datos previamente descargados | Pendiente de estimación | Sprint 1 |
-| 19 | TS05 | Implementación del servicio de autenticación | 8 | Sprint 2 |
+| 18 | HU-OFF01 | Consulta sin conexión de datos previamente descargados | 8 | Sprint 1 |
+| 19 | TS05 | Implementación del servicio de autenticación | 5 | Sprint 2 |
 | 20 | US08 | Recuperación de contraseña | 3 | Sprint 2 |
 | 21 | TS08 | Consulta de perfiles agrícolas | 3 | Sprint 2 |
 | 22 | SP02 | Viabilidad del almacenamiento local y la sincronización sin conexión | 3 | Sprint 2 |
-| 23 | US13 | Identificación de zonas fértiles | 8 | Sprint 3 |
-| 24 | US14 | Navegación en el mapa | 3 | Sprint 3 |
-| 25 | US15 | Recomendación automática de riego | 5 | Sprint 3 |
-| 26 | US16 | Recomendación automática de fertilización | 5 | Sprint 3 |
-| 27 | US18 | Configuración de umbrales de alerta | 3 | Sprint 3 |
-| 28 | US22 | Consulta del pronóstico del clima | 5 | Sprint 3 |
-| 29 | US23 | Consulta de imágenes satelitales | 8 | Sprint 3 |
-| 30 | TS09 | Gestión del inventario de insumos | 5 | Sprint 3 |
-| 31 | US24 | Registro de insumos | 3 | Sprint 3 |
-| 32 | US25 | Consulta y filtrado del inventario | 3 | Sprint 3 |
-| 33 | US26 | Actualización del stock de insumos | 5 | Sprint 3 |
-| 34 | TS10 | Consulta de reportes analíticos por dispositivo | 3 | Sprint 3 |
+| 23 | US13 | Identificación de zonas fértiles | 8 | Sprint 2 |
+| 24 | US14 | Navegación en el mapa | 3 | Sprint 2 |
+| 25 | US15 | Recomendación automática de riego | 3 | Sprint 2 |
+| 26 | US16 | Recomendación automática de fertilización | 3 | Sprint 2 |
+| 27 | US18 | Configuración de umbrales de alerta | 3 | Sprint 2 |
+| 28 | US22 | Consulta del pronóstico del clima | 5 | Sprint 2 |
+| 29 | US23 | Consulta de imágenes satelitales | 5 | Sprint 2 |
+| 30 | TS09 | Gestión del inventario de insumos | 5 | Sprint 2 |
+| 31 | TS10 | Consulta de reportes analíticos por dispositivo | 3 | Sprint 2 |
+| 32 | US24 | Registro de insumos | 3 | Sprint 3 |
+| 33 | US25 | Consulta y filtrado del inventario | 3 | Sprint 3 |
+| 34 | US26 | Actualización del stock de insumos | 5 | Sprint 3 |
 | 35 | SP03 | Viabilidad de las notificaciones push | 3 | Sprint 3 |
-| 36 | US27 | Consulta de notificaciones de los sensores | 3 | Sprint 4 |
-| 37 | US28 | Configuración de preferencias de notificaciones | 5 | Sprint 4 |
-| 38 | US29 | Alertas de interés sobre productos | 3 | Sprint 4 |
-| 39 | US30 | Notificaciones de nuevas reseñas | 3 | Sprint 4 |
-| 40 | US31 | Notificaciones de nuevos productos de interés | 3 | Sprint 4 |
-| 41 | US32 | Notificaciones de novedades y disponibilidad | 3 | Sprint 4 |
-| 42 | US39 | Consulta del catálogo de productos | 5 | Sprint 4 |
-| 43 | US40 | Consulta del detalle y la trazabilidad de un producto | 5 | Sprint 4 |
-| 44 | US41 | Consulta de la información de los cultivos de los clientes | 5 | Sprint 4 |
-| 45 | TS11 | Gestión de la comunidad y reseñas | 8 | Sprint 4 |
-| 46 | US33 | Consulta de comentarios y calificaciones | 3 | Sprint 4 |
-| 47 | US34 | Consulta de la reputación de productos | 3 | Sprint 4 |
-| 48 | US35 | Publicación de reseñas de productos | 3 | Sprint 4 |
-| 49 | US36 | Consulta de reseñas de otros compradores | 2 | Sprint 4 |
-| 50 | US37 | Consulta de productos con mayor interés | 5 | Sprint 4 |
-| 51 | US38 | Consulta de zonas con mayor actividad | 5 | Sprint 4 |
+| 36 | US27 | Consulta de notificaciones de los sensores | 3 | Sprint 3 |
+| 37 | US28 | Configuración de preferencias de notificaciones | 5 | Sprint 3 |
+| 38 | US30 | Notificaciones de nuevas reseñas | 3 | Sprint 3 |
+| 39 | US33 | Consulta de comentarios y calificaciones | 3 | Sprint 3 |
+| 40 | US34 | Consulta de la reputación de productos | 3 | Sprint 3 |
+| 41 | US35 | Publicación de reseñas de productos | 3 | Sprint 3 |
+| 42 | US36 | Consulta de reseñas de otros compradores | 2 | Sprint 3 |
+| 43 | US39 | Consulta del catálogo de productos | 5 | Sprint 3 |
+| 44 | US40 | Consulta del detalle y la trazabilidad de un producto | 5 | Sprint 3 |
+| 45 | TS11 | Gestión de la comunidad y reseñas | 8 | Sprint 3 |
+| 46 | US29 | Alertas de interés sobre productos | 3 | Sprint 4 |
+| 47 | US31 | Notificaciones de nuevos productos de interés | 3 | Sprint 4 |
+| 48 | US32 | Notificaciones de novedades y disponibilidad | 3 | Sprint 4 |
+| 49 | US37 | Consulta de productos con mayor interés | 5 | Sprint 4 |
+| 50 | US38 | Consulta de zonas con mayor actividad | 5 | Sprint 4 |
+| 51 | US41 | Consulta de la información de los cultivos de los clientes | 5 | Sprint 4 |
 | 52 | US19 | Documentación interactiva de la API | 2 | Sprint 4 |
 | 53 | US20 | Consulta de datos de un sensor | 3 | Sprint 4 |
 | 54 | US21 | Registro de recomendaciones mediante webhook | 5 | Sprint 4 |
@@ -5261,19 +5261,19 @@ El Product Backlog consolida y prioriza las 54 historias del proyecto (53 estima
 
 | Sprint | Enfoque principal del Sprint | Historias asignadas | Story Points | % del Backlog |
 |:---|:---|:---:|:---:|:---:|
-| **Sprint 1** | Infraestructura, Landing Page, Spike IoT y recorrido móvil TB1 con consulta offline | 18 (17 estimadas + HU-OFF01) | 52 SP + HU-OFF01 pendiente | 25.7% estimado |
-| **Sprint 2** | Ampliación IAM, recuperación de contraseña, perfiles y spike de sincronización | 4 (2 TS, 1 US, 1 SP) | 17 SP | 8.4% estimado |
-| **Sprint 3** | Analítica de suelo, prescripciones inteligentes, inventario y Spike Push | 13 (2 TS, 10 US, 1 SP) | 59 SP | 29.2% |
-| **Sprint 4** | Alertas push, trazabilidad QR, catálogo, comunidad y APIs externas | 19 (1 TS, 18 US) | 74 SP | 36.6% |
-| **Total** | **Proyecto completo TerraTech** | **54 historias** | **202 SP + HU-OFF01 pendiente** | **100%** |
+| **Sprint 1** | Infraestructura, Landing Page, Spike IoT, autenticación, gestión de perfil, sensores, indicadores y consulta offline. | 18 (17 estimadas + HU-OFF01) | 49 SP + 8 (HU-OFF01) | 25.9% |
+| **Sprint 2** | Ampliación de autenticación, perfiles agrícolas, investigación de sincronización offline, analítica del suelo, recomendaciones agrícolas, clima, satélite e inventario. | 13 | 52 SP | 27.5% |
+| **Sprint 3** | Gestión de inventario, notificaciones push, comunidad, reputación, calificaciones y catálogo de productos. | 14 | 54 SP | 28.6% |
+| **Sprint 4** | Alertas de interés comercial, notificaciones de productos, indicadores de actividad, información de cultivos y funcionalidades de integración mediante API y webhook. | 9 | 34 SP | 18.0% |
+| **Total** | **Proyecto completo TerraTech** | **54 historias (53 estimadas + 1 HU-OFF01)** | **189 SP estimados + 8 (HU-OFF01) pendiente** | **100%** |
 
-**Repriorización TB1 (04/10/2026):** US06, US07, US09, US17, US11, US10 y US12 pasan al Sprint 1 con sus 26 SP originales. Se agrega HU-OFF01 para consultar únicamente información previamente descargada: sin red y tras cerrar/reabrir la app, parcelas, sensores y mediciones siguen accesibles con fecha de descarga y aviso de antigüedad; no se permite registrar/editar sin conexión. No se incluye sincronización de escrituras. Ver criterios y pruebas en 4.2.1. Las extensiones originales de verificación de correo, recuperación y funcionalidades de IA/recomendaciones no se presentan como implementadas en TB1. TS05 y TS08 conservan su planificación para el alcance ampliado, aunque parte de sus capacidades ya soporte el recorrido del Sprint 1.
+**Criterios de priorización y distribución:** La organización del Product Backlog considera el valor para el negocio, las dependencias entre funcionalidades y la precedencia arquitectónica necesaria para el desarrollo de la aplicación móvil. Las historias técnicas y los spikes de investigación se distribuyen considerando su relación con las funcionalidades que habilitan o complementan.
 
-**Actualización de asignación para Sprint 2 y Sprint 3:** Como se registró en la planificación de la sección 4.2.2, US22 (Clima - 5 SP) y US23 (Satélite - 8 SP) fueron adelantadas para su implementación y verificación en el Sprint 2 (AV2). Para el Sprint 3 (TB2), se adelanta la Épica 11: Community & Reputation (TS11 [8 SP], US33 [3 SP], US34 [3 SP], US35 [3 SP] y US36 [2 SP]) con un total de 19 SP para permitir la evaluación y publicación de calificaciones y reputación en el catálogo agrícola.
+La distribución contempla cuatro Sprints y mantiene la asignación de HU-OFF01 al Sprint 1, cuyo alcance se limita a la consulta de información previamente descargada, sin permitir operaciones de registro o edición sin conexión. La sincronización de escrituras permanece fuera de este alcance.
 
-Los porcentajes de la tabla representan esfuerzo estimado sobre 202 SP, no avance funcional, cobertura ni velocidad medida del equipo. HU-OFF01 requiere estimación del equipo.
+**Consideraciones sobre la planificación:** La reorganización del Product Backlog representa una actualización de la planificación y distribución del trabajo. No implica, por sí misma, cambios en el estado de implementación, la aceptación de historias de usuario ni la validación de funcionalidades. El avance efectivo debe sustentarse en las evidencias y resultados documentados para cada Sprint.
 
-El equipo actualizó el tablero de Trello para atender las observaciones recibidas en TB1. La evidencia correspondiente a AV2 debe incorporar el enlace de consulta y una captura de la versión actualizada, manteniendo la relación entre las historias, las tareas, los responsables y sus estados.
+Los porcentajes representan la proporción del esfuerzo estimado de las 53 historias con estimación definida, tomando como base un total de 189 Story Points. HU-OFF01 permanece pendiente de estimación, por lo que no se incluye en dicho cálculo.
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
@@ -7228,7 +7228,7 @@ Los cambios de la Landing Page se incorporarán a esta tabla cuando formen parte
 
 ##### 4.2.2.5. Testing Suite Evidence for Sprint Review
 
-Las pruebas del Sprint 2 comprueban los criterios de las historias seleccionadas y las regresiones sobre las funcionalidades existentes. Cada resultado debe identificar el commit o versión evaluada, el entorno y la fecha de ejecución.
+Las pruebas del Sprint 2 comprueban los criterios de las historias seleccionadas y las regresiones sobre las funcionalidades existentes. Cada resultado debe identificar el commit o versión evaluada, el entorno y la fec407 | — |ha de ejecución.
 
 Las comprobaciones previas del proyecto incluyen navegación del mapa de fertilidad y operaciones de guardado y restablecimiento de umbrales. Estos antecedentes orientan las pruebas de regresión, pero sus resultados deben contrastarse con la versión integrada que se presentará en AV2.
 
