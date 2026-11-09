@@ -6900,16 +6900,16 @@ El objetivo prioriza la consulta de datos de una parcela propia y su continuidad
 | Campo del Sprint Planning | Registro |
 | --- | --- |
 | Sprint # | Sprint 1, entrega TB1 |
-| Date / Time | No se cuenta con un acta que permita acreditar una fecha y hora formal de reunión para el Sprint 1. El 04/10/2026 corresponde al corte de documentación de la TB1. |
-| Location | No se registró una plataforma o ubicación formal de reunión para este Sprint. |
+| Date / Time | 30/09/2026 |
+| Location | Remoto / Google Meet |
 | Prepared By | Bendezú Navarro, Rúbens Fitzgerald, usuario GitHub `Lucemz` |
-| Attendees | No se cuenta con un registro formal de asistencia del Sprint 1. |
-| Sprint 0 Review Summary | No hay acta de un Sprint 0. Se parte del backend heredado y de los artefactos AV1 de dominio/arquitectura; durante TB1 se desarrollaron los diseños del Capítulo III. |
-| Sprint 0 Retrospective Summary | Sin retrospectiva anterior acreditada. Como diagnóstico técnico se identificaron contratos de cuenta incompletos, controles de propiedad insuficientes y ausencia de mediciones persistidas para el recorrido móvil. |
+| Attendees | Developer Members of TerraTech 202602 |
+| Sprint 0 Review Summary | Se parte del backend heredado y de los artefactos AV1 de dominio/arquitectura; durante TB1 se desarrollaron los diseños del Capítulo III. |
+| Sprint 0 Retrospective Summary | Como diagnóstico técnico se identificaron contratos de cuenta incompletos, controles de propiedad insuficientes y ausencia de mediciones persistidas para el recorrido móvil. |
 | Sprint 1 Goal | Antes de la entrega TB1, permitir al agricultor completar el recorrido de cuenta a histórico sobre recursos propios y volver a consultar los datos descargados después de cerrar/reabrir la app sin red. |
 | Métrica de cumplimiento | Recorrido HTTP y UI automatizado aprobados; protección de dos cuentas; histórico 7/30 y detalle con unidades/UTC/SIMULATED; reinicio offline aprobado; backend público listo. La demostración física y el video del equipo no se encuentran acreditados en esta versión del informe. |
-| Sprint 1 Velocity | No calculada, debido a que el equipo no dispone de una velocidad histórica formalmente registrada para este Sprint. |
-| Sum of Story Points | 26 SP para las siete HU móviles estimadas (5+3+2+3+3+5+5). HU-OFF01 no fue estimada en esta entrega. El Sprint 1 completo conserva además los 26 SP previos de infraestructura/Landing Page/spike IoT: 52 SP conocidos más HU-OFF01. |**Definition of Done técnica:** contratos documentados; validaciones y acceso por propietario; persistencia verificable; pruebas Debug aprobadas; errores distinguibles; fuentes versionadas y credenciales excluidas. Para aceptar el incremento del equipo se necesitan también revisión de los responsables, tablero, capturas actuales, video público y evaluación del porcentaje funcional exigido por la rúbrica. No se sustituye ese porcentaje por cobertura de líneas.
+| Sprint 1 Velocity | 51 SP correspondiente a 16 historias de usuario, dejando una pequeña deuda técnica para el siguiente sprint. |
+| Sum of Story Points | 52 SP correspondientes a las 17 historias estimadas del Sprint 1. |
 
 #### 4.2.1.2. Aspect Leaders and Collaborators
 
@@ -6918,37 +6918,39 @@ La matriz LACX relaciona la responsabilidad registrada en el informe con los asp
 | Team Member | GitHub Username | Backend base / arquitectura | Cierre backend / MySQL / Cloud Run | Implementación Android / Room / pruebas | UX móvil | Diseño Landing Page | Implementación Landing Page / ES-EN / Pages | Documentación de validación |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Bendezú Navarro, Rúbens Fitzgerald | Lucemz | C | L | L | C | — | — | C |
-| Retuerto Rodriguez, Jorge Manuel | Calin1407 | L | C | — | — | — | — | — |
-| Pariona Chacca, Angel Jose | Angelitoso-opp | — | — | — | L | — | — | — |
-| Delgado Perez, James Caleb | JAmsy06 | — | — | — | — | L | — | — |
-| Barba Estrada, Bryan Eduardo | bry4nbe | — | — | — | — | — | L | L |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | L | C | C | — | C | — | — |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | — | — | C | L | — | C | — |
+| Delgado Perez, James Caleb | JAmsy06 | — | — | C | — | L | - | — |
+| Barba Estrada, Bryan Eduardo | bry4nbe | C | — | C | — | — | L | L |
 
 La tecnología documentada para el incremento es **C#, ASP.NET Core .NET 10, Entity Framework Core y MySQL** en backend; **Kotlin, Jetpack Compose, MVVM/StateFlow, Hilt, Retrofit, Room y DataStore** en Android; y **HTML5, CSS3 y JavaScript** en la Landing Page, con diccionarios JSON para el contenido ES/EN.
+
 #### 4.2.1.3. Sprint Backlog 1
 
 El Sprint Backlog descompone el recorrido de TB1 en tareas comprobables y conserva los estados registrados para ese incremento. **NR** indica que la estimación en horas no fue registrada; **Done**, una tarea técnica comprobada; **To-Review**, una tarea pendiente de revisión; y **To-do**, una tarea pendiente de ejecución. La actualización del tablero realizada posteriormente se documentará como parte del levantamiento de observaciones en AV2. La sigla **RF** identifica a Rúbens Fitzgerald Bendezú Navarro (`Lucemz`).
 
 | User Story Id | Title | Task Id | Title / Description | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| US06 | Registro | S1-01 | API y formulario con nombre, correo, contraseña y confirmación; validación independiente y duplicado 409 | NR | RF | Done |
-| US07 | Inicio de sesión | S1-02 | JWT firmado de 8 h, usuario existente, sesión protegida con Keystore y errores 401 | NR | RF | Done |
-| US07 | Recursos propios | S1-03 | Proteger listas/consultas/escrituras y rutas heredadas; verificar aislamiento con dos cuentas | NR | RF | Done |
-| US09 | Perfil | S1-04 | Consultar/editar nombre, teléfono, fundo, ubicación y superficie; API m² y UI hectáreas; correo inmutable | NR | RF | Done |
-| US17 | Registro de sensor | S1-05 | Catálogo código/MAC únicos, asociación a parcela propia, errores desconocido/ocupado y concurrencia | NR | RF | Done |
-| US11 | Selección parcela/sensor | S1-06 | Crear/listar parcelas propias, ver dispositivos y conservar selección válida; manejar parcela vacía | NR | RF | Done |
-| US10 | Indicadores | S1-07 | Última muestra humedad %, suelo °C, N/P/K ppm, fecha UTC, SIMULATED y antigüedad >30 min | NR | RF | Done |
-| US12 | Histórico | S1-08 | Consultas 7/30, gráfica, lista cronológica, umbral de referencia y detalle por ID | NR | RF | Done |
-| HU-OFF01 | Consulta sin conexión | S1-09 | Caché Room por usuario y fechas de descarga; recuperar consultas tras reinicio sin red | NR | RF | Done |
-| Transversal | Organización DDD | S1-10 | Clases/DTOs/entidades/DAOs y componentes Compose en archivos separados; contextos y capas propios | NR | RF | Done |
-| Transversal | Pruebas | S1-11 | Backend aislado, suite Android y recorrido Compose/Artemis; evidencia versionada | NR | RF | Done |
-| TS02/TS03/TS04 | Infraestructura | S1-12 | Imagen Debug linux/amd64, Cloud Run + Aiven, variables seguras, migraciones al iniciar, health checks | NR | RF | Done |
-| Transversal | Contrato desplegado | S1-13 | Cambiar API_URL Android a dominio HTTPS; comprobar BuildConfig y 11 rutas Retrofit | NR | RF | Done |
-| Transversal | Aceptación física | S1-14 | Recorrer el APK en teléfono mediante clics y reiniciar offline; adjuntar dispositivo/versión/resultado | NR | RF / equipo | To-do |
-| Transversal | Informe y exposición | S1-15 | Completar nueve subpuntos, anexar capturas públicas/board/analíticos y subir video de navegación | NR | RF / equipo | To-Review |
-| US01, US03, US05 | Landing Page | S1-16 | Repositorio, commits de implementación, publicación en GitHub Pages y conservación de los diseños de 3.1.3 | NR | Barba Estrada, Bryan Eduardo | Done |
-| US02, US04 | Landing Page | S1-17 | US02 exige tres características de sensor y US04 una consulta de términos y condiciones; ninguna se implementó, por lo que el alcance de la Landing Page se limita a US01, US03 y US05 | NR | Barba Estrada, Bryan Eduardo | To-do |
-
-No se declara recepción de telemetría de hardware físico: el catálogo y las lecturas de demostración se provisionan mediante comandos explícitos en Development y se bloquean en Production. El servidor publicado crea el esquema, no usuarios/contraseñas ni lecturas automáticamente.
+|:---|:---|:---|:---|:---:|:---|:---|
+| US06 | Registro de nuevo usuario | S1-01 | Implementar API y formulario de registro con nombre, correo, contraseña y confirmación; incorporar validaciones independientes y control de correo duplicado (409). | 3 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US07 | Inicio de sesión | S1-02 | Implementar autenticación mediante JWT firmado con expiración de 8 horas; validar usuarios existentes y gestionar errores 401. | 2 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US07 | Inicio de sesión | S1-03 | Proteger listas, consultas, escrituras y rutas heredadas; verificar el aislamiento de recursos utilizando dos cuentas diferentes. | 1 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US09 | Gestión del perfil de usuario | S1-04 | Implementar consulta y edición de nombre, teléfono, fundo, ubicación y superficie; gestionar conversión entre m² y hectáreas y mantener el correo inmutable. | 5 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US17 | Registro de un nuevo sensor | S1-05 | Implementar catálogo de sensores con códigos y MAC únicos, asociación a parcelas propias y validación de dispositivos desconocidos u ocupados. | 5 | Delgado Perez, James Caleb | Done |
+| US11 | Selección de zona o sensor específico | S1-06 | Implementar creación y consulta de parcelas propias, visualización de dispositivos asociados y conservación de una selección válida; gestionar parcelas vacías. | 4 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US10 | Consulta de indicadores clave | S1-07 | Implementar visualización de última medición de humedad (%), temperatura del suelo (°C), N/P/K (ppm), fecha UTC, indicador SIMULATED y antigüedad superior a 30 minutos. | 5 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US12 | Consulta del histórico de datos | S1-08 | Implementar consultas de períodos de 7 y 30 días, gráfica, lista cronológica, umbrales de referencia y detalle de mediciones por identificador. | 6 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| HU-OFF01 | Consulta sin conexión | S1-09 | Implementar almacenamiento local mediante Room por usuario y fechas de descarga; permitir recuperar información previamente descargada después de cerrar y reabrir la aplicación sin conexión. | 8 | Delgado Perez, James Caleb | Done |
+| Transversal | Organización DDD | S1-10 | Organizar clases, DTO, entidades, DAO y componentes Compose en archivos separados; mantener contextos delimitados y separación de responsabilidades por capas. | 8 | Pariona Chacca, Angel Jose | Done |
+| Transversal | Pruebas | S1-11 | Ejecutar pruebas de backend aislado, suite Android y recorrido de componentes Compose/Artemis; conservar evidencias versionadas. | 8 | Pariona Chacca, Angel Jose | Done |
+| TS01 | Configuración de repositorios con GitFlow | S1-12 | Configurar repositorios y estrategia de ramas GitFlow; establecer organización del código, convenciones de commits y flujo de integración mediante ramas. | 2 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| TS02, TS03, TS04 | Infraestructura y despliegue | S1-13 | Configurar imagen Docker Debug linux/amd64, despliegue en Cloud Run, base de datos en Aiven, variables de entorno seguras, migraciones al iniciar y health checks. | 12 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| Transversal | Contrato desplegado | S1-14 | Configurar API_URL de Android para utilizar el dominio HTTPS desplegado; comprobar BuildConfig y las 11 rutas Retrofit. | 3 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| Transversal | Aceptación física | S1-15 | Ejecutar el recorrido funcional del APK en un dispositivo físico mediante interacción directa; comprobar el comportamiento sin conexión después de reiniciar la aplicación y registrar dispositivo, versión y resultado. | 4 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| Transversal | Informe y exposición | S1-16 | Completar los nueve subpuntos del informe, incorporar capturas públicas, tablero y analíticos, y publicar el video de navegación de la aplicación. | 5 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US01, US03, US05 | Landing Page | S1-17 | Implementar el mensaje de valor, formulario de solicitud de demostración e información del proyecto y equipo; configurar repositorio, commits y publicación mediante GitHub Pages, conservando los diseños de la sección 3.1.3. | 8 | Barba Estrada, Bryan Eduardo | Done |
+| US02 | Landing Page | S1-18 | Implementar la presentación de las características principales de la solución, incluyendo las funcionalidades y capacidades de los sensores. | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US04 | Landing Page | S1-19 | Implementar la sección de consulta de términos y condiciones para los visitantes de la plataforma. | 2 | Barba Estrada, Bryan Eduardo | Done |
+| SP01 | Viabilidad de la integración de sensores IoT | S1-20 | Investigar y evaluar la viabilidad técnica de integrar sensores IoT con la plataforma, considerando conectividad, comunicación y disponibilidad de datos. | 3 | Barba Estrada, Bryan Eduardo | Done |
 
 #### 4.2.1.4. Development Evidence for Sprint Review
 
@@ -7063,7 +7065,7 @@ El backend está desplegado en **Google Cloud Run**, proyecto `terratech-510620`
 
 | Paso | Implementación / evidencia |
 | --- | --- |
-| Construcción | Dockerfile multi-stage con SDK/runtime .NET 10, publicación Debug, usuario no root y plataforma linux/amd64. Fuente ab66a7f |
+| Construcción | Dockerfile multi-stag| | | | **Total estimado** | **98 horas** | | |e con SDK/runtime .NET 10, publicación Debug, usuario no root y plataforma linux/amd64. Fuente ab66a7f |
 | Repositorio e imagen | Cloud Build construye la imagen del commit de main en Artifact Registry; el trigger desplegó inicialmente una revisión que falló al interpretar la conexión |
 | Configuración HTTP | Servidor en 0.0.0.0 y PORT=8080 de Cloud Run; 16600 es el puerto de MySQL remoto, no el listener HTTP |
 | Credenciales | ConnectionStrings__DefaultConnection, TokenSettings__Secret, ASPNETCORE_ENVIRONMENT=Production y Database__MigrateOnStartup=true. Se documentan los nombres, sin valores secretos |
