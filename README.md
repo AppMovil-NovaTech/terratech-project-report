@@ -6902,8 +6902,8 @@ El objetivo prioriza la consulta de datos de una parcela propia y su continuidad
 | Sprint # | Sprint 1, entrega TB1 |
 | Date / Time | 30/09/2026 |
 | Location | Remoto / Google Meet |
-| Prepared By | Bendezú Navarro, Rúbens Fitzgerald, usuario GitHub `Lucemz` |
-| Attendees | Developer Members of TerraTech 202602 |
+| **Prepared By** | Barba Estrada, Bryan Eduardo y Bendezú Navarro, Rúbens Fitzgerald |
+| **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
 | Sprint 0 Review Summary | Se parte del backend heredado y de los artefactos AV1 de dominio/arquitectura; durante TB1 se desarrollaron los diseños del Capítulo III. |
 | Sprint 0 Retrospective Summary | Como diagnóstico técnico se identificaron contratos de cuenta incompletos, controles de propiedad insuficientes y ausencia de mediciones persistidas para el recorrido móvil. |
 | Sprint 1 Goal | Antes de la entrega TB1, permitir al agricultor completar el recorrido de cuenta a histórico sobre recursos propios y volver a consultar los datos descargados después de cerrar/reabrir la app sin red. |
@@ -6928,6 +6928,12 @@ La tecnología documentada para el incremento es **C#, ASP.NET Core .NET 10, Ent
 #### 4.2.1.3. Sprint Backlog 1
 
 El Sprint Backlog descompone el recorrido de TB1 en tareas comprobables y conserva los estados registrados para ese incremento. **NR** indica que la estimación en horas no fue registrada; **Done**, una tarea técnica comprobada; **To-Review**, una tarea pendiente de revisión; y **To-do**, una tarea pendiente de ejecución. La actualización del tablero realizada posteriormente se documentará como parte del levantamiento de observaciones en AV2. La sigla **RF** identifica a Rúbens Fitzgerald Bendezú Navarro (`Lucemz`).
+
+**Enlace al tablero del Sprint 1:** [Tablero_Trello](https://trello.com/invite/b/6acbd1c061bea70e03cb9156/ATTIf5c2d3c9054434a65c8aa9b38338025b6EAD3D25/appmovile-agrotech)
+
+**Captura del tablero actualizado:**
+
+![Trello](assets/images/team/trello-organization.png){width=500}
 
 | User Story Id | Title | Task Id | Title / Description | Estimation (Hours) | Assigned To | Status |
 |:---|:---|:---|:---|:---:|:---|:---|
@@ -7097,7 +7103,8 @@ El incremento reutiliza el backend anterior y los artefactos de dominio y UI del
 | Rama individual | feature/rubens-fitzgerald-tb1-sprint1, creada desde origin/develop 1aa2092; integra los nueve subpuntos y evidencia en una rama independiente para revisión |
 | Landing Page | Implementación, internacionalización y publicación en GitHub Pages atribuidas a Barba Estrada, Bryan Eduardo mediante los commits de `LandingPage-TerraTech`; [historial](https://github.com/AppMovil-Dato/LandingPage-TerraTech/commits/main/) y [sitio publicado](https://appmovil-dato.github.io/LandingPage-TerraTech/). El diseño de 3.1.3 corresponde a Delgado Perez, James Caleb y se documenta por separado, sin atribuirle código. Faltan las capturas de analíticos de GitHub y las pantallas Desktop y Mobile reales que exige el checklist |
 
-**Interpretación:** separar contextos y archivos facilitó revisar cambios sin agrupar pantallas, DTOs y lógica; el contrato compartido evitó modificar rutas al cambiar de servidor local a Cloud Run. Las pruebas de dos cuentas y reinicio offline hicieron visible el trabajo de seguridad/persistencia. El fallo de despliegue se resolvió contrastando el error real y el formato de conexión, no cambiando el puerto de MySQL por el de HTTP.
+**Interpretación:** separar contextos y archivos facilitó revisar cambios sin agrupar pantallas, DTOs y lógica; el contrato compartido evitó modificar rutas al cambiar de servidor local a Cloud Run. Las pruebas de dos cuentas y reinicio offline hicieron visible el trabajo de seguridad/persistencia. El fallo de despliegue se resolvió contrastando el error real y el formato de conexión, no cambiando el puerto de MySQL por el de HTTP.| **Prepared By** | Barba Estrada, Bryan Eduardo y Bendezú Navarro, Rúbens Fitzgerald |
+| **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
 
 **Mejoras para el próximo sprint:** registrar reunión/estimaciones antes de implementar; vincular tasks del board con commits y revisiones; completar la matriz LACX con acuerdos del equipo; añadir capturas de Contributors/Network/Pull Requests por cada repositorio; revisar el porcentaje funcional con criterios ponderados; y ejecutar el recorrido en teléfono sobre el servicio publicado. Un número de commits no mide esfuerzo ni acredita por sí solo participación de todos en cada producto.
 
@@ -7106,47 +7113,26 @@ El [checklist de cierre del Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md) re
 
 #### 4.2.2. Sprint 2
 
-El Sprint 2 corresponde al incremento de TerraTech presentado en AV2. Continúa el recorrido agrícola desarrollado durante TB1 e incorpora las ampliaciones seleccionadas por el equipo, su integración con la aplicación móvil y el levantamiento de las observaciones de la entrega anterior.
+El Sprint 2 corresponde al incremento de TerraTech presentado en AV2. Su propósito es continuar el desarrollo del recorrido agrícola iniciado durante TB1, incorporando nuevas capacidades funcionales, ampliaciones técnicas y mejoras derivadas de las observaciones recibidas en la entrega anterior.
 
-El trabajo comprende la evolución de las funcionalidades de acceso, monitoreo, mapa de fertilidad, configuración de sensores y servicios relacionados con la información agrícola. La selección definitiva de historias se consolida en el Sprint Backlog y debe mantener correspondencia con el Product Backlog actualizado.
+El alcance comprende la evolución de los servicios de acceso y consulta de perfiles agrícolas, el monitoreo de las condiciones del suelo, la identificación y navegación de zonas fértiles mediante mapas, las recomendaciones agrícolas y la integración de servicios relacionados con información climática y satelital. Asimismo, contempla las actividades técnicas necesarias para ampliar las capacidades de la aplicación móvil y mantener su integración con los servicios existentes. La selección definitiva de historias y tareas se establece en el Sprint Backlog, manteniendo su correspondencia con el Product Backlog actualizado.
 
-El incremento reutiliza el backend y la Landing Page existentes. Las modificaciones del backend se orientan a completar los servicios requeridos por los recorridos móviles, manteniendo la organización por Bounded Contexts y las capas de Domain, Application, Infrastructure e Interfaces.
-
-La aceptación de AV2 requiere comprobar el backend público y su documentación, demostrar las principales funcionalidades core de la aplicación y presentar las primeras versiones de los videos de validación, producto y equipo. El avance se acredita mediante las evidencias de implementación, pruebas, ejecución y despliegue descritas en los siguientes apartados.
-
-##### 4.2.2.1. Sprint Planning 2
-
-La planificación del Sprint 2 parte de los resultados de TB1 y de las capacidades necesarias para ampliar el recorrido del agricultor. El equipo debe relacionar las historias seleccionadas con las tareas de implementación móvil, backend, pruebas y documentación.
-
-La selección considera las dependencias entre componentes. Una pantalla disponible en la aplicación no determina por sí sola la aceptación de una historia: también deben comprobarse sus operaciones, persistencia, manejo de errores y acceso a los recursos correspondientes al usuario.
+El incremento reutiliza el backend y la Landing Page desarrollados previamente, evitando reconstruir componentes que ya forman parte de la solución. Las modificaciones del backend se orientan a completar y adaptar los servicios requeridos por los recorridos móviles, conservando la organización por Bounded Contexts y la separación de responsabilidades en las capas implementadas.
 
 | Campo | Registro |
-| --- | --- |
-| Sprint # | Sprint 2 — AV2 |
-| Date | 28/10/2026 |
-| Time | 10:00 - 11:30 America/Lima |
-| Location | Sesión remota vía Discord / Google Meet |
-| Prepared By | Barba Estrada, Bryan Eduardo y Bendezú Navarro, Rúbens Fitzgerald |
-| Attendees | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
-| Sprint 1 Review Summary | En TB1 se documentó el recorrido de registro, inicio de sesión, perfil, parcelas, asociación de sensores, indicadores, histórico y consulta de información descargada sin conexión. Se incorporaron evidencias de ejecución en emulador, pruebas técnicas y publicación del backend. El Sprint 2 continúa sobre esa base y registra por separado las ampliaciones y correcciones posteriores. |
-| Sprint 1 Retrospective Summary | Las observaciones posteriores a TB1 identificaron la necesidad de corregir contenido mal integrado en el informe y mejorar la organización y trazabilidad del tablero. El equipo actualizó Trello; su evidencia debe incorporarse al reporte. También se requiere mantener coherencia entre requisitos, diseño, código y resultados de las pruebas. |
-| Sprint 2 Goal | Permitir al agricultor optimizar la toma de decisiones agronómicas mediante la consulta integrada del pronóstico del clima con recomendación automática de suspensión de riego (US22) y el análisis visual de teledetección satelital con cálculo de índices de vegetación NDVI y comparación temporal de parcelas (US23), garantizando persistencia local en Room v4 para operación sin conexión y disponibilidad verificada en Cloud Run. |
-| Métrica de cumplimiento | 100 % de los criterios de aceptación técnicos y funcionales de US22 y US23 aprobados, respaldados por 7 pruebas de integración xUnit en backend, 4 pruebas de contrato y 2 pruebas unitarias de dominio en Android, además de migración Room v4 y despliegue público en Google Cloud Run. |
-| Historias seleccionadas | US22 (Consulta del pronóstico del clima - 5 SP) y US23 (Consulta de imágenes satelitales - 8 SP) adelantadas de EPIC08 (Transversal / Shared) para la entrega AV2. Se integran además US08 (Recuperación de contraseña), US13 (Zonas fértiles) y US18 (Umbrales de alerta). |
-| Sprint 2 Velocity | 32 SP comprometidos para el Sprint 2 por el equipo de desarrollo. |
-| Sum of Story Points | 13 SP correspondientes a la integración de servicios externos de Bryan Barba (5 SP de US22 + 8 SP de US23), dentro del compromiso total del incremento. |
-
-La planificación anterior del informe asignaba TS05, US08, TS08 y SP02 al Sprint 2. La incorporación de capacidades adelantadas desde otras iteraciones debe registrarse como una actualización de la planificación, conservando sus identificadores y estimaciones.
-
-**Criterios de cierre del incremento:**
-
-- Las historias seleccionadas cumplen sus criterios de aceptación.
-- Los cambios están integrados en las ramas correspondientes.
-- La aplicación consume los servicios del entorno evaluado.
-- Las operaciones conservan las reglas de autorización y propiedad de los recursos.
-- Las pruebas y sus resultados identifican la versión del código y el entorno utilizado.
-- La documentación de los servicios corresponde a la implementación publicada.
-- Las evidencias del informe permiten reconstruir los recorridos presentados.
+|:---|:---|
+| **Sprint #** | Sprint 2 — AV2 |
+| **Date** | 28/10/2026 |
+| **Time** | 10:00 - 11:30 America/Lima |
+| **Location** | Sesión remota vía Discord / Google Meet |
+| **Prepared By** | Barba Estrada, Bryan Eduardo y Bendezú Navarro, Rúbens Fitzgerald |
+| **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
+| **Sprint 1 Review Summary** | Durante TB1 se desarrolló el recorrido inicial de la aplicación móvil, comprendiendo el registro e inicio de sesión, gestión del perfil, selección de parcelas, consulta de indicadores e histórico de mediciones. También se trabajó en la infraestructura, publicación del backend y Landing Page. Las observaciones identificadas permitieron establecer mejoras en la organización del informe, la trazabilidad del tablero y la correspondencia entre requisitos, implementación y evidencias. |
+| **Sprint 1 Retrospective Summary** | El equipo identificó oportunidades de mejora en la organización de la documentación, el seguimiento de las tareas y la presentación de evidencias. Como respuesta, se actualizó el tablero de Trello y se reorganizó la información para mejorar la relación entre historias de usuario, tareas, responsables y estados. Se estableció como criterio mantener la coherencia entre los requisitos definidos, las funcionalidades implementadas y los resultados de las pruebas. |
+| **Sprint 2 Goal** | Ampliar las capacidades de TerraTech para facilitar la gestión y toma de decisiones agrícolas mediante funcionalidades de autenticación, consulta de perfiles agrícolas, identificación y navegación de zonas fértiles, monitoreo de sensores, recomendaciones automáticas de riego y fertilización, configuración de umbrales de alerta e integración de información climática y satelital. Asimismo, fortalecer los servicios backend relacionados con inventario y reportes analíticos por dispositivo, evaluando mecanismos de almacenamiento local y sincronización sin conexión. |
+| **Métrica de cumplimiento** | Verificación de los criterios de aceptación de las 14 historias y elementos técnicos incorporados al incremento, considerando la disponibilidad de los servicios backend, integración con la aplicación móvil, funcionamiento de las funcionalidades agrícolas, validaciones, persistencia y pruebas correspondientes. El cumplimiento se respalda mediante evidencias de implementación, pruebas, ejecución y despliegue. |
+| **Sprint 2 Velocity** | 55 SP, correspondientes a las 14 historias y elementos del Product Backlog incorporados al incremento. |
+| **Sum of Story Points** | 55 SP correspondientes al alcance de las 14 historias y elementos técnicos considerados para este sprint. |
 
 ##### 4.2.2.2. Aspect Leaders and Collaborators
 
@@ -7156,11 +7142,11 @@ La matriz Leadership-and-Collaboration Matrix relaciona los aspectos del Sprint 
 
 | Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias |
 | --- | --- | --- | --- | --- | --- |
-| Barba Estrada, Bryan Eduardo | bry4nbe | L | L | C | L |
-| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Delgado Perez, James Caleb | JAmsy06 | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Pariona Chacca, Angel Jose | Angelitoso-opp | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Retuerto Rodriguez, Jorge Manuel | Calin1407 | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+| Barba Estrada, Bryan Eduardo | bry4nbe | L | C | C | C |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | C | L | L | C |
+| Delgado Perez, James Caleb | JAmsy06 | C | C | C | C |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | C | C | C | C |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | C | C | C | L |
 
 Cada integrante aporta las evidencias de las tareas realizadas. La consolidación de una sección del informe no sustituye la identificación de los responsables de implementación, pruebas o despliegue.
 
@@ -7170,28 +7156,44 @@ El Sprint Backlog organiza las historias seleccionadas en tareas verificables. I
 
 Los estados utilizados son **To-do**, **In-Process**, **To-Review** y **Done**. La aceptación de una tarea requiere comprobar su resultado y relacionarlo con la evidencia correspondiente.
 
-**Enlace al tablero del Sprint 2:** POR COMPLETAR.
+**Enlace al tablero del Sprint 2:** [Tablero_Trello](https://trello.com/invite/b/6acbd1c061bea70e03cb9156/ATTIf5c2d3c9054434a65c8aa9b38338025b6EAD3D25/appmovile-agrotech)
 
-**Captura del tablero actualizado:** POR COMPLETAR.
+**Captura del tablero actualizado:** 
 
-| User Story ID | Title | Task ID | Title | Description | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| US22 | Consulta del pronóstico del clima | S2-01 | Cliente Open-Meteo y modelos de datos | Implementación de OpenMeteoWeatherClient e interfaces de deserialización externa en backend | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US22 | Consulta del pronóstico del clima | S2-02 | Servicio de clima, caché 3h y regla agronómica | Servicio WeatherForecastService con IMemoryCache y cálculo de suspensión de riego (lluvia >=80% / 10mm y humedad <=35% -> ahorro 500 L) | 8 | Barba Estrada, Bryan Eduardo | Done |
-| US22 | Consulta del pronóstico del clima | S2-03 | Controlador REST y OpenAPI de clima | Creación de FieldWeatherController (GET /api/v1/fields/{id}/weather), DTOs y manejo de errores 404/502 | 4 | Barba Estrada, Bryan Eduardo | Done |
-| US22 | Consulta del pronóstico del clima | S2-04 | Persistencia Room v4 y DTOs de clima | Creación de FieldWeatherRow, FieldWeatherDao, DTOs remotos y migración Room 3->4 | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US22 | Consulta del pronóstico del clima | S2-05 | Caso de uso y repositorio Android de clima | Implementación de GetFieldWeather, FieldWeatherRepositoryImpl con fallback offline y StateFlow en ViewModel | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US22 | Consulta del pronóstico del clima | S2-06 | Componentes Compose de clima y banner | Diseño e integración de WeatherForecastCard e IrrigationSuspensionBanner en SensorsScreen | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US23 | Consulta de imágenes satelitales | S2-07 | Agregado y catálogo satelital backend | Definición de SatelliteImageRecord, SatelliteBounds y servicio SatelliteImageService con catálogo multitemporal | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US23 | Consulta de imágenes satelitales | S2-08 | Controlador REST y OpenAPI satelital | Implementación de SatelliteImagesController con endpoints /latest y ?targetDate=... y validación de ventana de 60 días | 5 | Barba Estrada, Bryan Eduardo | Done |
-| US23 | Consulta de imágenes satelitales | S2-09 | Persistencia Room v4 y DTOs satelitales | Creación de SatelliteImageRow, SatelliteImageDao, DTOs Retrofit y actualización de TerraDatabase v4 | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US23 | Consulta de imágenes satelitales | S2-10 | Casos de uso y comparación de vegetación | Implementación de GetSatelliteImage, CompareVegetationPeriod y repositorio SatelliteImageRepositoryImpl | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US23 | Consulta de imágenes satelitales | S2-11 | UI Compose: Visor satelital y selector | Desarrollo de SatelliteOverlayViewer, diálogo de fecha SatelliteDatePickerDialog y alternancia mapa/satélite | 8 | Barba Estrada, Bryan Eduardo | Done |
-| US23 | Consulta de imágenes satelitales | S2-12 | Pantalla y navegación de comparación | Creación de VegetationComparisonCard, VegetationComparisonScreen y subgrafo de navegación Compose | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US22 / US23 | Integración con Servicios Externos | S2-13 | Pruebas de integración xUnit de backend | Suites WeatherTests (3 casos) y SatelliteImageTests (4 casos) con servidor MySQL aislado | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US22 / US23 | Integración con Servicios Externos | S2-14 | Pruebas de contrato y unitarias Android | Suites ExternalServicesContractTest (4 casos con MockWebServer) y CompareVegetationPeriodTest (2 casos) | 5 | Barba Estrada, Bryan Eduardo | Done |
+![Trello](assets/images/team/trello-organization.png){width=500}
 
-El registro debe diferenciar las capacidades heredadas del Sprint 1, las ampliaciones implementadas durante el Sprint 2 y las correcciones derivadas de la revisión de TB1. Las historias trasladadas desde otra iteración deben actualizarse también en el Product Backlog.
+El Sprint Backlog descompone el alcance de AV2 en tareas comprobables, considerando las actividades funcionales, técnicas y de integración realizadas durante el Sprint 2. Se incluyen las tareas correspondientes a los servicios de clima e imágenes satelitales, así como las actividades consolidadas de las historias relacionadas con autenticación, perfiles agrícolas, monitoreo, recomendaciones, inventario y analítica.
+
+**NR** indica que la estimación en horas no fue registrada; **Done**, una tarea o historia completada; y **To-Review** y **To-do**, actividades pendientes de revisión o ejecución, respectivamente. Las historias que todavía no cuentan con un desglose de tareas verificable se identifican mediante un registro consolidado, sin atribuir estimaciones ni responsables no documentados.
+
+| User Story ID | Title | Task ID | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+|:---|:---|:---|:---|:---|:---:|:---|:---|
+| TS05 | Implementación del servicio de autenticación | 05-1 | Configuración y desarrollo del servicio de autenticación | Configuración del servicio de autenticación (3 h), implementación de los mecanismos de validación de credenciales y emisión de tokens (5 h), e integración y pruebas de los endpoints de acceso (4 h). | 12 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| TS08 | Consulta de perfiles agrícolas | 08-1 | Desarrollo de servicios de consulta de perfiles agrícolas | Implementación de los servicios de consulta de perfiles agrícolas (3 h), definición y adaptación de los modelos de respuesta (2 h), e integración con los componentes que consumen esta información (1 h). | 6 | Pariona Chacca, Angel Jose | Done |
+| US08 | Recuperación de contraseña | 08-1 | Implementación del flujo de recuperación de contraseña | Implementación del flujo de recuperación de contraseña (3 h), integración del mecanismo de validación y restablecimiento (2 h), y pruebas del proceso (1 h). | 6 | Pariona Chacca, Angel Jose | Done |
+| US13 | Identificación de zonas fértiles | 13-1 | Procesamiento y clasificación de zonas fértiles | Procesamiento de los indicadores agrícolas para identificar zonas fértiles (6 h), implementación de la lógica de clasificación y presentación de resultados (6 h), e integración y validación de la funcionalidad (4 h). | 16 | Pariona Chacca, Angel Jose | Done |
+| US14 | Navegación en el mapa | 14-1 | Integración del mapa y navegación de parcelas | Integración del componente de mapas (3 h), implementación de la navegación e interacción con parcelas y zonas agrícolas (3 h), y pruebas de visualización y selección (2 h). | 8 | Pariona Chacca, Angel Jose | Done |
+| US15 | Recomendación automática de riego | 15-1 | Desarrollo de la lógica de recomendación de riego | Implementación de la lógica de recomendación a partir de las mediciones disponibles (4 h), integración con los datos agrícolas y sensores (2 h), y validación de los resultados (2 h). | 8 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US16 | Recomendación automática de fertilización | 16-1 | Desarrollo de la lógica de recomendación de fertilización | Implementación de reglas de recomendación según los indicadores del suelo (4 h), integración con la información agrícola disponible (2 h), y validación de las recomendaciones generadas (2 h). | 8 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US17 | Registro de un nuevo sensor | 17-1 | Implementación del registro y asociación de sensores | Implementación del formulario y flujo de registro (2 h), integración con el servicio de registro y asociación con parcelas (3 h), y validación del proceso (1 h). | 6 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US18 | Configuración de umbrales de alerta | 18-1 | Configuración y persistencia de umbrales de alerta | Implementación de la configuración y persistencia de umbrales (3 h), integración con los parámetros de medición de sensores (2 h), y validación de las condiciones de alerta (1 h). | 6 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US22 | Consulta del pronóstico del clima | 22-1 | Implementación del cliente Open-Meteo y modelos de datos | Implementación de OpenMeteoWeatherClient e interfaces de deserialización externa en backend. | 6 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US22 | Consulta del pronóstico del clima | 22-2 | Desarrollo del servicio de pronóstico y reglas de riego | Servicio WeatherForecastService con IMemoryCache y cálculo de suspensión de riego (lluvia >=80% / 10mm y humedad <=35% -> ahorro 500 L). | 8 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | 22-3 | Implementación del controlador REST de clima | Creación de FieldWeatherController (GET /api/v1/fields/{id}/weather), DTOs y manejo de errores 404/502. | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | 22-4 | Persistencia local de datos meteorológicos | Creación de FieldWeatherRow, FieldWeatherDao, DTOs remotos y migración Room 3->4. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | 22-5 | Integración del repositorio y caso de uso meteorológico | Implementación de GetFieldWeather, FieldWeatherRepositoryImpl con fallback offline y StateFlow en ViewModel. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | 22-6 | Desarrollo de componentes visuales del pronóstico | Diseño e integración de WeatherForecastCard e IrrigationSuspensionBanner en SensorsScreen. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | 23-1 | Definición del modelo y catálogo de imágenes satelitales | Definición de SatelliteImageRecord, SatelliteBounds y servicio SatelliteImageService con catálogo multitemporal. | 6 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-2 | Implementación del controlador REST de imágenes satelitales | Implementación de SatelliteImagesController con endpoints /latest y ?targetDate=... y validación de ventana de 60 días. | 5 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-3 | Persistencia local de imágenes satelitales | Creación de SatelliteImageRow, SatelliteImageDao, DTOs Retrofit y actualización de TerraDatabase v4. | 6 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-4 | Desarrollo de casos de uso y comparación de vegetación | Implementación de GetSatelliteImage, CompareVegetationPeriod y repositorio SatelliteImageRepositoryImpl. | 6 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-5 | Desarrollo del visor y selector de imágenes satelitales | Desarrollo de SatelliteOverlayViewer, diálogo de fecha SatelliteDatePickerDialog y alternancia mapa/satélite. | 8 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-6 | Implementación de la comparación de períodos de vegetación | Creación de VegetationComparisonCard, VegetationComparisonScreen y subgrafo de navegación Compose. | 6 | Delgado Perez, James Caleb | Done |
+| US22 / US23 | Integración con servicios externos | 22/23-1 | Pruebas de integración de los servicios meteorológicos y satelitales | Suites WeatherTests (3 casos) y SatelliteImageTests (4 casos) con servidor MySQL aislado. | 6 | Delgado Perez, James Caleb | Done |
+| US22 / US23 | Integración con servicios externos | 22/23-2 | Pruebas de contrato y comparación de vegetación en Android | Suites ExternalServicesContractTest (4 casos con MockWebServer) y CompareVegetationPeriodTest (2 casos). | 5 | Barba Estrada, Bryan Eduardo | Done |
+| SP02 | Viabilidad del almacenamiento local y la sincronización sin conexión | 02-1 | Evaluación de almacenamiento local y sincronización offline | Evaluación de alternativas de almacenamiento local (2 h), análisis de mecanismos de sincronización y resolución de conflictos (1 h), y documentación de viabilidad técnica (1 h). | 4 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| TS09 | Gestión del inventario de insumos | 09-1 | Desarrollo de servicios y operaciones de inventario | Implementación de modelos y operaciones de inventario (4 h), desarrollo de servicios para registrar y consultar insumos (4 h), e integración y pruebas de las operaciones de gestión de existencias (4 h). | 12 | Retuerto Rodriguez, Jorge Manuel | Done |
+| TS10 | Consulta de reportes analíticos por dispositivo | 10-1 | Desarrollo de consultas y endpoints de reportes analíticos | Implementación de consultas y procesamiento de datos analíticos por dispositivo (3 h), desarrollo de endpoints y estructuras de respuesta (3 h), e integración y validación de los reportes (2 h). | 8 | Delgado Perez, James Caleb | Done |
 
 ##### 4.2.2.4. Development Evidence for Sprint Review
 
@@ -7352,8 +7354,6 @@ Se incorporan capturas de contribuciones, ramas y revisiones de los productos co
 La interpretación de los analíticos relaciona las contribuciones con las tareas y resultados del sprint. Las gráficas acumuladas se identifican como tales para distinguirlas de las contribuciones realizadas exclusivamente durante esta iteración.
 
 La retrospectiva final del Sprint 2 registrará los resultados de la integración, las dificultades encontradas y las acciones de mejora acordadas para la siguiente iteración.
-
-
 
 #### 4.2.3. Sprint 3
 
