@@ -152,6 +152,22 @@ Para la entrega AV2 (Sprint 2), el equipo continuó aplicando la metodología de
 | Retuerto Rodriguez, Jorge Manuel | Calin1407 | **Responsabilidad:** soporte en persistencia relacional y esquemas de datos para las ampliaciones del Sprint 2. |
 
 
+### TB2
+
+Para la entrega TB2 (Sprint 3), el equipo continuó aplicando la metodología de desarrollo basada en GitFlow sobre los repositorios del proyecto. Se desarrollaron e integraron las capacidades de gestión de reputación comercial y reseñas de productos (Épica 11) en backend y cliente móvil Flutter, junto con la implementación completa del centro de notificaciones de alertas de sensores IoT y reseñas (Épica 10: US27, US28 y US30) en Android nativo con Jetpack Compose y arquitectura DDD, registrando los cambios mediante ramas `feature/*` e integrándolos en `develop` a través de Pull Requests verificados.
+
+#### Registro preliminar de participación
+
+| Integrante | Usuario de GitHub | Responsabilidad asignada |
+|:---|:---|:---|
+| Barba Estrada, Bryan Eduardo | bry4nbe | **Responsabilidad:** liderazgo e implementación de la Épica 11 (Comunidad y Reputación) en backend y cliente móvil Flutter, pruebas de integración xUnit y estructuración de la plantilla del Sprint 3 en el informe.<br><br>**Realizado:** endpoints REST y DTOs de comentarios y reputación (`CommentsController`); ACL desacoplada en IAM para resolución de autores; suite de 10 pruebas de integración xUnit (`ProductReviewsAndReputationTests.cs`); componentes móviles Flutter de visualización de estrellas y modal de reseñas; y documentación de las secciones 4.2.3.1 a 4.2.3.9 en el informe. |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | **Responsabilidad:** soporte técnico de arquitectura backend, infraestructura de despliegue en Google Cloud Run y base de datos Aiven MySQL para la iteración TB2. |
+| Delgado Perez, James Caleb | JAmsy06 | **Responsabilidad:** revisión editorial y de coherencia del informe de proyecto, verificación de lineamientos y enlaces para la entrega TB2. |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | **Responsabilidad:** liderazgo e implementación de la Épica 10 (Gestión de Notificaciones: US27, US28 y US30) en la aplicación móvil Android con arquitectura DDD y Jetpack Compose, pruebas unitarias automatizadas y contingencia offline.<br><br>**Realizado:** definición del modelo de dominio (`NotificationItem`, `NotificationPreferences`, `ReviewDetails`); implementación de API Retrofit, DTOs y DataStore reactivo (`NotificationPreferencesStore`); desarrollo de casos de uso y ViewModels reactivos con StateFlow; construcción de pantallas y componentes UI (`NotificationsScreen`, `NotificationPreferencesScreen`, badge en Toolbar); integración de fallback resiliente local-first en IAM para login offline; suite de 5 pruebas unitarias automatizadas (`NotificationsTest.kt`); y documentación de evidencias técnicas y capturas del Sprint 3 en el informe. |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | **Responsabilidad:** soporte en persistencia relacional y esquemas de base de datos para la iteración TB2. |
+
+<div class="page"></div>
+
 ### Collaboration Insights AV1
 
 ![AV1](assets/images/team/collaboration-insights-av1.png)
