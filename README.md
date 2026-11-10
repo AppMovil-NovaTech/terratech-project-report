@@ -7498,6 +7498,7 @@ Evidencias de despliegue e infraestructura del incremento:
 | Backend y OpenAPI | https://terratech-api.lucemz.com/ | Rama `develop` actualizada con PR #4 ([1048d3d](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/1048d3d)) | 08/11/2026 | Compilación Debug aprobada, 110/110 pruebas de integración xUnit aprobadas en CI | CI GitHub Actions y Swagger |
 | Base de datos | MySQL administrado en Aiven | Esquema relacional con tabla `comments` e índice `i_x_comments_product_id` | 08/11/2026 | Esquema preparado sin migraciones destructivas | Verificación de esquema en CI |
 | Aplicación móvil | Repositorio Flutter `terratech-flutter` | Rama `feature/epic11-product-reviews-ratings` | 08/11/2026 | Arquitectura Clean Architecture con `DioClient` y `ProblemDetails` | Commits del repositorio móvil |
+| Aplicación móvil Android | Repositorio Android `App-Android-Terratech` | Rama `develop` actualizada con PR #5 ([143489b](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/143489b)) | 09/11/2026 | Arquitectura DDD de 4 capas, Jetpack Compose, persistencia DataStore y fallback resiliente offline verificado en emulador | CI GitHub Actions y artefactos de build |
 
 ##### 4.2.3.9. Team Collaboration Insights during Sprint
 
