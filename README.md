@@ -8006,5 +8006,3 @@ Link del Figma: https://www.figma.com/design/tEitQn36cpZFYQTRyniiRg/terra-tech?n
 - [Reflexiones individuales preservadas del Student Outcome](docs/STUDENT_OUTCOME_REFLEXIONES_HISTORICAS.md).
 - [Resultados de pruebas y despliegue](assets/evidence/sprint1/).
 - [Capturas de ejecución y servicio Cloud Run](assets/images/cap4/sprint1/).
-
-El README es la fuente actualizada. `informe.pdf` conserva una exportación previa y debe regenerarse tras incorporar las evidencias pendientes; no representa esta versión TB1.
