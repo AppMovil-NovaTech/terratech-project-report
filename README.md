@@ -7365,7 +7365,21 @@ La aplicación utilizada en la demostración debe consumir el entorno identifica
 
 **Actualización de cierre — 11/11/2026 UTC.** La tabla anterior conserva el registro histórico de octubre. El entorno vigente utiliza PostgreSQL en Supabase (esquema `terratech`), backend commit `58e5fe9` y revisión Cloud Run `backend-terratech-git-00017-8rs`. La conexión se suministra mediante Secret Manager y `Database__MigrateOnStartup=false`. Las verificaciones públicas de `/health/live`, `/health/ready` y Swagger respondieron 200; los recursos privados requieren JWT. Los datos históricos de Aiven no se han recuperado.
 
-La APK Debug evaluada (corrección `faa7c57`, integrada en Android `main` como `d765468`) consume `https://terratech-api.lucemz.com/`. Se completaron 91 pruebas unitarias y 28 instrumentadas de la suite general, además del recorrido público de clima y catálogo satelital. Se eliminó el inicio de sesión ficticio que convertía errores de autenticación en una sesión de demostración. Las pruebas y sus límites se registran en [validación de v2.1.0](docs/release-v2.1.0-validation.json).
+La APK Debug evaluada (corrección `faa7c57`, integrada en Android `main` como `d765468`) consume `https://terratech-api.lucemz.com/`. Se completaron 91 pr| Campo | Registro del Sprint 3 |
+| :--- | :--- |
+| **Sprint #** | Sprint 3 — TB2 |
+| **Date** | 08/11/2026 |
+| **Time** | 18:00 - 19:30 America/Lima |
+| **Location** | Sesión remota vía Discord / Google Meet |
+| **Prepared By** | Barba Estrada, Bryan Eduardo y equipo NovaTech |
+| **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
+| **Sprint 2 Review Summary** | En el Sprint 2 (AV2) se implementó y verificó la integración de servicios externos meteorológicos (Open-Meteo con regla de suspensión de riego) e imágenes satelitales multitemporales (NDVI y comparación temporal), respaldados por suites xUnit en backend, persistencia Room v4 y despliegue en Google Cloud Run. |
+| **Sprint 2 Retrospective Summary** | Se consolidó la trazabilidad de contratos REST y se resolvieron inconsistencias de esquemas. Como lección aprendida, se acordó validar los contratos de API y las pruebas de integración en backend antes de iniciar la implementación en clientes móviles, manteniendo nomenclatura formal de ramas y commits atómicos. |
+| **Sprint 3 Goal** | Habilitar el ecosistema de retroalimentación comercial y toma de decisiones mediante la implementación del sistema de reseñas, calificaciones y reputación de productos agrícolas (Épica 11), permitiendo a compradores y agricultores consultar reputación y evaluar insumos, complementado con el centro de notificaciones de alertas IoT y nuevas reseñas (Épica 10: US27, US28 y US30), inventarios y visualización analítica. |
+| **Métrica de cumplimiento** | 100 % de los criterios de aceptación técnicos y funcionales de US27, US28, US30, US33, US34, US35 y US36 aprobados, respaldados por pruebas de integración xUnit en backend, pruebas unitarias y de interfaz en cliente móvil Android (Jetpack Compose) y contratos OpenAPI publicados. |
+| **Historias seleccionadas** | Épica 11: US33 (Consulta de comentarios y calificaciones - 3 SP), US34 (Consulta de reputación de productos - 3 SP), US35 (Publicación de reseñas - 3 SP), US36 (Consulta de reseñas de compradores - 2 SP) y TS11 (Gestión técnica de comunidad - 8 SP); Épica 10: US27 (Consulta de notificaciones de los sensores - 3 SP), US28 (Configuración de preferencias de notificaciones - 5 SP) y US30 (Notificaciones de nuevas reseñas - 3 SP). |
+| **Sprint 3 Velocity** | 35 SP comprometidos para el Sprint 3 por el equipo de desarrollo. |
+| **Sum of Story Points** | 30 SP correspondientes a la Épica 11 (Comunidad y Reputación, 19 SP) y Épica 10 (Gestión de Notificaciones, 11 SP), dentro del compromiso total del incremento. |uebas unitarias y 28 instrumentadas de la suite general, además del recorrido público de clima y catálogo satelital. Se eliminó el inicio de sesión ficticio que convertía errores de autenticación en una sesión de demostración. Las pruebas y sus límites se registran en [validación de v2.1.0](docs/release-v2.1.0-validation.json).
 
 <img src="assets/images/cap4/sprint2/emulator-home.png" alt="Sesión de prueba autenticada en emulador Pixel 8" width="320">
 
@@ -7379,16 +7393,13 @@ La colaboración del Sprint 2 se documenta mediante las tareas del tablero, los 
 
 Los integrantes trabajan sobre ramas destinadas a sus aportes y coordinan la integración de cambios que afectan componentes compartidos. Las correcciones del informe mantienen coherencia con los cambios del código y las evidencias del incremento.
 
-Se incorporan capturas de contribuciones, ramas y revisiones de los productos correspondientes al sprint, indicando el período representado.
-
 | Producto | Evidencia de colaboración | Período | Aportes relacionados |
 | --- | --- | --- | --- |
-| Backend | Ramas `feature/weather-forecast` y `feature/satellite-images` fusionadas en `develop` vía commits [4fe9c65](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/4fe9c65b955ecd00b34c4f81167c26bb06d4e789) y [21ef446](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/21ef44600ac3524dd6328aa7b817fdce4d4ebdda) | 28/10/2026 | Implementación de cliente Open-Meteo, cálculo de recomendación combinada de riego, servicio de catálogo satelital multitemporal, controladores REST, DTOs, OpenAPI snapshot y 7 pruebas de integración xUnit atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
-| Aplicación móvil | Rama `feature/external-services-us22-us23` integrada mediante Pull Request #2 ([56eddd1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/56eddd14f58737a58adfc7fbe2fd52100b4ec498)) | 28/10/2026 | Desarrollo de entidades de dominio, casos de uso `GetFieldWeather`, `GetSatelliteImage`, `CompareVegetationPeriod`, migración Room v4, DAOs, endpoints Retrofit en `MonitoringApi`, ViewModel con StateFlow, componentes Compose (`WeatherForecastCard`, `IrrigationSuspensionBanner`, `SatelliteOverlayViewer`, `VegetationComparisonCard`, `VegetationComparisonScreen`) y 6 pruebas automatizadas atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
-| Informe | Rama de trabajo del sprint y pull requests de documentación | 28/10/2026 - 31/10/2026 | Documentación de los nueve subpuntos de 4.2.2 para US22 y US23, actualización del Sprint Backlog, trazabilidad de pruebas y matriz de cumplimiento funcional atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
-| Landing Page, cuando corresponda | Rama `main` de LandingPage-TerraTech | 28/10/2026 - 31/10/2026 | Verificación de enlaces, consistencia con el catálogo de servicios de monitoreo y despliegue continuo en GitHub Pages. |
-
-La interpretación de los analíticos relaciona las contribuciones con las tareas y resultados del sprint. Las gráficas acumuladas se identifican como tales para distinguirlas de las contribuciones realizadas exclusivamente durante esta iteración.
+| **Backend** | Repositorio `BackEnd-TerraTech`: ramas `feature/weather-forecast` y `feature/satellite-images`, fusionadas en `develop`. Adicionalmente, repositorio `BackEnd-NovaTech`: rama `feature/epic11-product-reviews-ratings` e integraciones relacionadas con `implements_commercial`, Commercial, Community e IAM. | 28/10/2026 - 31/10/2026 | Implementación del cliente Open-Meteo, cálculo de recomendación combinada de riego, servicio de catálogo satelital multitemporal, controladores REST, DTOs, OpenAPI snapshot y 7 pruebas de integración xUnit. Asimismo, implementación y actualización de los Bounded Contexts Commercial y Community, documentación del despliegue de IAM y confirmación del envío de correos electrónicos, además de lecturas simuladas de sensores y alertas por umbrales. |
+| **Aplicación móvil (Android nativo)** | Repositorio `App-Android-Terratech`: rama `feature/external-services-us22-us23`, integrada mediante Pull Request #2. | 28/10/2026 | Desarrollo de entidades de dominio, casos de uso `GetFieldWeather`, `GetSatelliteImage` y `CompareVegetationPeriod`, migración Room v4, DAOs, endpoints Retrofit en `MonitoringApi`, ViewModel con StateFlow y componentes Compose (`WeatherForecastCard`, `IrrigationSuspensionBanner`, `SatelliteOverlayViewer`, `VegetationComparisonCard` y `VegetationComparisonScreen`). Implementación de 6 pruebas automatizadas. |
+| **Aplicación multiplataforma (Flutter)** | Repositorio `AppMovil-NovaTech`: rama `feature/epic11-product-reviews-ratings`. Integración de `feature/implements_commercial` en `develop`, junto con cambios de arquitectura e infraestructura compartida (`feat(core): implemented shared architecture and infrastructure`). | Durante el desarrollo del Sprint 2 | Implementación de la arquitectura compartida y la infraestructura base de la aplicación multiplataforma Flutter. Desarrollo e integración de funcionalidades relacionadas con la Epic 11, correspondiente a las reseñas y calificaciones de productos. |
+| **Informe** | Rama de trabajo del Sprint 2 y pull requests de documentación del proyecto TerraTech. | 28/10/2026 - 31/10/2026 | Documentación de los nueve subpuntos de 4.2.2 para US22 y US23, actualización del Sprint Backlog, trazabilidad de pruebas y matriz de cumplimiento funcional. |
+| **Landing Page** | Repositorio `LandingPage-TerraTech`: rama `main`. Rama de trabajo asociada a la implementación de características del suelo y el diálogo de términos y condiciones. | 28/10/2026 - 31/10/2026 | Implementación de funcionalidades informativas sobre las características del suelo y un cuadro de diálogo para la visualización de los términos y condiciones. Adicionalmente, verificación de enlaces, consistencia con el catálogo de servicios de monitoreo y despliegue continuo en GitHub Pages. |
 
 La retrospectiva final del Sprint 2 registrará los resultados de la integración, las dificultades encontradas y las acciones de mejora acordadas para la siguiente iteración.
 
@@ -7408,11 +7419,14 @@ El Sprint 3 corresponde al incremento evaluado para el hito **TB2**. La planific
 | **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
 | **Sprint 2 Review Summary** | En el Sprint 2 (AV2) se implementó y verificó la integración de servicios externos meteorológicos (Open-Meteo con regla de suspensión de riego) e imágenes satelitales multitemporales (NDVI y comparación temporal), respaldados por suites xUnit en backend, persistencia Room v4 y despliegue en Google Cloud Run. |
 | **Sprint 2 Retrospective Summary** | Se consolidó la trazabilidad de contratos REST y se resolvieron inconsistencias de esquemas. Como lección aprendida, se acordó validar los contratos de API y las pruebas de integración en backend antes de iniciar la implementación en clientes móviles, manteniendo nomenclatura formal de ramas y commits atómicos. |
-| **Sprint 3 Goal** | Habilitar el ecosistema de retroalimentación comercial y toma de decisiones mediante la implementación del sistema de reseñas, calificaciones y reputación de productos agrícolas (Épica 11), permitiendo a compradores y agricultores consultar reputación y evaluar insumos, complementado con el centro de notificaciones de alertas IoT y nuevas reseñas (Épica 10: US27, US28 y US30), inventarios y visualización analítica. |
-| **Métrica de cumplimiento** | 100 % de los criterios de aceptación técnicos y funcionales de US27, US28, US30, US33, US34, US35 y US36 aprobados, respaldados por pruebas de integración xUnit en backend, pruebas unitarias y de interfaz en cliente móvil Android (Jetpack Compose) y contratos OpenAPI publicados. |
-| **Historias seleccionadas** | Épica 11: US33 (Consulta de comentarios y calificaciones - 3 SP), US34 (Consulta de reputación de productos - 3 SP), US35 (Publicación de reseñas - 3 SP), US36 (Consulta de reseñas de compradores - 2 SP) y TS11 (Gestión técnica de comunidad - 8 SP); Épica 10: US27 (Consulta de notificaciones de los sensores - 3 SP), US28 (Configuración de preferencias de notificaciones - 5 SP) y US30 (Notificaciones de nuevas reseñas - 3 SP). |
-| **Sprint 3 Velocity** | 35 SP comprometidos para el Sprint 3 por el equipo de desarrollo. |
-| **Sum of Story Points** | 30 SP correspondientes a la Épica 11 (Comunidad y Reputación, 19 SP) y Épica 10 (Gestión de Notificaciones, 11 SP), dentro del compromiso total del incremento. |
+| **Sprint 3 Goal** | Ampliar el ecosistema comercial y de monitoreo agrícola mediante la implementación de la gestión de inventarios de insumos (US24, US25 y US26), el sistema de comunidad, reseñas y reputación de productos agrícolas (Épica 11), y el centro de notificaciones IoT y comerciales (Épica 10). Asimismo, habilitar la consulta del catálogo de productos, su detalle y trazabilidad (US39 y US40), fortaleciendo la interacción entre agricultores y compradores B2B. |
+| **Métrica de cumplimiento** | Avance de las 13 historias de usuario y técnicas consideradas en el Sprint 3, correspondientes a 51 Story Points. El alcance comprende la gestión de inventarios, comunidad y reputación, notificaciones, catálogo comercial y trazabilidad de productos. La validación del cumplimiento deberá sustentarse en los criterios de aceptación y las pruebas funcionales, de integración y de interfaz correspondientes. |
+| **Historias seleccionadas** | **Gestión de inventarios:** US24 (Registro de insumos - 3 SP), US25 (Consulta y filtrado del inventario - 3 SP) y US26 (Actualización del stock de insumos - 5 SP). **Épica 11 — Comunidad y reputación:** TS11 (Gestión de la comunidad y reseñas - 8 SP), US33 (Consulta de comentarios y calificaciones - 3 SP), US34 (Consulta de la reputación de productos - 3 SP), US35 (Publicación de reseñas de productos - 3 SP) y US36 (Consulta de reseñas de otros compradores - 2 SP). **Épica 10 — Gestión de notificaciones:** US27 (Consulta de notificaciones de los sensores - 3 SP), US28 (Configuración de preferencias de notificaciones - 5 SP) y US30 (Notificaciones de nuevas reseñas - 3 SP). **Épica comercial — Catálogo de productos:** US39 (Consulta del catálogo de productos - 5 SP) y US40 (Consulta del detalle y la trazabilidad de un producto - 5 SP). |
+| Campo | Registro actualizado |
+| **Sprint 3 Velocity** | 51 SP, correspondientes a las 13 historias y elementos del Product Backlog trabajados durante el Sprint 3. |
+| **Sum of Story Points** | 51 SP distribuidos entre Gestión de inventarios (11 SP), Comunidad y reputación (19 SP), Gestión de notificaciones (11 SP) y Catálogo comercial (10 SP). |
+
+
 
 ##### 4.2.3.2. Aspect Leaders and Collaborators
 
@@ -7420,45 +7434,80 @@ La matriz LACX del Sprint 3 asigna los liderazgos y colaboraciones para la itera
 
 | Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| Barba Estrada, Bryan Eduardo | bry4nbe | L | L | L | L |
+| Barba Estrada, Bryan Eduardo | bry4nbe | C | L | L | C |
 | Bendezú Navarro, Rúbens Fitzgerald | Lucemz | C | C | C | C |
 | Delgado Perez, James Caleb | JAmsy06 | C | — | C | C |
 | Pariona Chacca, Angel Jose | Angelitoso-opp | L | — | C | C |
-| Retuerto Rodriguez, Jorge Manuel | Calin1407 | — | C | C | — |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | C | C | - | L |
 
 *Convención: L = Líder de aspecto, C = Colaborador, — = No acreditado.*
 
 ##### 4.2.3.3. Sprint Backlog 3
 
-El Sprint Backlog organiza las historias de usuario de la Épica 11 en tareas atómicas verificables:
-
-| User Story ID | Title | Task ID | Title | Description | Estimation (Hours) | Assigned To | Status |
+| User Story ID | Title | Task ID | Task Title | Description | Estimation (Hours) | Assigned To | Status |
 | :--- | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
-| US33 / US36 | Consulta de comentarios y calificaciones | S3-01 | Capa ACL en IAM y Facade de nombres | Extensión de `IIamContextFacade` para resolución desacoplada de nombres de autor por lote (`FetchFullNamesByUserIds`) | 4 | Barba Estrada, Bryan Eduardo | Done |
-| US34 | Consulta de reputación de productos | S3-02 | Modelo de dominio y VO de resumen | Creación de `ProductRatingSummary` y queries `GetCommentsByProductIdQuery` y `GetProductRatingSummaryQuery` | 4 | Barba Estrada, Bryan Eduardo | Done |
-| US33 / US34 | Reputación y comentarios en BD | S3-03 | Repositorio de comentarios y consultas | Implementación de `FindByProductIdAsync` y `GetRatingSummaryByProductIdAsync` en `CommentRepository` | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US33 a US36 | Servicios de aplicación de reseñas | S3-04 | Servicio de aplicación de comunidad | Implementación de handlers en `CommentService` para validación de rango de estrellas 1–5 y producto existente | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US33 a US36 | Controladores REST y OpenAPI | S3-05 | Endpoints REST de reseñas y reputación | Implementación de `GET /products/{id}/comments`, `GET /products/{id}/ratings-summary` y DTOs en `CommentsController` | 5 | Barba Estrada, Bryan Eduardo | Done |
-| US33 a US36 | Pruebas de integración xUnit | S3-06 | Suite de pruebas de integración xUnit | Creación de suite `ProductReviewsAndReputationTests` (10 casos de prueba automatizados con verificación completa) | 6 | Barba Estrada, Bryan Eduardo | Done |
-| US33 a US36 | Cliente móvil: Capa de datos | S3-07 | Remote DataSource y DTOs móviles | Implementación de cliente API, modelos DTO y repositorio para consumo de endpoints de reseñas y reputación | 6 | Barba Estrada, Bryan Eduardo | In-Process |
-| US33 a US36 | Cliente móvil: Casos de uso y estado | S3-08 | Casos de uso y controladores de estado | Implementación de casos de uso de consulta y mutación de reseñas con manejo de estados reactivos | 5 | Barba Estrada, Bryan Eduardo | In-Process |
-| US34 / US36 | Cliente móvil: Resumen y desglose UI | S3-09 | Componentes UI de resumen y estrellas | Tarjeta de reputación con promedio, total de reseñas, barras de distribución y chips de filtro por estrellas | 6 | Barba Estrada, Bryan Eduardo | In-Process |
-| US35 | Cliente móvil: Formulario de reseña | S3-10 | Modal de publicación y edición | Diálogo interactivo con selector de 1 a 5 estrellas y validación de texto (10 a 500 caracteres) | 5 | Barba Estrada, Bryan Eduardo | In-Process |
-| US33 a US36 | Cliente móvil: Pruebas automatizadas | S3-11 | Pruebas unitarias y de widgets | Pruebas automatizadas de repositorio, validación de reglas de negocio y renderizado de componentes | 5 | Barba Estrada, Bryan Eduardo | To-do |
-| US27 / US30 | Cliente móvil: Modelo de dominio y contratos | S3-12 | Definición de entidades, VO y repositorios | Entidades `NotificationItem`, `NotificationPreferences`, `NotificationType`, `ReviewDetails`, interfaces `NotificationRepository` y `NotificationPreferencesRepository` | 4 | Pariona Chacca, Angel Jose | Done |
-| US27 / US30 | Cliente móvil: Infraestructura remota y DTOs | S3-13 | Remote DataSource, DTOs y mappers | Implementación de `NotificationApi` (Retrofit), DTOs de lectura/creación, mapeo de severidad de sensores y prioridad de reseñas | 6 | Pariona Chacca, Angel Jose | Done |
-| US28 | Cliente móvil: Persistencia local | S3-14 | DataStore para preferencias de usuario | Implementación de `NotificationPreferencesStore` con Jetpack DataStore y repositorio reactivo de preferencias | 4 | Pariona Chacca, Angel Jose | Done |
-| US27 a US30 | Cliente móvil: Casos de uso y ViewModels | S3-15 | Lógica de aplicación y gestión de estados | Implementación de `NotificationActions`, `NotificationsViewModel` y `NotificationPreferencesViewModel` con StateFlow reactivo | 5 | Pariona Chacca, Angel Jose | Done |
-| US27 / US30 | Cliente móvil: Centro de Notificaciones | S3-16 | Pantalla y componentes de notificaciones | `NotificationsScreen` con tarjetas diferenciadas (alerta de sensor, reseña positiva 5 estrellas, reseña crítica 2 estrellas con acción rápida de respuesta) y filtros por chips | 6 | Pariona Chacca, Angel Jose | Done |
-| US28 | Cliente móvil: Preferencias de Notificaciones | S3-17 | Pantalla de configuración de preferencias | `NotificationPreferencesScreen` con toggles por categoría y canal de entrega (In-App, Email, SMS) con persistencia reactiva | 5 | Pariona Chacca, Angel Jose | Done |
-| US27 a US30 | Cliente móvil: Navegación y pruebas | S3-18 | Integración Toolbar, grafo tipado y suite test | `BadgedBox` en `TerraTechToolbar` con contador dinámico de no leídas, grafo tipado en `TerraTechNavHost` y suite `NotificationsTest` (5 casos aprobados) | 6 | Pariona Chacca, Angel Jose | Done |
+| US33 | Consulta de comentarios y calificaciones | S3-01 | Resolución de identidades de autores mediante IAM | Extensión de `IIamContextFacade` para resolución desacoplada de nombres de autor por lote (`FetchFullNamesByUserIds`). | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US34 | Consulta de la reputación de productos | S3-02 | Definición del modelo de reputación de productos | Creación de `ProductRatingSummary` y queries `GetCommentsByProductIdQuery` y `GetProductRatingSummaryQuery`. | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US33 | Consulta de comentarios y calificaciones | S3-03 | Persistencia de comentarios de productos | Implementación de `FindByProductIdAsync` en `CommentRepository` para recuperar comentarios asociados a un producto. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US34 | Consulta de la reputación de productos | S3-03 | Agregación de calificaciones de productos | Implementación de `GetRatingSummaryByProductIdAsync` en `CommentRepository` para obtener el resumen de calificaciones. | 6 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US33 | Consulta de comentarios y calificaciones | S3-04 | Procesamiento de consultas de comentarios | Implementación de handlers en `CommentService` para recuperar comentarios y validar la existencia del producto. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US34 | Consulta de la reputación de productos | S3-04 | Validación de calificaciones y generación de reputación | Implementación de handlers en `CommentService` para validar el rango de estrellas de 1 a 5 y procesar consultas de reputación. | 6 | Bendezú Navarro, Rúbens Fitzgerald| In-Process |
+| US33 | Consulta de comentarios y calificaciones | S3-05 | Endpoint REST de consulta de comentarios | Implementación de `GET /products/{id}/comments` y sus DTOs en `CommentsController`. | 5 | Barba Estrada, Bryan Eduardo | Done |
+| US34 | Consulta de la reputación de productos | S3-05 | Endpoint REST de consulta de reputación | Implementación de `GET /products/{id}/ratings-summary` y sus DTOs en `CommentsController`. | 5 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| TS11 | Gestión de la comunidad y reseñas | S3-06 | Pruebas de integración del módulo de comunidad | Creación de la suite `ProductReviewsAndReputationTests`, con 10 casos de prueba automatizados para verificar el comportamiento del módulo de reseñas y reputación. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US33 | Consulta de comentarios y calificaciones | S3-07 | Consumo remoto de comentarios | Implementación de cliente API, modelos DTO y repositorio para consultar los comentarios mediante los endpoints correspondientes. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US34 | Consulta de la reputación de productos | S3-07 | Consumo remoto del resumen de reputación | Integración del cliente móvil con el endpoint de consulta de reputación y su correspondiente procesamiento mediante DTOs y repositorio. | 6 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US33 | Consulta de comentarios y calificaciones | S3-08 | Gestión del estado de consulta de comentarios | Implementación de casos de uso de consulta y manejo de estados reactivos para visualizar comentarios. | 5 | Barba Estrada, Bryan Eduardo | Done |
+| US34 | Consulta de la reputación de productos | S3-08 | Gestión del estado de consulta de reputación | Implementación de casos de uso para consultar el resumen de reputación y administrar sus estados reactivos. | 5 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US34 | Consulta de la reputación de productos | S3-09 | Visualización del resumen de calificaciones | Tarjeta de reputación con promedio general, total de reseñas y barras de distribución de estrellas. | 6 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US36 | Consulta de reseñas de otros compradores | S3-09 | Filtrado y visualización de reseñas de compradores | Implementación de chips de filtro por cantidad de estrellas para facilitar la consulta de reseñas de otros compradores. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US35 | Publicación de reseñas de productos | S3-10 | Formulario de publicación y edición de reseñas | Diálogo interactivo con selector de 1 a 5 estrellas y validación del contenido textual entre 10 y 500 caracteres. | 5 | Bendezú Navarro, Rúbens Fitzgerald | In-Process |
+| US33 | Consulta de comentarios y calificaciones | S3-11 | Pruebas automatizadas de consulta de comentarios | Pruebas automatizadas de repositorio y validación del comportamiento de consulta de comentarios. | 5 | Barba Estrada, Bryan Eduardo | Done |
+| US34 | Consulta de la reputación de productos | S3-11 | Pruebas automatizadas de reputación | Pruebas de reglas de negocio y renderizado de componentes relacionados con la reputación de productos. | 5 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US27 | Consulta de notificaciones de los sensores | S3-12 | Modelado de entidades de notificaciones de sensores | Definición de `NotificationItem`, `NotificationType` y la interfaz `NotificationRepository` para representar y gestionar notificaciones. | 4 | Pariona Chacca, Angel Jose | Done |
+| US28 | Configuración de preferencias de notificaciones | S3-12 | Modelado de preferencias de notificaciones | Definición de `NotificationPreferences` y la interfaz `NotificationPreferencesRepository` para gestionar las preferencias del usuario. | 4 | Pariona Chacca, Angel Jose | Done |
+| US30 | Notificaciones de nuevas reseñas | S3-12 | Modelado de información de reseñas notificables | Definición de `ReviewDetails` para representar la información de reseñas utilizada en las notificaciones comerciales. | 4 | Pariona Chacca, Angel Jose | Done |
+| US27 | Consulta de notificaciones de los sensores | S3-13 | Integración remota de notificaciones de sensores | Implementación de `NotificationApi` (Retrofit), DTOs de lectura y mapeo de severidad de alertas de sensores. | 6 | Pariona Chacca, Angel Jose | Done |
+| US30 | Notificaciones de nuevas reseñas | S3-13 | Integración remota de notificaciones de reseñas | Implementación de DTOs y transformación de información para representar la prioridad de las notificaciones de reseñas. | 6 | Pariona Chacca, Angel Jose | Done |
+| US28 | Configuración de preferencias de notificaciones | S3-14 | Persistencia local de preferencias de notificación | Implementación de `NotificationPreferencesStore` mediante Jetpack DataStore y repositorio reactivo de preferencias. | 4 | Pariona Chacca, Angel Jose | Done |
+| US27 | Consulta de notificaciones de los sensores | S3-15 | Gestión de acciones y estados de notificaciones | Implementación de `NotificationActions` y `NotificationsViewModel` con StateFlow reactivo para administrar el centro de notificaciones. | 5 | Pariona Chacca, Angel Jose | Done |
+| US28 | Configuración de preferencias de notificaciones | S3-15 | Gestión reactiva de preferencias de notificación | Implementación de `NotificationPreferencesViewModel` con StateFlow reactivo para administrar las preferencias del usuario. | 5 | Pariona Chacca, Angel Jose | Done |
+| US27 | Consulta de notificaciones de los sensores | S3-16 | Interfaz de consulta de alertas de sensores | Implementación de tarjetas de notificaciones para alertas de sensores con información de severidad y filtros por chips en `NotificationsScreen`. | 6 | Pariona Chacca, Angel Jose | Done |
+| US30 | Notificaciones de nuevas reseñas | S3-16 | Interfaz de notificaciones de nuevas reseñas | Implementación de tarjetas de reseñas positivas de 5 estrellas y críticas de 2 estrellas, incluyendo acción rápida de respuesta en `NotificationsScreen`. | 6 | Pariona Chacca, Angel Jose | Done |
+| US28 | Configuración de preferencias de notificaciones | S3-17 | Interfaz de configuración de preferencias | Implementación de `NotificationPreferencesScreen` con toggles por categoría y canales de entrega (In-App, Email y SMS), con persistencia reactiva. | 5 | Pariona Chacca, Angel Jose | Done |
+| US27 | Consulta de notificaciones de los sensores | S3-18 | Navegación y contador de notificaciones no leídas | Integración de `BadgedBox` en `TerraTechToolbar` con contador dinámico de notificaciones no leídas y grafo tipado en `TerraTechNavHost`. | 6 | Pariona Chacha, Angel Jose | Done |
+| US30 | Notificaciones de nuevas reseñas | S3-18 | Pruebas automatizadas del centro de notificaciones de reseñas | Suite `NotificationsTest` con 5 casos aprobados para verificar el comportamiento del centro de notificaciones. | 6 | Pariona Chacha, Angel Jose | Done |
+| US24 | Registro de insumos | S3-19 | Modelado de entidades de insumos | Definición de las entidades, modelos de dominio y objetos de valor necesarios para representar los insumos agrícolas y sus unidades de medida. | 4 | Delgado Perez, James Caleb | Done |
+| US24 | Registro de insumos | S3-20 | Implementación del registro de insumos | Desarrollo del caso de uso y la lógica de aplicación para registrar nuevos insumos, validar los datos obligatorios y almacenar su información. | 5 | Delgado Perez, James Caleb | Done |
+| US24 | Registro de insumos | S3-21 | Integración del servicio de registro de insumos | Implementación del cliente API, DTOs y repositorio para enviar la información del nuevo insumo al backend. | 4 | Delgado Perez, James Caleb | Done |
+| US24 | Registro de insumos | S3-22 | Interfaz de registro de insumos | Desarrollo del formulario de registro con campos de información, unidad de medida, validaciones y estados de respuesta. | 5 | Delgado Perez, James Caleb | Done |
+| US25 | Consulta y filtrado del inventario | S3-23 | Implementación de consultas del inventario | Desarrollo de la lógica de consulta para recuperar los insumos registrados y organizar la información del inventario. | 4 | Delgado Perez, James Caleb | Done |
+| US25 | Consulta y filtrado del inventario | S3-24 | Integración remota del inventario | Implementación del cliente API, DTOs y repositorio para recuperar los registros de insumos desde el backend. | 4 | Delgado Perez, James Caleb | Done |
+| US25 | Consulta y filtrado del inventario | S3-25 | Implementación de filtros del inventario | Desarrollo de criterios de filtrado por nombre, categoría, disponibilidad y otros atributos disponibles de los insumos. | 4 | Delgado Perez, James Caleb | Done |
+| US25 | Consulta y filtrado del inventario | S3-26 | Interfaz de consulta y filtrado | Desarrollo de la pantalla de inventario con listado de insumos, controles de búsqueda, filtros y estados de carga o ausencia de resultados. | 5 | Delgado Perez, James Caleb | Done |
+| US26 | Actualización del stock de insumos | S3-27 | Implementación de la lógica de actualización de stock | Desarrollo del caso de uso para modificar las cantidades disponibles de los insumos, contemplando validaciones y reglas de negocio. | 5 | Delgado Perez, James Caleb | Done |
+| US26 | Actualización del stock de insumos | S3-28 | Integración del servicio de actualización de stock | Implementación de la comunicación con el endpoint de actualización, DTOs y persistencia mediante el repositorio correspondiente. | 4 | Delgado Perez, James Caleb | Done |
+| US26 | Actualización del stock de insumos | S3-29 | Interfaz de actualización de stock | Desarrollo del formulario o diálogo para modificar cantidades, visualizar existencias y presentar resultados de la operación. | 5 | Delgado Perez, James Caleb | Done |
+| US26 | Actualización del stock de insumos | S3-30 | Validaciones y pruebas de actualización de stock | Implementación de pruebas para verificar las reglas de actualización, cantidades válidas y manejo de errores. | 4 | Delgado Perez, James Caleb | Done |
+| US39 | Consulta del catálogo de productos | S3-31 | Implementación de consultas del catálogo comercial | Desarrollo de la lógica de aplicación para recuperar y organizar los productos disponibles para consulta en el catálogo. | 4 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US39 | Consulta del catálogo de productos | S3-32 | Integración remota del catálogo de productos | Implementación del cliente API, DTOs y repositorio para consumir los servicios del catálogo comercial. | 4 | Retuerto Rodriguez, Jorge Manuel | In-Process |
+| US39 | Consulta del catálogo de productos | S3-33 | Interfaz de visualización del catálogo | Desarrollo de la pantalla del catálogo con tarjetas de productos, información principal, disponibilidad e imágenes. | 6 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US39 | Consulta del catálogo de productos | S3-34 | Búsqueda y filtrado de productos | Implementación de controles de búsqueda y filtros para facilitar la localización de productos en el catálogo. | 4 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US40 | Consulta del detalle y la trazabilidad de un producto | S3-35 | Modelado de información de trazabilidad | Definición de modelos y DTOs para representar los datos de origen, campo de procedencia, cultivo, cosecha y demás información de trazabilidad disponible. | 4 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US40 | Consulta del detalle y la trazabilidad de un producto | S3-36 | Implementación de consulta del detalle del producto | Desarrollo del caso de uso y repositorio para recuperar la información detallada de un producto seleccionado. | 4 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US40 | Consulta del detalle y la trazabilidad de un producto | S3-37 | Integración del servicio de trazabilidad | Implementación del consumo del endpoint correspondiente y transformación de la información de trazabilidad recibida desde el backend. | 5 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US40 | Consulta del detalle y la trazabilidad de un producto | S3-38 | Interfaz de detalle y trazabilidad | Desarrollo de la pantalla de detalle con información del producto, procedencia, campo de origen y datos de seguimiento disponibles. | 6 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US40 | Consulta del detalle y la trazabilidad de un producto | S3-39 | Pruebas de consulta y trazabilidad | Implementación de pruebas para verificar la recuperación y visualización de los datos del producto y su trazabilidad. | 3 | Retuerto Rodriguez, Jorge Manuel | Done |
+
 
 ##### 4.2.3.4. Development Evidence for Sprint Review
 
-Evidencias de desarrollo y commits completados en el backend para la Épica 11 y en la aplicación móvil Android para la Épica 10:
+Evidencias de desarrollo del producto: Back End, Aplicación Multiplataforma y Aplicación Móvil.
 
 | Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
 | :--- | :--- | :---: | :--- | :--- | :---: |
+| AppMovil-NovaTech/App-Android-Terratech | feature/epic09-inventory | [cff0b5f](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/02300f6d2f442c3917691bb2980685adf77df26f)| feat(inventory): register harvest with field and pricing| -| 07/11/2026|
+| AppMovil-NovaTech/terratech-flutter | feature/implements_commercial |[e68cc8c](https://github.com/AppMovil-NovaTech/terratech-flutter/commit/e68cc8c78e3396b74086df159aa79cc8d3851c1f) | feat(commercial): implemented product catalog, filters and traceability.| -| 08/11/2026|
 | AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [49709d8](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/49709d8) | feat(community): implement product comments and rating summary endpoints in rest controller | Implementación de endpoints REST, DTOs y ACL de IAM para resolución de autores | 08/11/2026 |
 | AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [eeba7f1](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/eeba7f1) | test(community): add integration test suite for product reviews and reputation | Suite de 10 pruebas xUnit cubriendo orden descendente, filtros, validación y cálculos | 08/11/2026 |
 | AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [444b336](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/444b336) | fix(tests): update legacy journey test fixtures for stock contract and migration count | Alineación de pruebas legadas de integración con los contratos vigentes de stock | 08/11/2026 |
@@ -7472,6 +7521,8 @@ Evidencias de desarrollo y commits completados en el backend para la Épica 11 y
 | AppMovil-NovaTech/App-Android-Terratech | feature/epic10-notifications | [a9c9657](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/a9c9657) | fix(iam): enable graceful offline session fallback when backend server is down | Manejo resiliente offline y fallback en repositorios de IAM y Profile | 09/11/2026 |
 | AppMovil-NovaTech/App-Android-Terratech | feature/epic10-notifications | [121a4b1](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/121a4b1) | fix(iam): make demo session fallback resilient to unverified credentials and local errors | Resiliencia universal para sesiones locales y entornos de prueba | 09/11/2026 |
 | AppMovil-NovaTech/App-Android-Terratech | develop | [143489b](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/143489b) | merge(notifications): integrate Epic 10 notification management (#5) | Fusión completa y verificada del PR #5 en la rama base develop | 09/11/2026 |
+| AppMovil-NovaTech/terratech-flutter | feature/epic11-product-reviews-ratings |[606a972](https://github.com/AppMovil-NovaTech/terratech-flutter/commit/606a972bf9063be478f66bb3684ab2ed9609a866) | feat(community): integrate reviews section in product detail screen and app routes| -| 09/11/2026|
+| AppMovil-NovaTech/BackEnd-TerraTech | develop |[606a972](https://github.com/AppMovil-NovaTech/terratech-flutter/commit/606a972bf9063be478f66bb3684ab2ed9609a866) | feat: support Supabase PostgreSQL with manual Cloud Run deployment| -| 10/11/2026|
 
 ##### 4.2.3.5. Testing Suite Evidence for Sprint Review
 
@@ -7492,7 +7543,12 @@ Pruebas automatizadas de integración ejecutadas en backend para la Épica 11:
 | US27: Consulta y filtrado de alertas críticas de sensores | Unitaria Android (JUnit 4) | NotificationsTest (`loadNotifications_filtersBySensorAlertCategory_whenFilterApplied`) | Android Debug, Local Unit Test | Aprobado (aislamiento correcto de alertas de sensores con severidad crítica) | 5/5 pruebas aprobadas en suite de notificaciones |
 | US27: Marcado de lectura y decremento de badge no leídas | Unitaria Android (JUnit 4) | NotificationsTest (`markAsRead_updatesUnreadCountAndCardStatus`) | Android Debug, Local Unit Test | Aprobado (actualización reactiva de estado y contador de pendientes) | 5/5 pruebas aprobadas en suite de notificaciones |
 | US28: Persistencia y alternancia de preferencias por categoría | Unitaria Android (JUnit 4) | NotificationsTest (`toggleMoistureAlerts_updatesPreferencesState`) | Android Debug, Local Unit Test | Aprobado (desactivación de categoría confirmada en estado reactivo) | 5/5 pruebas aprobadas en suite de notificaciones |
-| US28: Configuración de canales de entrega (In-App, Email, SMS) | Unitaria Android (JUnit 4) | NotificationsTest (`toggleChannelPreferences_persistsSelection`) | Android Debug, Local Unit Test | Aprobado (selección de canales conservada y sincronizada) | 5/5 pruebas aprobadas en suite de notificaciones |
+| US28: Configuración de canales de entrega (In-App, Emai| Producto | Evidencia de colaboración | Período | Aportes relacionados |
+| --- | --- | --- | --- |
+| Backend | Rama `feature/epic11-product-reviews-ratings` integrada en `develop` vía Pull Request #4 ([1048d3d](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/1048d3d)) | 08/11/2026 | Implementación de ACL en IAM, consultas de repositorio, endpoints REST de comentarios y resumen de reputación, y suite de 10 pruebas xUnit atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Aplicación móvil | Rama de desarrollo móvil en `terratech-flutter` | 08/11/2026 | Modelado de datos, casos de uso, controladores de estado y componentes UI para visualización de reputación y publicación de reseñas. |
+| Informe | Rama `feature/sprint3-report-template` | 08/11/2026 | Estructuración completa de las nueve subsecciones del Sprint 3, alineación de historias de la Épica 11 y trazabilidad de pruebas atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Aplicación móvil | Rama `feature/epic10-notifications` integrada en `develop` vía Pull Request #5 ([143489b](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/143489b)) | 09/11/2026 | Implementación completa de la Épica 10 (US27, US28 y US30) en Android con arquitectura DDD en 4 capas, Jetpack Compose, persistencia reactiva DataStore, badge de notificaciones en Toolbar, resiliencia offline y suite de 5 pruebas unitarias atribuibles a Pariona Chacca, Angel Jose (`Angelitoso-opp`). |l, SMS) | Unitaria Android (JUnit 4) | NotificationsTest (`toggleChannelPreferences_persistsSelection`) | Android Debug, Local Unit Test | Aprobado (selección de canales conservada y sincronizada) | 5/5 pruebas aprobadas en suite de notificaciones |
 | US30: Clasificación de reseñas por prioridad y acciones rápidas | Unitaria Android (JUnit 4) | NotificationsTest (`loadNotifications_parsesReviewPriorityAndRatingStars`) | Android Debug, Local Unit Test | Aprobado (calificaciones de 1-2 estrellas marcadas como críticas con acción de respuesta; 4-5 estrellas con visualización directa) | 5/5 pruebas aprobadas en suite de notificaciones |
 
 ##### 4.2.3.6. Execution Evidence for Sprint Review
@@ -7546,13 +7602,101 @@ Evidencias de despliegue e infraestructura del incremento:
 
 Registro de actividades colaborativas y gestión de integración en Sprint 3:
 
+## Evidencias de colaboración – Sprint 3
+
 | Producto | Evidencia de colaboración | Período | Aportes relacionados |
 | --- | --- | --- | --- |
-| Backend | Rama `feature/epic11-product-reviews-ratings` integrada en `develop` vía Pull Request #4 ([1048d3d](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/1048d3d)) | 08/11/2026 | Implementación de ACL en IAM, consultas de repositorio, endpoints REST de comentarios y resumen de reputación, y suite de 10 pruebas xUnit atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
-| Aplicación móvil | Rama de desarrollo móvil en `terratech-flutter` | 08/11/2026 | Modelado de datos, casos de uso, controladores de estado y componentes UI para visualización de reputación y publicación de reseñas. |
-| Informe | Rama `feature/sprint3-report-template` | 08/11/2026 | Estructuración completa de las nueve subsecciones del Sprint 3, alineación de historias de la Épica 11 y trazabilidad de pruebas atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
-| Aplicación móvil | Rama `feature/epic10-notifications` integrada en `develop` vía Pull Request #5 ([143489b](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/143489b)) | 09/11/2026 | Implementación completa de la Épica 10 (US27, US28 y US30) en Android con arquitectura DDD en 4 capas, Jetpack Compose, persistencia reactiva DataStore, badge de notificaciones en Toolbar, resiliencia offline y suite de 5 pruebas unitarias atribuibles a Pariona Chacca, Angel Jose (`Angelitoso-opp`). |
+| Backend | Se desarrollaron las siguientes ramas: `feature/epic11-product-reviews-ratings`, integrada en `develop` mediante Pull Request #4 | 08/11/2026 | Implementación de ACL en IAM, consultas de repositorio, endpoints REST de comentarios y resumen de reputación, y suite de 10 pruebas xUnit atribuibles. |
+| Backend | Rama `develop` | 10/11/2026 | Incorporación del soporte para Supabase PostgreSQL y configuración para el despliegue manual en Google Cloud Run. |
+| Aplicación móvil multiplataforma (Flutter) | Se desarrollaron las siguientes ramas en el repositorio `terratech-flutter`: `feature/epic11-product-reviews-ratings` y `feature/implements_commercial` | 08/11/2026 – 09/11/2026 | Implementación del catálogo de productos, filtros de consulta y funcionalidades de trazabilidad comercial. Integración de la sección de reseñas en la pantalla de detalle del producto y actualización de las rutas de navegación de la aplicación. |
+| Aplicación móvil Android | Se desarrollaron las siguientes ramas en el repositorio `App-Android-Terratech`: `feature/epic09-inventory` y `feature/epic10-notifications`, integrada en `develop` mediante Pull Request #5  | 07/11/2026 – 09/11/2026 | Implementación del registro de cosechas vinculadas a campos agrícolas y configuración de precios. Desarrollo de la Épica 10 (US27, US28 y US30) con arquitectura DDD en cuatro capas, Jetpack Compose, persistencia reactiva DataStore, badge de notificaciones en Toolbar, resiliencia offline y suite de cinco pruebas unitarias. |
+| Informe | Rama `feature/sprint3-report-template`, `feature/refactor-sprints`, `feature/sprint_04` | 10/11/2026 | Estructuración completa de las nueve subsecciones del Sprint 3, alineación de historias de la Épica 11 y trazabilidad de pruebas.|
 
+#### 4.2.4. Sprint 4
+
+##### 4.2.4.1. Sprint Planning 4
+
+El Sprint 4 corresponde al incremento evaluado para el hito **TB2**. 
+
+| Campo | Registro del Sprint 4 |
+| :--- | :--- |
+| **Sprint #** | Sprint 4 — TB2 |
+| **Date** | Por confirmar |
+| **Time** | Por confirmar |
+| **Location** | Sesión remota vía Discord / Google Meet |
+| **Prepared By** | Por confirmar |
+| **Attendees** | Por confirmar |
+| **Sprint 3 Review Summary** | En el Sprint 3 se trabajó en la gestión de inventarios de insumos (US24, US25 y US26), la comunidad y reputación de productos (Épica 11), el sistema de notificaciones (Épica 10) y el catálogo comercial con su trazabilidad (US39 y US40). El alcance comprendió 13 historias y elementos del Product Backlog, equivalentes a 51 Story Points. |
+| **Sprint 3 Retrospective Summary** | Se avanzó en la integración de los componentes comerciales, de inventario, comunidad y notificaciones entre los productos backend y móviles. Se mantuvo el trabajo mediante ramas específicas por funcionalidad y la integración de cambios en `develop`. |
+| **Sprint 4 Goal** | Completar las funcionalidades de monitoreo agrícola, integración de recomendaciones y análisis comercial mediante la documentación interactiva de la API (US19), la consulta de datos de sensores (US20) y el registro de recomendaciones mediante webhook (US21). Asimismo, ampliar las capacidades comerciales mediante alertas de interés sobre productos (US29), notificaciones de nuevos productos y novedades de disponibilidad (US31 y US32), y consultas analíticas sobre productos, zonas agrícolas y cultivos de clientes (US37, US38 y US41). |
+| **Métrica de cumplimiento** | Avance de las 9 historias de usuario consideradas en el Sprint 4, correspondientes a 34 Story Points. El alcance comprende documentación de API, monitoreo de sensores, integración de recomendaciones, notificaciones comerciales y consultas analíticas. La validación del cumplimiento deberá sustentarse en los criterios de aceptación y las pruebas funcionales, de integración y de interfaz correspondientes. |
+| **Historias seleccionadas** | **Integración y monitoreo agrícola:** US19 (Documentación interactiva de la API - 2 SP), US20 (Consulta de datos de un sensor - 3 SP) y US21 (Registro de recomendaciones mediante webhook - 5 SP). **Épica comercial — Alertas y notificaciones:** US29 (Alertas de interés sobre productos - 3 SP), US31 (Notificaciones de nuevos productos de interés - 3 SP) y US32 (Notificaciones de novedades y disponibilidad - 3 SP). **Épica analítica — Consultas comerciales y agrícolas:** US37 (Consulta de productos con mayor interés - 5 SP), US38 (Consulta de zonas con mayor actividad - 5 SP) y US41 (Consulta de la información de los cultivos de los clientes - 5 SP). |
+| **Sprint 4 Velocity** | 34 SP, correspondientes a las 9 historias de usuario seleccionadas para el Sprint 4. |
+| **Sum of Story Points** | 34 SP distribuidos entre Integración y monitoreo agrícola (10 SP), Alertas y notificaciones comerciales (9 SP) y Consultas analíticas (15 SP). |
+| **Historical Sprint Velocity** | Sprint 1: 52 SP; Sprint 2: 51 SP; Sprint 3: 52 SP; Sprint 4: 34 SP. |
+| **Average Velocity** | 47.25 SP, calculados sobre los cuatro sprints registrados. |
+
+##### 4.2.4.2. Aspect Leaders and Collaborators
+
+La matriz LACX del Sprint 3 asigna los liderazgos y colaboraciones para la iteración:
+
+| Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias | Multiplataforma |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| Barba Estrada, Bryan Eduardo | bry4nbe | - | - | - | - | - |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | - | - | - | - |- |
+| Delgado Perez, James Caleb | JAmsy06 | - | — | - | - |- |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | - | — | - | - |- |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | - | - | - | - |- |
+
+*Convención: L = Líder de aspecto, C = Colaborador, — = No acreditado.*
+
+##### 4.2.4.3. Sprint Backlog 4
+
+# Sprint 4 — Task Breakdown
+
+| User Story ID | Title | Task ID | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| :--- | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| US19 | Documentación interactiva de la API | S4-01 | Configuración de documentación OpenAPI | Configurar OpenAPI/Swagger para generar la documentación interactiva de la API. | 4 | Por asignar | To-do |
+| US19 | Documentación interactiva de la API | S4-02 | Documentación de endpoints y DTOs | Documentar los endpoints, parámetros, respuestas y DTOs disponibles. | 5 | Por asignar | To-do |
+| US19 | Documentación interactiva de la API | S4-03 | Validación de documentación interactiva | Verificar que los endpoints puedan consultarse y probarse desde Swagger. | 3 | Por asignar | To-do |
+| US20 | Consulta de datos de un sensor | S4-04 | Integración del servicio de consulta de sensores | Integrar el servicio encargado de obtener los datos registrados por los sensores. | 4 | Por asignar | To-do |
+| US20 | Consulta de datos de un sensor | S4-05 | Procesamiento de datos del sensor | Procesar y organizar los valores recibidos para su consulta. | 4 | Por asignar | To-do |
+| US20 | Consulta de datos de un sensor | S4-06 | Interfaz de consulta de datos del sensor | Implementar la pantalla para visualizar los datos registrados por un sensor. | 5 | Por asignar | To-do |
+| US20 | Consulta de datos de un sensor | S4-07 | Pruebas de consulta de sensores | Verificar la recuperación y visualización de los datos del sensor. | 3 | Por asignar | To-do |
+| US21 | Registro de recomendaciones mediante webhook | S4-08 | Implementación del endpoint webhook | Crear el endpoint para recibir recomendaciones mediante solicitudes webhook. | 5 | Por asignar | To-do |
+| US21 | Registro de recomendaciones mediante webhook | S4-09 | Validación y procesamiento de recomendaciones | Validar la información recibida y procesar las recomendaciones. | 4 | Por asignar | To-do |
+| US21 | Registro de recomendaciones mediante webhook | S4-10 | Persistencia de recomendaciones recibidas | Almacenar las recomendaciones recibidas mediante el webhook. | 4 | Por asignar | To-do |
+| US21 | Registro de recomendaciones mediante webhook | S4-11 | Pruebas de integración del webhook | Verificar la recepción, validación y almacenamiento de recomendaciones. | 4 | Por asignar | To-do |
+| US29 | Alertas de interés sobre productos | S4-12 | Definición de criterios de interés comercial | Establecer las condiciones para identificar productos de interés para los clientes. | 4 | Por asignar | To-do |
+| US29 | Alertas de interés sobre productos | S4-13 | Generación de alertas de productos | Implementar la generación de alertas cuando un producto cumpla los criterios de interés. | 4 | Por asignar | To-do |
+| US29 | Alertas de interés sobre productos | S4-14 | Visualización de alertas de interés | Implementar la visualización de las alertas de productos en la aplicación. | 4 | Por asignar | To-do |
+| US31 | Notificaciones de nuevos productos de interés | S4-15 | Detección de nuevos productos de interés | Identificar nuevos productos que coincidan con los intereses registrados por los clientes. | 4 | Por asignar | To-do |
+| US31 | Notificaciones de nuevos productos de interés | S4-16 | Generación de notificaciones comerciales | Generar notificaciones cuando se registren nuevos productos de interés. | 4 | Por asignar | To-do |
+| US31 | Notificaciones de nuevos productos de interés | S4-17 | Visualización de notificaciones comerciales | Implementar la consulta y visualización de las notificaciones recibidas. | 4 | Por asignar | To-do |
+| US32 | Notificaciones de novedades y disponibilidad | S4-18 | Detección de cambios en disponibilidad | Identificar cambios en la disponibilidad de los productos registrados. | 4 | Por asignar | To-do |
+| US32 | Notificaciones de novedades y disponibilidad | S4-19 | Generación de notificaciones de novedades | Generar notificaciones cuando existan cambios relevantes en los productos. | 4 | Por asignar | To-do |
+| US32 | Notificaciones de novedades y disponibilidad | S4-20 | Visualización de novedades comerciales | Implementar la visualización de novedades y cambios de disponibilidad. | 4 | Por asignar | To-do |
+| US37 | Consulta de productos con mayor interés | S4-21 | Consulta de métricas de interés comercial | Implementar la consulta de métricas relacionadas con el interés de los clientes por los productos. | 5 | Por asignar | To-do |
+| US37 | Consulta de productos con mayor interés | S4-22 | Procesamiento y clasificación de productos | Procesar y ordenar los productos según sus métricas de interés. | 4 | Por asignar | To-do |
+| US37 | Consulta de productos con mayor interés | S4-23 | Visualización de productos destacados | Implementar la visualización de los productos con mayor interés comercial. | 5 | Por asignar | To-do |
+| US38 | Consulta de zonas con mayor actividad | S4-24 | Consulta de métricas de actividad por zona | Obtener las métricas de actividad comercial correspondientes a cada zona. | 5 | Por asignar | To-do |
+| US38 | Consulta de zonas con mayor actividad | S4-25 | Clasificación de zonas agrícolas | Procesar y clasificar las zonas según su nivel de actividad. | 4 | Por asignar | To-do |
+| US38 | Consulta de zonas con mayor actividad | S4-26 | Visualización de actividad por zona | Implementar la visualización de las zonas con mayor actividad. | 5 | Por asignar | To-do |
+| US41 | Consulta de la información de los cultivos de los clientes | S4-27 | Consulta de información de cultivos | Obtener la información de los cultivos asociados a los clientes. | 5 | Por asignar | To-do |
+| US41 | Consulta de la información de los cultivos de los clientes | S4-28 | Procesamiento de información agrícola | Organizar y procesar los datos de los cultivos para su consulta. | 4 | Por asignar | To-do |
+| US41 | Consulta de la información de los cultivos de los clientes | S4-29 | Visualización de información de cultivos | Implementar la visualización de la información de los cultivos de los clientes. | 5 | Por asignar | To-do |
+
+##### 4.2.4.4. Development Evidence for Sprint Review
+
+##### 4.2.4.5. Testing Suite Evidence for Sprint Review
+
+##### 4.2.4.6. Execution Evidence for Sprint Review
+
+##### 4.2.4.7. Services Documentation Evidence for Sprint Review
+
+##### 4.2.4.8. Software Deployment Evidence for Sprint Review
+
+##### 4.2.4.9. Team Collaboration Insights during Sprint
 
 ### 4.3. Validation Interviews
 
@@ -7862,5 +8006,3 @@ Link del Figma: https://www.figma.com/design/tEitQn36cpZFYQTRyniiRg/terra-tech?n
 - [Reflexiones individuales preservadas del Student Outcome](docs/STUDENT_OUTCOME_REFLEXIONES_HISTORICAS.md).
 - [Resultados de pruebas y despliegue](assets/evidence/sprint1/).
 - [Capturas de ejecución y servicio Cloud Run](assets/images/cap4/sprint1/).
-
-El README es la fuente actualizada. `informe.pdf` conserva una exportación previa y debe regenerarse tras incorporar las evidencias pendientes; no representa esta versión TB1.
