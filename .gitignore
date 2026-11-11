@@ -1,2 +1,7 @@
 ﻿# Configuración local de IntelliJ IDEA
 /.idea/
+# Caché generada al exportar el informe a PDF
+/pdf/.image-cache/
+/pdf/*
+/pdf
+pdf

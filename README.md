@@ -335,7 +335,6 @@ Desarrollo de Back End Contributors
         - [AV1 - Conclusiones acumuladas](#av1---conclusiones-acumuladas)
         - [TB1 - Conclusiones del incremento](#tb1---conclusiones-del-incremento)
         - [TB1 - Recomendaciones para el roadmap](#tb1---recomendaciones-para-el-roadmap)
-        - [TB2 - Conclusiones y recomendaciones del cierre técnico](#tb2---conclusiones-y-recomendaciones-del-cierre-técnico)
 - [Bibliografía](#bibliografía)
     - [Dominio de negocio](#dominio-de-negocio)
     - [Métodos y técnicas de ingeniería de software](#métodos-y-técnicas-de-ingeniería-de-software)
@@ -7156,6 +7155,8 @@ El [checklist de cierre del Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md) re
 
 
 #### 4.2.2. Sprint 2
+
+##### 4.2.2.1. Sprint Planning 2
 
 El Sprint 2 corresponde al incremento de TerraTech presentado en AV2. Su propósito es continuar el desarrollo del recorrido agrícola iniciado durante TB1, incorporando nuevas capacidades funcionales, ampliaciones técnicas y mejoras derivadas de las observaciones recibidas en la entrega anterior.
 
