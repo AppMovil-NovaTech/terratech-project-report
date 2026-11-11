@@ -7293,12 +7293,24 @@ El recorrido conserva las funcionalidades de acceso, perfil, parcelas y consulta
 
 Para cada funcionalidad se documentan el dispositivo o emulador utilizado, la versión de la aplicación, el entorno del backend y el resultado observado.
 
-| Recorrido | Historia relacionada | Dispositivo / versión | Backend utilizado | Resultado | Captura o marca temporal |
-| --- | --- | --- | --- | --- | --- |
-| Consulta del pronóstico climático y recomendación combinada de suspensión de riego | US22 | Emulador Pixel 7 (API 34), APK Debug | Development / Cloud Run producción | Presentación de WeatherForecastCard con temperatura, humedad, viento y probabilidad de lluvia; despliegue de IrrigationSuspensionBanner con aviso de ahorro de 500 L | `assets/images/cap4/sprint2/weather-forecast.png` |
-| Visualización de capa satelital y alternancia con mapa base | US23 (Escenario 1) | Emulador Pixel 7 (API 34), APK Debug | Development / Cloud Run producción | Carga de SatelliteOverlayViewer con overlay sobre la parcela, indicador de NDVI promedio (0.74), nubosidad (3.2%) y botón de alternancia con mapa vectorial base | `assets/images/cap4/sprint2/satellite-viewer.png` |
-| Consulta de escena satelital histórica por fecha objetivo | US23 (Escenario 2) | Emulador Pixel 7 (API 34), APK Debug | Development / Cloud Run producción | Apertura de SatelliteDatePickerDialog, selección de fecha objetivo, recuperación de imagen más cercana en 60 días y manejo de 404 si no existen datos | `assets/images/cap4/sprint2/satellite-date-picker.png` |
-| Comparación temporal de vegetación entre dos periodos | US23 (Escenario 3) | Emulador Pixel 7 (API 34), APK Debug | Development / Cloud Run producción | Pantalla VegetationComparisonScreen, despliegue de VegetationComparisonCard con dos escenas lado a lado, cálculo de delta de NDVI y porcentaje de cambio | `assets/images/cap4/sprint2/vegetation-comparison.png` |
+**Verificación de cierre — 11/11/2026 UTC (10/11 en Lima).** Capturas reales de la APK Debug 1.0 en emulador Pixel 8 (2), Android 16 / API 36, contra `https://terratech-api.lucemz.com/`. Se utilizó una cuenta sintética provisionada administrativamente en Supabase; este recorrido verifica inicio de sesión, no el registro ni el envío de correo. La prueba en teléfono físico queda pendiente por indicación del equipo.
+
+| Recorrido | Historia | Resultado observado |
+| --- | --- | --- |
+| Pronóstico climático | US22 | Consulta autenticada: 22.9 °C, humedad 84 %, lluvia 16 %, precipitación esperada 0 mm. Sin recomendación de suspensión en esta muestra; no se acredita ahorro de 500 L. |
+| Vista satelital | US23 | Metadatos de catálogo demostrativo: NDVI 0.74 y nubosidad 3.2 %. La URL de imagen devuelve HTTP 404 y el visor permanece vacío. Pendiente conectar imágenes válidas y verificar las teselas del mapa base. |
+| Selección de fecha | US23 | Apertura del calendario y cancelación comprobadas. Esta captura no acredita recuperación de una escena histórica real. |
+| Comparación de vegetación | US23 | Comparación entre 11/10 y 10/11: variación NDVI 0.12 calculada con metadatos demostrativos; no representa una medición satelital validada. |
+
+| Pronóstico climático | Vista satelital y metadatos |
+| --- | --- |
+| <img src="assets/images/cap4/sprint2/weather-forecast.png" alt="Pronóstico consultado en el emulador" width="320"> | <img src="assets/images/cap4/sprint2/satellite-viewer.png" alt="Visor vacío con metadatos de demostración" width="320"> |
+
+| Selector de fecha | Comparación de metadatos |
+| --- | --- |
+| <img src="assets/images/cap4/sprint2/satellite-date-picker.png" alt="Calendario abierto en la APK" width="320"> | <img src="assets/images/cap4/sprint2/vegetation-comparison.png" alt="Resultado de comparación NDVI de demostración" width="320"> |
+
+La ejecución automatizada `BackendJourneyTest.publicExternalServicesEvidence` completó el recorrido contra el servicio público. Las imágenes son capturas del emulador, sin composición ni generación artificial. Registro reproducible y hashes: [validación de v2.1.0](docs/release-v2.1.0-validation.json).
 
 **Video de ejecución del Sprint 2:** POR COMPLETAR.
 
@@ -7350,6 +7362,14 @@ La aplicación utilizada en la demostración debe consumir el entorno identifica
 | Backend y OpenAPI | https://terratech-api.lucemz.com/ | Revisión Cloud Run `backend-terratech-git-00016-rer` (imagen basada en commit `38045e5` / `dfc9191`) | 31/10/2026 04:31 UTC | Ready=True, 100% tráfico, probes `/health/live` y `/health/ready` 200 OK | `docs/sprint2-deployment.json` y `docs/sprint2-public-verification.json` |
 | Base de datos y migraciones | MySQL administrado en Aiven (puerto 16600, SslMode=Required) | Migraciones iniciales y de ampliación aplicadas al arrancar | 31/10/2026 | Tablas iniciales verificadas; sin migraciones pendientes | `docs/sprint2-validation.json` |
 | Aplicación evaluada | APK Debug instalable en emulador Pixel 7 (API 34) | Commit [56eddd1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/56eddd14f58737a58adfc7fbe2fd52100b4ec498) en rama `feature/external-services-us22-us23` | 28/10/2026 | Compilación Debug aprobada, Room v4 migrado, consumo de API verificado | `app/schemas/com.novatech.terratech.core.database.TerraDatabase/4.json` |
+
+**Actualización de cierre — 11/11/2026 UTC.** La tabla anterior conserva el registro histórico de octubre. El entorno vigente utiliza PostgreSQL en Supabase (esquema `terratech`), backend commit `58e5fe9` y revisión Cloud Run `backend-terratech-git-00017-8rs`. La conexión se suministra mediante Secret Manager y `Database__MigrateOnStartup=false`. Las verificaciones públicas de `/health/live`, `/health/ready` y Swagger respondieron 200; los recursos privados requieren JWT. Los datos históricos de Aiven no se han recuperado.
+
+La APK Debug evaluada (corrección `faa7c57`, integrada en Android `main` como `d765468`) consume `https://terratech-api.lucemz.com/`. Se completaron 91 pruebas unitarias y 28 instrumentadas de la suite general, además del recorrido público de clima y catálogo satelital. Se eliminó el inicio de sesión ficticio que convertía errores de autenticación en una sesión de demostración. Las pruebas y sus límites se registran en [validación de v2.1.0](docs/release-v2.1.0-validation.json).
+
+<img src="assets/images/cap4/sprint2/emulator-home.png" alt="Sesión de prueba autenticada en emulador Pixel 8" width="320">
+
+**Pendientes de entrega:** prueba y fotografías en Android físico, imágenes satelitales válidas, verificación del mapa base, video enlazado y exportación final del informe a PDF. El cierre GitFlow del informe no elimina estas limitaciones.
 
 El cierre del despliegue se relaciona con la matriz de requisitos y pruebas del backend, de modo que la publicación del servicio y su cumplimiento funcional queden documentados.
 
@@ -7481,11 +7501,17 @@ Capturas de ejecución y verificación funcional:
 
 | Recorrido | Historia relacionada | Dispositivo / versión | Backend utilizado | Resultado | Captura o marca temporal |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Consulta de reputación de producto con desglose de estrellas | US34 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Presentación de tarjeta de reputación con promedio, total de opiniones y barras de distribución | `assets/images/cap4/sprint3/product-rating-summary.png` |
-| Filtrado interactivo de comentarios por calificación de estrellas | US33 / US36 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Actualización dinámica de la lista según el chip de estrellas seleccionado | `assets/images/cap4/sprint3/reviews-filter-stars.png` |
-| Publicación de reseña con calificación y validación de longitud | US35 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Diálogo modal con selector táctil de estrellas y validación de 10 a 500 caracteres | `assets/images/cap4/sprint3/create-review-modal.png` |
-| Consulta de notificaciones de sensores y reseñas con badge dinámico | US27 / US30 | Emulador Android / Jetpack Compose | Backend Debug / Fallback Local-First | Centro de notificaciones con badge '3', chips de filtro, tarjeta de humedad crítica y reseñas con estrellas (5 estrellas con 'View review' y 2 estrellas con alerta y 'Reply') | `assets/images/cap4/sprint3/notifications-center.png` |
+| Consulta de reputación de producto con desglose de estrellas | US34 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Presentación de tarjeta de reputación con promedio, total de opiniones y barras de distribución | Pendiente: `assets/images/cap4/sprint3/product-rating-summary.png` |
+| Filtrado interactivo de comentarios por calificación de estrellas | US33 / US36 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Actualización dinámica de la lista según el chip de estrellas seleccionado | Pendiente: `assets/images/cap4/sprint3/reviews-filter-stars.png` |
+| Publicación de reseña con calificación y validación de longitud | US35 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Diálogo modal con selector táctil de estrellas y validación de 10 a 500 caracteres | Pendiente: `assets/images/cap4/sprint3/create-review-modal.png` |
+| Consulta de notificaciones de sensores y reseñas con badge dinámico | US27 / US30 | Emulador Android / Jetpack Compose | Captura archivada / datos de demostración | Centro de notificaciones con badge '3', chips de filtro, tarjeta de humedad crítica y reseñas con estrellas (5 estrellas con 'View review' y 2 estrellas con alerta y 'Reply') | `assets/images/cap4/sprint3/notifications-center.png` |
 | Configuración de preferencias de notificaciones y canales | US28 | Emulador Android / Jetpack Compose | DataStore local reactivo | Pantalla de configuración con switches de activación por tipo de alerta y canal de entrega (In-app, Email, SMS) | `assets/images/cap4/sprint3/notification-preferences.png` |
+
+Las siguientes capturas del emulador se incrustan para su lectura directa en el informe. Proceden de la evidencia Android archivada por el equipo en Sprint 3 y muestran datos de demostración de notificaciones. La captura del centro incluye el aviso de sesión «Sign in again»; su alcance es la presentación de las tarjetas y filtros. La prueba en teléfono físico queda pendiente en este cierre.
+
+| Centro de notificaciones | Preferencias de notificaciones |
+| --- | --- |
+| <img src="assets/images/cap4/sprint3/notifications-center.png" alt="Centro de notificaciones Android en emulador, con filtros y tarjetas de demostración" width="320"> | <img src="assets/images/cap4/sprint3/notification-preferences.png" alt="Preferencias de notificaciones Android en emulador" width="320"> |
 
 **Video de ejecución del Sprint 3:** Por completar.  
 **Duración:** Por completar.
