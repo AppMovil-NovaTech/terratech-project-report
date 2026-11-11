@@ -1,0 +1,136 @@
+{
+  "release": "v2.1.0",
+  "verifiedAtUtc": "2026-11-11T00:52:35.269844+00:00",
+  "scope": "Report GitFlow release; Android Debug verification",
+  "android": {
+    "commit": "faa7c57e56eaa4dbe9f315acc45cd2d03dcdfea9",
+    "versionName": "1.0",
+    "variant": "Debug",
+    "emulator": "Pixel_8_2",
+    "androidApi": 36,
+    "physicalDeviceTested": false,
+    "apiBaseUrl": "https://terratech-api.lucemz.com/",
+    "apkSha256": "2ab6b8467313b21a82bddb886be67a05337bb72a0e4470f5716c19a12969ea0a",
+    "unit": {
+      "tests": 91,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "instrumented": {
+      "tests": 28,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "publicJourney": {
+      "test": "BackendJourneyTest.publicExternalServicesEvidence",
+      "tests": 1,
+      "failures": 0,
+      "account": "Synthetic account provisioned administratively; credentials excluded",
+      "coverage": [
+        "sign-in",
+        "field selection",
+        "weather",
+        "satellite metadata",
+        "date dialog opening/cancel",
+        "vegetation comparison"
+      ]
+    },
+    "quality": {
+      "assembleDebug": "passed",
+      "lintDebug": "passed",
+      "modularity": "passed",
+      "kotlinStyle": "passed"
+    },
+    "publishedMainCommit": "d765468",
+    "publishedDevelopCommit": "cc120c6"
+  },
+  "backend": {
+    "commit": "58e5fe984464e4fd3132d3aff00ab233ed1fb4ca",
+    "revision": "backend-terratech-git-00017-8rs",
+    "database": "Supabase PostgreSQL",
+    "schema": "terratech",
+    "publicChecks": [
+      {
+        "path": "/health/live",
+        "status": 200
+      },
+      {
+        "path": "/health/ready",
+        "status": 200
+      },
+      {
+        "path": "/swagger/index.html",
+        "status": 200
+      },
+      {
+        "path": "/api/v1/users/me",
+        "status": 401
+      }
+    ],
+    "weather": "Real API response displayed in emulator",
+    "satellite": {
+      "metadata": "Demonstration catalog",
+      "imageHttpStatus": 404,
+      "ndviEarlier": 0.62,
+      "ndviLater": 0.74,
+      "ndviDelta": 0.12
+    }
+  },
+  "screenshots": [
+    {
+      "path": "assets/images/cap4/sprint2/emulator-home.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "94d3a377e614c51dc973ddfbd2b66e6226727cb4f779748cf414b246d564e968",
+      "source": "Actual emulator screenshot"
+    },
+    {
+      "path": "assets/images/cap4/sprint2/satellite-date-picker.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "bedcf65467452b9b59278835a1de1e7e14279aed6b9cd780a674d304a00906b1",
+      "source": "Actual emulator screenshot"
+    },
+    {
+      "path": "assets/images/cap4/sprint2/satellite-viewer.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "cf95b68da6eb5ab28504a704dae64caf83347c06309640b3c4755d4fe31f611e",
+      "source": "Actual emulator screenshot"
+    },
+    {
+      "path": "assets/images/cap4/sprint2/vegetation-comparison.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "48c416fa96fd3c3fd9ea95044c95ad2ecb7b3b86f4f4cd30f9bad2c94506ccc5",
+      "source": "Actual emulator screenshot"
+    },
+    {
+      "path": "assets/images/cap4/sprint2/weather-forecast.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "9529bf473cb15e7fc4cd9ea7195a47ea344b2101fb0706676317d357be8278cb",
+      "source": "Actual emulator screenshot"
+    },
+    {
+      "path": "assets/images/cap4/sprint3/notifications-center.png",
+      "sha256": "3a88cdb471dc9f0202920254d84ac868a71a16eb405835b852d424f01d408531",
+      "source": "Archived team emulator evidence; demo data; not a current authenticated journey"
+    },
+    {
+      "path": "assets/images/cap4/sprint3/notification-preferences.png",
+      "sha256": "1ad2df137e2fe07e3c4309ba64dfd798bdbaffad4fe3ca2ea1a9c7077f703727",
+      "source": "Archived team emulator evidence; demo data; not a current authenticated journey"
+    }
+  ],
+  "remaining": [
+    "Physical Android device testing and photographs",
+    "Valid satellite imagery and base-map verification",
+    "Sprint videos",
+    "Final PDF export",
+    "Missing Flutter Sprint 3 screenshots",
+    "Historical Aiven data recovery"
+  ]
+}

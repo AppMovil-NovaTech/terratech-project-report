@@ -1,0 +1,54 @@
+{
+  "sprint": "Sprint 3",
+  "evaluationHarness": "TB2",
+  "executedAt": "2026-11-09T20:26:00.000Z",
+  "author": "Pariona Chacca, Angel Jose (Angelitoso-opp)",
+  "results": {
+    "backend": {
+      "framework": "xUnit .NET 10",
+      "suite": "TerraTech.IntegrationTests",
+      "total": 110,
+      "passed": 110,
+      "failed": 0,
+      "reputationSuite": {
+        "suiteName": "ProductReviewsAndReputationTests",
+        "tests": 10,
+        "passed": 10
+      }
+    },
+    "mobile": {
+      "framework": "JUnit 4 / Android Test Harness",
+      "repository": "App-Android-Terratech",
+      "variant": "Debug",
+      "notificationsSuite": {
+        "suiteName": "NotificationsTest",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "codeQuality": {
+        "modularityCheck": "PASSED (337 files, no bundled types)",
+        "kotlinStyleCheck": "PASSED (337 files clean)",
+        "ciRunStatus": "SUCCESS"
+      },
+      "offlineResilience": {
+        "localFirstFallback": "Enabled and verified",
+        "sessionPersistence": "Jetpack DataStore"
+      }
+    }
+  },
+  "epicsCovered": [
+    {
+      "id": "EPIC10",
+      "name": "Notification Management",
+      "stories": ["US27", "US28", "US30"],
+      "status": "COMPLETED"
+    },
+    {
+      "id": "EPIC11",
+      "name": "Product Reviews and Ratings",
+      "stories": ["US33", "US34", "US35", "US36"],
+      "status": "COMPLETED"
+    }
+  ]
+}

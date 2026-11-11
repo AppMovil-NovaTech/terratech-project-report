@@ -84,6 +84,10 @@
 | 0.9.2 | 04/10/2026 | Barba Estrada, Bryan Eduardo | Alineación de la sección 3.1 con la Landing Page implementada: tipografía Inter, paleta, escala de espaciado, breakpoints, estructura de secciones, etiquetas, metadatos, internationalización ES/EN y accesibilidad. Registro de la evidencia de implementación y publicación en GitHub Pages, columna de implementación de la Landing Page en la matriz LACX, corrección de la descripción tecnológica y renumeración de las figuras del capítulo 3. |
 | 0.9.3 | 05/10/2026 | Retuerto Rodriguez, Jorge Manuel | Implementacion de reglas de diseño y herramientas para el correcto desarrollo de la apliaciones                                                                                                                                                                                                                                                                                                                              | 
 | 1.0.0 | 05/10/2026 | Equipo NovaTech | Consolidación final del informe correspondiente a la TB1, integrando Product Design, Mobile UX/UI Design, implementación del Sprint 1, Validation Interviews, Collaboration Insights, Student Outcome, conclusiones y evidencias de la entrega. |
+| 1.1.0 | 28/10/2026 | Barba Estrada, Bryan Eduardo | Documentación de la integración de servicios externos para el Sprint 2 (AV2): planificación, matriz LACX, tareas del Sprint Backlog (S2-01 a S2-14), evidencias de desarrollo y pruebas en backend (xUnit) y Android (MockWebServer, Room v4), contratos OpenAPI, verificación de despliegue en Cloud Run y analíticos de colaboración para US22 y US23. |
+| 1.1.1 | 08/11/2026 | Barba Estrada, Bryan Eduardo | Incorporación del registro de participación AV2 en colaboración, actualización del Student Outcome 7 para AV2 (criterios 1 y 2 con evidencias técnicas) y vinculación de archivos de verificación y contratos OpenAPI en docs/. |
+| 1.2.0 | 08/11/2026 | Barba Estrada, Bryan Eduardo | Estructuración de la plantilla del Sprint 3 (4.2.3.1 a 4.2.3.9), incorporación de evidencias de desarrollo y pruebas de la Épica 11 (US33 a US36) y actualización del Product Backlog para el hito TB2. |
+| 1.2.1 | 09/11/2026 | Pariona Chacca, Angel Jose | Incorporación de evidencias de desarrollo, pruebas unitarias y ejecución móvil de la Épica 10 (US27, US28, US30: Gestión de Notificaciones) en Sprint 3 para el hito TB2. |
 ## Project Report Collaboration Insights
 
 Esta sección presenta la organización y las evidencias del trabajo
@@ -133,6 +137,37 @@ Para el desarrollo de la TB1, el equipo NovaTech continuó trabajando mediante G
 | Retuerto Rodriguez, Jorge Manuel | Calin1407 | **Responsabilidad:** implementación y despliegue del backend de TerraTech para el Sprint 1.<br><br>**Realizado:** desarrollo de la Web API REST utilizando C#, ASP.NET Core y Domain-Driven Design; implementación de componentes de dominio, aplicación, infraestructura e interfaces; integración de autenticación y servicios vinculados con usuarios, parcelas, dispositivos y telemetría; documentación mediante Swagger/OpenAPI; y despliegue del servicio backend para su consumo durante la implementación de TerraTech. |
 
 
+### AV2
+
+Para la entrega AV2 (Sprint 2), el equipo continuó aplicando la metodología de desarrollo basada en GitFlow sobre los repositorios del proyecto. Se desarrollaron e integraron de forma desacoplada las capacidades de servicios externos, analítica agronómica y persistencia local, registrando los cambios mediante ramas `feature/*` e integrándolos en `develop` a través de Pull Requests con verificación continua.
+
+#### Registro preliminar de participación
+
+| Integrante | Usuario de GitHub | Responsabilidad asignada |
+|:---|:---|:---|
+| Barba Estrada, Bryan Eduardo | bry4nbe | **Responsabilidad:** liderazgo e implementación de la integración de servicios externos (US22 y US23) en backend y aplicación móvil Android, pruebas automatizadas y documentación del incremento en el informe.<br><br>**Realizado:** desarrollo del cliente Open-Meteo con IMemoryCache y cálculo de recomendación combinada de riego (US22); implementación del catálogo multitemporal satelital con cálculo de índices de vegetación NDVI y filtrado temporal (US23); creación de DAOs, entidades y migración Room v4 en Android; desarrollo de casos de uso y componentes Compose (`WeatherForecastCard`, `IrrigationSuspensionBanner`, `SatelliteOverlayViewer`, `VegetationComparisonScreen`); implementación de 7 pruebas de integración xUnit en backend y 6 pruebas automatizadas en Android (MockWebServer y unitarias); y documentación integral de las nueve subsecciones del Sprint 2 (4.2.2.1 a 4.2.2.9) en el informe. |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | **Responsabilidad:** coordinación de arquitectura técnica, revisión de despliegue en Google Cloud Run y soporte de integración de servicios backend para AV2. |
+| Delgado Perez, James Caleb | JAmsy06 | **Responsabilidad:** verificación de consistencia del informe, diseño UI responsive y alineación con la Landing Page para la entrega AV2. |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | **Responsabilidad:** soporte de diseño UX/UI en componentes visuales móviles y revisión de flujos para la iteración AV2. |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | **Responsabilidad:** soporte en persistencia relacional y esquemas de datos para las ampliaciones del Sprint 2. |
+
+
+### TB2
+
+Para la entrega TB2 (Sprint 3), el equipo continuó aplicando la metodología de desarrollo basada en GitFlow sobre los repositorios del proyecto. Se desarrollaron e integraron las capacidades de gestión de reputación comercial y reseñas de productos (Épica 11) en backend y cliente móvil Flutter, junto con la implementación completa del centro de notificaciones de alertas de sensores IoT y reseñas (Épica 10: US27, US28 y US30) en Android nativo con Jetpack Compose y arquitectura DDD, registrando los cambios mediante ramas `feature/*` e integrándolos en `develop` a través de Pull Requests verificados.
+
+#### Registro preliminar de participación
+
+| Integrante | Usuario de GitHub | Responsabilidad asignada |
+|:---|:---|:---|
+| Barba Estrada, Bryan Eduardo | bry4nbe | **Responsabilidad:** liderazgo e implementación de la Épica 11 (Comunidad y Reputación) en backend y cliente móvil Flutter, pruebas de integración xUnit y estructuración de la plantilla del Sprint 3 en el informe.<br><br>**Realizado:** endpoints REST y DTOs de comentarios y reputación (`CommentsController`); ACL desacoplada en IAM para resolución de autores; suite de 10 pruebas de integración xUnit (`ProductReviewsAndReputationTests.cs`); componentes móviles Flutter de visualización de estrellas y modal de reseñas; y documentación de las secciones 4.2.3.1 a 4.2.3.9 en el informe. |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | **Responsabilidad:** soporte técnico de arquitectura backend, infraestructura de despliegue en Google Cloud Run y base de datos Aiven MySQL para la iteración TB2. |
+| Delgado Perez, James Caleb | JAmsy06 | **Responsabilidad:** revisión editorial y de coherencia del informe de proyecto, verificación de lineamientos y enlaces para la entrega TB2. |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | **Responsabilidad:** liderazgo e implementación de la Épica 10 (Gestión de Notificaciones: US27, US28 y US30) en la aplicación móvil Android con arquitectura DDD y Jetpack Compose, pruebas unitarias automatizadas y contingencia offline.<br><br>**Realizado:** definición del modelo de dominio (`NotificationItem`, `NotificationPreferences`, `ReviewDetails`); implementación de API Retrofit, DTOs y DataStore reactivo (`NotificationPreferencesStore`); desarrollo de casos de uso y ViewModels reactivos con StateFlow; construcción de pantallas y componentes UI (`NotificationsScreen`, `NotificationPreferencesScreen`, badge en Toolbar); integración de fallback resiliente local-first en IAM para login offline; suite de 5 pruebas unitarias automatizadas (`NotificationsTest.kt`); y documentación de evidencias técnicas y capturas del Sprint 3 en el informe. |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | **Responsabilidad:** soporte en persistencia relacional y esquemas de base de datos para la iteración TB2. |
+
+<div class="page"></div>
+
 ### Collaboration Insights AV1
 
 ![AV1](assets/images/team/collaboration-insights-av1.png)
@@ -181,6 +216,7 @@ Para el desarrollo de la TB1, el equipo NovaTech continuó trabajando mediante G
 - [Project Report Collaboration Insights](#project-report-collaboration-insights)
     - [AV1](#av1)
     - [TB1](#tb1)
+    - [AV2](#av2)
 - [Student Outcome](#student-outcome)
 - [Objetivos SMART](#objetivos-smart)
 - [Capítulo I: Presentación](#capítulo-i-presentación)
@@ -247,6 +283,26 @@ Para el desarrollo de la TB1, el equipo NovaTech continuó trabajando mediante G
             - [4.2.1.7. Services Documentation Evidence for Sprint Review](#4217-services-documentation-evidence-for-sprint-review)
             - [4.2.1.8. Software Deployment Evidence for Sprint Review](#4218-software-deployment-evidence-for-sprint-review)
             - [4.2.1.9. Team Collaboration Insights during Sprint](#4219-team-collaboration-insights-during-sprint)
+        - [4.2.2. Sprint 2](#422-sprint-2)
+            - [4.2.2.1. Sprint Planning 2](#4221-sprint-planning-2)
+            - [4.2.2.2. Aspect Leaders and Collaborators](#4222-aspect-leaders-and-collaborators)
+            - [4.2.2.3. Sprint Backlog 2](#4223-sprint-backlog-2)
+            - [4.2.2.4. Development Evidence for Sprint Review](#4224-development-evidence-for-sprint-review)
+            - [4.2.2.5. Testing Suite Evidence for Sprint Review](#4225-testing-suite-evidence-for-sprint-review)
+            - [4.2.2.6. Execution Evidence for Sprint Review](#4226-execution-evidence-for-sprint-review)
+            - [4.2.2.7. Services Documentation Evidence for Sprint Review](#4227-services-documentation-evidence-for-sprint-review)
+            - [4.2.2.8. Software Deployment Evidence for Sprint Review](#4228-software-deployment-evidence-for-sprint-review)
+            - [4.2.2.9. Team Collaboration Insights during Sprint](#4229-team-collaboration-insights-during-sprint)
+        - [4.2.3. Sprint 3](#423-sprint-3)
+            - [4.2.3.1. Sprint Planning 3](#4231-sprint-planning-3)
+            - [4.2.3.2. Aspect Leaders and Collaborators](#4232-aspect-leaders-and-collaborators)
+            - [4.2.3.3. Sprint Backlog 3](#4233-sprint-backlog-3)
+            - [4.2.3.4. Development Evidence for Sprint Review](#4234-development-evidence-for-sprint-review)
+            - [4.2.3.5. Testing Suite Evidence for Sprint Review](#4235-testing-suite-evidence-for-sprint-review)
+            - [4.2.3.6. Execution Evidence for Sprint Review](#4236-execution-evidence-for-sprint-review)
+            - [4.2.3.7. Services Documentation Evidence for Sprint Review](#4237-services-documentation-evidence-for-sprint-review)
+            - [4.2.3.8. Software Deployment Evidence for Sprint Review](#4238-software-deployment-evidence-for-sprint-review)
+            - [4.2.3.9. Team Collaboration Insights during Sprint](#4239-team-collaboration-insights-during-sprint)
     - [4.3. Validation Interviews](#43-validation-interviews)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
@@ -275,11 +331,11 @@ EAC - Student Outcome 7.
 
 | Criterio específico | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |---|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y, en especial, para su proyecto en soluciones de software. | **Barba Estrada, Bryan Eduardo** - **AV1:** Revisé los lineamientos del curso y los apliqué al desarrollo de 2.3 Needfinding y 2.4 Requirements Specification. Aprendí a elaborar User Personas, User Task Matrix, User Journey Maps, Empathy Maps y Ubiquitous Language, y a redactar User Stories con criterios de aceptación en formato Given–When–Then, Technical Stories, Spike Stories, Impact Mapping y Product Backlog. Reforcé además el uso de Markdown, GitFlow y Conventional Commits.<br>**Evidencias:** secciones 2.3 y 2.4 del README, imágenes de los artefactos y commits de la rama `feature/av1-needfinding-requirements`.<br><br>**Barba Estrada, Bryan Eduardo** - **TB1:** Desarrollé la documentación de la sección 4.3 Validation Interviews, incluyendo el diseño de las entrevistas, la adaptación de sus resúmenes a los recorridos definidos y la redacción del apartado de evaluación de usabilidad según las heurísticas de Jakob Nielsen.<br>**Evidencias:** sección 4.3 del README y commits de la rama `feature/validation-interviews`.<br><br>**Bendezú Navarro, Rúbens Fitzgerald** - **AV1:** Investigó y aplicó los principios de Domain-Driven Design (DDD) Estratégico (descubrimiento de Bounded Contexts, Domain Storytelling, Bounded Context Canvases y Context Mapping) junto con el modelado de arquitectura C4 (Contexto, Contenedores y Despliegue) orientado a aplicaciones móviles nativas Android con persistencia local Room y arquitectura limpia, asegurando una base técnica escalable para el monitoreo agrícola.<br>**Evidencias:** Diagramas de Big Picture EventStorming, Domain Storytelling, Bounded Context Canvases (5 contextos), Context Mapping y diagramas C4 incorporados en la sección 2.5 del README.<br><br>**Bendezú Navarro, Rúbens Fitzgerald** - **TB1:** Apliqué Kotlin, Jetpack Compose, StateFlow, Hilt y Room para implementar el recorrido móvil y conservar consultas por usuario tras reiniciar sin conexión. Amplié ASP.NET Core .NET 10 y EF Core con autenticación JWT estándar, acceso por propietario, mediciones fechadas y migraciones incrementales. Contrasté estas decisiones mediante pruebas Debug, dos cuentas aisladas, concurrencia y pruebas por clics con Artemis, y desplegué el backend en Cloud Run con MySQL Aiven.<br>**Evidencias:** secciones 4.2.1.4 a 4.2.1.8, commits y resultados versionados en assets/evidence/sprint1.<br><br>**Delgado Perez, James Caleb** - **AV1:** Revisé los lineamientos del curso y el material de referencia de Lean UX para adaptar el Capítulo I de TerraTech al proyecto de aplicaciones móviles, reutilizando la base tecnológica del proyecto previo y alineando el Capítulo I con el alcance funcional actualmente documentado para TerraTech. Apliqué la técnica 5W + 2H para organizar la problemática y desarrollé los Problem Statements, Assumptions, Hypothesis Statements y Lean UX Canvas. Asimismo, revisé el sustento estadístico de los segmentos objetivo y organicé las referencias bibliográficas en formato APA 7. Estas actividades me permitieron aplicar los conocimientos adquiridos mediante la consulta de fuentes y la revisión de la coherencia entre las secciones relacionadas con mi aporte.<br>**Evidencias:** Capítulo I actualizado, Lean UX Canvas y bibliografía incorporados en el README de la AV1. <br><br>**TB1:** Revisé y apliqué conceptos de Product Design, diseño responsive y arquitectura de información para desarrollar la documentación del Capítulo III correspondiente a la Landing Page de TerraTech. Definí y documenté los sistemas de etiquetado, metadatos SEO, mecanismos de búsqueda y navegación, y elaboré wireframes y mock-ups responsive para Desktop y Mobile. Asimismo, adapté estos artefactos al alcance funcional actual de la TB1, manteniendo coherencia con las historias priorizadas de registro, inicio de sesión, perfil, gestión de parcelas y sensores, indicadores del suelo, histórico de mediciones y consulta sin conexión. <br><br>**Pariona Chacca, Angel Jose** - **AV1:** Investigué el mercado de soluciones agrícolas móviles y la formulación de entrevistas semiestructuradas, profundizando en patrones de diseño accesible para usuarios con baja alfabetización digital y en arquitecturas móviles resilientes con soporte sin conexión (almacenamiento local SQLite/Room) y conectividad evaluada para campo. Apliqué estos conceptos al benchmark de competidores y a la sistematización de 7 entrevistas reales para extraer requisitos aplicables a la solución móvil.<br>**Evidencias:** secciones 2.1 y 2.2 del README con matrices de análisis competitivo, registro de entrevistas y análisis estadístico-cualitativo.<br><br>**Pariona Chacca, Angel Jose** - **TB1:** Investigué y apliqué los principios de diseño de experiencia de usuario (UX) e interfaz móvil (UI) basados en Material Design 3 y heurísticas de usabilidad para entornos rurales. Diseñé 8 pantallas en baja fidelidad (wireframes) y alta fidelidad (mockups), un wireflow operacional P1-P8, 4 diagramas modulares de User Flow y rutas de contingencia (Unhappy Paths), asegurando la trazabilidad con las 8 historias de usuario priorizadas (US06, US07, US09, US10, US11, US12, US17 y Consulta sin conexión). Además, validé los estándares vectoriales de 16 archivos SVG estructurados y semánticos, garantizando la consistencia geométrica de 390 × 844 px y áreas de contacto mínimas de 48 × 48 dp.<br>**Evidencias:** sección 3.1.4 del README, 16 archivos SVG estandarizados, 5 diagramas de flujos en `assets/images/cap3/` y prototipo interactivo en Figma.<br><br>**Retuerto Rodriguez, Jorge Manuel** - **AV1:** Investigué y apliqué patrones de diseño de software táctico y modelado de datos para soluciones móviles e IoT. Diseñé los diagramas de clases del dominio de software por cada Bounded Context y desarrollé el diseño de base de datos relacional y local (Room/SQLite), asegurando la correcta representación de entidades, agregados, relaciones e interacciones de datos para la persistencia offline y sincronización del sistema. | **AV1 - Conclusión grupal:** La revisión de Lean UX, requisitos, entrevistas y modelado DDD/C4 permitió al equipo relacionar las necesidades de los segmentos con una arquitectura móvil y de persistencia. La aplicación de estos conceptos produjo los artefactos de los capítulos I y II; las hipótesis de beneficio permanecieron sujetas a validación.<br><br>**TB1 - Conclusión grupal:** El equipo amplió la base de AV1 mediante diseño UI/UX, arquitectura de información y documentación de validación, junto con una implementación móvil que consume servicios de identidad, parcelas, sensores y mediciones. Los contratos REST, la persistencia Room, la autorización por propietario y las pruebas de reinicio offline permitieron contrastar decisiones de diseño con comportamientos ejecutables. El despliegue Cloud Run/Aiven aportó evidencia de integración. Este aprendizaje se acredita mediante los artefactos y pruebas de 3.1, 4.2.1 y 4.3, diferenciando resultados técnicos de la validación de beneficios y de la aceptación física pendiente. |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Barba Estrada, Bryan Eduardo** - **AV1:** Identifiqué que las herramientas de análisis de experiencia (UXPressia) y de modelado (Miro) requieren práctica continua, por lo que investigué su documentación y buenas prácticas. Comprendí también la importancia de mantener actualizados los conceptos de especificación de requisitos y de trabajo colaborativo con ramas, merges y revisión de cambios.<br>**Evidencias:** artefactos de Needfinding, user stories y product backlog incorporados en el README.<br><br>**Barba Estrada, Bryan Eduardo** - **TB1:** Reconocí la importancia de revisar los criterios de usabilidad y mantener la coherencia entre los requisitos, el diseño de las entrevistas y su documentación. Revisé la redacción de la sección 4.3 y organicé los cambios en tres commits para conservar la trazabilidad de mi aporte.<br>**Evidencias:** sección 4.3 del README e historial de commits de `feature/validation-interviews`.<br><br>**Bendezú Navarro, Rúbens Fitzgerald** - **AV1:** Reconoció la importancia de la autoformación permanente en patrones modernos de arquitectura móvil nativa (Jetpack Compose, Kotlin Coroutines, Room y Offline-First) para resolver desafíos de baja conectividad en el sector agrícola peruano.<br>**Evidencias:** Diagramas de Big Picture EventStorming, Domain Storytelling, Bounded Context Canvases (5 contextos), Context Mapping y diagramas C4 incorporados en la sección 2.5 del README.<br><br>**Bendezú Navarro, Rúbens Fitzgerald** - **TB1:** Reconocí la necesidad de contrastar la documentación y el código heredado antes de reutilizarlos. Utilicé Codegraph para examinar componentes del backend y revisé los contratos Android, las reglas de propiedad y los resultados de pruebas. La investigación del fallo de conexión en Cloud Run permitió corregir el formato URI de Aiven sin confundir el puerto HTTP con el de MySQL. Aprendí a distinguir cobertura de código de porcentaje funcional y evidencia de emulador de aceptación física, manteniendo trazabilidad y pendientes explícitos.<br>**Evidencias:** 4.2.1.5, 4.2.1.8, 4.2.1.9 y checklist de cierre.<br><br>**Delgado Perez, James Caleb** - **AV1:** Reconocí la necesidad de ampliar mis conocimientos de Markdown, Git y GitFlow para responder a los cambios en la organización del informe. Apliqué estos conocimientos al consolidar la estructura del informe en un único README, ajustar los enlaces del índice y registrar mis aportes mediante ramas y commits. También actualicé el registro de versiones, el registro de participación, el Student Outcome y los objetivos SMART, y revisé la coherencia del Capítulo I con el alcance funcional actualizado de TerraTech. La revisión del Lean UX Canvas y de las fuentes estadísticas me permitió reconocer que los supuestos del proyecto deben contrastarse y actualizarse conforme se obtiene nueva evidencia.<br>**Evidencias:** README consolidado, Capítulo I actualizado, Lean UX Canvas, registro de versiones, registro de participación e historial de commits de la AV1.<br><br>**TB1: Reconocí la necesidad de continuar fortaleciendo mis conocimientos de diseño UI/UX responsive, arquitectura de información y documentación de interfaces para mantener coherencia entre el diseño y la implementación real del producto. Durante la elaboración del Capítulo III tuve que contrastar los wireframes y mock-ups con el alcance actualizado de la TB1 y con las funcionalidades soportadas por la aplicación Android y el backend. También reforcé el uso de Git y GitFlow al organizar mi trabajo en una rama feature y registrar por separado la documentación, los wireframes y los mock-ups mediante commits independientes.**<br><br>**Pariona Chacca, Angel Jose** - **AV1:** Reconocí que el análisis del entorno de mercado y las expectativas de los usuarios no son estáticos, sino que exigen una constante actualización sobre nuevas tecnologías móviles y diseño inclusivo. Comprendí la necesidad del aprendizaje continuo para contrastar hipótesis teóricas con la retroalimentación directa de los usuarios en campo, adaptando las soluciones de software de forma ágil y profesional.<br>**Evidencias:** análisis comparativo de competidores, síntesis estadística de entrevistas en el README y registro de actividades colaborativas en GitHub.<br><br>**Pariona Chacca, Angel Jose** - **TB1:** Reconocí la necesidad de investigar y dominar el uso de herramientas de diseño vectorial (Figma), estándares de gráficos escalables (SVG semántico y XML bien formado) y flujos colaborativos de Git para garantizar la fidelidad entre el diseño UX/UI y la implementación móvil. Asimismo, comprendí la importancia de revisar y refinar continuamente los flujos de interacción a partir de la retroalimentación técnica y las restricciones del backend, asegurando la coherencia entre las historias de usuario, los wireframes, los user flows y los prototipos interactivos.<br>**Evidencias:** sección 3.1.4 del README, validación de archivos SVG, imágenes actualizadas en `assets/images/cap3/` e historial de commits de `feature/cap3-mobile-ux-ui`.<br><br>**Retuerto Rodriguez, Jorge Manuel** - **AV1:** Investigué y apliqué patrones de diseño de software táctico y modelado de datos para soluciones móviles e IoT. Diseñé los diagramas de clases del dominio de software por cada Bounded Context y desarrollé el diseño de base de datos relacional y local (Room/SQLite), asegurando la correcta representación de entidades, agregados, relaciones e interacciones de datos para la persistencia offline y sincronización del sistema.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | **AV1 - Conclusión grupal:** El equipo reconoció que el desarrollo requiere investigación continua de herramientas de diseño, modelado, persistencia móvil y control de versiones. La revisión de fuentes y necesidades de los usuarios permitió mejorar la coherencia entre requisitos y arquitectura, conservando la trazabilidad de los aportes.<br><br>**TB1 - Conclusión grupal:** La evolución de los diseños y la reutilización del backend exigieron revisar contratos, tecnologías y decisiones de seguridad en lugar de asumir que la implementación heredada cubría los requisitos. La separación de clases, las pruebas en entornos aislados y la investigación del formato de conexión de Aiven evidenciaron la necesidad de actualizar conocimientos y comprobar decisiones con resultados. El equipo mantiene como siguientes aprendizajes la evaluación con usuarios, el contraste con hardware real y la operación de la solución desplegada. Se distingue cobertura de código, cumplimiento funcional y validación de hipótesis para evitar conclusiones sin respaldo. |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y, en especial, para su proyecto en soluciones de software. | **Barba Estrada, Bryan Eduardo** - **AV1:** Revisé los lineamientos del curso y los apliqué al desarrollo de 2.3 Needfinding y 2.4 Requirements Specification. Aprendí a elaborar User Personas, User Task Matrix, User Journey Maps, Empathy Maps y Ubiquitous Language, y a redactar User Stories con criterios de aceptación en formato Given–When–Then, Technical Stories, Spike Stories, Impact Mapping y Product Backlog. Reforcé además el uso de Markdown, GitFlow y Conventional Commits.<br>**Evidencias:** secciones 2.3 y 2.4 del README, imágenes de los artefactos y commits de la rama `feature/av1-needfinding-requirements`.<br><br>**Barba Estrada, Bryan Eduardo** - **TB1:** Desarrollé la documentación de la sección 4.3 Validation Interviews, incluyendo el diseño de las entrevistas, la adaptación de sus resúmenes a los recorridos definidos y la redacción del apartado de evaluación de usabilidad según las heurísticas de Jakob Nielsen.<br>**Evidencias:** sección 4.3 del README y commits de la rama `feature/validation-interviews`.<br><br>**Barba Estrada, Bryan Eduardo** - **AV2:** Investigué y apliqué patrones de integración con servicios externos meteorológicos (Open-Meteo) y de teledetección satelital multitemporal (NDVI). En backend implementé clientes HTTP resilientes, manejo de caché en memoria con TTL de 3 horas y pruebas de integración xUnit con base de datos MySQL aislada en contenedor. En la aplicación móvil Android investigué e implementé migraciones complejas de base de datos local con Room v4, pruebas de contrato HTTP mediante MockWebServer y componentes reactivos en Jetpack Compose para superposición de capas satelitales y comparación temporal de índices de vegetación.<br>**Evidencias:** secciones 4.2.2.4 a 4.2.2.8 del README, pruebas xUnit (`WeatherTests.cs`, `SatelliteImageTests.cs`), pruebas Android (`ExternalServicesContractTest.kt`, `CompareVegetationPeriodTest.kt`), migración `TerraDatabase` v4 y commits en `feature/weather-forecast`, `feature/satellite-images` y `feature/external-services-us22-us23`.<br><br>**Bendezú Navarro, Rúbens Fitzgerald** - **AV1:** Investigó y aplicó los principios de Domain-Driven Design (DDD) Estratégico (descubrimiento de Bounded Contexts, Domain Storytelling, Bounded Context Canvases y Context Mapping) junto con el modelado de arquitectura C4 (Contexto, Contenedores y Despliegue) orientado a aplicaciones móviles nativas Android con persistencia local Room y arquitectura limpia, asegurando una base técnica escalable para el monitoreo agrícola.<br>**Evidencias:** Diagramas de Big Picture EventStorming, Domain Storytelling, Bounded Context Canvases (5 contextos), Context Mapping y diagramas C4 incorporados en la sección 2.5 del README.<br><br>**Bendezú Navarro, Rúbens Fitzgerald** - **TB1:** Apliqué Kotlin, Jetpack Compose, StateFlow, Hilt y Room para implementar el recorrido móvil y conservar consultas por usuario tras reiniciar sin conexión. Amplié ASP.NET Core .NET 10 y EF Core con autenticación JWT estándar, acceso por propietario, mediciones fechadas y migraciones incrementales. Contrasté estas decisiones mediante pruebas Debug, dos cuentas aisladas, concurrencia y pruebas por clics con Artemis, y desplegué el backend en Cloud Run con MySQL Aiven.<br>**Evidencias:** secciones 4.2.1.4 a 4.2.1.8, commits y resultados versionados en assets/evidence/sprint1.<br><br>**Delgado Perez, James Caleb** - **AV1:** Revisé los lineamientos del curso y el material de referencia de Lean UX para adaptar el Capítulo I de TerraTech al proyecto de aplicaciones móviles, reutilizando la base tecnológica del proyecto previo y alineando el Capítulo I con el alcance funcional actualmente documentado para TerraTech. Apliqué la técnica 5W + 2H para organizar la problemática y desarrollé los Problem Statements, Assumptions, Hypothesis Statements y Lean UX Canvas. Asimismo, revisé el sustento estadístico de los segmentos objetivo y organicé las referencias bibliográficas en formato APA 7. Estas actividades me permitieron aplicar los conocimientos adquiridos mediante la consulta de fuentes y la revisión de la coherencia entre las secciones relacionadas con mi aporte.<br>**Evidencias:** Capítulo I actualizado, Lean UX Canvas y bibliografía incorporados en el README de la AV1. <br><br>**TB1:** Revisé y apliqué conceptos de Product Design, diseño responsive y arquitectura de información para desarrollar la documentación del Capítulo III correspondiente a la Landing Page de TerraTech. Definí y documenté los sistemas de etiquetado, metadatos SEO, mecanismos de búsqueda y navegación, y elaboré wireframes y mock-ups responsive para Desktop y Mobile. Asimismo, adapté estos artefactos al alcance funcional actual de la TB1, manteniendo coherencia con las historias priorizadas de registro, inicio de sesión, perfil, gestión de parcelas y sensores, indicadores del suelo, histórico de mediciones y consulta sin conexión. <br><br>**Pariona Chacca, Angel Jose** - **AV1:** Investigué el mercado de soluciones agrícolas móviles y la formulación de entrevistas semiestructuradas, profundizando en patrones de diseño accesible para usuarios con baja alfabetización digital y en arquitecturas móviles resilientes con soporte sin conexión (almacenamiento local SQLite/Room) y conectividad evaluada para campo. Apliqué estos conceptos al benchmark de competidores y a la sistematización de 7 entrevistas reales para extraer requisitos aplicables a la solución móvil.<br>**Evidencias:** secciones 2.1 y 2.2 del README con matrices de análisis competitivo, registro de entrevistas y análisis estadístico-cualitativo.<br><br>**Pariona Chacca, Angel Jose** - **TB1:** Investigué y apliqué los principios de diseño de experiencia de usuario (UX) e interfaz móvil (UI) basados en Material Design 3 y heurísticas de usabilidad para entornos rurales. Diseñé 8 pantallas en baja fidelidad (wireframes) y alta fidelidad (mockups), un wireflow operacional P1-P8, 4 diagramas modulares de User Flow y rutas de contingencia (Unhappy Paths), asegurando la trazabilidad con las 8 historias de usuario priorizadas (US06, US07, US09, US10, US11, US12, US17 y Consulta sin conexión). Además, validé los estándares vectoriales de 16 archivos SVG estructurados y semánticos, garantizando la consistencia geométrica de 390 × 844 px y áreas de contacto mínimas de 48 × 48 dp.<br>**Evidencias:** sección 3.1.4 del README, 16 archivos SVG estandarizados, 5 diagramas de flujos en `assets/images/cap3/` y prototipo interactivo en Figma.<br><br>**Pariona Chacca, Angel Jose** - **TB2:** Investigué y apliqué la arquitectura Domain-Driven Design (DDD) táctica en 4 capas para desarrollo nativo Android con Jetpack Compose. Diseñé e implementé el sistema de gestión de notificaciones (Épica 10: US27, US28 y US30), integrando persistencia reactiva mediante Jetpack DataStore, consumo desacoplado con Retrofit y patrones de contingencia offline (Local-First) ante indisponibilidad del backend. Asimismo, implementé pruebas unitarias automatizadas con JUnit 4 y StateFlow para verificar el filtrado de alertas de sensores IoT y la clasificación de reseñas por estrellas.<br>**Evidencias:** subsecciones 4.2.3.4 a 4.2.3.6 del README, suite de pruebas unitarias `NotificationsTest.kt`, persistencia `NotificationPreferencesStore`, capturas de ejecución y commits en la rama `feature/epic10-notifications` integrada en `develop` vía Pull Request #5.<br><br>**Retuerto Rodriguez, Jorge Manuel** - **AV1:** Investigué y apliqué patrones de diseño de software táctico y modelado de datos para soluciones móviles e IoT. Diseñé los diagramas de clases del dominio de software por cada Bounded Context y desarrollé el diseño de base de datos relacional y local (Room/SQLite), asegurando la correcta representación de entidades, agregados, relaciones e interacciones de datos para la persistencia offline y sincronización del sistema. | **AV1 - Conclusión grupal:** La revisión de Lean UX, requisitos, entrevistas y modelado DDD/C4 permitió al equipo relacionar las necesidades de los segmentos con una arquitectura móvil y de persistencia. La aplicación de estos conceptos produjo los artefactos de los capítulos I y II; las hipótesis de beneficio permanecieron sujetas a validación.<br><br>**TB1 - Conclusión grupal:** El equipo amplió la base de AV1 mediante diseño UI/UX, arquitectura de información y documentación de validación, junto con una implementación móvil que consume servicios de identidad, parcelas, sensores y mediciones. Los contratos REST, la persistencia Room, la autorización por propietario y las pruebas de reinicio offline permitieron contrastar decisiones de diseño con comportamientos ejecutables. El despliegue Cloud Run/Aiven aportó evidencia de integración. Este aprendizaje se acredita mediante los artefactos y pruebas de 3.1, 4.2.1 y 4.3, diferenciando resultados técnicos de la validación de beneficios y de la aceptación física pendiente.<br><br>**AV2 - Conclusión grupal:** El equipo consolidó el aprendizaje en arquitecturas distribuidas mediante la integración de servicios externos meteorológicos y satelitales, reconociendo los desafíos de disponibilidad, latencia y persistencia local sin conexión. La implementación de migraciones Room v4, pruebas automatizadas en ambos extremos (xUnit y MockWebServer) y verificación de despliegue en Google Cloud Run demostraron la importancia de contrastar técnicamente cada decisión de arquitectura con evidencia auditable de ejecución.<br><br>**TB2 - Conclusión grupal:** El equipo amplió las capacidades de la plataforma integrando el sistema de reputación comercial y el centro de notificaciones proactivas de alertas de sensores IoT y retroalimentación de clientes. La aplicación de patrones DDD tácticos en 4 capas, la resiliencia offline local-first ante indisponibilidad de servicios en la nube y la verificación exhaustiva mediante suites de pruebas automatizadas (xUnit en backend y JUnit 4 en Android) demostraron la necesidad de contrastar continuamente la arquitectura con escenarios reales de fallo, garantizando que el usuario conserve la operatividad y la trazabilidad del estado en cualquier condición de conectividad. |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Barba Estrada, Bryan Eduardo** - **AV1:** Identifiqué que las herramientas de análisis de experiencia (UXPressia) y de modelado (Miro) requieren práctica continua, por lo que investigué su documentación y buenas prácticas. Comprendí también la importancia de mantener actualizados los conceptos de especificación de requisitos y de trabajo colaborativo con ramas, merges y revisión de cambios.<br>**Evidencias:** artefactos de Needfinding, user stories y product backlog incorporados en el README.<br><br>**Barba Estrada, Bryan Eduardo** - **TB1:** Reconocí la importancia de revisar los criterios de usabilidad y mantener la coherencia entre los requisitos, el diseño de las entrevistas y su documentación. Revisé la redacción de la sección 4.3 y organicé los cambios en tres commits para conservar la trazabilidad de mi aporte.<br>**Evidencias:** sección 4.3 del README e historial de commits de `feature/validation-interviews`.<br><br>**Barba Estrada, Bryan Eduardo** - **AV2:** Reconocí la necesidad de investigar de forma continua las especificaciones y limitaciones de APIs externas (cuotas de uso, tiempos de respuesta y manejo de fallos 502 Bad Gateway) y su impacto en la experiencia del usuario en campo con baja conectividad. Comprendí la importancia del aprendizaje permanente en estrategias de almacenamiento en caché, migraciones incrementales de esquemas locales sin pérdida de datos en dispositivos móviles y la validación rigurosa de despliegues en Google Cloud Run para asegurar alta disponibilidad del backend.<br>**Evidencias:** subsecciones 4.2.2.5, 4.2.2.7 y 4.2.2.8 del README, documentación de endpoints OpenAPI en `docs/backend-openapi.snapshot.json` y verificación de despliegue en `docs/sprint2-deployment.json`.<br><br>**Bendezú Navarro, Rúbens Fitzgerald** - **AV1:** Reconoció la importancia de la autoformación permanente en patrones modernos de arquitectura móvil nativa (Jetpack Compose, Kotlin Coroutines, Room y Offline-First) para resolver desafíos de baja conectividad en el sector agrícola peruano.<br>**Evidencias:** Diagramas de Big Picture EventStorming, Domain Storytelling, Bounded Context Canvases (5 contextos), Context Mapping y diagramas C4 incorporados en la sección 2.5 del README.<br><br>**Bendezú Navarro, Rúbens Fitzgerald** - **TB1:** Reconocí la necesidad de contrastar la documentación y el código heredado antes de reutilizarlos. Utilicé Codegraph para examinar componentes del backend y revisé los contratos Android, las reglas de propiedad y los resultados de pruebas. La investigación del fallo de conexión en Cloud Run permitió corregir el formato URI de Aiven sin confundir el puerto HTTP con el de MySQL. Aprendí a distinguir cobertura de código de porcentaje funcional y evidencia de emulador de aceptación física, manteniendo trazabilidad y pendientes explícitos.<br>**Evidencias:** 4.2.1.5, 4.2.1.8, 4.2.1.9 y checklist de cierre.<br><br>**Delgado Perez, James Caleb** - **AV1:** Reconocí la necesidad de ampliar mis conocimientos de Markdown, Git y GitFlow para responder a los cambios en la organización del informe. Apliqué estos conocimientos al consolidar la estructura del informe en un único README, ajustar los enlaces del índice y registrar mis aportes mediante ramas y commits. También actualicé el registro de versiones, el registro de participación, el Student Outcome y los objetivos SMART, y revisé la coherencia del Capítulo I con el alcance funcional actualizado de TerraTech. La revisión del Lean UX Canvas y de las fuentes estadísticas me permitió reconocer que los supuestos del proyecto deben contrastarse y actualizarse conforme se obtiene nueva evidencia.<br>**Evidencias:** README consolidado, Capítulo I actualizado, Lean UX Canvas, registro de versiones, registro de participación e historial de commits de la AV1.<br><br>**TB1: Reconocí la necesidad de continuar fortaleciendo mis conocimientos de diseño UI/UX responsive, arquitectura de información y documentación de interfaces para mantener coherencia entre el diseño y la implementación real del producto. Durante la elaboración del Capítulo III tuve que contrastar los wireframes y mock-ups con el alcance actualizado de la TB1 y con las funcionalidades soportadas por la aplicación Android y el backend. También reforcé el uso de Git y GitFlow al organizar mi trabajo en una rama feature y registrar por separado la documentación, los wireframes y los mock-ups mediante commits independientes.**<br><br>**Pariona Chacca, Angel Jose** - **AV1:** Reconocí que el análisis del entorno de mercado y las expectativas de los usuarios no son estáticos, sino que exigen una constante actualización sobre nuevas tecnologías móviles y diseño inclusivo. Comprendí la necesidad del aprendizaje continuo para contrastar hipótesis teóricas con la retroalimentación directa de los usuarios en campo, adaptando las soluciones de software de forma ágil y profesional.<br>**Evidencias:** análisis comparativo de competidores, síntesis estadística de entrevistas en el README y registro de actividades colaborativas en GitHub.<br><br>**Pariona Chacca, Angel Jose** - **TB1:** Reconocí la necesidad de investigar y dominar el uso de herramientas de diseño vectorial (Figma), estándares de gráficos escalables (SVG semántico y XML bien formado) y flujos colaborativos de Git para garantizar la fidelidad entre el diseño UX/UI y la implementación móvil. Asimismo, comprendí la importancia de revisar y refinar continuamente los flujos de interacción a partir de la retroalimentación técnica y las restricciones del backend, asegurando la coherencia entre las historias de usuario, los wireframes, los user flows y los prototipos interactivos.<br>**Evidencias:** sección 3.1.4 del README, validación de archivos SVG, imágenes actualizadas en `assets/images/cap3/` e historial de commits de `feature/cap3-mobile-ux-ui`.<br><br>**Pariona Chacca, Angel Jose** - **TB2:** Reconocí la importancia de la actualización continua en patrones de resiliencia móvil y sincronización local cuando los servicios backend o de nube presentan intermitencias. Aprendí a no asumir la disponibilidad inmediata de APIs externas y a estructurar soluciones basadas en el principio Local-First con valores por defecto resilientes. Asimismo, comprendí el valor de la modularidad estricta (una clase por archivo), el control de calidad con linters automatizados y la entrega atómica de cambios mediante Conventional Commits para asegurar la mantenibilidad del código en equipos ágiles.<br>**Evidencias:** Pull Request #5, commits atómicos (`836bed0` a `121a4b1`), scripts de verificación (`check-modularity.py`, `check-kotlin-style.py`) y documentación de evidencias en `docs/evidence/sprint3/`.<br><br>**Retuerto Rodriguez, Jorge Manuel** - **AV1:** Investigué y apliqué patrones de diseño de software táctico y modelado de datos para soluciones móviles e IoT. Diseñé los diagramas de clases del dominio de software por cada Bounded Context y desarrollé el diseño de base de datos relacional y local (Room/SQLite), asegurando la correcta representación de entidades, agregados, relaciones e interacciones de datos para la persistencia offline y sincronización del sistema.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | **AV1 - Conclusión grupal:** El equipo reconoció que el desarrollo requiere investigación continua de herramientas de diseño, modelado, persistencia móvil y control de versiones. La revisión de fuentes y necesidades de los usuarios permitió mejorar la coherencia entre requisitos y arquitectura, conservando la trazabilidad de los aportes.<br><br>**TB1 - Conclusión grupal:** La evolución de los diseños y la reutilización del backend exigieron revisar contratos, tecnologías y decisiones de seguridad en lugar de asumir que la implementación heredada cubría los requisitos. La separación de clases, las pruebas en entornos aislados y la investigación del formato de conexión de Aiven evidenciaron la necesidad de actualizar conocimientos y comprobar decisiones con resultados. El equipo mantiene como siguientes aprendizajes la evaluación con usuarios, el contraste con hardware real y la operación de la solución desplegada. Se distingue cobertura de código, cumplimiento funcional y validación de hipótesis para evitar conclusiones sin respaldo.<br><br>**AV2 - Conclusión grupal:** El equipo consolidó el aprendizaje en arquitecturas distribuidas mediante la integración de servicios externos meteorológicos y satelitales, reconociendo los desafíos de disponibilidad, latencia y persistencia local sin conexión. La implementación de migraciones Room v4, pruebas automatizadas en ambos extremos (xUnit y MockWebServer) y verificación de despliegue en Google Cloud Run demostraron la importancia de contrastar técnicamente cada decisión de arquitectura con evidencia auditable de ejecución.<br><br>**TB2 - Conclusión grupal:** El equipo amplió las capacidades de la plataforma integrando el sistema de reputación comercial y el centro de notificaciones proactivas de alertas de sensores IoT y retroalimentación de clientes. La aplicación de patrones DDD tácticos en 4 capas, la resiliencia offline local-first ante indisponibilidad de servicios en la nube y la verificación exhaustiva mediante suites de pruebas automatizadas (xUnit en backend y JUnit 4 en Android) demostraron la necesidad de contrastar continuamente la arquitectura con escenarios reales de fallo, garantizando que el usuario conserve la operatividad y la trazabilidad del estado en cualquier condición de conectividad. |
 
 
-**Organización por entrega:** las acciones se registran por integrante y las conclusiones del cuadro son grupales, acumulando AV1 y TB1. Las [reflexiones individuales de versiones anteriores](docs/STUDENT_OUTCOME_REFLEXIONES_HISTORICAS.md) se preservan como anexo. Rúbens cuenta con acciones TB1 en ambos criterios; el bloque de Jorge aún requiere su actualización individual TB1, sin sustituirla por una atribución no confirmada.
+**Organización por entrega:** las acciones se registran por integrante y las conclusiones del cuadro son grupales, acumulando AV1, TB1, AV2 y TB2. Las [reflexiones individuales de versiones anteriores](docs/STUDENT_OUTCOME_REFLEXIONES_HISTORICAS.md) se preservan como anexo. Bryan, Rúbens y Angel cuentan con acciones documentadas con evidencia de código y despliegue; el bloque de Jorge aún requiere su actualización individual, sin sustituirla por una atribución no confirmada.
 
 ## Objetivos SMART
 
@@ -339,8 +395,8 @@ relevantes y estar delimitados por un plazo.
 | Objetivo profesional | Introducirme en el mercado, dentro de una empresa de tecnologia y teniendo un puesto como desarrollador junior. | Poner en marcha mis proyectos propios. |
 | Específico | Conseguir un puesto de trabajo como Desarrollador Junior (Frontend, Backend o Fullstack) en una empresa del sector tecnológico o consultoría TI, aplicando metodologías ágiles y arquitecturas limpias. | Lanzar una versión funcional (MVP - Minimum Viable Product) de una aplicación o plataforma propia, desplegada en producción y accesible para los primeros usuarios de prueba. |
 | Medible | Postular a un mínimo de 10 ofertas semanales, realizar al menos 5 entrevistas técnicas o de selección y obtener al menos 1 oferta laboral formal. | Completar el 100% de las funcionalidades clave definidas en el backlog del MVP y alcanzar un primer grupo de al menos 20 usuarios activos que prueben la solución. |
-| Alcanzable | Completar el 100% de las funcionalidades clave definidas en el backlog del MVP y alcanzar un primer grupo de al menos 20 usuarios activos que prueben la solución. | Utilizar arquitecturas conocidas, herramientas de código abierto o infraestructura en la nube con capas gratuitas (e.g., Firebase, Vercel, AWS Free Tier) para reducir costos iniciales y avanzar de forma incremental. |
-| Relevante | Utilizar arquitecturas conocidas, herramientas de código abierto o infraestructura en la nube con capas gratuitas (e.g., Firebase, Vercel, AWS Free Tier) para reducir costos iniciales y avanzar de forma incremental. | Permitirá validar una idea de negocio propia en el mercado, poner en práctica habilidades de liderazgo, producto y desarrollo integral, y diversificar las fuentes de ingresos/portafolio. |
+| Alcanzable | Preparar y mantener un portafolio con los proyectos desarrollados durante la carrera, reforzar las tecnologías requeridas para puestos junior y organizar las postulaciones y la preparación de entrevistas dentro del plazo establecido. | Utilizar arquitecturas conocidas, herramientas de código abierto o infraestructura en la nube con capas gratuitas (e.g., Firebase, Vercel, AWS Free Tier) para reducir costos iniciales y avanzar de forma incremental. |
+| Relevante | Me permitirá iniciar mi experiencia profesional en desarrollo de software, aplicar los conocimientos adquiridos durante la carrera y fortalecer mis competencias técnicas y de trabajo en equipo. | Permitirá validar una idea de negocio propia en el mercado, poner en práctica habilidades de liderazgo, producto y desarrollo integral, y diversificar las fuentes de ingresos/portafolio. |
 | Plazo | En un plazo máximo de 3 a 6 meses posteriores a la finalización de los estudios académicos. | En un plazo máximo de 6 a 9 meses, dedicando horas semanales constantes fuera del horario académico. |
 
 <div class="page"></div>
@@ -1999,8 +2055,9 @@ funcionalidades.
        <b>Then</b> se presenta la misión y visión de TerraTech junto con el nombre de la startup NovaTech<br>
        <br>
        <b>Scenario 2: Información del equipo</b><br>
-       <b>Given</b> el visitante consulta la sección del equipo<br>
-       <b>Then</b> se muestran las fotografías, nombres completos, roles y especialidad de los integrantes del equipo de desarrollo
+       <b>Given</b> el visitante se encuentra en la Landing Page<br>
+       <b>When</b> accede a la sección del equipo<br>
+       <b>Then</b> se muestran las fotografías, nombres completos, roles y especialidad de los integrantes del equipo de desarrollo 
      </td>
    </tr>
   </tbody>
@@ -3992,7 +4049,8 @@ funcionalidades.
        <b>And</b> las reseñas se ordenan de la más reciente a la más antigua<br>
         <br>
         <b>Scenario 2: Resumen de calificaciones</b><br>
-        <b>Given</b> el cliente consulta las reseñas de un producto<br>
+        <b>Given</b> el cliente accede al detalle de un producto con reseñas registradas<br>
+        <b>When</b> consulta el resumen de calificaciones<br>
         <b>Then</b> el sistema presenta la calificación promedio, el número total de reseñas y la distribución de estrellas<br>
         <br>
         <b>Scenario 3: Filtro por calificación</b><br>
@@ -4376,11 +4434,12 @@ funcionalidades.
 <tr>
      <td colspan="4">
        <b>Scenario 1: Ramas del flujo de trabajo</b><br>
-       <b>Given</b> se consultan las ramas de un repositorio del proyecto<br>
+       <b>Given</b> el repositorio del proyecto está disponible en GitHub<br>
+       <b>When</b> un integrante consulta las ramas y las reglas de integración del repositorio<br>
        <b>Then</b> existen las ramas permanentes main y develop<br>
-        <b>And</b> las funcionalidades se desarrollan en ramas feature<br>
-        <b>And</b> la rama main solo recibe cambios mediante pull request con al menos una aprobación<br>
-        <br>
+       <b>And</b> las funcionalidades se desarrollan en ramas feature<br>
+       <b>And</b> la rama main solo recibe cambios mediante pull request con al menos una aprobación<br>
+       <br>
         <b>Scenario 2: Mensajes de commit</b><br>
         <b>Given</b> se revisa el historial de commits de un repositorio<br>
         <b>When</b> se analizan los últimos mensajes registrados<br>
@@ -4494,7 +4553,7 @@ funcionalidades.
    <tr>
      <td colspan="4">
        <b>Como</b> developer,<br>
-       <b>deseo</b> contar con una base de datos PostgreSQL en la nube para persistir la información de usuarios, parcelas, dispositivos y recomendaciones.
+       <b>deseo</b> contar con una base de datos MySQL en la nube para persistir la información de usuarios, parcelas, dispositivos y recomendaciones.
      </td>
    </tr>
 
@@ -5177,40 +5236,40 @@ El Product Backlog consolida y prioriza las 54 historias del proyecto (53 estima
 | 15 | US10 | Consulta de indicadores clave | 5 | Sprint 1 |
 | 16 | US11 | Selección de zona o sensor específico | 3 | Sprint 1 |
 | 17 | US12 | Consulta del histórico de datos | 5 | Sprint 1 |
-| 18 | HU-OFF01 | Consulta sin conexión de datos previamente descargados | Pendiente de estimación | Sprint 1 |
-| 19 | TS05 | Implementación del servicio de autenticación | 8 | Sprint 2 |
+| 18 | HU-OFF01 | Consulta sin conexión de datos previamente descargados | 8 | Sprint 1 |
+| 19 | TS05 | Implementación del servicio de autenticación | 5 | Sprint 2 |
 | 20 | US08 | Recuperación de contraseña | 3 | Sprint 2 |
 | 21 | TS08 | Consulta de perfiles agrícolas | 3 | Sprint 2 |
 | 22 | SP02 | Viabilidad del almacenamiento local y la sincronización sin conexión | 3 | Sprint 2 |
-| 23 | US13 | Identificación de zonas fértiles | 8 | Sprint 3 |
-| 24 | US14 | Navegación en el mapa | 3 | Sprint 3 |
-| 25 | US15 | Recomendación automática de riego | 5 | Sprint 3 |
-| 26 | US16 | Recomendación automática de fertilización | 5 | Sprint 3 |
-| 27 | US18 | Configuración de umbrales de alerta | 3 | Sprint 3 |
-| 28 | US22 | Consulta del pronóstico del clima | 5 | Sprint 3 |
-| 29 | US23 | Consulta de imágenes satelitales | 8 | Sprint 3 |
-| 30 | TS09 | Gestión del inventario de insumos | 5 | Sprint 3 |
-| 31 | US24 | Registro de insumos | 3 | Sprint 3 |
-| 32 | US25 | Consulta y filtrado del inventario | 3 | Sprint 3 |
-| 33 | US26 | Actualización del stock de insumos | 5 | Sprint 3 |
-| 34 | TS10 | Consulta de reportes analíticos por dispositivo | 3 | Sprint 3 |
+| 23 | US13 | Identificación de zonas fértiles | 8 | Sprint 2 |
+| 24 | US14 | Navegación en el mapa | 3 | Sprint 2 |
+| 25 | US15 | Recomendación automática de riego | 3 | Sprint 2 |
+| 26 | US16 | Recomendación automática de fertilización | 3 | Sprint 2 |
+| 27 | US18 | Configuración de umbrales de alerta | 3 | Sprint 2 |
+| 28 | US22 | Consulta del pronóstico del clima | 5 | Sprint 2 |
+| 29 | US23 | Consulta de imágenes satelitales | 5 | Sprint 2 |
+| 30 | TS09 | Gestión del inventario de insumos | 5 | Sprint 2 |
+| 31 | TS10 | Consulta de reportes analíticos por dispositivo | 3 | Sprint 2 |
+| 32 | US24 | Registro de insumos | 3 | Sprint 3 |
+| 33 | US25 | Consulta y filtrado del inventario | 3 | Sprint 3 |
+| 34 | US26 | Actualización del stock de insumos | 5 | Sprint 3 |
 | 35 | SP03 | Viabilidad de las notificaciones push | 3 | Sprint 3 |
-| 36 | US27 | Consulta de notificaciones de los sensores | 3 | Sprint 4 |
-| 37 | US28 | Configuración de preferencias de notificaciones | 5 | Sprint 4 |
-| 38 | US29 | Alertas de interés sobre productos | 3 | Sprint 4 |
-| 39 | US30 | Notificaciones de nuevas reseñas | 3 | Sprint 4 |
-| 40 | US31 | Notificaciones de nuevos productos de interés | 3 | Sprint 4 |
-| 41 | US32 | Notificaciones de novedades y disponibilidad | 3 | Sprint 4 |
-| 42 | US39 | Consulta del catálogo de productos | 5 | Sprint 4 |
-| 43 | US40 | Consulta del detalle y la trazabilidad de un producto | 5 | Sprint 4 |
-| 44 | US41 | Consulta de la información de los cultivos de los clientes | 5 | Sprint 4 |
-| 45 | TS11 | Gestión de la comunidad y reseñas | 8 | Sprint 4 |
-| 46 | US33 | Consulta de comentarios y calificaciones | 3 | Sprint 4 |
-| 47 | US34 | Consulta de la reputación de productos | 3 | Sprint 4 |
-| 48 | US35 | Publicación de reseñas de productos | 3 | Sprint 4 |
-| 49 | US36 | Consulta de reseñas de otros compradores | 2 | Sprint 4 |
-| 50 | US37 | Consulta de productos con mayor interés | 5 | Sprint 4 |
-| 51 | US38 | Consulta de zonas con mayor actividad | 5 | Sprint 4 |
+| 36 | US27 | Consulta de notificaciones de los sensores | 3 | Sprint 3 |
+| 37 | US28 | Configuración de preferencias de notificaciones | 5 | Sprint 3 |
+| 38 | US30 | Notificaciones de nuevas reseñas | 3 | Sprint 3 |
+| 39 | US33 | Consulta de comentarios y calificaciones | 3 | Sprint 3 |
+| 40 | US34 | Consulta de la reputación de productos | 3 | Sprint 3 |
+| 41 | US35 | Publicación de reseñas de productos | 3 | Sprint 3 |
+| 42 | US36 | Consulta de reseñas de otros compradores | 2 | Sprint 3 |
+| 43 | US39 | Consulta del catálogo de productos | 5 | Sprint 3 |
+| 44 | US40 | Consulta del detalle y la trazabilidad de un producto | 5 | Sprint 3 |
+| 45 | TS11 | Gestión de la comunidad y reseñas | 8 | Sprint 3 |
+| 46 | US29 | Alertas de interés sobre productos | 3 | Sprint 4 |
+| 47 | US31 | Notificaciones de nuevos productos de interés | 3 | Sprint 4 |
+| 48 | US32 | Notificaciones de novedades y disponibilidad | 3 | Sprint 4 |
+| 49 | US37 | Consulta de productos con mayor interés | 5 | Sprint 4 |
+| 50 | US38 | Consulta de zonas con mayor actividad | 5 | Sprint 4 |
+| 51 | US41 | Consulta de la información de los cultivos de los clientes | 5 | Sprint 4 |
 | 52 | US19 | Documentación interactiva de la API | 2 | Sprint 4 |
 | 53 | US20 | Consulta de datos de un sensor | 3 | Sprint 4 |
 | 54 | US21 | Registro de recomendaciones mediante webhook | 5 | Sprint 4 |
@@ -5219,19 +5278,19 @@ El Product Backlog consolida y prioriza las 54 historias del proyecto (53 estima
 
 | Sprint | Enfoque principal del Sprint | Historias asignadas | Story Points | % del Backlog |
 |:---|:---|:---:|:---:|:---:|
-| **Sprint 1** | Infraestructura, Landing Page, Spike IoT y recorrido móvil TB1 con consulta offline | 18 (17 estimadas + HU-OFF01) | 52 SP + HU-OFF01 pendiente | 25.7% estimado |
-| **Sprint 2** | Ampliación IAM, recuperación de contraseña, perfiles y spike de sincronización | 4 (2 TS, 1 US, 1 SP) | 17 SP | 8.4% estimado |
-| **Sprint 3** | Analítica de suelo, prescripciones inteligentes, inventario y Spike Push | 13 (2 TS, 10 US, 1 SP) | 59 SP | 29.2% |
-| **Sprint 4** | Alertas push, trazabilidad QR, catálogo, comunidad y APIs externas | 19 (1 TS, 18 US) | 74 SP | 36.6% |
-| **Total** | **Proyecto completo TerraTech** | **54 historias** | **202 SP + HU-OFF01 pendiente** | **100%** |
+| **Sprint 1** | Infraestructura, Landing Page, Spike IoT, autenticación, gestión de perfil, sensores, indicadores y consulta offline. | 18 (17 estimadas + HU-OFF01) | 49 SP + 8 (HU-OFF01) | 25.9% |
+| **Sprint 2** | Ampliación de autenticación, perfiles agrícolas, investigación de sincronización offline, analítica del suelo, recomendaciones agrícolas, clima, satélite e inventario. | 13 | 52 SP | 27.5% |
+| **Sprint 3** | Gestión de inventario, notificaciones push, comunidad, reputación, calificaciones y catálogo de productos. | 14 | 54 SP | 28.6% |
+| **Sprint 4** | Alertas de interés comercial, notificaciones de productos, indicadores de actividad, información de cultivos y funcionalidades de integración mediante API y webhook. | 9 | 34 SP | 18.0% |
+| **Total** | **Proyecto completo TerraTech** | **54 historias (53 estimadas + 1 HU-OFF01)** | **189 SP estimados + 8 (HU-OFF01) pendiente** | **100%** |
 
-**Repriorización TB1 (04/10/2026):** US06, US07, US09, US17, US11, US10 y US12 pasan al Sprint 1 con sus 26 SP originales. Se agrega HU-OFF01 para consultar únicamente información previamente descargada: sin red y tras cerrar/reabrir la app, parcelas, sensores y mediciones siguen accesibles con fecha de descarga y aviso de antigüedad; no se permite registrar/editar sin conexión. No se incluye sincronización de escrituras. Ver criterios y pruebas en 4.2.1. Las extensiones originales de verificación de correo, recuperación y funcionalidades de IA/recomendaciones no se presentan como implementadas en TB1. TS05 y TS08 conservan su planificación para el alcance ampliado, aunque parte de sus capacidades ya soporte el recorrido del Sprint 1.
+**Criterios de priorización y distribución:** La organización del Product Backlog considera el valor para el negocio, las dependencias entre funcionalidades y la precedencia arquitectónica necesaria para el desarrollo de la aplicación móvil. Las historias técnicas y los spikes de investigación se distribuyen considerando su relación con las funcionalidades que habilitan o complementan.
 
-Los porcentajes de la tabla representan esfuerzo estimado sobre 202 SP, no avance funcional, cobertura ni velocidad medida del equipo. HU-OFF01 requiere estimación del equipo.
+La distribución contempla cuatro Sprints y mantiene la asignación de HU-OFF01 al Sprint 1, cuyo alcance se limita a la consulta de información previamente descargada, sin permitir operaciones de registro o edición sin conexión. La sincronización de escrituras permanece fuera de este alcance.
 
-La captura del tablero y el enlace público del Product Backlog se
-incorporarán cuando el equipo cree el tablero en la herramienta de
-gestión seleccionada.
+**Consideraciones sobre la planificación:** La reorganización del Product Backlog representa una actualización de la planificación y distribución del trabajo. No implica, por sí misma, cambios en el estado de implementación, la aceptación de historias de usuario ni la validación de funcionalidades. El avance efectivo debe sustentarse en las evidencias y resultados documentados para cada Sprint.
+
+Los porcentajes representan la proporción del esfuerzo estimado de las 53 historias con estimación definida, tomando como base un total de 189 Story Points. HU-OFF01 permanece pendiente de estimación, por lo que no se incluye en dicho cálculo.
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
@@ -5452,10 +5511,8 @@ solución:
         *MVVM + Clean Architecture*, StateFlow para reactividad, inyección
         de dependencias con Hilt/Koin y cliente Retrofit para comunicación
         HTTPS con el backend.
-    2. **Local SQLite / Room Database:** Base de datos embebida en el dispositivo móvil Android.
-        Almacena localmente información previamente obtenida y los datos que requieran sincronización 
-        posterior, permitiendo consultar información disponible cuando no exista conexión y
-        actualizarla cuando se recupere la conectividad.
+    2.  **Local SQLite / Room Database:** Base de datos embebida en el dispositivo Android. 
+        Conserva información previamente descargada para consultar parcelas, sensores y mediciones cuando no existe conexión, mostrando su fecha y antigüedad. La implementación documentada en TB1 permite consultas offline; la sincronización de escrituras requiere una implementación y validación independientes.
     3.  **Web Landing Page (HTML5 / CSS3 / JavaScript):** Sitio web
         institucional responsivo, sin dependencias de frontend ni paso de
         compilación. Presenta el producto, el alcance funcional, los planes
@@ -5465,10 +5522,7 @@ solución:
          Application, Interface e Infrastructure. Expone endpoints REST consumidos por la aplicación móvil
          y utiliza mecanismos de autenticación y autorización basados en JWT.
          La persistencia del backend se gestiona mediante Entity Framework Core.
-    5.  **Relational Database:** Base de datos relacional centralizada utilizada por el backend de TerraTech
-        para persistir la información estructurada de los diferentes Bounded Contexts.
-        El motor de base de datos debe corresponder con el proveedor configurado 
-        en la implementación reutilizada del backend.
+    5.  **Relational Database (MySQL):** Base de datos centralizada utilizada por el backend para persistir la información de los Bounded Contexts. El despliegue documentado en TB1 utiliza MySQL administrado en Aiven y acceso mediante Entity Framework Core.
 
 #### 2.5.3.3. Software Architecture Deployment Diagram
 
@@ -5479,12 +5533,11 @@ protocolos de red y seguridad:
 ![Strategic Context Map](assets/images/strategic-ddd/c4-deployment.svg)
 
 - **Nodos de Infraestructura y Despliegue:**
-    - **Nodo Cliente - Smartphone Android:** Dispositivo móvil que ejecuta la aplicación TerraTech. La aplicación utiliza almacenamiento local mediante Room para conservar información disponible sin conexión y sincronizarla posteriormente cuando exista conectividad.
+    - **Nodo Cliente - Smartphone Android:** Dispositivo que ejecuta la aplicación TerraTech. Utiliza Room para conservar y consultar información previamente descargada cuando no existe conexión. La sincronización de escrituras no forma parte del comportamiento acreditado en el Sprint 1.
 
     - **Nodo Cloud - Infraestructura de despliegue:**
         - **Backend REST API:** Servicio que ejecuta la API ASP.NET Core reutilizada por TerraTech y expone sus endpoints mediante HTTPS.
-        - **Base de datos relacional:** Servicio encargado de persistir la información centralizada utilizada por el backend. El motor y el proveedor de despliegue deberán coincidir con la configuración real del proyecto.
-
+        - **Base de datos relacional:** Servicio MySQL administrado en Aiven que conserva la información centralizada del backend. La conexión y las migraciones se gestionan mediante la configuración del entorno y Entity Framework Core.
     - **Nodo SaaS Externo:** Servicios externos utilizados por TerraTech, como el proveedor de información climática y el servicio seleccionado para el envío de notificaciones push.
 
 ## 2.6. Tactical-Level Domain-Driven Design
@@ -5857,7 +5910,7 @@ la mantenibilidad del sistema.
   <img src="assets/images/cap5/Notification-Db.png" alt="Notification Database Design Diagram" width="650">
 </p>
 
-### 2.6.6. Bounded Context: Shared Bounded
+### 2.6.6. Shared: componentes transversales
 
 #### 2.6.6.1. Domain Layer
 
@@ -6234,7 +6287,7 @@ La Landing Page no pretende simular que todas sus secciones dependen del backend
 - **US11 — Selección de parcela/sensor:** selección de una parcela y consulta de sus dispositivos.
 - **US10 — Indicadores:** consulta de humedad, temperatura y nutrientes con fecha de actualización y aviso de datos desactualizados.
 - **US12 — Histórico:** consulta de humedad de los últimos 7 días, cambio a 30 días y visualización del detalle de una lectura.
-- **Nueva HU — Consulta sin conexión:** consulta de parcelas, sensores y mediciones previamente descargadas, indicando la antigüedad de la información.
+- **HU-OFF01 — Consulta sin conexión:** consulta de parcelas, sensores y mediciones previamente descargadas, indicando la antigüedad de la información.
 
 Se consideran versiones **Desktop Web Browser** y **Mobile Web Browser**, manteniendo el mismo contenido pero modificando la distribución de los componentes según el espacio disponible.
 
@@ -6375,22 +6428,22 @@ El mock-up final presenta el formulario de solicitud de demostración utilizando
 
 ### 3.1.4. Mobile Applications UX/UI Design
 
-El diseño de experiencia de usuario (UX) e interfaz de usuario (UI) para la aplicación móvil de **TerraTech** se encuentra estrictamente delimitado para resolver las necesidades prioritarias del agricultor dentro del alcance de la entrega (TB1 / Sprint 2). La solución tecnológica móvil se enfoca en dos pilares fundamentales: la **gestión de identidad, predios y dispositivos IoT**, y el **monitoreo agronómico en tiempo real con capacidad de consulta resiliente sin conexión**.
+El diseño UX/UI de TerraTech presentado en TB1 corresponde al Sprint 1 y prioriza el recorrido del agricultor: acceso a su cuenta, gestión de perfil y parcelas, asociación de sensores y consulta de indicadores e históricos. La información descargada se conserva para su consulta sin conexión, con fecha y aviso de antigüedad.
 
-El diseño responde a tres principios esenciales:
-1. **Resiliencia operativa en campo rural (Offline-First):** Soporte de almacenamiento local en el dispositivo (SQLite / Room) para garantizar la consulta ininterrumpida de parcelas, sensores y mediciones descargadas previamente, indicando de forma visible la antigüedad de los datos en zonas sin cobertura de red.
-2. **Ergonomía táctil y diseño inclusivo:** Componentes con áreas de contacto mínimas de 48 × 48 dp, contrastes cromáticos adecuados para lectura bajo luz solar directa en campo y flujos optimizados para usuarios con diversos niveles de alfabetización digital.
-3. **Claridad informativa y veracidad de telemetría:** Jerarquía visual enfocada en indicadores agronómicos críticos (humedad %, temperatura del suelo °C y nutrientes N-P-K en ppm), señalando con precisión la fecha y hora de la última sincronización y emitiendo alertas visuales preventivas ante falta de recepción de datos por más de 30 minutos.
+El diseño utiliza tres criterios: navegación comprensible para los usuarios objetivo, controles táctiles accesibles y presentación clara del origen y la actualización de los datos. Las mediciones de demostración identificadas como SIMULATED se distinguen de las mediciones procedentes de hardware.
 
-Las interfaces y flujos implementados cubren de manera exhaustiva las 8 Historias de Usuario priorizadas para el producto móvil:
-- **US06 — Registro:** Creación de cuenta de usuario con validación de nombre, correo electrónico y contraseña confirmada.
-- **US07 — Inicio de sesión:** Autenticación segura mediante tokens JWT, control de credenciales incorrectas, verificación de correo y restricción de acceso a recursos propios.
-- **US09 — Perfil:** Visualización y edición de datos del agricultor y de la parcela (número de teléfono, ubicación y tamaño de terreno).
-- **US17 — Registro de sensor:** Asociación de dispositivos físicos válidos (`TT-XXXXXX`) a una parcela específica con rechazo de códigos inválidos o duplicados.
-- **US11 — Selección de parcela/sensor:** Navegación y filtrado entre parcelas y sus respectivos sensores asociados.
-- **US10 — Indicadores:** Visualización en tiempo real de humedad, temperatura y nutrientes (N, P, K) con timestamp y alerta de datos desactualizados.
-- **US12 — Histórico:** Monitoreo gráfico de humedad a 7 días (por defecto con umbral mínimo de referencia), selector rápido a 30 días y detalle táctil de cada punto.
-- **Nueva HU — Consulta sin conexión:** Acceso a la información previamente almacenada en caché local y banner informativo con la antigüedad de la sincronización.
+El recorrido móvil de referencia comprende:
+
+- **US06 — Registro:** Creación de cuenta y validación de los campos del formulario.
+- **US07 — Inicio de sesión:** Autenticación y mensajes ante credenciales incorrectas.
+- **US09 — Perfil:** Consulta y edición de los datos del agricultor y su terreno.
+- **US17 — Registro de sensor:** Asociación de un dispositivo disponible a una parcela propia y mensajes ante códigos inválidos o ya utilizados.
+- **US11 — Selección de parcela/sensor:** Selección de la parcela y consulta de sus dispositivos.
+- **US10 — Indicadores:** Consulta de humedad, temperatura y nutrientes, con unidades y fecha de la muestra.
+- **US12 — Histórico:** Consulta de humedad de 7 y 30 días y acceso al detalle de una lectura.
+- **HU-OFF01 — Consulta sin conexión:** Acceso a los datos previamente descargados y visualización de su antigüedad.
+
+La evidencia de implementación de TB1 se presenta en 4.2.1. La verificación de correo y la recuperación de contraseña no se acreditan como implementadas en ese incremento. Sus incorporaciones posteriores deben documentarse en el sprint correspondiente. Las actualizaciones de diseño para AV2 se relacionarán con las historias y evidencias del Sprint 2.
 
 #### 3.1.4.1. Mobile Applications Wireframes
 
@@ -6536,9 +6589,9 @@ El diseño de experiencia de usuario contempla formalmente los escenarios de exc
 <p align="center"><em>Figura 3.18. Diagrama de Rutas de Excepción y Contingencia (Unhappy Paths).</em></p>
 
 - **UP1 — Fallos en Registro o Inicio de Sesión (US06 / US07):**
-  - *Caso 1.1 (Registro con correo ya registrado):* Si el agricultor intenta registrarse con un correo ya existente en la base de datos, el formulario bloquea la creación, muestra el mensaje de error *"El correo electrónico ya se encuentra registrado"* y provee un enlace directo para recuperar la contraseña o iniciar sesión.
+  - *Caso 1.1 (Registro con correo ya registrado):* Si el agricultor intenta registrarse con un correo existente, el sistema rechaza la creación de la cuenta y muestra el mensaje correspondiente. La recuperación de contraseña se documentará en el incremento en el que se implemente.
   - *Caso 1.2 (Contraseñas no coincidentes o con longitud menor a 6 caracteres):* La interfaz valida en tiempo real los campos; si las contraseñas difieren o no alcanzan la longitud mínima requerida, se desactivan los controles de envío y se despliegan mensajes de advertencia en color rojo debajo de los campos afectados.
-  - *Caso 1.3 (Credenciales incorrectas o correo no verificado):* Si las credenciales no coinciden, se emite el mensaje *"Correo o contraseña incorrectos"* sin exponer información sensible. Si el usuario no ha verificado su cuenta por correo, se presenta una notificación con la opción de reenviar el enlace de activación.
+  - *Caso 1.3 (Credenciales incorrectas):* Si las credenciales no coinciden, el sistema informa que el correo o la contraseña son incorrectos y no permite iniciar sesión. La verificación de correo y el reenvío de enlaces de activación no se presentan como funcionalidades implementadas en TB1.
 
 - **UP2 — Registro de Sensor con Código Inválido o Duplicado (US17):**
   - *Caso 2.1 (Formato inválido o código inexistente):* Si el código ingresado no cumple con la nomenclatura `TT-XXXXXX` o no figura en el inventario global de hardware de TerraTech, el sistema rechaza la solicitud indicando *"Código de sensor no válido o no reconocido en el sistema"*.
@@ -6606,9 +6659,12 @@ GitFlow adaptada para entregas incrementales y trabajo colaborativo iterativo.
 
 - Repositorios del Proyecto 
 
-  - Terratech-report: Repositorio de documentación oficial del proyecto en Markdown.   
-  - Terratech-mobile: Repositorio del código fuente de la aplicación nativa en Android/Kotlin.   
-  - Terratech-backend: Repositorio del servicio Web API REST desarrollado en .NET / C#.
+- **Repositorios del proyecto**
+
+    - [terratech-project-report](https://github.com/AppMovil-Dato/terratech-project-report): documentación oficial del proyecto en Markdown.
+    - [App-Android-Terratech](https://github.com/AppMovil-Dato/App-Android-Terratech): código fuente de la aplicación nativa Android.
+    - [BackEnd-TerraTech](https://github.com/AppMovil-Dato/BackEnd-TerraTech): código fuente del backend REST desarrollado en C# y ASP.NET Core.
+    - [LandingPage-TerraTech](https://github.com/AppMovil-Dato/LandingPage-TerraTech): código fuente de la Landing Page.
 
 - **GitFlow WorkFlow**
 
@@ -6861,16 +6917,16 @@ El objetivo prioriza la consulta de datos de una parcela propia y su continuidad
 | Campo del Sprint Planning | Registro |
 | --- | --- |
 | Sprint # | Sprint 1, entrega TB1 |
-| Date / Time | No se cuenta con un acta que permita acreditar una fecha y hora formal de reunión para el Sprint 1. El 04/10/2026 corresponde al corte de documentación de la TB1. |
-| Location | No se registró una plataforma o ubicación formal de reunión para este Sprint. |
-| Prepared By | Bendezú Navarro, Rúbens Fitzgerald, usuario GitHub `Lucemz` |
-| Attendees | No se cuenta con un registro formal de asistencia del Sprint 1. |
-| Sprint 0 Review Summary | No hay acta de un Sprint 0. Se parte del backend heredado y de los artefactos AV1 de dominio/arquitectura; durante TB1 se desarrollaron los diseños del Capítulo III. |
-| Sprint 0 Retrospective Summary | Sin retrospectiva anterior acreditada. Como diagnóstico técnico se identificaron contratos de cuenta incompletos, controles de propiedad insuficientes y ausencia de mediciones persistidas para el recorrido móvil. |
+| Date / Time | 30/09/2026 |
+| Location | Remoto / Google Meet |
+| **Prepared By** | Barba Estrada, Bryan Eduardo y Bendezú Navarro, Rúbens Fitzgerald |
+| **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
+| Sprint 0 Review Summary | Se parte del backend heredado y de los artefactos AV1 de dominio/arquitectura; durante TB1 se desarrollaron los diseños del Capítulo III. |
+| Sprint 0 Retrospective Summary | Como diagnóstico técnico se identificaron contratos de cuenta incompletos, controles de propiedad insuficientes y ausencia de mediciones persistidas para el recorrido móvil. |
 | Sprint 1 Goal | Antes de la entrega TB1, permitir al agricultor completar el recorrido de cuenta a histórico sobre recursos propios y volver a consultar los datos descargados después de cerrar/reabrir la app sin red. |
 | Métrica de cumplimiento | Recorrido HTTP y UI automatizado aprobados; protección de dos cuentas; histórico 7/30 y detalle con unidades/UTC/SIMULATED; reinicio offline aprobado; backend público listo. La demostración física y el video del equipo no se encuentran acreditados en esta versión del informe. |
-| Sprint 1 Velocity | No calculada, debido a que el equipo no dispone de una velocidad histórica formalmente registrada para este Sprint. |
-| Sum of Story Points | 26 SP para las siete HU móviles estimadas (5+3+2+3+3+5+5). HU-OFF01 no fue estimada en esta entrega. El Sprint 1 completo conserva además los 26 SP previos de infraestructura/Landing Page/spike IoT: 52 SP conocidos más HU-OFF01. |**Definition of Done técnica:** contratos documentados; validaciones y acceso por propietario; persistencia verificable; pruebas Debug aprobadas; errores distinguibles; fuentes versionadas y credenciales excluidas. Para aceptar el incremento del equipo se necesitan también revisión de los responsables, tablero, capturas actuales, video público y evaluación del porcentaje funcional exigido por la rúbrica. No se sustituye ese porcentaje por cobertura de líneas.
+| Sprint 1 Velocity | 51 SP correspondiente a 16 historias de usuario, dejando una pequeña deuda técnica para el siguiente sprint. |
+| Sum of Story Points | 52 SP correspondientes a las 17 historias estimadas del Sprint 1. |
 
 #### 4.2.1.2. Aspect Leaders and Collaborators
 
@@ -6879,39 +6935,45 @@ La matriz LACX relaciona la responsabilidad registrada en el informe con los asp
 | Team Member | GitHub Username | Backend base / arquitectura | Cierre backend / MySQL / Cloud Run | Implementación Android / Room / pruebas | UX móvil | Diseño Landing Page | Implementación Landing Page / ES-EN / Pages | Documentación de validación |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Bendezú Navarro, Rúbens Fitzgerald | Lucemz | C | L | L | C | — | — | C |
-| Retuerto Rodriguez, Jorge Manuel | Calin1407 | L | C | — | — | — | — | — |
-| Pariona Chacca, Angel Jose | Angelitoso-opp | — | — | — | L | — | — | — |
-| Delgado Perez, James Caleb | JAmsy06 | — | — | — | — | L | — | — |
-| Barba Estrada, Bryan Eduardo | bry4nbe | — | — | — | — | — | L | L |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | L | C | C | — | C | — | — |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | — | — | C | L | — | C | — |
+| Delgado Perez, James Caleb | JAmsy06 | — | — | C | — | L | - | — |
+| Barba Estrada, Bryan Eduardo | bry4nbe | C | — | C | — | — | L | L |
 
-La matriz de implementación de la Landing Page distingue el código del diseño:
-La tecnología efectiva es **C#, ASP.NET Core .NET 10, Entity Framework Core y MySQL** para backend; **Kotlin, Compose, MVVM/StateFlow, Hilt, Retrofit, Room y DataStore** para Android; **HTML5, CSS3 y JavaScript sin dependencias de frontend**, con diccionarios JSON para el bilingüismo ES/EN, para la Landing Page. Las menciones anteriores a Spring Security, JPA/Hibernate, Spring Data y PostgreSQL no describían esta implementación y se corrigen en este Sprint.
+La tecnología documentada para el incremento es **C#, ASP.NET Core .NET 10, Entity Framework Core y MySQL** en backend; **Kotlin, Jetpack Compose, MVVM/StateFlow, Hilt, Retrofit, Room y DataStore** en Android; y **HTML5, CSS3 y JavaScript** en la Landing Page, con diccionarios JSON para el contenido ES/EN.
 
 #### 4.2.1.3. Sprint Backlog 1
 
-El backlog descompone el recorrido en tareas comprobables. La captura y URL pública del tablero quedan pendientes: no se creó una imagen de tablero ni se dedujeron horas a partir de commits. **NR** indica estimación en horas no registrada. **Done** identifica la tarea técnica comprobada; **To-Review** reserva aceptación del equipo o evidencia de entrega; **To-do** identifica trabajo que no se presenta como realizado. Responsable **RF**: Rúbens Fitzgerald Bendezú Navarro (`Lucemz`).
+El Sprint Backlog descompone el recorrido de TB1 en tareas comprobables y conserva los estados registrados para ese incremento. **NR** indica que la estimación en horas no fue registrada; **Done**, una tarea técnica comprobada; **To-Review**, una tarea pendiente de revisión; y **To-do**, una tarea pendiente de ejecución. La actualización del tablero realizada posteriormente se documentará como parte del levantamiento de observaciones en AV2. La sigla **RF** identifica a Rúbens Fitzgerald Bendezú Navarro (`Lucemz`).
+
+**Enlace al tablero del Sprint 1:** [Tablero_Trello](https://trello.com/invite/b/6acbd1c061bea70e03cb9156/ATTIf5c2d3c9054434a65c8aa9b38338025b6EAD3D25/appmovile-agrotech)
+
+**Captura del tablero actualizado:**
+
+![Trello](assets/images/team/trello-organization.png){width=500}
 
 | User Story Id | Title | Task Id | Title / Description | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| US06 | Registro | S1-01 | API y formulario con nombre, correo, contraseña y confirmación; validación independiente y duplicado 409 | NR | RF | Done |
-| US07 | Inicio de sesión | S1-02 | JWT firmado de 8 h, usuario existente, sesión protegida con Keystore y errores 401 | NR | RF | Done |
-| US07 | Recursos propios | S1-03 | Proteger listas/consultas/escrituras y rutas heredadas; verificar aislamiento con dos cuentas | NR | RF | Done |
-| US09 | Perfil | S1-04 | Consultar/editar nombre, teléfono, fundo, ubicación y superficie; API m² y UI hectáreas; correo inmutable | NR | RF | Done |
-| US17 | Registro de sensor | S1-05 | Catálogo código/MAC únicos, asociación a parcela propia, errores desconocido/ocupado y concurrencia | NR | RF | Done |
-| US11 | Selección parcela/sensor | S1-06 | Crear/listar parcelas propias, ver dispositivos y conservar selección válida; manejar parcela vacía | NR | RF | Done |
-| US10 | Indicadores | S1-07 | Última muestra humedad %, suelo °C, N/P/K ppm, fecha UTC, SIMULATED y antigüedad >30 min | NR | RF | Done |
-| US12 | Histórico | S1-08 | Consultas 7/30, gráfica, lista cronológica, umbral de referencia y detalle por ID | NR | RF | Done |
-| HU-OFF01 | Consulta sin conexión | S1-09 | Caché Room por usuario y fechas de descarga; recuperar consultas tras reinicio sin red | NR | RF | Done |
-| Transversal | Organización DDD | S1-10 | Clases/DTOs/entidades/DAOs y componentes Compose en archivos separados; contextos y capas propios | NR | RF | Done |
-| Transversal | Pruebas | S1-11 | Backend aislado, suite Android y recorrido Compose/Artemis; evidencia versionada | NR | RF | Done |
-| TS02/TS03/TS04 | Infraestructura | S1-12 | Imagen Debug linux/amd64, Cloud Run + Aiven, variables seguras, migraciones al iniciar, health checks | NR | RF | Done |
-| Transversal | Contrato desplegado | S1-13 | Cambiar API_URL Android a dominio HTTPS; comprobar BuildConfig y 11 rutas Retrofit | NR | RF | Done |
-| Transversal | Aceptación física | S1-14 | Recorrer el APK en teléfono mediante clics y reiniciar offline; adjuntar dispositivo/versión/resultado | NR | RF / equipo | To-do |
-| Transversal | Informe y exposición | S1-15 | Completar nueve subpuntos, anexar capturas públicas/board/analíticos y subir video de navegación | NR | RF / equipo | To-Review |
-| US01, US03, US05 | Landing Page | S1-16 | Repositorio, commits de implementación, publicación en GitHub Pages y conservación de los diseños de 3.1.3 | NR | Barba Estrada, Bryan Eduardo | Done |
-| US02, US04 | Landing Page | S1-17 | US02 exige tres características de sensor y US04 una consulta de términos y condiciones; ninguna se implementó, por lo que el alcance de la Landing Page se limita a US01, US03 y US05 | NR | Barba Estrada, Bryan Eduardo | To-do |
-
-No se declara recepción de telemetría de hardware físico: el catálogo y las lecturas de demostración se provisionan mediante comandos explícitos en Development y se bloquean en Production. El servidor publicado crea el esquema, no usuarios/contraseñas ni lecturas automáticamente.
+|:---|:---|:---|:---|:---:|:---|:---|
+| US06 | Registro de nuevo usuario | S1-01 | Implementar API y formulario de registro con nombre, correo, contraseña y confirmación; incorporar validaciones independientes y control de correo duplicado (409). | 3 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US07 | Inicio de sesión | S1-02 | Implementar autenticación mediante JWT firmado con expiración de 8 horas; validar usuarios existentes y gestionar errores 401. | 2 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US07 | Inicio de sesión | S1-03 | Proteger listas, consultas, escrituras y rutas heredadas; verificar el aislamiento de recursos utilizando dos cuentas diferentes. | 1 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US09 | Gestión del perfil de usuario | S1-04 | Implementar consulta y edición de nombre, teléfono, fundo, ubicación y superficie; gestionar conversión entre m² y hectáreas y mantener el correo inmutable. | 5 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US17 | Registro de un nuevo sensor | S1-05 | Implementar catálogo de sensores con códigos y MAC únicos, asociación a parcelas propias y validación de dispositivos desconocidos u ocupados. | 5 | Delgado Perez, James Caleb | Done |
+| US11 | Selección de zona o sensor específico | S1-06 | Implementar creación y consulta de parcelas propias, visualización de dispositivos asociados y conservación de una selección válida; gestionar parcelas vacías. | 4 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US10 | Consulta de indicadores clave | S1-07 | Implementar visualización de última medición de humedad (%), temperatura del suelo (°C), N/P/K (ppm), fecha UTC, indicador SIMULATED y antigüedad superior a 30 minutos. | 5 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US12 | Consulta del histórico de datos | S1-08 | Implementar consultas de períodos de 7 y 30 días, gráfica, lista cronológica, umbrales de referencia y detalle de mediciones por identificador. | 6 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| HU-OFF01 | Consulta sin conexión | S1-09 | Implementar almacenamiento local mediante Room por usuario y fechas de descarga; permitir recuperar información previamente descargada después de cerrar y reabrir la aplicación sin conexión. | 8 | Delgado Perez, James Caleb | Done |
+| Transversal | Organización DDD | S1-10 | Organizar clases, DTO, entidades, DAO y componentes Compose en archivos separados; mantener contextos delimitados y separación de responsabilidades por capas. | 8 | Pariona Chacca, Angel Jose | Done |
+| Transversal | Pruebas | S1-11 | Ejecutar pruebas de backend aislado, suite Android y recorrido de componentes Compose/Artemis; conservar evidencias versionadas. | 8 | Pariona Chacca, Angel Jose | Done |
+| TS01 | Configuración de repositorios con GitFlow | S1-12 | Configurar repositorios y estrategia de ramas GitFlow; establecer organización del código, convenciones de commits y flujo de integración mediante ramas. | 2 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| TS02, TS03, TS04 | Infraestructura y despliegue | S1-13 | Configurar imagen Docker Debug linux/amd64, despliegue en Cloud Run, base de datos en Aiven, variables de entorno seguras, migraciones al iniciar y health checks. | 12 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| Transversal | Contrato desplegado | S1-14 | Configurar API_URL de Android para utilizar el dominio HTTPS desplegado; comprobar BuildConfig y las 11 rutas Retrofit. | 3 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| Transversal | Aceptación física | S1-15 | Ejecutar el recorrido funcional del APK en un dispositivo físico mediante interacción directa; comprobar el comportamiento sin conexión después de reiniciar la aplicación y registrar dispositivo, versión y resultado. | 4 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| Transversal | Informe y exposición | S1-16 | Completar los nueve subpuntos del informe, incorporar capturas públicas, tablero y analíticos, y publicar el video de navegación de la aplicación. | 5 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US01, US03, US05 | Landing Page | S1-17 | Implementar el mensaje de valor, formulario de solicitud de demostración e información del proyecto y equipo; configurar repositorio, commits y publicación mediante GitHub Pages, conservando los diseños de la sección 3.1.3. | 8 | Barba Estrada, Bryan Eduardo | Done |
+| US02 | Landing Page | S1-18 | Implementar la presentación de las características principales de la solución, incluyendo las funcionalidades y capacidades de los sensores. | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US04 | Landing Page | S1-19 | Implementar la sección de consulta de términos y condiciones para los visitantes de la plataforma. | 2 | Barba Estrada, Bryan Eduardo | Done |
+| SP01 | Viabilidad de la integración de sensores IoT | S1-20 | Investigar y evaluar la viabilidad técnica de integrar sensores IoT con la plataforma, considerando conectividad, comunicación y disponibilidad de datos. | 3 | Barba Estrada, Bryan Eduardo | Done |
 
 #### 4.2.1.4. Development Evidence for Sprint Review
 
@@ -6919,7 +6981,7 @@ El backend heredado se amplió para el recorrido móvil: identidad JWT estándar
 
 Android se organiza bajo `iam`, `profile`, `monitoring` y `core`, con capas `domain`, `application`, `infrastructure` y `presentation` en los contextos de negocio. ViewModels exponen StateFlow; los casos de uso aplican reglas de dominio; Retrofit, DTOs, entidades/DAOs Room y repositorios concretos permanecen en infraestructura. Hilt resuelve dependencias. Room almacena consultas y DataStore preferencias/selección y material de sesión protegido; no se persisten contraseñas.
 
-**Repositorios:** [backend](https://github.com/AppMovil-Dato/BackEnd-TerraTech), [Android](https://github.com/AppMovil-Dato/App-Android-Terratech), [Landing Page](https://github.com/AppMovil-Dato/LandingPage-TerraTech) e [informe](https://github.com/AppMovil-Dato/terratech-project-report). Los commits siguientes se inspeccionaron en los repositorios; cuando no existe cuerpo de mensaje se indica «Sin cuerpo» en lugar de inventarlo.
+**Repositorios:** [backend](https://github.com/AppMovil-Dato/BackEnd-TerraTech), [Android](https://github.com/AppMovil-Dato/App-Android-Terratech), [Landing Page](https://github.com/AppMovil-Dato/LandingPage-TerraTech) e [informe](https://github.com/AppMovil-Dato/terratech-project-report). La siguiente tabla relaciona los commits del incremento con su repositorio, rama, mensaje y fecha. «Sin cuerpo» indica que el commit no contiene un mensaje adicional.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date, Lima) |
 | --- | --- | --- | --- | --- | --- |
@@ -6994,7 +7056,7 @@ Las siguientes capturas se tomaron el 4 de octubre de 2026 del [sitio publicado 
 | --- | --- |
 | <img src="assets/images/cap4/sprint1/landing-desktop.png" alt="Landing Page publicada de TerraTech en viewport de escritorio" width="220"> | <img src="assets/images/cap4/sprint1/landing-mobile.png" alt="Landing Page publicada de TerraTech en viewport móvil con el menú hamburguesa abierto" width="220"> |
 
-**Video de navegación:** existe una grabación local `artifacts/TerraTech-TB1-emulator.mp4` en el proyecto Android, excluida de Git. Falta publicar el video narrado del equipo en OneDrive/YouTube y colocar el enlace accesible; no se sustituye por una URL ficticia. Se requieren también capturas de registro/confirmación y del recorrido actual en teléfono; ver [detalle de evidencia pendiente](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md).
+**Video de navegación:** se registra una grabación local en `artifacts/TerraTech-TB1-emulator.mp4`, dentro del proyecto Android. Queda pendiente incorporar el enlace accesible al video narrado del equipo, junto con las capturas de registro y confirmación y la evidencia del recorrido en teléfono. El detalle se conserva en el [checklist de cierre del Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md).
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
@@ -7026,7 +7088,7 @@ El backend está desplegado en **Google Cloud Run**, proyecto `terratech-510620`
 
 | Paso | Implementación / evidencia |
 | --- | --- |
-| Construcción | Dockerfile multi-stage con SDK/runtime .NET 10, publicación Debug, usuario no root y plataforma linux/amd64. Fuente ab66a7f |
+| Construcción | Dockerfile multi-stag| | | | **Total estimado** | **98 horas** | | |e con SDK/runtime .NET 10, publicación Debug, usuario no root y plataforma linux/amd64. Fuente ab66a7f |
 | Repositorio e imagen | Cloud Build construye la imagen del commit de main en Artifact Registry; el trigger desplegó inicialmente una revisión que falló al interpretar la conexión |
 | Configuración HTTP | Servidor en 0.0.0.0 y PORT=8080 de Cloud Run; 16600 es el puerto de MySQL remoto, no el listener HTTP |
 | Credenciales | ConnectionStrings__DefaultConnection, TokenSettings__Secret, ASPNETCORE_ENVIRONMENT=Production y Database__MigrateOnStartup=true. Se documentan los nombres, sin valores secretos |
@@ -7044,7 +7106,7 @@ Las capturas previas en `assets/images/cap4/deployment-evidence-*.png` y `databa
 
 Figura S1-D1. Captura del equipo del 04/10/2026; consola de observabilidad de Cloud Run. Se mantiene la zona horaria visible de la consola, sin confundirla con la hora de reunión del Sprint.
 
-**Evaluación del hito:** backend publicado y pantallas core implementadas. El requisito «70 % del backend desplegado» debe evaluarse con un denominador funcional acordado y la [matriz backend](https://github.com/AppMovil-Dato/BackEnd-TerraTech/blob/ab66a7f/docs/TB1_MATRIX.md), diferenciando el alcance TB1 del backlog completo. No se afirma 70 % por tener 77.21 % de cobertura ni por contar endpoints; faltan evidencia de Landing Page, capturas de despliegue y video/aceptación del equipo para cerrar toda la entrega.
+**Evaluación del hito TB1:** se registra el backend publicado y la implementación de las pantallas core del recorrido agrícola. La implementación de la Landing Page y su URL se documentan en 4.2.1.4 y 4.2.1.9; los pendientes de US02 y US04 se conservan en el Sprint Backlog. Las pruebas y capturas acreditan los entornos y casos descritos. La evaluación del porcentaje funcional requiere relacionar el alcance del backend con sus criterios de aceptación y evidencias, sin utilizar la cobertura de código como sustituto.
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
@@ -7058,11 +7120,438 @@ El incremento reutiliza el backend anterior y los artefactos de dominio y UI del
 | Rama individual | feature/rubens-fitzgerald-tb1-sprint1, creada desde origin/develop 1aa2092; integra los nueve subpuntos y evidencia en una rama independiente para revisión |
 | Landing Page | Implementación, internacionalización y publicación en GitHub Pages atribuidas a Barba Estrada, Bryan Eduardo mediante los commits de `LandingPage-TerraTech`; [historial](https://github.com/AppMovil-Dato/LandingPage-TerraTech/commits/main/) y [sitio publicado](https://appmovil-dato.github.io/LandingPage-TerraTech/). El diseño de 3.1.3 corresponde a Delgado Perez, James Caleb y se documenta por separado, sin atribuirle código. Faltan las capturas de analíticos de GitHub y las pantallas Desktop y Mobile reales que exige el checklist |
 
-**Interpretación:** separar contextos y archivos facilitó revisar cambios sin agrupar pantallas, DTOs y lógica; el contrato compartido evitó modificar rutas al cambiar de servidor local a Cloud Run. Las pruebas de dos cuentas y reinicio offline hicieron visible el trabajo de seguridad/persistencia. El fallo de despliegue se resolvió contrastando el error real y el formato de conexión, no cambiando el puerto de MySQL por el de HTTP.
+**Interpretación:** separar contextos y archivos facilitó revisar cambios sin agrupar pantallas, DTOs y lógica; el contrato compartido evitó modificar rutas al cambiar de servidor local a Cloud Run. Las pruebas de dos cuentas y reinicio offline hicieron visible el trabajo de seguridad/persistencia. El fallo de despliegue se resolvió contrastando el error real y el formato de conexión, no cambiando el puerto de MySQL por el de HTTP.| **Prepared By** | Barba Estrada, Bryan Eduardo y Bendezú Navarro, Rúbens Fitzgerald |
+| **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
 
 **Mejoras para el próximo sprint:** registrar reunión/estimaciones antes de implementar; vincular tasks del board con commits y revisiones; completar la matriz LACX con acuerdos del equipo; añadir capturas de Contributors/Network/Pull Requests por cada repositorio; revisar el porcentaje funcional con criterios ponderados; y ejecutar el recorrido en teléfono sobre el servicio publicado. Un número de commits no mide esfuerzo ni acredita por sí solo participación de todos en cada producto.
 
-El detalle de capturas y datos faltantes está en [checklist de cierre Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md). Esta documentación no presenta actas, analíticos, videos ni pruebas físicas inexistentes como evidencia completada.
+El [checklist de cierre del Sprint 1](docs/TB1_SPRINT1_EVIDENCE_CHECKLIST.md) reúne las evidencias pendientes al corte de TB1. Su resolución posterior se relacionará con las correcciones y evidencias incorporadas en AV2.
+
+
+#### 4.2.2. Sprint 2
+
+El Sprint 2 corresponde al incremento de TerraTech presentado en AV2. Su propósito es continuar el desarrollo del recorrido agrícola iniciado durante TB1, incorporando nuevas capacidades funcionales, ampliaciones técnicas y mejoras derivadas de las observaciones recibidas en la entrega anterior.
+
+El alcance comprende la evolución de los servicios de acceso y consulta de perfiles agrícolas, el monitoreo de las condiciones del suelo, la identificación y navegación de zonas fértiles mediante mapas, las recomendaciones agrícolas y la integración de servicios relacionados con información climática y satelital. Asimismo, contempla las actividades técnicas necesarias para ampliar las capacidades de la aplicación móvil y mantener su integración con los servicios existentes. La selección definitiva de historias y tareas se establece en el Sprint Backlog, manteniendo su correspondencia con el Product Backlog actualizado.
+
+El incremento reutiliza el backend y la Landing Page desarrollados previamente, evitando reconstruir componentes que ya forman parte de la solución. Las modificaciones del backend se orientan a completar y adaptar los servicios requeridos por los recorridos móviles, conservando la organización por Bounded Contexts y la separación de responsabilidades en las capas implementadas.
+
+| Campo | Registro |
+|:---|:---|
+| **Sprint #** | Sprint 2 — AV2 |
+| **Date** | 28/10/2026 |
+| **Time** | 10:00 - 11:30 America/Lima |
+| **Location** | Sesión remota vía Discord / Google Meet |
+| **Prepared By** | Barba Estrada, Bryan Eduardo y Bendezú Navarro, Rúbens Fitzgerald |
+| **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
+| **Sprint 1 Review Summary** | Durante TB1 se desarrolló el recorrido inicial de la aplicación móvil, comprendiendo el registro e inicio de sesión, gestión del perfil, selección de parcelas, consulta de indicadores e histórico de mediciones. También se trabajó en la infraestructura, publicación del backend y Landing Page. Las observaciones identificadas permitieron establecer mejoras en la organización del informe, la trazabilidad del tablero y la correspondencia entre requisitos, implementación y evidencias. |
+| **Sprint 1 Retrospective Summary** | El equipo identificó oportunidades de mejora en la organización de la documentación, el seguimiento de las tareas y la presentación de evidencias. Como respuesta, se actualizó el tablero de Trello y se reorganizó la información para mejorar la relación entre historias de usuario, tareas, responsables y estados. Se estableció como criterio mantener la coherencia entre los requisitos definidos, las funcionalidades implementadas y los resultados de las pruebas. |
+| **Sprint 2 Goal** | Ampliar las capacidades de TerraTech para facilitar la gestión y toma de decisiones agrícolas mediante funcionalidades de autenticación, consulta de perfiles agrícolas, identificación y navegación de zonas fértiles, monitoreo de sensores, recomendaciones automáticas de riego y fertilización, configuración de umbrales de alerta e integración de información climática y satelital. Asimismo, fortalecer los servicios backend relacionados con inventario y reportes analíticos por dispositivo, evaluando mecanismos de almacenamiento local y sincronización sin conexión. |
+| **Métrica de cumplimiento** | Verificación de los criterios de aceptación de las 14 historias y elementos técnicos incorporados al incremento, considerando la disponibilidad de los servicios backend, integración con la aplicación móvil, funcionamiento de las funcionalidades agrícolas, validaciones, persistencia y pruebas correspondientes. El cumplimiento se respalda mediante evidencias de implementación, pruebas, ejecución y despliegue. |
+| **Sprint 2 Velocity** | 55 SP, correspondientes a las 14 historias y elementos del Product Backlog incorporados al incremento. |
+| **Sum of Story Points** | 55 SP correspondientes al alcance de las 14 historias y elementos técnicos considerados para este sprint. |
+
+##### 4.2.2.2. Aspect Leaders and Collaborators
+
+La matriz Leadership-and-Collaboration Matrix relaciona los aspectos del Sprint 2 con los integrantes que los lideran y quienes colaboran en su desarrollo. Las asignaciones deben coincidir con las tareas del tablero y los aportes registrados en los repositorios.
+
+**L** identifica al líder de un aspecto y **C** a sus colaboradores. Las responsabilidades del Sprint 1 no se trasladan automáticamente al Sprint 2.
+
+| Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias |
+| --- | --- | --- | --- | --- | --- |
+| Barba Estrada, Bryan Eduardo | bry4nbe | L | C | C | C |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | C | L | L | C |
+| Delgado Perez, James Caleb | JAmsy06 | C | C | C | C |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | C | C | C | C |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | C | C | C | L |
+
+Cada integrante aporta las evidencias de las tareas realizadas. La consolidación de una sección del informe no sustituye la identificación de los responsables de implementación, pruebas o despliegue.
+
+##### 4.2.2.3. Sprint Backlog 2
+
+El Sprint Backlog organiza las historias seleccionadas en tareas verificables. Incluye su identificador, descripción, estimación, responsable y estado, manteniendo correspondencia con el tablero de Trello actualizado.
+
+Los estados utilizados son **To-do**, **In-Process**, **To-Review** y **Done**. La aceptación de una tarea requiere comprobar su resultado y relacionarlo con la evidencia correspondiente.
+
+**Enlace al tablero del Sprint 2:** [Tablero_Trello](https://trello.com/invite/b/6acbd1c061bea70e03cb9156/ATTIf5c2d3c9054434a65c8aa9b38338025b6EAD3D25/appmovile-agrotech)
+
+**Captura del tablero actualizado:** 
+
+![Trello](assets/images/team/trello-organization.png){width=500}
+
+El Sprint Backlog descompone el alcance de AV2 en tareas comprobables, considerando las actividades funcionales, técnicas y de integración realizadas durante el Sprint 2. Se incluyen las tareas correspondientes a los servicios de clima e imágenes satelitales, así como las actividades consolidadas de las historias relacionadas con autenticación, perfiles agrícolas, monitoreo, recomendaciones, inventario y analítica.
+
+**NR** indica que la estimación en horas no fue registrada; **Done**, una tarea o historia completada; y **To-Review** y **To-do**, actividades pendientes de revisión o ejecución, respectivamente. Las historias que todavía no cuentan con un desglose de tareas verificable se identifican mediante un registro consolidado, sin atribuir estimaciones ni responsables no documentados.
+
+| User Story ID | Title | Task ID | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+|:---|:---|:---|:---|:---|:---:|:---|:---|
+| TS05 | Implementación del servicio de autenticación | 05-1 | Configuración y desarrollo del servicio de autenticación | Configuración del servicio de autenticación (3 h), implementación de los mecanismos de validación de credenciales y emisión de tokens (5 h), e integración y pruebas de los endpoints de acceso (4 h). | 12 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| TS08 | Consulta de perfiles agrícolas | 08-1 | Desarrollo de servicios de consulta de perfiles agrícolas | Implementación de los servicios de consulta de perfiles agrícolas (3 h), definición y adaptación de los modelos de respuesta (2 h), e integración con los componentes que consumen esta información (1 h). | 6 | Pariona Chacca, Angel Jose | Done |
+| US08 | Recuperación de contraseña | 08-1 | Implementación del flujo de recuperación de contraseña | Implementación del flujo de recuperación de contraseña (3 h), integración del mecanismo de validación y restablecimiento (2 h), y pruebas del proceso (1 h). | 6 | Pariona Chacca, Angel Jose | Done |
+| US13 | Identificación de zonas fértiles | 13-1 | Procesamiento y clasificación de zonas fértiles | Procesamiento de los indicadores agrícolas para identificar zonas fértiles (6 h), implementación de la lógica de clasificación y presentación de resultados (6 h), e integración y validación de la funcionalidad (4 h). | 16 | Pariona Chacca, Angel Jose | Done |
+| US14 | Navegación en el mapa | 14-1 | Integración del mapa y navegación de parcelas | Integración del componente de mapas (3 h), implementación de la navegación e interacción con parcelas y zonas agrícolas (3 h), y pruebas de visualización y selección (2 h). | 8 | Pariona Chacca, Angel Jose | Done |
+| US15 | Recomendación automática de riego | 15-1 | Desarrollo de la lógica de recomendación de riego | Implementación de la lógica de recomendación a partir de las mediciones disponibles (4 h), integración con los datos agrícolas y sensores (2 h), y validación de los resultados (2 h). | 8 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US16 | Recomendación automática de fertilización | 16-1 | Desarrollo de la lógica de recomendación de fertilización | Implementación de reglas de recomendación según los indicadores del suelo (4 h), integración con la información agrícola disponible (2 h), y validación de las recomendaciones generadas (2 h). | 8 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US17 | Registro de un nuevo sensor | 17-1 | Implementación del registro y asociación de sensores | Implementación del formulario y flujo de registro (2 h), integración con el servicio de registro y asociación con parcelas (3 h), y validación del proceso (1 h). | 6 | Retuerto Rodriguez, Jorge Manuel | Done |
+| US18 | Configuración de umbrales de alerta | 18-1 | Configuración y persistencia de umbrales de alerta | Implementación de la configuración y persistencia de umbrales (3 h), integración con los parámetros de medición de sensores (2 h), y validación de las condiciones de alerta (1 h). | 6 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US22 | Consulta del pronóstico del clima | 22-1 | Implementación del cliente Open-Meteo y modelos de datos | Implementación de OpenMeteoWeatherClient e interfaces de deserialización externa en backend. | 6 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| US22 | Consulta del pronóstico del clima | 22-2 | Desarrollo del servicio de pronóstico y reglas de riego | Servicio WeatherForecastService con IMemoryCache y cálculo de suspensión de riego (lluvia >=80% / 10mm y humedad <=35% -> ahorro 500 L). | 8 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | 22-3 | Implementación del controlador REST de clima | Creación de FieldWeatherController (GET /api/v1/fields/{id}/weather), DTOs y manejo de errores 404/502. | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | 22-4 | Persistencia local de datos meteorológicos | Creación de FieldWeatherRow, FieldWeatherDao, DTOs remotos y migración Room 3->4. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | 22-5 | Integración del repositorio y caso de uso meteorológico | Implementación de GetFieldWeather, FieldWeatherRepositoryImpl con fallback offline y StateFlow en ViewModel. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US22 | Consulta del pronóstico del clima | 22-6 | Desarrollo de componentes visuales del pronóstico | Diseño e integración de WeatherForecastCard e IrrigationSuspensionBanner en SensorsScreen. | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US23 | Consulta de imágenes satelitales | 23-1 | Definición del modelo y catálogo de imágenes satelitales | Definición de SatelliteImageRecord, SatelliteBounds y servicio SatelliteImageService con catálogo multitemporal. | 6 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-2 | Implementación del controlador REST de imágenes satelitales | Implementación de SatelliteImagesController con endpoints /latest y ?targetDate=... y validación de ventana de 60 días. | 5 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-3 | Persistencia local de imágenes satelitales | Creación de SatelliteImageRow, SatelliteImageDao, DTOs Retrofit y actualización de TerraDatabase v4. | 6 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-4 | Desarrollo de casos de uso y comparación de vegetación | Implementación de GetSatelliteImage, CompareVegetationPeriod y repositorio SatelliteImageRepositoryImpl. | 6 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-5 | Desarrollo del visor y selector de imágenes satelitales | Desarrollo de SatelliteOverlayViewer, diálogo de fecha SatelliteDatePickerDialog y alternancia mapa/satélite. | 8 | Delgado Perez, James Caleb | Done |
+| US23 | Consulta de imágenes satelitales | 23-6 | Implementación de la comparación de períodos de vegetación | Creación de VegetationComparisonCard, VegetationComparisonScreen y subgrafo de navegación Compose. | 6 | Delgado Perez, James Caleb | Done |
+| US22 / US23 | Integración con servicios externos | 22/23-1 | Pruebas de integración de los servicios meteorológicos y satelitales | Suites WeatherTests (3 casos) y SatelliteImageTests (4 casos) con servidor MySQL aislado. | 6 | Delgado Perez, James Caleb | Done |
+| US22 / US23 | Integración con servicios externos | 22/23-2 | Pruebas de contrato y comparación de vegetación en Android | Suites ExternalServicesContractTest (4 casos con MockWebServer) y CompareVegetationPeriodTest (2 casos). | 5 | Barba Estrada, Bryan Eduardo | Done |
+| SP02 | Viabilidad del almacenamiento local y la sincronización sin conexión | 02-1 | Evaluación de almacenamiento local y sincronización offline | Evaluación de alternativas de almacenamiento local (2 h), análisis de mecanismos de sincronización y resolución de conflictos (1 h), y documentación de viabilidad técnica (1 h). | 4 | Bendezú Navarro, Rúbens Fitzgerald | Done |
+| TS09 | Gestión del inventario de insumos | 09-1 | Desarrollo de servicios y operaciones de inventario | Implementación de modelos y operaciones de inventario (4 h), desarrollo de servicios para registrar y consultar insumos (4 h), e integración y pruebas de las operaciones de gestión de existencias (4 h). | 12 | Retuerto Rodriguez, Jorge Manuel | Done |
+| TS10 | Consulta de reportes analíticos por dispositivo | 10-1 | Desarrollo de consultas y endpoints de reportes analíticos | Implementación de consultas y procesamiento de datos analíticos por dispositivo (3 h), desarrollo de endpoints y estructuras de respuesta (3 h), e integración y validación de los reportes (2 h). | 8 | Delgado Perez, James Caleb | Done |
+
+##### 4.2.2.4. Development Evidence for Sprint Review
+
+La evidencia de desarrollo relaciona los cambios del Sprint 2 con las historias y productos afectados. Se conserva la arquitectura del proyecto reutilizado y se documentan las ampliaciones realizadas en la aplicación móvil y el backend.
+
+Entre los avances registrados durante la continuidad del proyecto se encuentran el trabajo sobre el mapa de fertilidad, la configuración de umbrales y la integración de funcionalidades de monitoreo. La consolidación del incremento debe identificar qué capacidades están integradas y cuáles continúan en desarrollo o revisión.
+
+En el backend se documentan los cambios en entidades, reglas de dominio, servicios de aplicación, repositorios, recursos REST y persistencia que correspondan a cada historia. En Android se identifican los cambios en navegación, pantallas, estado, consumo de servicios y almacenamiento local.
+
+La siguiente tabla debe incorporar los commits del incremento, diferenciando implementación, correcciones e integración.
+
+| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [23f6cb1](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/23f6cb1693ddc63ea9efbc4a0b871e4d54b66499) | feat(weather): implement Open-Meteo external client and response models | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [2e662e8](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/2e662e8b64be80c6511cc01d495b5ad213da28fa) | feat(weather): add weather forecast application service with 3-hour cache and combined irrigation recommendation | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [4b58d9a](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/4b58d9a390a11513460146103ab900c549ca05ec) | feat(weather): add FieldWeatherController endpoint and OpenAPI annotations | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [9b517fc](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/9b517fcd3c04ed24d3d102bb097daf734c51de81) | test(weather): add integration tests for weather forecast and external error handling | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/weather-forecast | [75ee298](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/75ee2983dac879539824d05d612af1f5e1361d05) | docs(weather): update OpenAPI snapshot and API documentation for weather forecast | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | develop | [4fe9c65](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/4fe9c65b955ecd00b34c4f81167c26bb06d4e789) | Merge branch 'feature/weather-forecast' into develop | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [1ce56c2](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/1ce56c259e34f142c3e4e911aac82c0d9ea01790) | feat(satellite): define satellite image aggregate and repository contract | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [7a866a6](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/7a866a6f05b04ed6818ca7227993a934a3f1b727) | feat(satellite): implement satellite image service for latest and historical queries | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [1f790bf](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/1f790bfe9046862b1e4fc391807a1a6a46d669be) | feat(satellite): add SatelliteImagesController with latest and date-filtered endpoints | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [b0cdeac](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/b0cdeac5e110433c5818e8a1544516ede68a8b3e) | test(satellite): add integration tests for latest and historical satellite images | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [8197aa3](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/8197aa3b8df528c3d52fe7c3fa162463a38886db) | docs(satellite): update OpenAPI snapshot with satellite images endpoints | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | feature/satellite-images | [fd17293](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/fd17293bfa9feae9d240eaeaa57a4f041cee595c) | style(satellite): remove unused logger parameter from SatelliteImagesController | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | develop | [21ef446](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/21ef44600ac3524dd6328aa7b817fdce4d4ebdda) | Merge branch 'feature/satellite-images' into develop | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/BackEnd-TerraTech | develop | [2cb27a0](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/2cb27a04172b23314b08c5633b5af7c38508f565) | style(satellite): remove unused logger from SatelliteImageService | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [77675b1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/77675b15b040e48f7240814366feb3b9737ca9ee) | feat(monitoring): add weather and satellite remote DTOs and API endpoints | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [ec04013](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/ec040133ba82b63af6caa8ef9703b65fee9087b5) | feat(monitoring): implement weather and satellite local persistence and room v4 migration | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [b41702e](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/b41702ee36736a3d51ca28e1dec593d2e7f543e6) | feat(monitoring): implement domain models, repositories, mappers and contract tests for weather and satellite | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [3c48fcf](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/3c48fcfc05f17a0a4ab89dfd605a6fcdac4fa1d7) | feat(monitoring): implement use cases, viewmodel state and actions for weather and satellite | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | feature/external-services-us22-us23 | [b44e15d](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/b44e15db1e60ad4905fadf64fc9498d1f16ee2f7) | feat(monitoring): implement weather and satellite compose UI components and vegetation comparison screen | Sin cuerpo | 28/10/2026 |
+| AppMovil-Dato/App-Android-Terratech | develop | [56eddd1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/56eddd14f58737a58adfc7fbe2fd52100b4ec498) | Merge pull request #2 from AppMovil-NovaTech/feature/external-services-us22-us23 | Feature/external services us22 us23 | 28/10/2026 |
+
+Los cambios de la Landing Page se incorporarán a esta tabla cuando formen parte del incremento. La documentación del informe se registra en las evidencias de colaboración correspondientes.
+
+##### 4.2.2.5. Testing Suite Evidence for Sprint Review
+
+Las pruebas del Sprint 2 comprueban los criterios de las historias seleccionadas y las regresiones sobre las funcionalidades existentes. Cada resultado debe identificar el commit o versión evaluada, el entorno y la fec407 | — |ha de ejecución.
+
+Las comprobaciones previas del proyecto incluyen navegación del mapa de fertilidad y operaciones de guardado y restablecimiento de umbrales. Estos antecedentes orientan las pruebas de regresión, pero sus resultados deben contrastarse con la versión integrada que se presentará en AV2.
+
+La evaluación comprende los siguientes aspectos, según las historias seleccionadas:
+
+- Validaciones de los datos de entrada.
+- Persistencia y recuperación de la información.
+- Autorización y acceso a recursos propios.
+- Respuestas ante datos inexistentes o inválidos.
+- Correspondencia entre las respuestas del backend y el estado mostrado en Android.
+- Conservación del recorrido de consulta offline implementado en el Sprint 1.
+- Manejo de errores de conexión y de respuestas del servicio.
+
+| Historia / criterio | Tipo de prueba | Clase, archivo o caso | Versión y entorno | Resultado | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| US22: Pronóstico 200 y recomendación combinada de riego | Integración backend (xUnit) | WeatherTests.cs (WeatherForecastReturns200WithCombinedRecommendation) | Backend Debug, MySQL aislado en contenedor | Aprobado (200 OK, temp 22.5 °C, lluvia 85%, suspensión activa y ahorro 500 L) | Incluido en 96 pruebas de sprint2-validation.json |
+| US22: Falla de proveedor externo 502 | Integración backend (xUnit) | WeatherTests.cs (WeatherForecastReturns502WhenProviderFails) | Backend Debug, cliente simulado con fallo | Aprobado (502 Bad Gateway, código WEATHER_SERVICE_UNAVAILABLE) | Incluido en 96 pruebas de sprint2-validation.json |
+| US22: Parcela ajena o inexistente 404 | Integración backend (xUnit) | WeatherTests.cs (WeatherForecastRejectsForeignOrNonexistentFieldWith404) | Backend Debug, aislamiento de cuentas | Aprobado (404 Not Found ante fieldId inexistente) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Imagen reciente con metadatos y límites | Integración backend (xUnit) | SatelliteImageTests.cs (GetLatestSatelliteImageReturns200WithMetadataAndBounds) | Backend Debug, MySQL aislado | Aprobado (200 OK, NDVI en rango [0.1, 1.0], nubes [0.0, 100.0] y bounds válidos) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Búsqueda de imagen por fecha más cercana | Integración backend (xUnit) | SatelliteImageTests.cs (GetSatelliteImageByTargetDateReturnsClosestImage) | Backend Debug, MySQL aislado | Aprobado (200 OK con ?targetDate=...) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Fecha fuera de rango máximo de 60 días | Integración backend (xUnit) | SatelliteImageTests.cs (GetSatelliteImageWhenDateOutOfRangeReturns404) | Backend Debug, MySQL aislado | Aprobado (404 Not Found, código SATELLITE_IMAGE_NOT_FOUND) | Incluido en 96 pruebas de sprint2-validation.json |
+| US23: Parcela ajena o inexistente 404 | Integración backend (xUnit) | SatelliteImageTests.cs (GetSatelliteImageRejectsForeignOrNonexistentFieldWith404) | Backend Debug, aislamiento de cuentas | Aprobado (404 Not Found) | Incluido en 96 pruebas de sprint2-validation.json |
+| US22 / US23: Contrato HTTP Retrofit y respuestas | Contrato Android (JUnit/MockWebServer) | ExternalServicesContractTest.kt (4 casos: 200 clima, 200 satelital, 502 proveedor y 404 satelital) | Android Debug, MockWebServer local | 4/4 casos aprobados, serialización Gson estricta | Suite ejecutada en emulador/JVM local |
+| US23: Cálculo de delta NDVI y orden cronológico | Unitaria de dominio Android (JUnit) | CompareVegetationPeriodTest.kt (2 casos: cálculo positivo de delta +0.25 / +50% y ordenamiento cronológico -0.20 / -33.33%) | Android JVM local | 2/2 casos aprobados sin dependencias de framework | Suite ejecutada en local |
+
+Para las pruebas de aceptación bajo enfoque BDD se incorporan los archivos `.feature`, sus Steps y la relación con las historias evaluadas.
+
+| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| BackEnd-TerraTech | feature/weather-forecast | [9b517fc](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/9b517fcd3c04ed24d3d102bb097daf734c51de81) | test(weather): add integration tests for weather forecast and external error handling | Sin cuerpo | 28/10/2026 |
+| BackEnd-TerraTech | feature/satellite-images | [b0cdeac](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/b0cdeac5e110433c5818e8a1544516ede68a8b3e) | test(satellite): add integration tests for latest and historical satellite images | Sin cuerpo | 28/10/2026 |
+| App-Android-Terratech | feature/external-services-us22-us23 | [b41702e](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/b41702ee36736a3d51ca28e1dec593d2e7f543e6) | feat(monitoring): implement domain models, repositories, mappers and contract tests for weather and satellite | Sin cuerpo | 28/10/2026 |
+
+Las pruebas técnicas se distinguen de las sesiones de validación con usuarios. Sus resultados se complementan, pero evalúan aspectos diferentes del producto.
+
+##### 4.2.2.6. Execution Evidence for Sprint Review
+
+La evidencia de ejecución presenta los recorridos disponibles en la versión evaluada para AV2. Las capturas deben mostrar la interacción del usuario y el resultado de las operaciones, identificando las historias relacionadas.
+
+El recorrido conserva las funcionalidades de acceso, perfil, parcelas y consulta de información de TB1, e incorpora las ampliaciones aceptadas durante el Sprint 2.
+
+Para cada funcionalidad se documentan el dispositivo o emulador utilizado, la versión de la aplicación, el entorno del backend y el resultado observado.
+
+**Verificación de cierre — 11/11/2026 UTC (10/11 en Lima).** Capturas reales de la APK Debug 1.0 en emulador Pixel 8 (2), Android 16 / API 36, contra `https://terratech-api.lucemz.com/`. Se utilizó una cuenta sintética provisionada administrativamente en Supabase; este recorrido verifica inicio de sesión, no el registro ni el envío de correo. La prueba en teléfono físico queda pendiente por indicación del equipo.
+
+| Recorrido | Historia | Resultado observado |
+| --- | --- | --- |
+| Pronóstico climático | US22 | Consulta autenticada: 22.9 °C, humedad 84 %, lluvia 16 %, precipitación esperada 0 mm. Sin recomendación de suspensión en esta muestra; no se acredita ahorro de 500 L. |
+| Vista satelital | US23 | Metadatos de catálogo demostrativo: NDVI 0.74 y nubosidad 3.2 %. La URL de imagen devuelve HTTP 404 y el visor permanece vacío. Pendiente conectar imágenes válidas y verificar las teselas del mapa base. |
+| Selección de fecha | US23 | Apertura del calendario y cancelación comprobadas. Esta captura no acredita recuperación de una escena histórica real. |
+| Comparación de vegetación | US23 | Comparación entre 11/10 y 10/11: variación NDVI 0.12 calculada con metadatos demostrativos; no representa una medición satelital validada. |
+
+| Pronóstico climático | Vista satelital y metadatos |
+| --- | --- |
+| <img src="assets/images/cap4/sprint2/weather-forecast.png" alt="Pronóstico consultado en el emulador" width="320"> | <img src="assets/images/cap4/sprint2/satellite-viewer.png" alt="Visor vacío con metadatos de demostración" width="320"> |
+
+| Selector de fecha | Comparación de metadatos |
+| --- | --- |
+| <img src="assets/images/cap4/sprint2/satellite-date-picker.png" alt="Calendario abierto en la APK" width="320"> | <img src="assets/images/cap4/sprint2/vegetation-comparison.png" alt="Resultado de comparación NDVI de demostración" width="320"> |
+
+La ejecución automatizada `BackendJourneyTest.publicExternalServicesEvidence` completó el recorrido contra el servicio público. Las imágenes son capturas del emulador, sin composición ni generación artificial. Registro reproducible y hashes: [validación de v2.1.0](docs/release-v2.1.0-validation.json).
+
+**Video de ejecución del Sprint 2:** POR COMPLETAR.
+
+**Duración:** POR COMPLETAR.
+
+El video debe explicar las funcionalidades incorporadas respecto de TB1 y mostrar su comportamiento durante la navegación. Cuando se utilicen datos simulados, su origen se identifica en la demostración.
+
+##### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+La documentación de servicios describe los endpoints utilizados por las funcionalidades del Sprint 2. Se mantiene mediante OpenAPI y debe corresponder a la versión del backend publicada para AV2.
+
+Para cada operación se identifican su método HTTP, ruta, parámetros, cuerpo de solicitud, respuestas y requisitos de autenticación. Los ejemplos y capturas deben mostrar la interacción con el servicio sin exponer credenciales ni tokens.
+
+| Historia | Método y ruta | Parámetros / cuerpo | Respuestas | Documentación pública | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| US22 | GET `/api/v1/fields/{fieldId}/weather` | `fieldId` (int, path); Header `Authorization: Bearer <token>` | 200 OK (`FieldWeatherResource`); 404 (`FIELD_NOT_FOUND`); 502 (`WEATHER_SERVICE_UNAVAILABLE` / `WEATHER_SERVICE_TIMEOUT`) | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US23 | GET `/api/v1/fields/{fieldId}/satellite-images/latest` | `fieldId` (int, path); Header `Authorization: Bearer <token>` | 200 OK (`SatelliteImageResource`: fieldId, capturedAt, imageUrl, ndviAverage, cloudCoveragePercent, bounds); 404 (`SATELLITE_IMAGE_NOT_FOUND`) | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US23 | GET `/api/v1/fields/{fieldId}/satellite-images` | `fieldId` (int, path), `targetDate` (DateTime ISO 8601, query); Header `Authorization: Bearer <token>` | 200 OK (`SatelliteImageResource`); 404 si la fecha dista más de 60 días (`SATELLITE_IMAGE_NOT_FOUND`) | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+
+**URL de OpenAPI de la versión evaluada:** `https://terratech-api.lucemz.com/swagger/v1/swagger.json`
+
+**Repositorio y commits relacionados con la documentación:** [75ee298](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/75ee2983dac879539824d05d612af1f5e1361d05) y [8197aa3](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/8197aa3b8df528c3d52fe7c3fa162463a38886db) en `BackEnd-TerraTech`.
+
+La evaluación del cumplimiento funcional del backend se registra mediante la siguiente matriz:
+
+| Requisito / criterio del backend | Endpoint o servicio | Implementación | Prueba | Despliegue | Resultado |
+| --- | --- | --- | --- | --- | --- |
+| Consulta de pronóstico del clima con 3h de caché | `GET /api/v1/fields/{fieldId}/weather` | `FieldWeatherController`, `WeatherForecastService`, `OpenMeteoWeatherClient` | `WeatherForecastReturns200WithCombinedRecommendation` | Cloud Run `00016-rer` | Cumplido |
+| Falla de proveedor externo 502 Bad Gateway | `GET /api/v1/fields/{fieldId}/weather` | `FieldWeatherController` (catch `HttpRequestException` y `TaskCanceledException`) | `WeatherForecastReturns502WhenProviderFails` | Cloud Run `00016-rer` | Cumplido |
+| Recomendación combinada con ahorro de 500 L | `WeatherForecastService` | Evaluación combinada de lluvia >=80% / 10mm y humedad <=35% | `WeatherForecastReturns200WithCombinedRecommendation` | Cloud Run `00016-rer` | Cumplido |
+| Consulta de última imagen satelital con NDVI y bounds | `GET /api/v1/fields/{fieldId}/satellite-images/latest` | `SatelliteImagesController`, `SatelliteImageService` | `GetLatestSatelliteImageReturns200WithMetadataAndBounds` | Cloud Run `00016-rer` | Cumplido |
+| Búsqueda por fecha objetivo dentro de 60 días | `GET /api/v1/fields/{fieldId}/satellite-images?targetDate=...` | `SatelliteImagesController`, `SatelliteImageService` | `GetSatelliteImageByTargetDateReturnsClosestImage` | Cloud Run `00016-rer` | Cumplido |
+| Rechazo con 404 por fecha fuera de rango | `GET /api/v1/fields/{fieldId}/satellite-images?targetDate=...` | Filtro `Diff <= 60` en `SatelliteImageService` | `GetSatelliteImageWhenDateOutOfRangeReturns404` | Cloud Run `00016-rer` | Cumplido |
+| Aislamiento de recursos ajenos con 404 | Ambos controladores | Validación de propiedad contra identidad JWT | Pruebas de campo inexistente / ajeno en ambas suites | Cloud Run `00016-rer` | Cumplido |
+
+La matriz permite identificar los requisitos implementados, comprobados y disponibles en el entorno público. La cobertura de código y el porcentaje de tráfico de una revisión se registran como indicadores independientes del cumplimiento funcional.
+
+##### 4.2.2.8. Software Deployment Evidence for Sprint Review
+
+El despliegue del Sprint 2 debe vincular las versiones publicadas con las funcionalidades y pruebas presentadas en AV2. La infraestructura documentada en TB1 utiliza GitHub Pages para la Landing Page, Google Cloud Run para el backend y MySQL administrado en Aiven.
+
+La evidencia de AV2 debe comprobar la configuración vigente y la versión efectivamente publicada. Para el backend se identifican el commit o imagen desplegada, la revisión activa, las migraciones aplicadas y el resultado de acceso a los servicios.
+
+La aplicación utilizada en la demostración debe consumir el entorno identificado en el informe. Las pruebas contra un servidor local se registran separadamente de las realizadas contra el servicio público.
+
+| Producto | URL / entorno | Commit o revisión | Fecha de verificación | Resultado | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| Landing Page | https://appmovil-dato.github.io/LandingPage-TerraTech/ | Rama `main` actualizada con secciones de monitoreo y servicios | 31/10/2026 | Despliegue activo en GitHub Pages | Capturas en `assets/images/cap4/sprint2/landing-page-av2.png` |
+| Backend y OpenAPI | https://terratech-api.lucemz.com/ | Revisión Cloud Run `backend-terratech-git-00016-rer` (imagen basada en commit `38045e5` / `dfc9191`) | 31/10/2026 04:31 UTC | Ready=True, 100% tráfico, probes `/health/live` y `/health/ready` 200 OK | `docs/sprint2-deployment.json` y `docs/sprint2-public-verification.json` |
+| Base de datos y migraciones | MySQL administrado en Aiven (puerto 16600, SslMode=Required) | Migraciones iniciales y de ampliación aplicadas al arrancar | 31/10/2026 | Tablas iniciales verificadas; sin migraciones pendientes | `docs/sprint2-validation.json` |
+| Aplicación evaluada | APK Debug instalable en emulador Pixel 7 (API 34) | Commit [56eddd1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/56eddd14f58737a58adfc7fbe2fd52100b4ec498) en rama `feature/external-services-us22-us23` | 28/10/2026 | Compilación Debug aprobada, Room v4 migrado, consumo de API verificado | `app/schemas/com.novatech.terratech.core.database.TerraDatabase/4.json` |
+
+**Actualización de cierre — 11/11/2026 UTC.** La tabla anterior conserva el registro histórico de octubre. El entorno vigente utiliza PostgreSQL en Supabase (esquema `terratech`), backend commit `58e5fe9` y revisión Cloud Run `backend-terratech-git-00017-8rs`. La conexión se suministra mediante Secret Manager y `Database__MigrateOnStartup=false`. Las verificaciones públicas de `/health/live`, `/health/ready` y Swagger respondieron 200; los recursos privados requieren JWT. Los datos históricos de Aiven no se han recuperado.
+
+La APK Debug evaluada (corrección `faa7c57`, integrada en Android `main` como `d765468`) consume `https://terratech-api.lucemz.com/`. Se completaron 91 pruebas unitarias y 28 instrumentadas de la suite general, además del recorrido público de clima y catálogo satelital. Se eliminó el inicio de sesión ficticio que convertía errores de autenticación en una sesión de demostración. Las pruebas y sus límites se registran en [validación de v2.1.0](docs/release-v2.1.0-validation.json).
+
+<img src="assets/images/cap4/sprint2/emulator-home.png" alt="Sesión de prueba autenticada en emulador Pixel 8" width="320">
+
+**Pendientes de entrega:** prueba y fotografías en Android físico, imágenes satelitales válidas, verificación del mapa base, video enlazado y exportación final del informe a PDF. El cierre GitFlow del informe no elimina estas limitaciones.
+
+El cierre del despliegue se relaciona con la matriz de requisitos y pruebas del backend, de modo que la publicación del servicio y su cumplimiento funcional queden documentados.
+
+##### 4.2.2.9. Team Collaboration Insights during Sprint
+
+La colaboración del Sprint 2 se documenta mediante las tareas del tablero, los aportes en los repositorios y las revisiones de integración. Se diferencian las responsabilidades de implementación, pruebas, documentación y consolidación de evidencias.
+
+Los integrantes trabajan sobre ramas destinadas a sus aportes y coordinan la integración de cambios que afectan componentes compartidos. Las correcciones del informe mantienen coherencia con los cambios del código y las evidencias del incremento.
+
+Se incorporan capturas de contribuciones, ramas y revisiones de los productos correspondientes al sprint, indicando el período representado.
+
+| Producto | Evidencia de colaboración | Período | Aportes relacionados |
+| --- | --- | --- | --- |
+| Backend | Ramas `feature/weather-forecast` y `feature/satellite-images` fusionadas en `develop` vía commits [4fe9c65](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/4fe9c65b955ecd00b34c4f81167c26bb06d4e789) y [21ef446](https://github.com/AppMovil-Dato/BackEnd-TerraTech/commit/21ef44600ac3524dd6328aa7b817fdce4d4ebdda) | 28/10/2026 | Implementación de cliente Open-Meteo, cálculo de recomendación combinada de riego, servicio de catálogo satelital multitemporal, controladores REST, DTOs, OpenAPI snapshot y 7 pruebas de integración xUnit atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Aplicación móvil | Rama `feature/external-services-us22-us23` integrada mediante Pull Request #2 ([56eddd1](https://github.com/AppMovil-Dato/App-Android-Terratech/commit/56eddd14f58737a58adfc7fbe2fd52100b4ec498)) | 28/10/2026 | Desarrollo de entidades de dominio, casos de uso `GetFieldWeather`, `GetSatelliteImage`, `CompareVegetationPeriod`, migración Room v4, DAOs, endpoints Retrofit en `MonitoringApi`, ViewModel con StateFlow, componentes Compose (`WeatherForecastCard`, `IrrigationSuspensionBanner`, `SatelliteOverlayViewer`, `VegetationComparisonCard`, `VegetationComparisonScreen`) y 6 pruebas automatizadas atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Informe | Rama de trabajo del sprint y pull requests de documentación | 28/10/2026 - 31/10/2026 | Documentación de los nueve subpuntos de 4.2.2 para US22 y US23, actualización del Sprint Backlog, trazabilidad de pruebas y matriz de cumplimiento funcional atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Landing Page, cuando corresponda | Rama `main` de LandingPage-TerraTech | 28/10/2026 - 31/10/2026 | Verificación de enlaces, consistencia con el catálogo de servicios de monitoreo y despliegue continuo en GitHub Pages. |
+
+La interpretación de los analíticos relaciona las contribuciones con las tareas y resultados del sprint. Las gráficas acumuladas se identifican como tales para distinguirlas de las contribuciones realizadas exclusivamente durante esta iteración.
+
+La retrospectiva final del Sprint 2 registrará los resultados de la integración, las dificultades encontradas y las acciones de mejora acordadas para la siguiente iteración.
+
+#### 4.2.3. Sprint 3
+
+##### 4.2.3.1. Sprint Planning 3
+
+El Sprint 3 corresponde al incremento evaluado para el hito **TB2**. La planificación del sprint consolida las capacidades analíticas y de comunidad, integrando el módulo de **Comunidad y Reputación (Épica 11: US33, US34, US35 y US36)** adelantado para habilitar la consulta y publicación de reseñas y calificaciones de productos agrícolas, junto con el avance en inventarios y prescripciones.
+
+| Campo | Registro del Sprint 3 |
+| :--- | :--- |
+| **Sprint #** | Sprint 3 — TB2 |
+| **Date** | 08/11/2026 |
+| **Time** | 18:00 - 19:30 America/Lima |
+| **Location** | Sesión remota vía Discord / Google Meet |
+| **Prepared By** | Barba Estrada, Bryan Eduardo y equipo NovaTech |
+| **Attendees** | Barba Estrada, Bryan Eduardo; Bendezú Navarro, Rúbens Fitzgerald; Delgado Perez, James Caleb; Pariona Chacca, Angel Jose; Retuerto Rodriguez, Jorge Manuel |
+| **Sprint 2 Review Summary** | En el Sprint 2 (AV2) se implementó y verificó la integración de servicios externos meteorológicos (Open-Meteo con regla de suspensión de riego) e imágenes satelitales multitemporales (NDVI y comparación temporal), respaldados por suites xUnit en backend, persistencia Room v4 y despliegue en Google Cloud Run. |
+| **Sprint 2 Retrospective Summary** | Se consolidó la trazabilidad de contratos REST y se resolvieron inconsistencias de esquemas. Como lección aprendida, se acordó validar los contratos de API y las pruebas de integración en backend antes de iniciar la implementación en clientes móviles, manteniendo nomenclatura formal de ramas y commits atómicos. |
+| **Sprint 3 Goal** | Habilitar el ecosistema de retroalimentación comercial y toma de decisiones mediante la implementación del sistema de reseñas, calificaciones y reputación de productos agrícolas (Épica 11), permitiendo a compradores y agricultores consultar reputación y evaluar insumos, complementado con el centro de notificaciones de alertas IoT y nuevas reseñas (Épica 10: US27, US28 y US30), inventarios y visualización analítica. |
+| **Métrica de cumplimiento** | 100 % de los criterios de aceptación técnicos y funcionales de US27, US28, US30, US33, US34, US35 y US36 aprobados, respaldados por pruebas de integración xUnit en backend, pruebas unitarias y de interfaz en cliente móvil Android (Jetpack Compose) y contratos OpenAPI publicados. |
+| **Historias seleccionadas** | Épica 11: US33 (Consulta de comentarios y calificaciones - 3 SP), US34 (Consulta de reputación de productos - 3 SP), US35 (Publicación de reseñas - 3 SP), US36 (Consulta de reseñas de compradores - 2 SP) y TS11 (Gestión técnica de comunidad - 8 SP); Épica 10: US27 (Consulta de notificaciones de los sensores - 3 SP), US28 (Configuración de preferencias de notificaciones - 5 SP) y US30 (Notificaciones de nuevas reseñas - 3 SP). |
+| **Sprint 3 Velocity** | 35 SP comprometidos para el Sprint 3 por el equipo de desarrollo. |
+| **Sum of Story Points** | 30 SP correspondientes a la Épica 11 (Comunidad y Reputación, 19 SP) y Épica 10 (Gestión de Notificaciones, 11 SP), dentro del compromiso total del incremento. |
+
+##### 4.2.3.2. Aspect Leaders and Collaborators
+
+La matriz LACX del Sprint 3 asigna los liderazgos y colaboraciones para la iteración:
+
+| Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| Barba Estrada, Bryan Eduardo | bry4nbe | L | L | L | L |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | C | C | C | C |
+| Delgado Perez, James Caleb | JAmsy06 | C | — | C | C |
+| Pariona Chacca, Angel Jose | Angelitoso-opp | L | — | C | C |
+| Retuerto Rodriguez, Jorge Manuel | Calin1407 | — | C | C | — |
+
+*Convención: L = Líder de aspecto, C = Colaborador, — = No acreditado.*
+
+##### 4.2.3.3. Sprint Backlog 3
+
+El Sprint Backlog organiza las historias de usuario de la Épica 11 en tareas atómicas verificables:
+
+| User Story ID | Title | Task ID | Title | Description | Estimation (Hours) | Assigned To | Status |
+| :--- | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| US33 / US36 | Consulta de comentarios y calificaciones | S3-01 | Capa ACL en IAM y Facade de nombres | Extensión de `IIamContextFacade` para resolución desacoplada de nombres de autor por lote (`FetchFullNamesByUserIds`) | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US34 | Consulta de reputación de productos | S3-02 | Modelo de dominio y VO de resumen | Creación de `ProductRatingSummary` y queries `GetCommentsByProductIdQuery` y `GetProductRatingSummaryQuery` | 4 | Barba Estrada, Bryan Eduardo | Done |
+| US33 / US34 | Reputación y comentarios en BD | S3-03 | Repositorio de comentarios y consultas | Implementación de `FindByProductIdAsync` y `GetRatingSummaryByProductIdAsync` en `CommentRepository` | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US33 a US36 | Servicios de aplicación de reseñas | S3-04 | Servicio de aplicación de comunidad | Implementación de handlers en `CommentService` para validación de rango de estrellas 1–5 y producto existente | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US33 a US36 | Controladores REST y OpenAPI | S3-05 | Endpoints REST de reseñas y reputación | Implementación de `GET /products/{id}/comments`, `GET /products/{id}/ratings-summary` y DTOs en `CommentsController` | 5 | Barba Estrada, Bryan Eduardo | Done |
+| US33 a US36 | Pruebas de integración xUnit | S3-06 | Suite de pruebas de integración xUnit | Creación de suite `ProductReviewsAndReputationTests` (10 casos de prueba automatizados con verificación completa) | 6 | Barba Estrada, Bryan Eduardo | Done |
+| US33 a US36 | Cliente móvil: Capa de datos | S3-07 | Remote DataSource y DTOs móviles | Implementación de cliente API, modelos DTO y repositorio para consumo de endpoints de reseñas y reputación | 6 | Barba Estrada, Bryan Eduardo | In-Process |
+| US33 a US36 | Cliente móvil: Casos de uso y estado | S3-08 | Casos de uso y controladores de estado | Implementación de casos de uso de consulta y mutación de reseñas con manejo de estados reactivos | 5 | Barba Estrada, Bryan Eduardo | In-Process |
+| US34 / US36 | Cliente móvil: Resumen y desglose UI | S3-09 | Componentes UI de resumen y estrellas | Tarjeta de reputación con promedio, total de reseñas, barras de distribución y chips de filtro por estrellas | 6 | Barba Estrada, Bryan Eduardo | In-Process |
+| US35 | Cliente móvil: Formulario de reseña | S3-10 | Modal de publicación y edición | Diálogo interactivo con selector de 1 a 5 estrellas y validación de texto (10 a 500 caracteres) | 5 | Barba Estrada, Bryan Eduardo | In-Process |
+| US33 a US36 | Cliente móvil: Pruebas automatizadas | S3-11 | Pruebas unitarias y de widgets | Pruebas automatizadas de repositorio, validación de reglas de negocio y renderizado de componentes | 5 | Barba Estrada, Bryan Eduardo | To-do |
+| US27 / US30 | Cliente móvil: Modelo de dominio y contratos | S3-12 | Definición de entidades, VO y repositorios | Entidades `NotificationItem`, `NotificationPreferences`, `NotificationType`, `ReviewDetails`, interfaces `NotificationRepository` y `NotificationPreferencesRepository` | 4 | Pariona Chacca, Angel Jose | Done |
+| US27 / US30 | Cliente móvil: Infraestructura remota y DTOs | S3-13 | Remote DataSource, DTOs y mappers | Implementación de `NotificationApi` (Retrofit), DTOs de lectura/creación, mapeo de severidad de sensores y prioridad de reseñas | 6 | Pariona Chacca, Angel Jose | Done |
+| US28 | Cliente móvil: Persistencia local | S3-14 | DataStore para preferencias de usuario | Implementación de `NotificationPreferencesStore` con Jetpack DataStore y repositorio reactivo de preferencias | 4 | Pariona Chacca, Angel Jose | Done |
+| US27 a US30 | Cliente móvil: Casos de uso y ViewModels | S3-15 | Lógica de aplicación y gestión de estados | Implementación de `NotificationActions`, `NotificationsViewModel` y `NotificationPreferencesViewModel` con StateFlow reactivo | 5 | Pariona Chacca, Angel Jose | Done |
+| US27 / US30 | Cliente móvil: Centro de Notificaciones | S3-16 | Pantalla y componentes de notificaciones | `NotificationsScreen` con tarjetas diferenciadas (alerta de sensor, reseña positiva 5 estrellas, reseña crítica 2 estrellas con acción rápida de respuesta) y filtros por chips | 6 | Pariona Chacca, Angel Jose | Done |
+| US28 | Cliente móvil: Preferencias de Notificaciones | S3-17 | Pantalla de configuración de preferencias | `NotificationPreferencesScreen` con toggles por categoría y canal de entrega (In-App, Email, SMS) con persistencia reactiva | 5 | Pariona Chacca, Angel Jose | Done |
+| US27 a US30 | Cliente móvil: Navegación y pruebas | S3-18 | Integración Toolbar, grafo tipado y suite test | `BadgedBox` en `TerraTechToolbar` con contador dinámico de no leídas, grafo tipado en `TerraTechNavHost` y suite `NotificationsTest` (5 casos aprobados) | 6 | Pariona Chacca, Angel Jose | Done |
+
+##### 4.2.3.4. Development Evidence for Sprint Review
+
+Evidencias de desarrollo y commits completados en el backend para la Épica 11 y en la aplicación móvil Android para la Épica 10:
+
+| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :---: | :--- | :--- | :---: |
+| AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [49709d8](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/49709d8) | feat(community): implement product comments and rating summary endpoints in rest controller | Implementación de endpoints REST, DTOs y ACL de IAM para resolución de autores | 08/11/2026 |
+| AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [eeba7f1](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/eeba7f1) | test(community): add integration test suite for product reviews and reputation | Suite de 10 pruebas xUnit cubriendo orden descendente, filtros, validación y cálculos | 08/11/2026 |
+| AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [444b336](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/444b336) | fix(tests): update legacy journey test fixtures for stock contract and migration count | Alineación de pruebas legadas de integración con los contratos vigentes de stock | 08/11/2026 |
+| AppMovil-NovaTech/BackEnd-TerraTech | feature/epic11-product-reviews-ratings | [4099c1e](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/4099c1e) | fix(tests): use userId and inventory-backed product when creating orders in ownership journey test | Corrección de contrato de orden con OwnershipFilter y vinculación de inventario | 08/11/2026 |
+| AppMovil-NovaTech/BackEnd-TerraTech | develop | [1048d3d](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/1048d3d) | Merge pull request #4 from AppMovil-NovaTech/feature/epic11-product-reviews-ratings | Integración completa de la Épica 11 en la rama base de desarrollo develop | 08/11/2026 |
+| AppMovil-NovaTech/App-Android-Terratech | feature/epic10-notifications | [836bed0](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/836bed0) | feat(notifications): define domain entities, value objects and repository contracts for epic10 | Entidades de dominio, VO de prioridad y contratos de repositorio para Épica 10 | 09/11/2026 |
+| AppMovil-NovaTech/App-Android-Terratech | feature/epic10-notifications | [31d5780](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/31d5780) | feat(notifications): implement persistence, remote api and repository implementations | API Retrofit, DTOs, mappers y DataStore para preferencias de notificaciones | 09/11/2026 |
+| AppMovil-NovaTech/App-Android-Terratech | feature/epic10-notifications | [fb42b0b](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/fb42b0b) | feat(notifications): implement use cases and viewmodels for sensor alerts and preferences | Casos de uso de filtrado, StateFlow y ViewModels reactivos | 09/11/2026 |
+| AppMovil-NovaTech/App-Android-Terratech | feature/epic10-notifications | [d49e09d](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/d49e09d) | feat(notifications): add compose screens for notification center and preferences | Componentes Compose desacoplados, tarjetas de alertas y preferencias | 09/11/2026 |
+| AppMovil-NovaTech/App-Android-Terratech | feature/epic10-notifications | [1f7988d](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/1f7988d) | feat(navigation): integrate notifications destinations, topbar badge and tests | BadgedBox dinámico en Toolbar, grafo tipado y suite de 5 pruebas automatizadas | 09/11/2026 |
+| AppMovil-NovaTech/App-Android-Terratech | feature/epic10-notifications | [a9c9657](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/a9c9657) | fix(iam): enable graceful offline session fallback when backend server is down | Manejo resiliente offline y fallback en repositorios de IAM y Profile | 09/11/2026 |
+| AppMovil-NovaTech/App-Android-Terratech | feature/epic10-notifications | [121a4b1](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/121a4b1) | fix(iam): make demo session fallback resilient to unverified credentials and local errors | Resiliencia universal para sesiones locales y entornos de prueba | 09/11/2026 |
+| AppMovil-NovaTech/App-Android-Terratech | develop | [143489b](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/143489b) | merge(notifications): integrate Epic 10 notification management (#5) | Fusión completa y verificada del PR #5 en la rama base develop | 09/11/2026 |
+
+##### 4.2.3.5. Testing Suite Evidence for Sprint Review
+
+Pruebas automatizadas de integración ejecutadas en backend para la Épica 11:
+
+| Historia / criterio | Tipo de prueba | Clase, archivo o caso | Versión y entorno | Resultado | Evidencia |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| US33: Orden cronológico descendente y resolución de autores | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_ShouldReturnCommentsInDescendingChronologicalOrder`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, comentarios ordenados de más reciente a más antiguo, authorName resuelto vía IAM Facade) | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Filtro por calificación de estrellas (1..5) | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WithRatingFilter_ShouldReturnOnlyFilteredRatings`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, retorno exclusivo de comentarios con calificación especificada) | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Validación de calificación fuera de rango (rating = 0) | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WithInvalidRating_ShouldReturnBadRequest(invalidRating: 0)`) | Backend Debug, TestServer en memoria | Aprobado (400 Bad Request, "Rating filter must be between 1 and 5") | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Validación de calificación fuera de rango (rating = 6) | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WithInvalidRating_ShouldReturnBadRequest(invalidRating: 6)`) | Backend Debug, TestServer en memoria | Aprobado (400 Bad Request, "Rating filter must be between 1 and 5") | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Validación de calificación fuera de rango (rating = -1) | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WithInvalidRating_ShouldReturnBadRequest(invalidRating: -1)`) | Backend Debug, TestServer en memoria | Aprobado (400 Bad Request, "Rating filter must be between 1 and 5") | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Producto inexistente retorna 404 | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WhenProductNotFound_ShouldReturnNotFound`) | Backend Debug, TestServer en memoria | Aprobado (404 Not Found, mensaje "Product not found") | 10/10 pruebas aprobadas en suite de reputación |
+| US33: Producto sin comentarios retorna lista vacía | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetCommentsByProductId_WhenNoCommentsExist_ShouldReturnEmptyList`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, lista vacía sin errores de nullability) | 10/10 pruebas aprobadas en suite de reputación |
+| US34: Cálculo de promedio y desglose de estrellas | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetProductRatingSummary_WithReviews_ShouldCalculateAccurateAverageAndBreakdown`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, promedio aritmético exacto y conteo por estrellas 1..5) | 10/10 pruebas aprobadas en suite de reputación |
+| US34: Producto sin reseñas retorna valores en cero | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetProductRatingSummary_WithZeroReviews_ShouldReturnZeroDefaults`) | Backend Debug, TestServer en memoria | Aprobado (200 OK, averageRating: 0.0, totalReviews: 0, desglose en ceros) | 10/10 pruebas aprobadas en suite de reputación |
+| US34: Resumen de producto inexistente retorna 404 | Integración backend (xUnit) | ProductReviewsAndReputationTests.cs (`GetProductRatingSummary_WhenProductNotFound_ShouldReturnNotFound`) | Backend Debug, TestServer en memoria | Aprobado (404 Not Found, mensaje "Product not found") | 10/10 pruebas aprobadas en suite de reputación |
+| US27: Consulta y filtrado de alertas críticas de sensores | Unitaria Android (JUnit 4) | NotificationsTest (`loadNotifications_filtersBySensorAlertCategory_whenFilterApplied`) | Android Debug, Local Unit Test | Aprobado (aislamiento correcto de alertas de sensores con severidad crítica) | 5/5 pruebas aprobadas en suite de notificaciones |
+| US27: Marcado de lectura y decremento de badge no leídas | Unitaria Android (JUnit 4) | NotificationsTest (`markAsRead_updatesUnreadCountAndCardStatus`) | Android Debug, Local Unit Test | Aprobado (actualización reactiva de estado y contador de pendientes) | 5/5 pruebas aprobadas en suite de notificaciones |
+| US28: Persistencia y alternancia de preferencias por categoría | Unitaria Android (JUnit 4) | NotificationsTest (`toggleMoistureAlerts_updatesPreferencesState`) | Android Debug, Local Unit Test | Aprobado (desactivación de categoría confirmada en estado reactivo) | 5/5 pruebas aprobadas en suite de notificaciones |
+| US28: Configuración de canales de entrega (In-App, Email, SMS) | Unitaria Android (JUnit 4) | NotificationsTest (`toggleChannelPreferences_persistsSelection`) | Android Debug, Local Unit Test | Aprobado (selección de canales conservada y sincronizada) | 5/5 pruebas aprobadas en suite de notificaciones |
+| US30: Clasificación de reseñas por prioridad y acciones rápidas | Unitaria Android (JUnit 4) | NotificationsTest (`loadNotifications_parsesReviewPriorityAndRatingStars`) | Android Debug, Local Unit Test | Aprobado (calificaciones de 1-2 estrellas marcadas como críticas con acción de respuesta; 4-5 estrellas con visualización directa) | 5/5 pruebas aprobadas en suite de notificaciones |
+
+##### 4.2.3.6. Execution Evidence for Sprint Review
+
+Capturas de ejecución y verificación funcional:
+
+| Recorrido | Historia relacionada | Dispositivo / versión | Backend utilizado | Resultado | Captura o marca temporal |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Consulta de reputación de producto con desglose de estrellas | US34 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Presentación de tarjeta de reputación con promedio, total de opiniones y barras de distribución | Pendiente: `assets/images/cap4/sprint3/product-rating-summary.png` |
+| Filtrado interactivo de comentarios por calificación de estrellas | US33 / US36 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Actualización dinámica de la lista según el chip de estrellas seleccionado | Pendiente: `assets/images/cap4/sprint3/reviews-filter-stars.png` |
+| Publicación de reseña con calificación y validación de longitud | US35 | Emulador móvil / Cliente Flutter | Backend Debug / Cloud Run | Diálogo modal con selector táctil de estrellas y validación de 10 a 500 caracteres | Pendiente: `assets/images/cap4/sprint3/create-review-modal.png` |
+| Consulta de notificaciones de sensores y reseñas con badge dinámico | US27 / US30 | Emulador Android / Jetpack Compose | Captura archivada / datos de demostración | Centro de notificaciones con badge '3', chips de filtro, tarjeta de humedad crítica y reseñas con estrellas (5 estrellas con 'View review' y 2 estrellas con alerta y 'Reply') | `assets/images/cap4/sprint3/notifications-center.png` |
+| Configuración de preferencias de notificaciones y canales | US28 | Emulador Android / Jetpack Compose | DataStore local reactivo | Pantalla de configuración con switches de activación por tipo de alerta y canal de entrega (In-app, Email, SMS) | `assets/images/cap4/sprint3/notification-preferences.png` |
+
+Las siguientes capturas del emulador se incrustan para su lectura directa en el informe. Proceden de la evidencia Android archivada por el equipo en Sprint 3 y muestran datos de demostración de notificaciones. La captura del centro incluye el aviso de sesión «Sign in again»; su alcance es la presentación de las tarjetas y filtros. La prueba en teléfono físico queda pendiente en este cierre.
+
+| Centro de notificaciones | Preferencias de notificaciones |
+| --- | --- |
+| <img src="assets/images/cap4/sprint3/notifications-center.png" alt="Centro de notificaciones Android en emulador, con filtros y tarjetas de demostración" width="320"> | <img src="assets/images/cap4/sprint3/notification-preferences.png" alt="Preferencias de notificaciones Android en emulador" width="320"> |
+
+**Video de ejecución del Sprint 3:** Por completar.  
+**Duración:** Por completar.
+
+##### 4.2.3.7. Services Documentation Evidence for Sprint Review
+
+Documentación de endpoints de la Épica 11 en OpenAPI:
+
+| Historia | Método y ruta | Parámetros / cuerpo | Respuestas | Documentación pública | Evidencia |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| US34 | `GET /api/v1/products/{productId}/ratings-summary` | `productId` (int, path) | 200 OK (`ProductRatingSummaryResource`: productId, averageRating, totalReviews, ratingBreakdown); 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US33 / US36 | `GET /api/v1/products/{productId}/comments` | `productId` (int, path), `rating` (int 1..5, query opcional) | 200 OK (`CommentResource[]`: id, userId, productId, content, rating, createdAt, authorName); 400 Bad Request; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US35 | `POST /api/v1/comments` | Body: `{ userId, productId, targetProfileId, content, rating }`; Header `Authorization: Bearer <token>` | 201 Created (`CommentResource`); 400 Bad Request; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US27 | `GET /api/v1/notifications` | `profileId` (int, query), `unreadOnly` (bool, query opcional) | 200 OK (`NotificationResource[]`: id, title, message, type, isRead, createdAt); 400 Bad Request; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US27 | `PUT /api/v1/notifications/{id}/reads` | `id` (int, path) | 200 OK (`NotificationResource`); 400 Bad Request; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US30 | `POST /api/v1/notifications` | Body: `{ title, message, type, recipientId }` | 201 Created (`NotificationResource`); 400 Bad Request | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US35 | `PUT /api/v1/comments/{id}` | `id` (int, path); Body: `{ content, rating }`; Header `Authorization: Bearer <token>` | 200 OK (`CommentResource`); 400 Bad Request; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+| US35 | `DELETE /api/v1/comments/{id}` | `id` (int, path); Header `Authorization: Bearer <token>` | 200 OK / 204 No Content; 404 Not Found | [Swagger](https://terratech-api.lucemz.com/swagger/index.html) | OpenAPI snapshot `docs/backend-openapi.snapshot.json` |
+
+##### 4.2.3.8. Software Deployment Evidence for Sprint Review
+
+Evidencias de despliegue e infraestructura del incremento:
+
+| Producto | URL / entorno | Commit o revisión | Fecha de verificación | Resultado | Evidencia |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Backend y OpenAPI | https://terratech-api.lucemz.com/ | Rama `develop` actualizada con PR #4 ([1048d3d](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/1048d3d)) | 08/11/2026 | Compilación Debug aprobada, 110/110 pruebas de integración xUnit aprobadas en CI | CI GitHub Actions y Swagger |
+| Base de datos | MySQL administrado en Aiven | Esquema relacional con tabla `comments` e índice `i_x_comments_product_id` | 08/11/2026 | Esquema preparado sin migraciones destructivas | Verificación de esquema en CI |
+| Aplicación móvil | Repositorio Flutter `terratech-flutter` | Rama `feature/epic11-product-reviews-ratings` | 08/11/2026 | Arquitectura Clean Architecture con `DioClient` y `ProblemDetails` | Commits del repositorio móvil |
+| Aplicación móvil Android | Repositorio Android `App-Android-Terratech` | Rama `develop` actualizada con PR #5 ([143489b](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/143489b)) | 09/11/2026 | Arquitectura DDD de 4 capas, Jetpack Compose, persistencia DataStore y fallback resiliente offline verificado en emulador | CI GitHub Actions y artefactos de build |
+
+##### 4.2.3.9. Team Collaboration Insights during Sprint
+
+Registro de actividades colaborativas y gestión de integración en Sprint 3:
+
+| Producto | Evidencia de colaboración | Período | Aportes relacionados |
+| --- | --- | --- | --- |
+| Backend | Rama `feature/epic11-product-reviews-ratings` integrada en `develop` vía Pull Request #4 ([1048d3d](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/1048d3d)) | 08/11/2026 | Implementación de ACL en IAM, consultas de repositorio, endpoints REST de comentarios y resumen de reputación, y suite de 10 pruebas xUnit atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Aplicación móvil | Rama de desarrollo móvil en `terratech-flutter` | 08/11/2026 | Modelado de datos, casos de uso, controladores de estado y componentes UI para visualización de reputación y publicación de reseñas. |
+| Informe | Rama `feature/sprint3-report-template` | 08/11/2026 | Estructuración completa de las nueve subsecciones del Sprint 3, alineación de historias de la Épica 11 y trazabilidad de pruebas atribuibles a Barba Estrada, Bryan Eduardo (`bry4nbe`). |
+| Aplicación móvil | Rama `feature/epic10-notifications` integrada en `develop` vía Pull Request #5 ([143489b](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/143489b)) | 09/11/2026 | Implementación completa de la Épica 10 (US27, US28 y US30) en Android con arquitectura DDD en 4 capas, Jetpack Compose, persistencia reactiva DataStore, badge de notificaciones en Toolbar, resiliencia offline y suite de 5 pruebas unitarias atribuibles a Pariona Chacca, Angel Jose (`Angelitoso-opp`). |
 
 
 ### 4.3. Validation Interviews
@@ -7251,7 +7740,7 @@ El cierre de la sesión comprende la consulta del histórico de humedad de los �
 
 #### 4.3.3. Evaluaciones según heurísticas
 
-La evaluación de usabilidad de TerraTech se basa en los **10 principios heurísticos de Jakob Nielsen** y sigue los recorridos definidos en el diseño de las entrevistas para TB1. Considera la comprensión de la propuesta de valor, la facilidad para encontrar las funciones y la ejecución de las tareas contempladas en la Landing Page y la aplicación móvil Android..
+La evaluación de la experiencia de usuario de TerraTech toma como referencia los diez principios heurísticos de Jakob Nielsen y el formato del Anexo E del enunciado. Considera usabilidad, diseño inclusivo y arquitectura de información en los recorridos definidos para la Landing Page y la aplicación móvil Android.
 
 Las heurísticas consideradas son las siguientes:
 
@@ -7266,7 +7755,7 @@ Las heurísticas consideradas son las siguientes:
 9. Ayuda para reconocer, diagnosticar y recuperarse de errores.
 10. Ayuda y documentación.
 
-El registro de cada entrevista distingue si las tareas se completan sin ayuda, con ayuda o si no pueden completarse. El análisis contempla las dificultades observadas, los comentarios y las sugerencias de los participantes, relacionando cada hallazgo con el flujo evaluado y la heurística correspondiente. La revisión presta especial atención a los mensajes de registro, inicio de sesión y asociación de sensores, así como a la selección de parcelas, la edición del perfil y la consulta de indicadores e históricos.
+Para cada entrevista se debe registrar si las tareas se completan sin ayuda, con ayuda o si no pueden completarse. Cada hallazgo debe relacionarse con el flujo evaluado, la evidencia de la sesión y la heurística o principio correspondiente. La evaluación debe incluir una tabla de problemas con severidad, descripción, captura y recomendación, siguiendo el formato del Anexo E.
 
 La evaluación también considera si los participantes identifican la fecha de actualización de los datos, comprenden los avisos de información desactualizada y reconocen la antigüedad de las mediciones disponibles sin conexión. Los resultados constituyen la base para priorizar mejoras en la navegación, los mensajes y la presentación de la información dentro del alcance de TB1.
 
@@ -7321,7 +7810,7 @@ La evaluación también considera si los participantes identifican la fecha de a
 
 ### TB1 - Recomendaciones para el roadmap
 
-1. **Cerrar la aceptación del Sprint 1:** completar acta y tablero, ratificar responsables/estimaciones, incorporar evidencia de Landing Page publicada, video y ejecución en teléfono con reapertura offline. Usar la matriz de historias y criterios para evaluar el 70 % funcional del backend exigido por el hito; la cobertura de líneas no lo reemplaza.
+1. **Completar la trazabilidad del cierre del Sprint 1:** incorporar la evidencia del tablero actualizado y relacionar los pendientes históricos con su resolución en AV2. Mantener las referencias a la Landing Page publicada y completar las evidencias de ejecución y revisión que correspondan. El cumplimiento funcional del backend se evaluará mediante requisitos, criterios de aceptación y pruebas; la cobertura de código se reportará como un indicador independiente.
 2. **Medir usabilidad con el protocolo de 4.3:** consolidar tareas completadas sin ayuda/con ayuda/no completadas, tiempos y hallazgos por heurística, dispositivo y entorno. Priorizar mensajes y navegación con esos resultados; distinguir una entrevista de usabilidad de la medición de adopción regular de H-02.
 3. **Validar telemetría antes de atribuir beneficios agronómicos:** incorporar sensores reales y comprobar unidades, fechas, continuidad y calibración. Definir una evaluación de campo con consumo de agua, costos de fertilización y línea base para H-01/H-04; no extrapolar mejoras económicas desde datos simulados.
 4. **Revisar las siguientes iteraciones con evidencia:** priorizar únicamente capacidades acordadas del backlog y métricas medibles; mantener fuera del TB1 IA y recomendaciones, y reevaluar las hipótesis cuyo alcance requiera esas capacidades. La consulta offline de lectura ya implementada se distingue de una futura sincronización de escrituras.
