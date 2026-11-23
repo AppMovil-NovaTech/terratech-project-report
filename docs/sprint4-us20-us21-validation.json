@@ -1,0 +1,214 @@
+{
+  "sprint": "Sprint 4",
+  "generatedAtUtc": "2026-11-23T07:28:00Z",
+  "contributor": {
+    "name": "Bendezú Navarro, Rúbens Fitzgerald",
+    "githubUsername": "Lucemz"
+  },
+  "scope": [
+    "Epic 07 - US20: Consulta de datos de un sensor",
+    "Epic 07 - US21: Registro de recomendaciones mediante webhook",
+    "TerraTech Flutter: Material 3 design system & UX redesign (Home, Catalog, Product Detail, Reviews)",
+    "Cloud Run + Supabase PostgreSQL production deployment"
+  ],
+  "repositories": {
+    "terratech-flutter": {
+      "remote": "https://github.com/AppMovil-NovaTech/terratech-flutter",
+      "featureBranch": "feature/flutter-ux-redesign",
+      "featureCommits": [
+        "d509c3f",
+        "6d6c9b2",
+        "a43fe4d",
+        "abe512e",
+        "3b72af3",
+        "b06aa3b",
+        "956913a",
+        "d881e7d",
+        "2f3f24f"
+      ],
+      "targetBranch": "develop",
+      "mergeCommit": "54c51b6",
+      "checks": [
+        {
+          "command": "flutter analyze --no-fatal-infos",
+          "result": "passed",
+          "details": "0 errors, 0 warnings"
+        },
+        {
+          "command": "flutter test",
+          "result": "passed",
+          "passed": 37,
+          "failed": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "BackEnd-TerraTech": {
+      "remote": "https://github.com/AppMovil-NovaTech/BackEnd-TerraTech",
+      "tracks": {
+        "develop": {
+          "featureBranch": "feature/epic07-us20-us21",
+          "featureCommits": [
+            "40f4457",
+            "845d826",
+            "87fe95a"
+          ],
+          "mergeCommit": "2ef5a3f",
+          "checks": [
+            {
+              "command": "dotnet test TerraTech.IntegrationTests/TerraTech.IntegrationTests.csproj -c Debug",
+              "environment": "Docker MySQL 8.4 + PostgreSQL 16",
+              "result": "passed",
+              "total": 123,
+              "passed": 123,
+              "failed": 0,
+              "skipped": 0
+            },
+            {
+              "command": "python3 check-modularity.py --backend .",
+              "result": "passed",
+              "newViolations": 0
+            }
+          ]
+        },
+        "main": {
+          "featureBranch": "feature/epic07-us20-us21-prod",
+          "baseCommit": "d640047",
+          "featureCommits": [
+            "9e598c8",
+            "734d213"
+          ],
+          "mergeCommit": "a0cd5e1",
+          "efCoreMigrationsAdded": {
+            "mysql": "Migrations/20261123071036_AddWebhookRecommendationsAndBattery.cs",
+            "postgresql": "Migrations/PostgreSql/20261123071040_AddWebhookRecommendationsAndBattery.cs"
+          },
+          "checks": [
+            {
+              "command": "dotnet test TerraTech.IntegrationTests/TerraTech.IntegrationTests.csproj -c Debug",
+              "environment": "Docker MySQL 8.4 + PostgreSQL 16",
+              "result": "passed",
+              "total": 124,
+              "passed": 124,
+              "failed": 0,
+              "skipped": 0
+            },
+            {
+              "command": "python3 check-modularity.py --backend .",
+              "result": "passed",
+              "newViolations": 0
+            }
+          ]
+        }
+      }
+    },
+    "App-Android-Terratech": {
+      "remote": "https://github.com/AppMovil-NovaTech/App-Android-Terratech",
+      "featureBranch": "feature/epic07-us20-us21",
+      "featureCommits": [
+        "e3e7fff",
+        "beefa5e",
+        "b817822"
+      ],
+      "targetBranch": "develop",
+      "mergeCommit": "4f985e8",
+      "checks": [
+        {
+          "command": "python3 scripts/check-modularity.py",
+          "result": "passed",
+          "kotlinFilesChecked": 371
+        },
+        {
+          "command": "python3 scripts/check-kotlin-style.py",
+          "result": "passed",
+          "kotlinFilesChecked": 371
+        },
+        {
+          "command": "./gradlew testDebugUnitTest lintDebug assembleDebug",
+          "result": "BUILD SUCCESSFUL",
+          "testsAdded": [
+            "Us20SensorReadingsTest",
+            "Us21WebhookRecommendationsTest"
+          ]
+        }
+      ]
+    }
+  },
+  "cloudRunDeployment": {
+    "baseUrl": "https://terratech-api.lucemz.com",
+    "gcpProject": "terratech-510620",
+    "region": "us-east1",
+    "service": "backend-terratech-git",
+    "cloudBuildId": "d2de3dd8-3ad9-4112-8dba-a8594e6d80da",
+    "imageTag": "a0cd5e188bd61cbbab7f5fbab9ef9fd649a1e6ea",
+    "migrationRevision": "backend-terratech-git-00022-jwb",
+    "activeRevision": "backend-terratech-git-00024-67j",
+    "trafficPercent": 100,
+    "migrateOnStartup": false,
+    "liveVerification": [
+      {
+        "check": "GET /health/live",
+        "status": 200,
+        "result": "Healthy"
+      },
+      {
+        "check": "GET /health/ready",
+        "status": 200,
+        "result": "Healthy"
+      },
+      {
+        "check": "GET /swagger/v1/swagger.json",
+        "status": 200,
+        "result": "Exposes LatestReadingResource and WebhookRecommendationResource endpoints"
+      },
+      {
+        "check": "POST /api/v1/recommendations/webhook (missing X-Api-Key)",
+        "status": 401,
+        "code": "INVALID_API_KEY"
+      },
+      {
+        "check": "POST /api/v1/recommendations/webhook (wrong X-Api-Key)",
+        "status": 401,
+        "code": "INVALID_API_KEY"
+      },
+      {
+        "check": "POST /api/v1/recommendations/webhook (valid key, missing zone)",
+        "status": 400,
+        "errorFields": [
+          "Zone"
+        ]
+      },
+      {
+        "check": "POST /api/v1/devices (with batteryLevelPercent=88)",
+        "status": 201,
+        "batteryLevelPercent": 88
+      },
+      {
+        "check": "GET /api/v1/devices/999999/readings/latest",
+        "status": 404,
+        "code": "DEVICE_NOT_FOUND"
+      },
+      {
+        "check": "GET /api/v1/devices/{deviceId}/readings/latest (without readings)",
+        "status": 404,
+        "code": "NO_READINGS"
+      },
+      {
+        "check": "POST /api/v1/recommendations/webhook (valid key & payload)",
+        "status": 201,
+        "location": "/api/v1/recommendations/webhooks/1"
+      },
+      {
+        "check": "GET /api/v1/recommendations/webhooks?fieldId={fieldId}",
+        "status": 200,
+        "containsCreatedRecommendation": true
+      },
+      {
+        "check": "GET /api/v1/recommendations/webhooks/1",
+        "status": 200,
+        "zone": "Zona Norte"
+      }
+    ],
+    "notes": "Populated-reading US20 HTTP 200 responses (elapsedMinutes, isStale >= 30 min, batteryLevelPercent) were verified end-to-end in Docker MySQL 8.4 and PostgreSQL 16 integration tests and Android MockWebServer unit tests; simulation endpoints are disabled outside Development in Cloud Run."
+  }
+}
