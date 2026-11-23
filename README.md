@@ -88,6 +88,7 @@
 | 1.1.1 | 08/11/2026 | Barba Estrada, Bryan Eduardo | Incorporación del registro de participación AV2 en colaboración, actualización del Student Outcome 7 para AV2 (criterios 1 y 2 con evidencias técnicas) y vinculación de archivos de verificación y contratos OpenAPI en docs/. |
 | 1.2.0 | 08/11/2026 | Barba Estrada, Bryan Eduardo | Estructuración de la plantilla del Sprint 3 (4.2.3.1 a 4.2.3.9), incorporación de evidencias de desarrollo y pruebas de la Épica 11 (US33 a US36) y actualización del Product Backlog para el hito TB2. |
 | 1.2.1 | 09/11/2026 | Pariona Chacca, Angel Jose | Incorporación de evidencias de desarrollo, pruebas unitarias y ejecución móvil de la Épica 10 (US27, US28, US30: Gestión de Notificaciones) en Sprint 3 para el hito TB2. |
+| 1.3.0 | 23/11/2026 | Bendezú Navarro, Rúbens Fitzgerald | Incorporación de evidencias del Sprint 4: implementación y pruebas de US20 y US21 (Backend .NET y Android Kotlin), rediseño Material 3 en Flutter, despliegue en Cloud Run con Supabase PostgreSQL y validación automatizada. |
 
 ## Project Report Collaboration Insights
 
@@ -7666,12 +7667,12 @@ El Sprint 4 corresponde al incremento evaluado para el hito **TB2**.
 
 ##### 4.2.4.2. Aspect Leaders and Collaborators
 
-La matriz LACX del Sprint 3 asigna los liderazgos y colaboraciones para la iteración:
+La matriz LACX del Sprint 4 asigna los liderazgos y colaboraciones para la iteración:
 
 | Team Member | GitHub Username | Aplicación móvil | Backend e integración | Pruebas y validación | Informe y evidencias | Multiplataforma |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | Barba Estrada, Bryan Eduardo | bry4nbe | - | - | - | - | - |
-| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | - | - | - | - |- |
+| Bendezú Navarro, Rúbens Fitzgerald | Lucemz | C | L | L | C | C |
 | Delgado Perez, James Caleb | JAmsy06 | - | — | - | - |- |
 | Pariona Chacca, Angel Jose | Angelitoso-opp | - | — | - | - |- |
 | Retuerto Rodriguez, Jorge Manuel | Calin1407 | - | - | - | - |- |
@@ -7687,14 +7688,14 @@ La matriz LACX del Sprint 3 asigna los liderazgos y colaboraciones para la itera
 | US19 | Documentación interactiva de la API | S4-01 | Configuración de documentación OpenAPI | Configurar OpenAPI/Swagger para generar la documentación interactiva de la API. | 4 | Por asignar | To-do |
 | US19 | Documentación interactiva de la API | S4-02 | Documentación de endpoints y DTOs | Documentar los endpoints, parámetros, respuestas y DTOs disponibles. | 5 | Por asignar | To-do |
 | US19 | Documentación interactiva de la API | S4-03 | Validación de documentación interactiva | Verificar que los endpoints puedan consultarse y probarse desde Swagger. | 3 | Por asignar | To-do |
-| US20 | Consulta de datos de un sensor | S4-04 | Integración del servicio de consulta de sensores | Integrar el servicio encargado de obtener los datos registrados por los sensores. | 4 | Por asignar | To-do |
-| US20 | Consulta de datos de un sensor | S4-05 | Procesamiento de datos del sensor | Procesar y organizar los valores recibidos para su consulta. | 4 | Por asignar | To-do |
-| US20 | Consulta de datos de un sensor | S4-06 | Interfaz de consulta de datos del sensor | Implementar la pantalla para visualizar los datos registrados por un sensor. | 5 | Por asignar | To-do |
-| US20 | Consulta de datos de un sensor | S4-07 | Pruebas de consulta de sensores | Verificar la recuperación y visualización de los datos del sensor. | 3 | Por asignar | To-do |
-| US21 | Registro de recomendaciones mediante webhook | S4-08 | Implementación del endpoint webhook | Crear el endpoint para recibir recomendaciones mediante solicitudes webhook. | 5 | Por asignar | To-do |
-| US21 | Registro de recomendaciones mediante webhook | S4-09 | Validación y procesamiento de recomendaciones | Validar la información recibida y procesar las recomendaciones. | 4 | Por asignar | To-do |
-| US21 | Registro de recomendaciones mediante webhook | S4-10 | Persistencia de recomendaciones recibidas | Almacenar las recomendaciones recibidas mediante el webhook. | 4 | Por asignar | To-do |
-| US21 | Registro de recomendaciones mediante webhook | S4-11 | Pruebas de integración del webhook | Verificar la recepción, validación y almacenamiento de recomendaciones. | 4 | Por asignar | To-do |
+| US20 | Consulta de datos de un sensor | S4-04 | Integración del servicio de consulta de sensores | Integrar el servicio encargado de obtener los datos registrados por los sensores. | 4 | Bendezú Navarro, Rúbens Fitzgerald (Lucemz) | Done |
+| US20 | Consulta de datos de un sensor | S4-05 | Procesamiento de datos del sensor | Procesar y organizar los valores recibidos para su consulta. | 4 | Bendezú Navarro, Rúbens Fitzgerald (Lucemz) | Done |
+| US20 | Consulta de datos de un sensor | S4-06 | Interfaz de consulta de datos del sensor | Implementar la pantalla para visualizar los datos registrados por un sensor. | 5 | Bendezú Navarro, Rúbens Fitzgerald (Lucemz) | Done |
+| US20 | Consulta de datos de un sensor | S4-07 | Pruebas de consulta de sensores | Verificar la recuperación y visualización de los datos del sensor. | 3 | Bendezú Navarro, Rúbens Fitzgerald (Lucemz) | Done |
+| US21 | Registro de recomendaciones mediante webhook | S4-08 | Implementación del endpoint webhook | Crear el endpoint para recibir recomendaciones mediante solicitudes webhook. | 5 | Bendezú Navarro, Rúbens Fitzgerald (Lucemz) | Done |
+| US21 | Registro de recomendaciones mediante webhook | S4-09 | Validación y procesamiento de recomendaciones | Validar la información recibida y procesar las recomendaciones. | 4 | Bendezú Navarro, Rúbens Fitzgerald (Lucemz) | Done |
+| US21 | Registro de recomendaciones mediante webhook | S4-10 | Persistencia de recomendaciones recibidas | Almacenar las recomendaciones recibidas mediante el webhook. | 4 | Bendezú Navarro, Rúbens Fitzgerald (Lucemz) | Done |
+| US21 | Registro de recomendaciones mediante webhook | S4-11 | Pruebas de integración del webhook | Verificar la recepción, validación y almacenamiento de recomendaciones. | 4 | Bendezú Navarro, Rúbens Fitzgerald (Lucemz) | Done |
 | US29 | Alertas de interés sobre productos | S4-12 | Definición de criterios de interés comercial | Establecer las condiciones para identificar productos de interés para los clientes. | 4 | Por asignar | To-do |
 | US29 | Alertas de interés sobre productos | S4-13 | Generación de alertas de productos | Implementar la generación de alertas cuando un producto cumpla los criterios de interés. | 4 | Por asignar | To-do |
 | US29 | Alertas de interés sobre productos | S4-14 | Visualización de alertas de interés | Implementar la visualización de las alertas de productos en la aplicación. | 4 | Por asignar | To-do |
@@ -7716,15 +7717,80 @@ La matriz LACX del Sprint 3 asigna los liderazgos y colaboraciones para la itera
 
 ##### 4.2.4.4. Development Evidence for Sprint Review
 
+Registro consolidado de commits e integraciones ejecutadas en el Sprint 4 sobre las ramas `develop` y `main` (evidencia respaldada en [docs/sprint4-us20-us21-validation.json](docs/sprint4-us20-us21-validation.json)):
+
+| Repositorio | Rama Feature | Commit Merge / Referencia | Alcance implementado | Autor |
+| :--- | :--- | :--- | :--- | :--- |
+| `terratech-flutter` | `feature/flutter-ux-redesign` | [`54c51b6`](https://github.com/AppMovil-NovaTech/terratech-flutter/commit/54c51b6) (`d509c3f`..`2f3f24f` -> `develop`) | Sistema de diseño Material 3 (`AppColors`, `AppSpacing`, `AppTheme.light()`), shell de navegación, Catálogo, Filtros simultáneos, Detalle/Trazabilidad, Contacto al productor y Reseñas comunitarias. | `Lucemz` |
+| `BackEnd-TerraTech` (`develop`) | `feature/epic07-us20-us21` | [`2ef5a3f`](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/2ef5a3f) (`40f4457`, `845d826`, `87fe95a` -> `develop`) | US20 (`LatestReadingResource` con `fieldId`, `sensorCode`, `batteryLevelPercent`, `elapsedMinutes`, `isStale >= 30`, códigos `DEVICE_NOT_FOUND` y `NO_READINGS`) y US21 (`WebhookRecommendation`, `WebhookApiKeyFilter` con `X-Api-Key`, `POST /api/v1/recommendations/webhook` y consultas GET con aislamiento por propietario). | `Lucemz` |
+| `BackEnd-TerraTech` (`main`) | `feature/epic07-us20-us21-prod` | [`a0cd5e1`](https://github.com/AppMovil-NovaTech/BackEnd-TerraTech/commit/a0cd5e1) (`9e598c8`, `734d213` -> `main`) | Reconciliación sobre producción (`d640047`), implementación US20 + US21 y migraciones duales EF Core MySQL (`20261123071036_AddWebhookRecommendationsAndBattery`) y PostgreSQL (`20261123071040_AddWebhookRecommendationsAndBattery`). | `Lucemz` |
+| `App-Android-Terratech` | `feature/epic07-us20-us21` | [`4f985e8`](https://github.com/AppMovil-NovaTech/App-Android-Terratech/commit/4f985e8) (`e3e7fff`, `beefa5e`, `b817822` -> `develop`) | Cliente US20 (píldora de campo/código de sensor, badge de batería, `ElapsedTimeFormatter`, separación `DEVICE_NOT_FOUND` vs `NO_READINGS`, textos bilingües) y cliente US21 (sincronización de webhooks con respaldo offline en Room v5). | `Lucemz` |
+
 ##### 4.2.4.5. Testing Suite Evidence for Sprint Review
+
+Resultados de las suites automatizadas y verificadores estáticos ejecutados tras los cambios finales del Sprint 4 (detalle completo en [docs/sprint4-us20-us21-validation.json](docs/sprint4-us20-us21-validation.json)):
+
+| Repositorio | Suite / Herramienta | Entorno | Resultado observado |
+| :--- | :--- | :--- | :--- |
+| `terratech-flutter` | `flutter analyze --no-fatal-infos` | macOS (Flutter 3.50.1 / Dart 3.14.0) | 0 errores, 0 warnings (`AppTheme` y pantallas actualizadas). |
+| `terratech-flutter` | `flutter test` (`app_theme_test.dart` + suite existente) | macOS | `+37: All tests passed!` (37/37 pruebas aprobadas, 0 fallidas, 0 omitidas). |
+| `BackEnd-TerraTech` (`develop`) | `dotnet test TerraTech.IntegrationTests/TerraTech.IntegrationTests.csproj -c Debug` | Docker MySQL 8.4 + PostgreSQL 16 | `Total: 123, Passed: 123, Failed: 0, Skipped: 0`. |
+| `BackEnd-TerraTech` (`main`) | `dotnet test TerraTech.IntegrationTests/TerraTech.IntegrationTests.csproj -c Debug` | Docker MySQL 8.4 + PostgreSQL 16 | `Total: 124, Passed: 124, Failed: 0, Skipped: 0` (incluye `SensorReadingUs20Tests` y `WebhookRecommendationsTests`). |
+| `BackEnd-TerraTech` | `python3 check-modularity.py --backend .` | Local | 0 nuevas violaciones de modularidad. |
+| `App-Android-Terratech` | `check-modularity.py` & `check-kotlin-style.py` | Local | 371 archivos Kotlin verificados; 0 archivos C#, sin violaciones de estilo/modularidad. |
+| `App-Android-Terratech` | `./gradlew testDebugUnitTest lintDebug assembleDebug` | Local Android Gradle | `BUILD SUCCESSFUL` (incluye `Us20SensorReadingsTest` y `Us21WebhookRecommendationsTest`, Lint y APK Debug). |
 
 ##### 4.2.4.6. Execution Evidence for Sprint Review
 
+Las ejecuciones y validaciones funcionales locales y remotas fueron registradas en [docs/sprint4-us20-us21-validation.json](docs/sprint4-us20-us21-validation.json):
+
+| Flujo verificado | Evidencia de ejecución | Cobertura |
+| :--- | :--- | :--- |
+| US20 — Lectura más reciente con métricas de dispositivo y frescura | Suite de integración `SensorReadingUs20Tests` en Docker MySQL 8.4 / PostgreSQL 16 (`15 min` fresco con `isStale=false`, `90 min` obsoleto con `isStale=true`, `fieldId`, `sensorCode`, `batteryLevelPercent`) y pruebas unitarias Android `Us20SensorReadingsTest` con `MockWebServer`. | Local (Docker + Android JVM) y 404 diferenciados en Cloud Run |
+| US21 — Ingesta segura de recomendaciones por webhook y aislamiento por dueño | Pruebas de integración `WebhookRecommendationsTests` (`401 INVALID_API_KEY`, `400` sin `Zone`, `201 Created` + `Location`, aislamiento GET entre propietarios), pruebas Android `Us21WebhookRecommendationsTest` y smoke test E2E en vivo contra Cloud Run. | Local (Docker + Android JVM) + Producción Cloud Run |
+| TerraTech Flutter — Sistema Material 3 | Compilación de análisis estático y pruebas de widget/tema ejecutadas sobre la rama fusionada en `develop` (`54c51b6`). | Local (`flutter analyze` + `flutter test`) |
+
+> **Nota de entorno productivo:** En Cloud Run (`!IsDevelopment()`), los endpoints de simulación de lecturas devuelven `404` por seguridad; por ello, las respuestas HTTP `200` de US20 con lecturas pobladas (`elapsedMinutes`, `isStale >= 30`, `batteryLevelPercent`) se verificaron en la suite de integración sobre Docker MySQL 8.4 / PostgreSQL 16 y en `Us20SensorReadingsTest`, mientras que Cloud Run validó el contrato OpenAPI, persistencia de `batteryLevelPercent` en dispositivos y los errores `DEVICE_NOT_FOUND` y `NO_READINGS`.
+
 ##### 4.2.4.7. Services Documentation Evidence for Sprint Review
+
+Contratos de servicios incorporados y verificados en OpenAPI (`/swagger/v1/swagger.json`) durante el Sprint 4:
+
+| Historia | Método y Ruta | Autenticación | Respuestas clave | Campos principales |
+| :--- | :--- | :--- | :--- | :--- |
+| US20 | `GET /api/v1/devices/{id}/readings/latest` | `Bearer JWT` (propietario del `Field`) | `200 OK`, `404 DEVICE_NOT_FOUND`, `404 NO_READINGS` | `LatestReadingResource`: `reading`, `isStale` (`>= 30 min`), `fieldId`, `sensorCode`, `batteryLevelPercent`, `elapsedMinutes`. |
+| US21 | `POST /api/v1/recommendations/webhook` | Header `X-Api-Key` (comparación en tiempo constante `SHA-256`) | `201 Created` + header `Location`, `400` (`ValidationProblem` p. ej. `errors.Zone`), `401 INVALID_API_KEY` | `CreateWebhookRecommendationResource`: `fieldId`, `zone`, `action`, `durationMinutes`, `priority`, `reason`, `deviceId`, `fertilityZoneId`, `category`, `source`, `externalId`. |
+| US21 | `GET /api/v1/recommendations/webhooks` | `Bearer JWT` (filtrado por propietario y `fieldId` opcional) | `200 OK` | Colección `WebhookRecommendationResource` (`id`, `fieldId`, `zone`, `action`, `durationMinutes`, `priority`, `reason`, `category`, `deviceId`, `fertilityZoneId`, `source`, `externalId`, `createdAt`). |
+| US21 | `GET /api/v1/recommendations/webhooks/{id}` | `Bearer JWT` | `200 OK`, `404 Not Found` | Objeto `WebhookRecommendationResource` del propietario autenticado. |
 
 ##### 4.2.4.8. Software Deployment Evidence for Sprint Review
 
+Despliegue en producción verificado sobre Google Cloud Run (`terratech-510620`, región `us-east1`) y base de datos Supabase PostgreSQL (esquema `terratech`):
+
+- **Servicio Cloud Run:** `backend-terratech-git`
+- **URL pública:** `https://terratech-api.lucemz.com/`
+- **Imagen desplegada:** `us-east1-docker.pkg.dev/terratech-510620/cloud-run-source-deploy/backend-terratech/backend-terratech-git:a0cd5e188bd61cbbab7f5fbab9ef9fd649a1e6ea` (Cloud Build `d2de3dd8-3ad9-4112-8dba-a8594e6d80da`)
+- **Migración PostgreSQL:** aplicada mediante revisión `backend-terratech-git-00022-jwb` (`20261123071040_AddWebhookRecommendationsAndBattery`), con rotación posterior a `backend-terratech-git-00024-67j` (100% del tráfico, `Database__MigrateOnStartup=false` y `Webhooks__ApiKey` configurada de forma segura).
+
+Verificación en vivo sobre `https://terratech-api.lucemz.com/` (sin credenciales ni secretos en el repositorio):
+
+| Prueba HTTP en producción | Estado | Detalle observado |
+| :--- | :---: | :--- |
+| `GET /health/live` & `GET /health/ready` | `200` | `Healthy` en ambos endpoints. |
+| `GET /swagger/v1/swagger.json` | `200` | Esquemas `LatestReadingResource` y `WebhookRecommendationResource` publicados. |
+| `POST /api/v1/recommendations/webhook` (sin `X-Api-Key` / llave inválida) | `401` | `code: "INVALID_API_KEY"`. |
+| `POST /api/v1/recommendations/webhook` (llave válida, sin `zone`) | `400` | Error de validación en campo `Zone`. |
+| `POST /api/v1/devices` (`batteryLevelPercent: 88`) | `201` | Persiste y retorna `batteryLevelPercent: 88`. |
+| `GET /api/v1/devices/999999/readings/latest` | `404` | `code: "DEVICE_NOT_FOUND"`. |
+| `GET /api/v1/devices/{deviceId}/readings/latest` | `404` | `code: "NO_READINGS"`. |
+| `POST /api/v1/recommendations/webhook` (payload completo + llave válida) | `201` | Header `Location: /api/v1/recommendations/webhooks/1`. |
+| `GET /api/v1/recommendations/webhooks?fieldId={fieldId}` & `/webhooks/1` | `200` | Devuelve registro persistido (`zone: "Zona Norte"`). |
+
 ##### 4.2.4.9. Team Collaboration Insights during Sprint
+
+- Se reconciliaron explícitamente dos líneas en `BackEnd-TerraTech`: `develop` (`feature/epic07-us20-us21` -> `2ef5a3f`) y `main` (`feature/epic07-us20-us21-prod` -> `a0cd5e1`), preservando el esquema de base de datos productivo y evitando conflictos con el aprovisionamiento automático de sensores en Cloud Run.
+- La integración entre módulos (`BackEnd-TerraTech`, `App-Android-Terratech` y `terratech-flutter`) mantuvo las puertas de calidad automáticas del proyecto (`check-modularity.py`, `check-kotlin-style.py`, `flutter analyze`, `flutter test`, `./gradlew` e `IntegrationTests` con Docker MySQL 8.4 y PostgreSQL 16).
+- Los resultados consolidados y sanitizados de todas las verificaciones se versionan en [docs/sprint4-us20-us21-validation.json](docs/sprint4-us20-us21-validation.json).
 
 ### 4.3. Validation Interviews
 
